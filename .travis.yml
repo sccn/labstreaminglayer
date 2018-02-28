@@ -1,0 +1,37 @@
+language: cpp
+compiler: clang # 3.5 instead of GCC 4.8
+env:
+  - CMakeArgs="-DLSLAPPS_LabRecorder=1"
+script:
+- mkdir -p build/install
+- cd build
+- $CMAKE_EXE --version
+- $CMAKE_EXE -DCMAKE_BUILD_TYPE=Release -DLSLAPPS_Examples=On -DLSL_LSLBOOST_PATH=lslboost $CMakeArgs ../
+- $CMAKE_EXE --build . --config Release --target install
+matrix:
+  include:
+    - os: linux
+      addons:
+        apt:
+          packages:
+            - qt5-default
+            - libboost-thread-dev
+            - libboost-filesystem-dev
+            - libboost-iostreams-dev
+      before_script:
+        - CMAKE_URL="https://cmake.org/files/v3.5/cmake-3.5.2-Linux-x86_64.tar.gz"
+        - mkdir cmakebin && travis_retry wget --quiet -O - ${CMAKE_URL} | tar --strip-components=1 -xz -C cmakebin
+        - export CMAKE_EXE=$PWD/cmakebin/bin/cmake
+    - os: osx
+      before_install:
+        - brew install qt
+        - export CMAKE_PREFIX_PATH=/usr/local/opt/qt/
+        - export CMAKE_EXE=`which cmake`
+notifications:
+    slack: labstreaminglayer:nVh8xmzDKzA3i3YJAmdPAgbr
+#deploy:
+#  provider: bintray
+#  user: tstenner
+#  key:
+#    secure: 8Gou8FcKj7o3nYOO4a7gSaUoUqyCrE4NjmV8yFIaDAS5l79kFWuM8SACYY/mBlN2uFBaUGXnD6VUZGuQ0GkbYnWPUhs024vXR5B+XhLpW5pRoHS3hZxwPNcWTR+8X46IawuWn360kb6zRXGU/ftK5Ppf3n2lXvRdvhz8O3NyTmXJeR8gr0QgRoNKVYENNEpUtzZbwN2htWqUzm5gw32u2HBa35O9aR026iwtW2ktICCtuAyyNaHR9CHy2vh3dasZu/SMRFfde95Bf+FcxrwcdNMlw1ot09Hc+bmx/ec/VMn8LYJ9XFdVz+7Jqm+0UH19NokUpt3FCg+DRNOj6d0HaVR4vXCe3S8wwaoNlFWWArt/2gSRFN266TDpKtP3AdpCoDOOIxtlPJq6mC9KR4U1GwnhvjvtAh9NdU+FRzsJJT7npMYsyAwvvfGulhz4Vz4RJWZSb0Kf7Tdp2C4dagb9tDQPuQ/mhwGigLT8T4GPkGSkUnVR7mNSDL7TUeQhP2wxYMMAYoaigGcT6GcqCIK6x6dxX01VffsfCZozvGpaXbdXPmVc1U1KupRZDpuk+kkvySWjMlrkYYiTVzyWVEH7hsAJkq6i6qOgC/hsNQ7oJ8mgokgvb7VWgNEdRN0G2uaYXqKeXBwtsYtWB14kx/fiZyUhbjLFX0lIS23qS52pxzQ=
+#  file: .bintray.json

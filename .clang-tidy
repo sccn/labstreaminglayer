@@ -1,0 +1,3 @@
+---
+Checks: 'modernize-*,-modernize-make-unique,boost-use-to-string,misc-*,performance-*'
+...

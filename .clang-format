@@ -1,0 +1,13 @@
+﻿---
+BasedOnStyle: LLVM
+ColumnLimit: 100
+UseTab: ForIndentation
+TabWidth: 4
+IndentWidth: 4
+AccessModifierOffset: -4
+PointerAlignment: Left
+AllowShortBlocksOnASingleLine: true
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: true
+...

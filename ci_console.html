@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Start CI builds</title>
+	<style type="text/css">
+		body{
+			margin:40px auto;
+			max-width:30em;
+			line-height:1.6;
+			color:#444;
+			padding:0 10px;
+		}
+		div {border: 1px solid gray; white-space: pre-wrap;}
+		form label { width: 10em; display:inline-block; }
+		input[type="text"], input[type="button"], textarea { width: 25em; display: inline-block; }
+	</style>
+	<script>
+		function $(id) { return document.getElementById(id); }
+		function formval(formid) { return $(formid).value; }
+		function savesettings() {
+			if(window.location.protocol!=='file:')
+			{
+				alert('Credentials are only saved on local (file://C:/foo.html) files');
+				return;
+			}
+			for(inp of document.getElementsByTagName('input')) {
+				window.localStorage.setItem(inp.id, inp.value);
+			}
+		}
+		function xhr(url, headers, data, cb) {
+			var req = new XMLHttpRequest();
+			req.open('POST', url);
+			headers['Content-Type'] = 'application/json';
+			for(let key in headers) req.setRequestHeader(key, headers[key]);
+			req.onload = ()=>{
+				$('result').textContent = req.response;
+				console.log(req);
+				try { cb(JSON.parse(req.response));
+				} catch(err) { alert(err); }
+			}
+			let datastr = JSON.stringify(data, null, 2);
+			$('request').textContent = datastr;
+			req.send(datastr);
+		}
+		function buildtravis() {
+			let data = { 'request': { }};
+			if(branch = formval('branch')) {data.request.branch = branch;}
+			if(cmakeargs = formval('cmakeargs')) data.request.config = {'env':{'CMakeArgs': cmakeargs}};
+			
+			let reponame = formval('accountName') + '%2F' + formval('projectSlug');
+			let url = 'https://api.travis-ci.org/repo/' + reponame + '/requests';
+			let headers = {'Travis-API-Version': 3, 'Authorization': 'token ' + formval('trtoken')};
+			xhr(url, headers, data, (resp)=>{});
+		}
+		// Useful presets for AppVeyor
+		// Keys: `env` contains environment settings, `CMakeArgs` (optional) arguments to CMake
+		let appveyorcompilers = {'Default': {},
+		'VS2015 x64': {'VCVER': '14.0', 'ARCH': 'amd64', 'QTCOMPILER': 'msvc2015_64'},
+		'VS2008 x86': {'VCVER': '9.0',  'ARCH': 'x86',   'QTCOMPILER': 'not supported'},
+	};
+	function buildappveyor() {
+		try {
+			let data = {
+				'accountName': formval('accountName'),
+				'projectSlug': formval('projectSlug'),
+				'environmentVariables': JSON.parse(formval('avcompilersettings')),
+			};
+			if(branch = formval('branch')) data.branch = branch;
+			if(cmakeargs = formval('cmakeargs')) data.environmentVariables.CMakeArgs = cmakeargs;
+			
+			let headers = { 'Authorization': 'Bearer ' + formval('avtoken')};
+			let cb = (resp)=>{
+				let link = document.createElement('a');
+				link.href='https://ci.appveyor.com/project/'+formval('accountName')+'/'+formval('projectSlug')+'/build/'+resp.version;
+				link.textContent = 'Build log';
+				$('result').appendChild(link);
+			}
+			xhr('https://ci.appveyor.com/api/builds', headers, data, cb);
+		}
+		catch(err) {
+			alert('Invalid JSON in AppVeyor environment settings' + err);
+		}
+	}
+	document.addEventListener("DOMContentLoaded", function() {
+		for(inp of document.getElementsByTagName('input')) {
+			if(inp.type=='button') continue;
+			let savedval = window.localStorage.getItem(inp.id);
+			if(savedval !== null) inp.value = savedval;
+		}
+		
+		for(key in appveyorcompilers) {
+			var option = document.createElement('option');
+			option.textContent = option.value = key;
+			$('avcompiler').appendChild(option);
+		}
+		$('avcompiler').onchange = (ev)=>{
+			$('avcompilersettings').value = JSON.stringify(appveyorcompilers[formval('avcompiler')], null, 2);
+		};
+	});
+</script></head>
+<body><form action="#">
+	<h1>CI build console</h1>
+	<h2>What's this for?</h2>
+	<span>LSL supports a large range of systems, from tiny Raspberry Pis and Android/iOS Phones to
+		large PCs with Windows, Linux and OS X. Before proposing changes, it's therefore a good
+		idea to test if your code compiles and runs on these platforms.
+		You can register with your GitHub Account at <a href="https://appveyor.com">AppVeyor</a>
+		and <a href="https://travis-ci.org">Travis CI</a> and compile your code on most supported
+		systems. To do this, request your API tokens (see links below) and fill out the forms below
+		to start a CI build and see if everything works.
+	</span>
+	<fieldset><legend>Account / Repo settings</legend>
+		<label>Account Name: <input id="accountName" value="tstenner"/></label><br>
+		<label>Repo Name: <input id="projectSlug"  value="labstreaminglayer"/></label><br>
+		<label><a href="https://ci.appveyor.com/api-token">AppVeyor-Token:</a> <input id="avtoken" value=""/></label><br>
+		<label><a href="https://docs.travis-ci.com/user/triggering-builds/">Travis-Token:</a> <input id="trtoken" value=""/></label><br>
+		<input type="button" value="Save settings locally" onclick="savesettings()">
+	</fieldset>
+	<fieldset><legend>Build settings</legend>
+		<label>Branch (optional): <input id="branch" value=""/></label><br>
+		<label>CMake args: <input id="cmakeargs" value="-DLSLAPPS_LabRecorder=1"/></label><br>
+	</fieldset>
+	<!--Travis-Repo-ID: <input id="travisrepoid" value="14417672"></br>-->
+	<fieldset><legend>AppVeyor Settings</legend>
+		<select id="avcompiler"><!-- Filled automatically on page load--></select><br>
+		<label>Env: <textarea id="avcompilersettings">{}</textarea></label>
+		<input id="buildbtnAV" type="button" value="Build on AppVeyor" onclick="buildappveyor()">
+	</fieldset>
+	<fieldset><legend><a href="https://docs.travis-ci.com/user/triggering-builds/">Travis settings</a></legend>
+		<input id="buildbtnTravis" type="button" value="Build on Travis" onclick="buildtravis()">
+	</fieldset>
+</form>
+<div id="request">(Request data appears here)</div>
+<div id="result">(Request results appear here)</div>
+</body>
+</html>
