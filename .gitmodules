@@ -127,3 +127,6 @@
 [submodule "LSL/liblsl"]
 	path = LSL/liblsl
 	url = git@github.com:labstreaminglayer/liblsl
+[submodule "Apps/OutOfTreeTest"]
+	path = Apps/OutOfTreeTest
+	url = git@github.com:labstreaminglayer/App-OutOfTreeTest
