@@ -1,240 +1,132 @@
-[submodule "Apps/App-AMTIForcePlate"]
-	path = AMTIForcePlate
-	url = git@github.com:labstreaminglayer/App-AMTIForcePlate.git
-[submodule "Apps/App-Benchmarks"]
-	path = Benchmarks
-	url = git@github.com:labstreaminglayer/App-Benchmarks.git
-[submodule "Apps/App-BioSemi"]
-	path = BioSemi
-	url = git@github.com:labstreaminglayer/App-BioSemi.git
-[submodule "Apps/App-BrainProducts"]
-	path = BrainProducts
-	url = git@github.com:labstreaminglayer/App-BrainProducts.git
-[submodule "Apps/App-Cognionics"]
-	path = Cognionics
-	url = git@github.com:labstreaminglayer/App-Cognionics.git
-[submodule "Apps/App-EGIAmpServer"]
-	path = EGIAmpServer
-	url = git@github.com:labstreaminglayer/App-EGIAmpServer.git
-[submodule "Apps/App-EmbarcaderoXE"]
-	path = EmbarcaderoXE
-	url = git@github.com:labstreaminglayer/App-EmbarcaderoXE.git
-[submodule "Apps/App-Enobio"]
-	path = Enobio
-	url = git@github.com:labstreaminglayer/App-Enobio.git
-[submodule "Apps/App-Examples"]
-	path = Examples
-	url = git@github.com:labstreaminglayer/App-Examples.git
-[submodule "Apps/App-EyeLink"]
-	path = EyeLink
-	url = git@github.com:labstreaminglayer/App-EyeLink.git
-[submodule "Apps/App-EyeTribe"]
-	path = EyeTribe
-	url = git@github.com:labstreaminglayer/App-EyeTribe.git
-[submodule "Apps/App-GameController"]
-	path = GameController
-	url = git@github.com:labstreaminglayer/App-GameController.git
-[submodule "Apps/App-Keyboard"]
-	path = Keyboard
-	url = git@github.com:labstreaminglayer/App-Keyboard.git
-[submodule "Apps/App-KinectMocap"]
-	path = KinectMocap
-	url = git@github.com:labstreaminglayer/App-KinectMocap.git
-[submodule "Apps/App-LabRecorder"]
-	path = LabRecorder
-	url = git@github.com:labstreaminglayer/App-LabRecorder.git
-[submodule "Apps/App-MATLABViewer"]
-	path = MATLABViewer
-	url = git@github.com:labstreaminglayer/App-MATLABViewer.git
-[submodule "Apps/App-MINDO"]
-	path = MINDO
-	url = git@github.com:labstreaminglayer/App-MINDO.git
-[submodule "Apps/App-MQTT"]
-	path = MQTT
-	url = git@github.com:labstreaminglayer/App-MQTT.git
-[submodule "Apps/App-Mouse"]
-	path = Mouse
-	url = git@github.com:labstreaminglayer/App-Mouse.git
-[submodule "Apps/App-Neuroscan"]
-	path = Neuroscan
-	url = git@github.com:labstreaminglayer/App-Neuroscan.git
-[submodule "Apps/App-OpenVR"]
-	path = OpenVR
-	url = git@github.com:labstreaminglayer/App-OpenVR.git
-[submodule "Apps/App-OptiTrack"]
-	path = OptiTrack
-	url = git@github.com:labstreaminglayer/App-OptiTrack.git
-[submodule "Apps/App-PhaseSpace"]
-	path = PhaseSpace
-	url = git@github.com:labstreaminglayer/App-PhaseSpace.git
-[submodule "Apps/App-PupilLabs"]
-	path = PupilLabs
-	url = git@github.com:labstreaminglayer/App-PupilLabs.git
-[submodule "Apps/App-ReceiveVideo"]
-	path = ReceiveVideo
-	url = git@github.com:labstreaminglayer/App-ReceiveVideo.git
-[submodule "Apps/App-SMIEyetracker"]
-	path = SMIEyetracker
-	url = git@github.com:labstreaminglayer/App-SMIEyetracker.git
-[submodule "Apps/App-SerialPort"]
-	path = SerialPort
-	url = git@github.com:labstreaminglayer/App-SerialPort.git
-[submodule "Apps/App-StaticInfo"]
-	path = StaticInfo
-	url = git@github.com:labstreaminglayer/App-StaticInfo.git
-[submodule "Apps/App-Tobii"]
-	path = Tobii
-	url = git@github.com:labstreaminglayer/App-Tobii.git
-[submodule "Apps/App-Wiimote"]
-	path = Wiimote
-	url = git@github.com:labstreaminglayer/App-Wiimote.git
-[submodule "Apps/App-XDFBrowser"]
-	path = XDFBrowser
-	url = git@github.com:labstreaminglayer/App-XDFBrowser.git
-[submodule "Apps/App-eegoSports"]
-	path = eegoSports
-	url = git@github.com:labstreaminglayer/App-eegoSports.git
-[submodule "Apps/App-emotiv"]
-	path = emotiv
-	url = git@github.com:labstreaminglayer/App-emotiv.git
-[submodule "Apps/App-g.Tec"]
-	path = g.Tec
-	url = git@github.com:labstreaminglayer/App-g.Tec.git
-[submodule "Apps/App-AudioCaptureWin"]
-	path = AudioCaptureWin
-	url = git@github.com:labstreaminglayer/App-AudioCaptureWin.git
-[submodule "Apps/App-BAlert"]
-	path = BAlert
-	url = git@github.com:labstreaminglayer/App-BAlert.git
 [submodule "LSL/liblsl-Android"]
 	path = LSL/liblsl-Android
-	url = git@github.com:labstreaminglayer/liblsl-Android
+	url = https://github.com/labstreaminglayer/liblsl-Android
 [submodule "LSL/liblsl-Csharp"]
 	path = LSL/liblsl-Csharp
-	url = git@github.com:labstreaminglayer/liblsl-Csharp
+	url = https://github.com/labstreaminglayer/liblsl-Csharp
 [submodule "LSL/liblsl-Generic"]
 	path = LSL/liblsl-Generic
-	url = git@github.com:labstreaminglayer/liblsl-Generic
+	url = https://github.com/labstreaminglayer/liblsl-Generic
 [submodule "LSL/liblsl-Java"]
 	path = LSL/liblsl-Java
-	url = git@github.com:labstreaminglayer/liblsl-Java
+	url = https://github.com/labstreaminglayer/liblsl-Java
 [submodule "LSL/liblsl-matlab"]
 	path = LSL/liblsl-matlab
-	url = git@github.com:labstreaminglayer/liblsl-matlab
+	url = https://github.com/labstreaminglayer/liblsl-matlab
 [submodule "LSL/liblsl-Python"]
 	path = LSL/liblsl-Python
-	url = git@github.com:labstreaminglayer/liblsl-Python
+	url = https://github.com/labstreaminglayer/liblsl-Python
 [submodule "LSL/liblsl"]
 	path = LSL/liblsl
-	url = git@github.com:labstreaminglayer/liblsl
+	url = https://github.com/labstreaminglayer/liblsl
 [submodule "Apps/OutOfTreeTest"]
 	path = Apps/OutOfTreeTest
-	url = git@github.com:labstreaminglayer/App-OutOfTreeTest
+	url = https://github.com/labstreaminglayer/App-OutOfTreeTest.git
 [submodule "Apps/AudioCaptureWin"]
 	path = Apps/AudioCaptureWin
-	url = git@github.com:labstreaminglayer/App-AudioCaptureWin
+	url = https://github.com/labstreaminglayer/App-AudioCaptureWin.git
 [submodule "Apps/BAlert"]
 	path = Apps/BAlert
-	url = git@github.com:labstreaminglayer/App-BAlert
+	url = https://github.com/labstreaminglayer/App-BAlert.git
 [submodule "Apps/AMTIForcePlate"]
 	path = Apps/AMTIForcePlate
-	url = git@github.com:labstreaminglayer/App-AMTIForcePlate
+	url = https://github.com/labstreaminglayer/App-AMTIForcePlate.git
 [submodule "Apps/EmbarcaderoXE"]
 	path = Apps/EmbarcaderoXE
-	url = git@github.com:labstreaminglayer/App-EmbarcaderoXE
+	url = https://github.com/labstreaminglayer/App-EmbarcaderoXE.git
 [submodule "Apps/LabRecorder"]
 	path = Apps/LabRecorder
-	url = git@github.com:labstreaminglayer/App-LabRecorder
+	url = https://github.com/labstreaminglayer/App-LabRecorder.git
 [submodule "Apps/Wiimote"]
 	path = Apps/Wiimote
-	url = git@github.com:labstreaminglayer/App-Wiimote
+	url = https://github.com/labstreaminglayer/App-Wiimote.git
 [submodule "Apps/Enobio"]
 	path = Apps/Enobio
-	url = git@github.com:labstreaminglayer/App-Enobio
+	url = https://github.com/labstreaminglayer/App-Enobio.git
 [submodule "Apps/MATLABViewer"]
 	path = Apps/MATLABViewer
-	url = git@github.com:labstreaminglayer/App-MATLABViewer
+	url = https://github.com/labstreaminglayer/App-MATLABViewer.git
 [submodule "Apps/PhaseSpace"]
 	path = Apps/PhaseSpace
-	url = git@github.com:labstreaminglayer/App-PhaseSpace
+	url = https://github.com/labstreaminglayer/App-PhaseSpace.git
 [submodule "Apps/XDFBrowser"]
 	path = Apps/XDFBrowser
-	url = git@github.com:labstreaminglayer/App-XDFBrowser
+	url = https://github.com/labstreaminglayer/App-XDFBrowser.git
 [submodule "Apps/Examples"]
 	path = Apps/Examples
-	url = git@github.com:labstreaminglayer/App-Examples
+	url = https://github.com/labstreaminglayer/App-Examples.git
 [submodule "Apps/MINDO"]
 	path = Apps/MINDO
-	url = git@github.com:labstreaminglayer/App-MINDO
+	url = https://github.com/labstreaminglayer/App-MINDO.git
 [submodule "Apps/PupilLabs"]
 	path = Apps/PupilLabs
-	url = git@github.com:labstreaminglayer/App-PupilLabs
+	url = https://github.com/labstreaminglayer/App-PupilLabs.git
 [submodule "Apps/eegoSports"]
 	path = Apps/eegoSports
-	url = git@github.com:labstreaminglayer/App-eegoSports
+	url = https://github.com/labstreaminglayer/App-eegoSports.git
 [submodule "Apps/Benchmarks"]
 	path = Apps/Benchmarks
-	url = git@github.com:labstreaminglayer/App-Benchmarks
+	url = https://github.com/labstreaminglayer/App-Benchmarks.git
 [submodule "Apps/EyeLink"]
 	path = Apps/EyeLink
-	url = git@github.com:labstreaminglayer/App-EyeLink
+	url = https://github.com/labstreaminglayer/App-EyeLink.git
 [submodule "Apps/MQTT"]
 	path = Apps/MQTT
-	url = git@github.com:labstreaminglayer/App-MQTT
+	url = https://github.com/labstreaminglayer/App-MQTT.git
 [submodule "Apps/ReceiveVideo"]
 	path = Apps/ReceiveVideo
-	url = git@github.com:labstreaminglayer/App-ReceiveVideo
+	url = https://github.com/labstreaminglayer/App-ReceiveVideo.git
 [submodule "Apps/emotiv"]
 	path = Apps/emotiv
-	url = git@github.com:labstreaminglayer/App-emotiv
+	url = https://github.com/labstreaminglayer/App-emotiv.git
 [submodule "Apps/BioSemi"]
 	path = Apps/BioSemi
-	url = git@github.com:labstreaminglayer/App-BioSemi
+	url = https://github.com/labstreaminglayer/App-BioSemi.git
 [submodule "Apps/EyeTribe"]
 	path = Apps/EyeTribe
-	url = git@github.com:labstreaminglayer/App-EyeTribe
+	url = https://github.com/labstreaminglayer/App-EyeTribe.git
 [submodule "Apps/Mouse"]
 	path = Apps/Mouse
-	url = git@github.com:labstreaminglayer/App-Mouse
+	url = https://github.com/labstreaminglayer/App-Mouse.git
 [submodule "Apps/SMIEyetracker"]
 	path = Apps/SMIEyetracker
-	url = git@github.com:labstreaminglayer/App-SMIEyetracker
+	url = https://github.com/labstreaminglayer/App-SMIEyetracker.git
 [submodule "Apps/g.Tec"]
 	path = Apps/g.Tec
-	url = git@github.com:labstreaminglayer/App-g.Tec
+	url = https://github.com/labstreaminglayer/App-g.Tec.git
 [submodule "Apps/BrainProducts"]
 	path = Apps/BrainProducts
-	url = git@github.com:labstreaminglayer/App-BrainProducts
+	url = https://github.com/labstreaminglayer/App-BrainProducts.git
 [submodule "Apps/GameController"]
 	path = Apps/GameController
-	url = git@github.com:labstreaminglayer/App-GameController
+	url = https://github.com/labstreaminglayer/App-GameController.git
 [submodule "Apps/Neuroscan"]
 	path = Apps/Neuroscan
-	url = git@github.com:labstreaminglayer/App-Neuroscan
+	url = https://github.com/labstreaminglayer/App-Neuroscan.git
 [submodule "Apps/SerialPort"]
 	path = Apps/SerialPort
-	url = git@github.com:labstreaminglayer/App-SerialPort
+	url = https://github.com/labstreaminglayer/App-SerialPort.git
 [submodule "Apps/Cognionics"]
 	path = Apps/Cognionics
-	url = git@github.com:labstreaminglayer/App-Cognionics
+	url = https://github.com/labstreaminglayer/App-Cognionics.git
 [submodule "Apps/Keyboard"]
 	path = Apps/Keyboard
-	url = git@github.com:labstreaminglayer/App-Keyboard
+	url = https://github.com/labstreaminglayer/App-Keyboard.git
 [submodule "Apps/OpenVR"]
 	path = Apps/OpenVR
-	url = git@github.com:labstreaminglayer/App-OpenVR
+	url = https://github.com/labstreaminglayer/App-OpenVR.git
 [submodule "Apps/StaticInfo"]
 	path = Apps/StaticInfo
-	url = git@github.com:labstreaminglayer/App-StaticInfo
+	url = https://github.com/labstreaminglayer/App-StaticInfo.git
 [submodule "Apps/EGIAmpServer"]
 	path = Apps/EGIAmpServer
-	url = git@github.com:labstreaminglayer/App-EGIAmpServer
+	url = https://github.com/labstreaminglayer/App-EGIAmpServer.git
 [submodule "Apps/KinectMocap"]
 	path = Apps/KinectMocap
-	url = git@github.com:labstreaminglayer/App-KinectMocap
+	url = https://github.com/labstreaminglayer/App-KinectMocap.git
 [submodule "Apps/OptiTrack"]
 	path = Apps/OptiTrack
-	url = git@github.com:labstreaminglayer/App-OptiTrack
+	url = https://github.com/labstreaminglayer/App-OptiTrack.git
 [submodule "Apps/Tobii"]
 	path = Apps/Tobii
-	url = git@github.com:labstreaminglayer/App-Tobii
+	url = https://github.com/labstreaminglayer/App-Tobii.git
