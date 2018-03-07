@@ -33,7 +33,7 @@ add_subdirectory(Apps)
 
 # Generate packages for LSL and all built apps
 if(UNIX AND NOT APPLE)
-	include(LslCPackCommon)
-	include(LslCPackDeb)
+	include(LSLCPackCommon)
+	include(LSLCPackDeb)
 	include(CPack)
 endif()
