@@ -1,5 +1,14 @@
 # Common functions and settings for LSL
 
+# set build type and default install dir if not done already
+if(NOT CMAKE_BUILD_TYPE)
+	set(CMAKE_BUILD_TYPE "Release" CACHE STRING "Build type" FORCE)
+endif()
+if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+	set(CMAKE_INSTALL_PREFIX "${CMAKE_CURRENT_LIST_DIR}/build/install/lsl_${CMAKE_BUILD_TYPE}" CACHE PATH
+		"Where to put redistributable binaries" FORCE)
+	message(WARNING "CMAKE_INSTALL_PREFIX default initialized to ${CMAKE_INSTALL_PREFIX}")
+endif()
 
 # Try to find the labstreaminglayer library and enable
 # the imported target LSL::lsl
@@ -76,6 +85,7 @@ endfunction()
 # OS X (homebrew) and Conda the libraries are installed
 # separately to save space, ease upgrading and distribution
 function(installLSLApp target)
+	set(CPACK_COMPONENT_${PROJECT_NAME}_DEPENDS liblsl PARENT_SCOPE)
 	if(LSL_UNIXFOLDERS)
 		install(TARGETS ${target}
 			COMPONENT "LSL${PROJECT_NAME}"
@@ -99,7 +109,6 @@ function(installLSLAppSingleFolder target)
 		RUNTIME DESTINATION ${PROJECT_NAME}
 		LIBRARY DESTINATION ${PROJECT_NAME}/lib
 	)
-	set(CPACK_COMPONENT_${PROJECT_NAME}_DEPENDS liblsl PARENT_SCOPE)
 	set(appbin "${CMAKE_INSTALL_PREFIX}/${PROJECT_NAME}/${target}${CMAKE_EXECUTABLE_SUFFIX}")
 	
 	# Copy lsl library for WIN32 or MacOS.
