@@ -32,8 +32,4 @@ include(LSLCMake)
 add_subdirectory(Apps)
 
 # Generate packages for LSL and all built apps
-if(UNIX AND NOT APPLE)
-	include(LSLCPackCommon)
-	include(LSLCPackDeb)
-	include(CPack)
-endif()
+include(LSLGenerateCPackConfig)

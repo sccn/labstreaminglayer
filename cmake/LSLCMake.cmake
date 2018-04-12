@@ -1,5 +1,14 @@
 # Common functions and settings for LSL
 
+# set build type and default install dir if not done already
+if(NOT CMAKE_BUILD_TYPE)
+	set(CMAKE_BUILD_TYPE "Release" CACHE STRING "Build type" FORCE)
+endif()
+if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+	set(CMAKE_INSTALL_PREFIX "${CMAKE_CURRENT_LIST_DIR}/build/install/lsl_${CMAKE_BUILD_TYPE}" CACHE PATH
+		"Where to put redistributable binaries" FORCE)
+	message(WARNING "CMAKE_INSTALL_PREFIX default initialized to ${CMAKE_INSTALL_PREFIX}")
+endif()
 
 # Try to find the labstreaminglayer library and enable
 # the imported target LSL::lsl
