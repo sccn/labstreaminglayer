@@ -76,6 +76,7 @@ endfunction()
 # OS X (homebrew) and Conda the libraries are installed
 # separately to save space, ease upgrading and distribution
 function(installLSLApp target)
+	set(CPACK_COMPONENT_${PROJECT_NAME}_DEPENDS liblsl PARENT_SCOPE)
 	if(LSL_UNIXFOLDERS)
 		install(TARGETS ${target}
 			COMPONENT "LSL${PROJECT_NAME}"
@@ -99,7 +100,6 @@ function(installLSLAppSingleFolder target)
 		RUNTIME DESTINATION ${PROJECT_NAME}
 		LIBRARY DESTINATION ${PROJECT_NAME}/lib
 	)
-	set(CPACK_COMPONENT_${PROJECT_NAME}_DEPENDS liblsl PARENT_SCOPE)
 	set(appbin "${CMAKE_INSTALL_PREFIX}/${PROJECT_NAME}/${target}${CMAKE_EXECUTABLE_SUFFIX}")
 	
 	# Copy lsl library for WIN32 or MacOS.
