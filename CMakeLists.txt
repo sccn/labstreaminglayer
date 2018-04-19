@@ -1,15 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 project(LabStreamingLayer)
 
-if(NOT CMAKE_BUILD_TYPE)
-	set(CMAKE_BUILD_TYPE "Release" CACHE STRING "Build type" FORCE)
-endif()
-if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
-	SET(CMAKE_INSTALL_PREFIX "${CMAKE_CURRENT_LIST_DIR}/build/install/lsl_${CMAKE_BUILD_TYPE}" CACHE PATH
-		"Where to put redistributable binaries" FORCE)
-	message(WARNING "CMAKE_INSTALL_PREFIX default initialized to ${CMAKE_INSTALL_PREFIX}")
-endif()
-
 # add the liblsl build directory
 add_subdirectory(LSL/liblsl)
 
@@ -31,5 +22,10 @@ include(LSLCMake)
 # and includes their build configurations
 add_subdirectory(Apps)
 
+# When building the whole tree, no component specific versions can be used
+# https://stackoverflow.com/q/44951598/73299
+set(CPACK_PACKAGE_VERSION_MAJOR 0)
+set(CPACK_PACKAGE_VERSION_MINOR 0)
+set(CPACK_PACKAGE_VERSION_PATCH 1)
 # Generate packages for LSL and all built apps
-include(LSLGenerateCPackConfig)
+LSLGenerateCPackConfig()

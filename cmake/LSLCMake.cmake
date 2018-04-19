@@ -1,5 +1,7 @@
 # Common functions and settings for LSL
 
+message(STATUS "Included LSL CMake helpers, rev. 1")
+
 # set build type and default install dir if not done already
 if(NOT CMAKE_BUILD_TYPE)
 	set(CMAKE_BUILD_TYPE "Release" CACHE STRING "Build type" FORCE)
@@ -282,3 +284,38 @@ if(WIN32 AND MSVC)
 		message(STATUS "Did not find Boost. If you need it then set BOOST_ROOT and/or BOOST_LIBRARYDIR")
 	endif()
 endif()
+
+function(LSLGenerateCPackConfig)
+	# CPack configuration
+	set(CPACK_ARCHIVE_COMPONENT_INSTALL ON PARENT_SCOPE)
+	set(CPACK_PACKAGE_NAME ${PROJECT_NAME} PARENT_SCOPE)
+	set(CPACK_PACKAGE_VERSION_MAJOR ${PROJECT_VERSION_MAJOR} PARENT_SCOPE)
+	set(CPACK_PACKAGE_VERSION_MINOR ${PROJECT_VERSION_MINOR} PARENT_SCOPE)
+	set(CPACK_PACKAGE_VERSION_PATCH ${PROJECT_VERSION_PATCH} PARENT_SCOPE)
+	set(SYSTEM_PROCESSOR ${CMAKE_SYSTEM_PROCESSOR} PARENT_SCOPE)
+
+	if(APPLE)
+		set(CPACK_GENERATOR "TBZ2")
+	elseif(WIN32)
+		set(CPACK_GENERATOR "ZIP")
+	elseif(UNIX)
+		set(CPACK_GENERATOR DEB)
+		set(CPACK_SET_DESTDIR 1)
+		set(CPACK_INSTALL_PREFIX "/usr")
+		set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Tristan Stenner <ttstenner@gmail.com>")
+		set(CPACK_DEBIAN_ENABLE_COMPONENT_DEPENDS 1)
+		set(CPACK_DEB_COMPONENT_INSTALL ON)
+		set(CPACK_DEBIAN_PACKAGE_PRIORITY optional)
+
+		# include distribution name (e.g. trusty or xenial) in the file name
+		# only works on CMake>=3.6, does nothing on CMake<3.6
+		find_program(LSB_RELEASE lsb_release)
+		execute_process(COMMAND ${LSB_RELEASE} -cs
+			OUTPUT_VARIABLE LSB_RELEASE_CODENAME
+			OUTPUT_STRIP_TRAILING_WHITESPACE
+		)
+		set(CPACK_DEBIAN_FILE_NAME "DEB-DEFAULT")
+		set(CPACK_DEBIAN_PACKAGE_RELEASE ${LSB_RELEASE_CODENAME})
+	endif()
+	include(CPack)
+endfunction()
