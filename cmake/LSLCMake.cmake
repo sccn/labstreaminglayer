@@ -1,6 +1,6 @@
 # Common functions and settings for LSL
 
-message(STATUS "Included LSL CMake helpers, rev. 1")
+message(STATUS "Included LSL CMake helpers, rev. 2")
 
 # set build type and default install dir if not done already
 if(NOT CMAKE_BUILD_TYPE)
@@ -24,8 +24,6 @@ if(TARGET lsl)
 else()
 	message(STATUS "Trying to find package LSL")
 	list(APPEND CMAKE_PREFIX_PATH ${CMAKE_CURRENT_LIST_DIR})
-	# If lsl was built with the bundled boost, we have to include it
-	#find_package(lslboost QUIET)
 	find_package(LSL REQUIRED)
 endif()
 
@@ -215,7 +213,7 @@ endfunction()
 
 # default paths, versions and magic to guess it on windows
 # guess default paths for Windows / VC
-set(LATEST_QT_VERSION "5.10.0")
+set(LATEST_QT_VERSION "5.10.1")
 
 # Boost autoconfig:
 # Original author: Ryan Pavlik <ryan@sensics.com> <ryan.pavlik@gmail.com
@@ -246,7 +244,7 @@ if(WIN32 AND MSVC)
 		set(VCYEAR 2017)
 		set(_vs_ver 14.1)
 	else()
-		message(WARNING "You're using an untested Visual C++ compiler.")
+		message(WARNING "You're using an untested Visual C++ compiler (MSVC_VERSION: ${MSVC_VERSION}).")
 	endif()
 	if(NOT _vs_ver)
 		message(WARNING "You're using an untested Visual C++ compiler.")
@@ -285,14 +283,14 @@ if(WIN32 AND MSVC)
 	endif()
 endif()
 
-function(LSLGenerateCPackConfig)
+macro(LSLGenerateCPackConfig)
 	# CPack configuration
-	set(CPACK_ARCHIVE_COMPONENT_INSTALL ON PARENT_SCOPE)
-	set(CPACK_PACKAGE_NAME ${PROJECT_NAME} PARENT_SCOPE)
-	set(CPACK_PACKAGE_VERSION_MAJOR ${PROJECT_VERSION_MAJOR} PARENT_SCOPE)
-	set(CPACK_PACKAGE_VERSION_MINOR ${PROJECT_VERSION_MINOR} PARENT_SCOPE)
-	set(CPACK_PACKAGE_VERSION_PATCH ${PROJECT_VERSION_PATCH} PARENT_SCOPE)
-	set(SYSTEM_PROCESSOR ${CMAKE_SYSTEM_PROCESSOR} PARENT_SCOPE)
+	set(CPACK_ARCHIVE_COMPONENT_INSTALL ON)
+	set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
+	set(CPACK_PACKAGE_VERSION_MAJOR ${PROJECT_VERSION_MAJOR})
+	set(CPACK_PACKAGE_VERSION_MINOR ${PROJECT_VERSION_MINOR})
+	set(CPACK_PACKAGE_VERSION_PATCH ${PROJECT_VERSION_PATCH})
+	set(SYSTEM_PROCESSOR ${CMAKE_SYSTEM_PROCESSOR})
 
 	if(APPLE)
 		set(CPACK_GENERATOR "TBZ2")
@@ -318,4 +316,4 @@ function(LSLGenerateCPackConfig)
 		set(CPACK_DEBIAN_PACKAGE_RELEASE ${LSB_RELEASE_CODENAME})
 	endif()
 	include(CPack)
-endfunction()
+endmacro()
