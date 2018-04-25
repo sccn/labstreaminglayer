@@ -1,6 +1,6 @@
 # Common functions and settings for LSL
 
-message(STATUS "Included LSL CMake helpers, rev. 2")
+message(STATUS "Included LSL CMake helpers, rev. 3")
 
 # set build type and default install dir if not done already
 if(NOT CMAKE_BUILD_TYPE)
@@ -45,19 +45,18 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON) # Because the ui_mainwindow.h file.
 # Enable automatic compilation of .cpp->.moc, xy.ui->ui_xy.h and resource files
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTORC ON)
+set(CMAKE_AUTORCC ON)
 
 # Boost
 #SET(Boost_DEBUG OFF) #Switch this and next to ON for help debugging Boost problems.
 #SET(Boost_DETAILED_FAILURE_MSG ON)
 if(WIN32)
 	set(Boost_USE_STATIC_LIBS ON)
-endif()
-
-IF(MSVC)
 	# Disable boost auto linking.
 	add_definitions(-DBOOST_ALL_NO_LIB )
 endif()
+
+
 
 # LSL functions, mostly for Apps
 
@@ -253,7 +252,8 @@ if(WIN32 AND MSVC)
 	if(NOT Qt5_DIR)
 		set(Qt5_DIR "C:/Qt/${LATEST_QT_VERSION}/msvc${VCYEAR}_${lslplatform}/lib/cmake/Qt5")
 		message(STATUS "You didn't specify a Qt5_DIR. I'm guessing it's ${Qt5_DIR}.")
-		message(STATUS "If you are building Apps that require Qt and if this is wrong then please add the correct dir with -DQt5_DIR=/path/to/Qt5/lib/cmake/Qt5")
+		message(STATUS "If you are building Apps that require Qt and if this is wrong then please add the correct dir:")
+		message(STATUS "  -DQt5_DIR=/path/to/Qt5/5.x.y/msvc_20xy_z/lib/cmake/Qt5")
 	endif()
 
 	if((NOT BOOST_ROOT) AND (NOT Boost_INCLUDE_DIR) AND (NOT Boost_LIBRARY_DIR))
