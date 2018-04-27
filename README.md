@@ -23,7 +23,7 @@ You may also wish to subscribe to the [LSL mailing list](https://mailman.ucsd.ed
 
 This is only a repository containing submodules for all projects. Depending on your needs, you should
 either download ready-to-use binary packages or clone just the repositories you need (see
-[liblsl](https://github.com/labstreaminglayer/superrepo/tree/master/LSL for an overview).
+[liblsl](https://github.com/labstreaminglayer/labstreaminglayer/tree/master/LSL) for an overview).
 
 ## Download Binary Releases
 
