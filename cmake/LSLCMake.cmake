@@ -1,6 +1,6 @@
 # Common functions and settings for LSL
 
-message(STATUS "Included LSL CMake helpers, rev. 3")
+message(STATUS "Included LSL CMake helpers, rev. 4")
 
 # set build type and default install dir if not done already
 if(NOT CMAKE_BUILD_TYPE)
@@ -229,10 +229,13 @@ if(WIN32 AND MSVC)
 	# see https://cmake.org/cmake/help/latest/variable/MSVC_VERSION.html
 	if(MSVC_VERSION EQUAL 1500)
 		set(VCYEAR 2008)
+		set(_vs_ver 9.0)
 	elseif(MSVC_VERSION EQUAL 1600)
 		set(VCYEAR 2010)
+		set(_vs_ver 10.0)
 	elseif(MSVC_VERSION EQUAL 1700)
 		set(VCYEAR 2012)
+		set(_vs_ver 11.0)
 	elseif(MSVC_VERSION EQUAL 1800)
 		set(VCYEAR 2013)
 		set(_vs_ver 12.0)
@@ -244,9 +247,6 @@ if(WIN32 AND MSVC)
 		set(_vs_ver 14.1)
 	else()
 		message(WARNING "You're using an untested Visual C++ compiler (MSVC_VERSION: ${MSVC_VERSION}).")
-	endif()
-	if(NOT _vs_ver)
-		message(WARNING "You're using an untested Visual C++ compiler.")
 	endif()
 
 	if(NOT Qt5_DIR)
