@@ -1,9 +1,10 @@
 # Common functions and settings for LSL
 
-message(STATUS "Included LSL CMake helpers, rev. 4")
+message(STATUS "Included LSL CMake helpers, rev. 5")
 
 # set build type and default install dir if not done already
 if(NOT CMAKE_BUILD_TYPE)
+	message(STATUS "CMAKE_BUILD_TYPE was default initialized to Release")
 	set(CMAKE_BUILD_TYPE "Release" CACHE STRING "Build type" FORCE)
 endif()
 if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
@@ -286,10 +287,11 @@ endif()
 macro(LSLGenerateCPackConfig)
 	# CPack configuration
 	set(CPACK_ARCHIVE_COMPONENT_INSTALL ON)
-	set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
+	set(CPACK_PACKAGE_NAME lsl)
 	set(CPACK_PACKAGE_VERSION_MAJOR ${PROJECT_VERSION_MAJOR})
 	set(CPACK_PACKAGE_VERSION_MINOR ${PROJECT_VERSION_MINOR})
 	set(CPACK_PACKAGE_VERSION_PATCH ${PROJECT_VERSION_PATCH})
+	set(CPACK_STRIP_FILES ON)
 	set(SYSTEM_PROCESSOR ${CMAKE_SYSTEM_PROCESSOR})
 
 	if(APPLE)
