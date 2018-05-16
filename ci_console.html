@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"><title>Start CI builds</title>
+<html><head><meta charset="utf-8"/>
+	<title>Start CI builds</title>
 	<style type="text/css">
 		body{
 			margin:40px auto;
@@ -53,6 +54,7 @@
 		// Useful presets for AppVeyor
 		// Keys: `env` contains environment settings, `CMakeArgs` (optional) arguments to CMake
 		let appveyorcompilers = {'Default': {},
+		'VS2015 x64 new image': {'VCVER': '14.0', 'ARCH': 'amd64', 'QTCOMPILER': 'msvc2017_64', 'APPVEYOR_BUILD_WORKER_IMAGE': 'Visual Studio 2017'},
 		'VS2015 x64': {'VCVER': '14.0', 'ARCH': 'amd64', 'QTCOMPILER': 'msvc2015_64'},
 		'VS2008 x86': {'VCVER': '9.0',  'ARCH': 'x86',   'QTCOMPILER': 'not supported'},
 	};
@@ -97,6 +99,15 @@
 	});
 </script></head>
 <body><form action="#">
+		<datalist id="accountNameList"><option value="labstreaminglayer"/></datalist>
+		<datalist id="projectSlugList">
+			<option value="liblsl"/>
+			<option value="App-LabRecorder"/>
+		</datalist>
+		<datalist id="cmakeargsList">
+			<option value="-DLSL_LSLBOOST_PATH=external"/>
+			<option value="-DLSL_LSLBOOST_PATH=lslboost -DCMAKE_INTERPROCEDURAL_OPTIMIZATION:BOOL=1 -DCMAKE_POLICY_DEFAULT_CMP0069=NEW"/>
+		</datalist>
 	<h1>CI build console</h1>
 	<h2>What's this for?</h2>
 	<span>LSL supports a large range of systems, from tiny Raspberry Pis and Android/iOS Phones to
@@ -108,15 +119,17 @@
 		to start a CI build and see if everything works.
 	</span>
 	<fieldset><legend>Account / Repo settings</legend>
-		<label>Account Name: <input id="accountName" value="tstenner"/></label><br>
-		<label>Repo Name: <input id="projectSlug"  value="labstreaminglayer"/></label><br>
+		<label>Account Name:
+			<input id="accountName" type="text" list="accountNameList"/
+		</label><br>
+		<label>Repo Name: <input id="projectSlug" type="text" list="projectSlugList"/></label><br>
 		<label><a href="https://ci.appveyor.com/api-token">AppVeyor-Token:</a> <input id="avtoken" value=""/></label><br>
 		<label><a href="https://docs.travis-ci.com/user/triggering-builds/">Travis-Token:</a> <input id="trtoken" value=""/></label><br>
 		<input type="button" value="Save settings locally" onclick="savesettings()">
 	</fieldset>
 	<fieldset><legend>Build settings</legend>
-		<label>Branch (optional): <input id="branch" value=""/></label><br>
-		<label>CMake args: <input id="cmakeargs" value="-DLSLAPPS_LabRecorder=1"/></label><br>
+		<label>Branch (optional): <input id="branch" type="text" /></label><br>
+		<label>CMake args: <input id="cmakeargs" type="text" list="cmakeargsList"/></label><br>
 	</fieldset>
 	<!--Travis-Repo-ID: <input id="travisrepoid" value="14417672"></br>-->
 	<fieldset><legend>AppVeyor Settings</legend>
@@ -124,7 +137,9 @@
 		<label>Env: <textarea id="avcompilersettings">{}</textarea></label>
 		<input id="buildbtnAV" type="button" value="Build on AppVeyor" onclick="buildappveyor()">
 	</fieldset>
-	<fieldset><legend><a href="https://docs.travis-ci.com/user/triggering-builds/">Travis settings</a></legend>
+	<fieldset><legend>
+		<a href="https://docs.travis-ci.com/user/triggering-builds/">Travis settings</a>
+	</legend>
 		<input id="buildbtnTravis" type="button" value="Build on Travis" onclick="buildtravis()">
 	</fieldset>
 </form>
