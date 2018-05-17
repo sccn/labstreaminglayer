@@ -32,14 +32,3 @@ build_script:
 artifacts:
 - path: build/install
   name: lsl_%ARCH%_%QTCOMPILER%_$(APPVEYOR_BUILD_VERSION)_${APPVEYOR_REPO_COMMIT}
-deploy:
-- provider: BinTray
-  username: tstenner
-  api_key:
-    secure: zcgGai0IfIlkwU5IXEvoJ/Kr+w2DbKIBJr/677Q52BPwUT0aFWSvJuZp2obpY3u5
-  subject: tstenner
-  repo: labstreaminglayer
-  package: LSL
-  publish: false
-  explode: false
-  override: false
