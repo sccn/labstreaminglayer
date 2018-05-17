@@ -11,7 +11,7 @@
 	path = LSL/liblsl-Java
 	url = https://github.com/labstreaminglayer/liblsl-Java
 [submodule "LSL/liblsl-matlab"]
-	path = LSL/liblsl-matlab
+	path = LSL/liblsl-Matlab
 	url = https://github.com/labstreaminglayer/liblsl-matlab
 [submodule "LSL/liblsl-Python"]
 	path = LSL/liblsl-Python
