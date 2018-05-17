@@ -28,7 +28,7 @@ build_script:
 
     cmake -G Ninja -DQt5_DIR=C:/Qt/%QTVER%/%QTCOMPILER%/lib/cmake/Qt5 -DBOOST_ROOT=C:/Libraries/boost_1_63_0 -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=install %CMakeArgs% ../
 
-    cmake --build . --config Release --target LSLPACKAGE
+    cmake --build . --config Release --target install
 artifacts:
 - path: build/install
   name: lsl_%ARCH%_%QTCOMPILER%_$(APPVEYOR_BUILD_VERSION)_${APPVEYOR_REPO_COMMIT}
