@@ -51,6 +51,7 @@ endif()
 
 if(LSLAPPS_BrainAmp)
     add_subdirectory(BrainProducts/BrainAmpSeries)
+    add_subdirectory(BrainProducts/BrainVisionRDA)
     #add_subdirectory(BrainProducts/BrainAmpImpedance)
 endif()
 
