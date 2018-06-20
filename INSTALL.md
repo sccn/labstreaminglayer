@@ -68,6 +68,8 @@ To build many of the Apps, you may need Boost and/or Qt:
 On Mac, if using homebrew Qt5, it is necessary to run the following from the project root:
 `sudo bash ./fix_mac.sh`
 
+See individual app subfolders for additional dependencies.
+
 # Build instructions
 
 There are two build types:
@@ -77,7 +79,7 @@ There are two build types:
 
 ## In tree builds (recommended)
 
-1. extract the zip file or clone the repository (`git clone https://github.com/sccn/labstreaminglayer.git`)
+1. extract the zip file or clone the repository (`git clone --recurse-submodules https://github.com/labstreaminglayer/labstreaminglayer.git`)
 2. Configure the project using cmake
     * Option 1 - Using the GUI
         - Windows only:
