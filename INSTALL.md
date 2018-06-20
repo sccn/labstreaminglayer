@@ -59,7 +59,7 @@ To build many of the Apps, you may need Boost and/or Qt:
 * [Boost](https://boost.org) (+path set with `-DBOOST_ROOT=path/to/boost`)
     - Windows: install the [precompiled binaries](https://sourceforge.net/projects/boost/files/boost-binaries/)
         - Choose the version that matches your compiler and target architecture (probably 64-bit). You can find the mapping between visual studio number and compiler version [here](https://en.wikipedia.org/wiki/Microsoft_Visual_C%2B%2B#Internal_version_numbering). 
-    - Debian / Ubuntu Linux: install the `libboost-dev` package
+    - Debian / Ubuntu Linux: install the `libboost-all-dev` package
     - OS X: install Boost via [Homebrew](https://brew.sh/)
 * [Qt](http://qt.io) (+path set with `-DQt5_DIR=C:/path_to/Qt/<version>/<compiler_arch>/lib/cmake/Qt5/` or `set PATH=C:\Qt\<version>\<compiler_arch>;%PATH%`)
     - Windows: use the [installer](http://download.qt.io/official_releases/online_installers/qt-unified-windows-x86-online.exe)
