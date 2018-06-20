@@ -63,7 +63,7 @@ To build many of the Apps, you may need Boost and/or Qt:
     - OS X: install Boost via [Homebrew](https://brew.sh/)
 * [Qt](http://qt.io) (+path set with `-DQt5_DIR=C:/path_to/Qt/<version>/<compiler_arch>/lib/cmake/Qt5/` or `set PATH=C:\Qt\<version>\<compiler_arch>;%PATH%`)
     - Windows: use the [installer](http://download.qt.io/official_releases/online_installers/qt-unified-windows-x86-online.exe)
-    - Debian / Ubuntu Linux: install the `qtbase5-dev` package
+    - Debian / Ubuntu Linux: install the `qt5-default` package
 
 On Mac, if using homebrew Qt5, it is necessary to run the following from the project root:
 `sudo bash ./fix_mac.sh`
