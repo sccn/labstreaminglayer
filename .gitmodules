@@ -19,6 +19,7 @@
 [submodule "LSL/liblsl"]
 	path = LSL/liblsl
 	url = https://github.com/labstreaminglayer/liblsl
+	update = rebase
 [submodule "Apps/OutOfTreeTest"]
 	path = Apps/OutOfTreeTest
 	url = https://github.com/labstreaminglayer/App-OutOfTreeTest.git
@@ -28,6 +29,9 @@
 [submodule "Apps/BAlert"]
 	path = Apps/BAlert
 	url = https://github.com/labstreaminglayer/App-BAlert.git
+[submodule "Apps/BestPracticesGUI"]
+	path = Apps/BestPracticesGUI
+	url = https://github.com/labstreaminglayer/App-BestPracticesGUI.git
 [submodule "Apps/AMTIForcePlate"]
 	path = Apps/AMTIForcePlate
 	url = https://github.com/labstreaminglayer/App-AMTIForcePlate.git
@@ -130,3 +134,6 @@
 [submodule "Apps/Tobii"]
 	path = Apps/Tobii
 	url = https://github.com/labstreaminglayer/App-Tobii.git
+[submodule "App-BestPracticesGUI"]
+	path = App-BestPracticesGUI
+	url = https://github.com/labstreaminglayer/App-BestPracticesGUI.git
