@@ -59,14 +59,16 @@ To build many of the Apps, you may need Boost and/or Qt:
 * [Boost](https://boost.org) (+path set with `-DBOOST_ROOT=path/to/boost`)
     - Windows: install the [precompiled binaries](https://sourceforge.net/projects/boost/files/boost-binaries/)
         - Choose the version that matches your compiler and target architecture (probably 64-bit). You can find the mapping between visual studio number and compiler version [here](https://en.wikipedia.org/wiki/Microsoft_Visual_C%2B%2B#Internal_version_numbering). 
-    - Debian / Ubuntu Linux: install the `libboost-dev` package
+    - Debian / Ubuntu Linux: install the `libboost-all-dev` package
     - OS X: install Boost via [Homebrew](https://brew.sh/)
 * [Qt](http://qt.io) (+path set with `-DQt5_DIR=C:/path_to/Qt/<version>/<compiler_arch>/lib/cmake/Qt5/` or `set PATH=C:\Qt\<version>\<compiler_arch>;%PATH%`)
     - Windows: use the [installer](http://download.qt.io/official_releases/online_installers/qt-unified-windows-x86-online.exe)
-    - Debian / Ubuntu Linux: install the `qtbase5-dev` package
+    - Debian / Ubuntu Linux: install the `qt5-default` package
 
 On Mac, if using homebrew Qt5, it is necessary to run the following from the project root:
 `sudo bash ./fix_mac.sh`
+
+See individual app subfolders for additional dependencies.
 
 # Build instructions
 
@@ -77,7 +79,7 @@ There are two build types:
 
 ## In tree builds (recommended)
 
-1. extract the zip file or clone the repository (`git clone https://github.com/sccn/labstreaminglayer.git`)
+1. extract the zip file or clone the repository (`git clone --recurse-submodules https://github.com/labstreaminglayer/labstreaminglayer.git`)
 2. Configure the project using cmake
     * Option 1 - Using the GUI
         - Windows only:
