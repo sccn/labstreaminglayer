@@ -137,3 +137,6 @@
 [submodule "App-BestPracticesGUI"]
 	path = App-BestPracticesGUI
 	url = https://github.com/labstreaminglayer/App-BestPracticesGUI.git
+[submodule "Apps/BrainAmpSeries"]
+	path = Apps/BrainAmpSeries
+	url = https://github.com/labstreaminglayer/App-BrainAmpSeries.git
