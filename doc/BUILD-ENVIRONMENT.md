@@ -81,6 +81,8 @@ NOTE: This has worked for me in the past but IS NOT working for Boost 1.66. Some
 
 ## [Qt5](http://qt.io)
 
+For compatibility with Ubuntu 16.04, Qt5.5 is the oldest supported version.
+
 Qt5 is the recommended toolkit to create graphical user interfaces.
 To build apps using Qt, install it and tell CMake where to find it, either by
 adding the compiler specific base path to the PATH

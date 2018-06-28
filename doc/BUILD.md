@@ -163,3 +163,10 @@ in the `LSL_INSTALL_ROOT` variable (e.g. `-DLSL_INSTALL_ROOT=C:/LSL/build/instal
 or add the **absolute path** to the`LSL/cmake` subfolder
 of the ['installed' LSL directory](#install-directory-tree) to your `CMAKE_PREFIX_PATH`
 (`list(APPEND CMAKE_MODULE_PATH "C:/path/to/LSL/build/install/cmake/")`.
+
+
+## Building for multiple platforms
+
+In case you haven't got several PCs and Macs with different build environments
+to test your changes, you can use the [CI](CIs.md) to compile the code on
+multiple platforms and offer binaries to willing testers.
