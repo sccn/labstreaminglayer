@@ -71,8 +71,8 @@ There are two build types:
     - Select your compiler and click Finish.
     - Use the interface to enable building of the Apps you want to use.
     - If necessary, change options or add options/paths (`Add Entry`).
-      - [Qt](BUILD-ENVIRONMENT.md#Qt5] if the guessed path is not right
-      - [Boost](BUILD-ENVIRONMENT.md#Boost] if the default was not correct
+      - [Qt](BUILD-ENVIRONMENT.md#Qt5) if the guessed path is not right
+      - [Boost](BUILD-ENVIRONMENT.md#Boost) if the default was not correct
       - A path where redistributable binaries get copied (`CMAKE_INSTALL_PREFIX`)
       - Build type (`CMAKE_BUILD_TYPE`, either `Release` or `Debug`).
         You can change this in Visual Studio later.
