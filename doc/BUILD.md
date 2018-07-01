@@ -19,23 +19,23 @@ and the Apps to stream data from several types of devices, the
 in the [`Apps`](Apps) subfolder:
 
   labstreaminglayer
-  ├── Apps
-  │   ├── AMTI ForcePlate
-  │   ├── Examples
-  │   ├── LabRecorder
-  │   ├── [several other apps]
-  │   └── Wiimote
-  └── LSL
-    ├── liblsl
-    │   ├── external
-    │   ├── include
-    │   ├── lslboost
-    │   ├── project
-    │   ├── src
-    │   └── testing
-    ├── liblsl-Matlab
-    ├── liblsl-Python
-    └── liblsl-Java
+  |-- Apps
+  │   |-- AMTI ForcePlate
+  │   |-- Examples
+  │   |-- LabRecorder
+  │   |-- [several other apps]
+  │   |-- Wiimote
+  |-- LSL
+  │   |-- liblsl
+  |   |   |-- external
+  |   |   |-- include
+  |   |   |-- lslboost
+  |   |   |-- project
+  |   |   |-- src
+  |   |   |-- testing
+  │   |-- liblsl-Matlab
+  │   |-- liblsl-Python
+  │   |-- liblsl-Java
 
 To get the project with Git (see also
 [Cloning submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules#_cloning_submodules))
