@@ -101,7 +101,7 @@ information).
 
 ## Developer Information
 
-Please see the separate [build documentation](docs/BUILD.md).
+Please see the separate [build documentation](doc/BUILD.md).
 
 The distribution includes a range of code examples in C, C++, Python, MATLAB, Java, and C# including
 some very simple sender and receiver programs, as well as some fairly extensive demo apps.
