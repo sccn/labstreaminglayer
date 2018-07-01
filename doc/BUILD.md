@@ -18,24 +18,26 @@ and the Apps to stream data from several types of devices, the
 [C / C++ code examples](`https://github.com/labstreaminglayer/App-LabRecorder`)
 in the [`Apps`](Apps) subfolder:
 
-  . labstreaminglayer
-  * Apps
-      * AMTI ForcePlate
-      * Examples
-      * LabRecorder
-      * [several other apps]
-      * Wiimote
-  * LSL
-      * liblsl
-          * external
-          * include
-          * lslboost
-          * project
-          * src
-          * testing
-      * liblsl-Matlab
-      * liblsl-Python
-      * liblsl-Java
+```bash
+  labstreaminglayer
+  ├── Apps
+  │   ├── AMTI ForcePlate
+  │   ├── Examples
+  │   ├── LabRecorder
+  │   ├── [several other apps]
+  │   └── Wiimote
+  └── LSL
+    ├── liblsl
+    │   ├── external
+    │   ├── include
+    │   ├── lslboost
+    │   ├── project
+    │   ├── src
+    │   └── testing
+    ├── liblsl-Matlab
+    ├── liblsl-Python
+    └── liblsl-Java
+```
 
 To get the project with Git (see also
 [Cloning submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules#_cloning_submodules))
@@ -97,6 +99,7 @@ This will create a distribution tree in the folder specified by `CMAKE_INSTALL_P
 
 ### 'installed' directory tree
 
+```bash
   ├── AppX
   │   ├── AppX.exe
   │   ├── liblsl64.dll
@@ -125,6 +128,7 @@ This will create a distribution tree in the folder specified by `CMAKE_INSTALL_P
       ├── liblsl64.dll
       ├── liblsl64.lib
       └── lslboost.lib
+```
 
 On Unix systems (Linux+OS X) the executable's library path is changed to include
 `../LSL/lib/` and the executable folder (`./`) so common libraries (Qt, Boost)
