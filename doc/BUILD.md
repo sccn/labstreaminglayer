@@ -40,7 +40,7 @@ in the [`Apps`](Apps) subfolder:
 To get the project with Git (see also
 [Cloning submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules#_cloning_submodules))
 either clone the whole repository with submodules
-(`git clone --recurse-submodules https://github.com/labstreaminglayer/labstreaminglayer.git )
+(`git clone --recurse-submodules https://github.com/labstreaminglayer/labstreaminglayer.git`)
 or change to the submodules you want to check out after cloning it without
 submodules (`git clone https://github.com/labstreaminglayer/labstreaminglayer.git`) and running
 in each directory `git submodule init` and `git submodule update`.
