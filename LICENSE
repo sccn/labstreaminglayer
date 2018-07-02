@@ -1,7 +1,10 @@
-The linked repositories may have different licenses.
+Each subproject has its own license requirements and copyright holders.
+Most subprojects are licensed under the MIT license by Christian A. Kothe.
+Consult the LICENSE file in the corresponding repositories for its license
+information.
 
-The documentation and supporting files in this repository
-are offered under the MIT license:
+The documentation and supporting files in this repository, but not the linked
+subrepositories, are offered under the MIT license:
 
 Copyright (c) 2018 Tristan Stenner
 
