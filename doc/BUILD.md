@@ -9,14 +9,12 @@ The following paragraphs provide a step-by-step instruction of the build process
 
 This repository contains only the general project structure and references
 ("[git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)")
-to the liblsl C library
-([`LSL/liblsl/`](https://github.com/labstreaminglayer/liblsl/),
-the language bindings in the `[LSL](LSL)` subfolder (e.g.
-[`LSL/liblsl-Python`](https://github.com/labstreaminglayer/liblsl-Python))
-and the Apps to stream data from several types of devices, the
-[LabRecorder](`https://github.com/labstreaminglayer/App-LabRecorder`) and
-[C / C++ code examples](`https://github.com/labstreaminglayer/App-LabRecorder`)
-in the [`Apps`](Apps) subfolder:
+to the liblsl C/C++ library
+([`LSL/liblsl/`](https://github.com/labstreaminglayer/liblsl/)),
+various language bindings (e.g.
+[`LSL/liblsl-Python`](https://github.com/labstreaminglayer/liblsl-Python)),
+the Apps to stream data from several types of devices including template Examples, and the
+[LabRecorder](`https://github.com/labstreaminglayer/App-LabRecorder`).:
 
 ```bash
   labstreaminglayer
@@ -47,13 +45,30 @@ or change to the submodules you want to check out after cloning it without
 submodules (`git clone https://github.com/labstreaminglayer/labstreaminglayer.git`) and running
 in each directory `git submodule init` and `git submodule update`.
 
+## Dependencies (optional)
+
+The core liblsl does not have any external dependencies.
+Different language bindings or apps have their own dependencies so please consult those projects' build instructions.
+
+Many apps depend on Qt and boost so we provide some quick instructions here,
+but this may not be necessary for you depending on what you are building.
+
+* Windows:
+    * [CMake](https://cmake.org/download/)
+    * [Qt5](https://www.qt.io/download-open-source/)
+    * [Boost](https://sourceforge.net/projects/boost/files/boost-binaries/). Be sure to choose the version that matches your version of MSVC.
+* Mac - Use [homebrew](https://brew.sh/)
+    * `brew install cmake qt boost`
+* Ubuntu (/Debian)
+    * `sudo apt-get install build-essential cmake qt5-default libboost-all-dev`
+
 ## Build instructions
 
 First, set up your [build environment](BUILD-ENVIRONMENT.md).
 
 There are two build types:
 
-1. [in tree builds](#in-tree-builds-recommended) build the LSL library and all apps you explicitely enable.
+1. [in tree builds](#in-tree-builds-recommended) build the LSL library and all apps you explicitly enable.
    This is probably what you want.
 2. [out of tree builds](#out-of-tree-builds) build only a single app and require you to have a
    prebuilt LSL library and the exported build configuration (`LSLConfig.cmake`).
@@ -79,7 +94,7 @@ There are two build types:
       - Click on `Configure` again to confirm changes.
     - Click on `Generate` to create the build files / Visual Studio Solution file
   - Option 2 - Using commandline.
-    - Open a Terminal window or a 'Developer Command Prompt for VS2015' (or 2017, as needed)
+    - Open a Terminal window or, on Windows, a 'Developer Command Prompt for VS2015' (or 2017, as needed)
     - Run cmake with commandline options.  The following is an example. Add/remove/modify options
       as required:
       - `cmake .. -G "Visual Studio 14 2015 Win64" -DQt5_DIR=C:\Qt\5.11.1\msvc2015_64\lib\cmake\Qt5 -DBOOST_ROOT=C:\local\boost_1_67_0 -DLSLAPPS_LabRecorder=ON -DLSLAPPS_XDFBrowser=ON -DLSLAPPS_OpenVR=ON`

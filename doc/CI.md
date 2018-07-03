@@ -1,13 +1,11 @@
 # Continuous Integration
 
 LSL, especially liblsl, aims to support a wide range of target devices and
-operating systems. Seemingly harmless changes that compile fine on a
-- typically modern - system with manually installed development libraries
-could break older systems.
+operating systems. Seemingly harmless changes that compile fine on a - typically modern - system with manually installed development libraries could break older systems.
 
 This is where
 [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration)
-come into play.
+comes into play.
 We use [Travis CI](https://travis-ci.com)(Ubuntu 14.04, OS X) and
 [AppVeyor](https://appveyor.com)(Windows, Ubuntu 16.04 planned) to build
 specific commits on multiple systems to see if everything builds in a clean,
