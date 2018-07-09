@@ -25,7 +25,7 @@
 	url = https://github.com/labstreaminglayer/App-OutOfTreeTest.git
 [submodule "Apps/AudioCaptureWin"]
 	path = Apps/AudioCaptureWin
-	url = https://github.com/labstreaminglayer/App-AudioCaptureWin.git
+	url = https://github.com/labstreaminglayer/App-AudioCaptureWin
 [submodule "Apps/BAlert"]
 	path = Apps/BAlert
 	url = https://github.com/labstreaminglayer/App-BAlert.git
