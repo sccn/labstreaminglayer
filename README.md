@@ -87,7 +87,9 @@ preclude the use of user-supplied alternative timestamps, for example from comme
 middleware or high-quality clocks.
 
 The built-in time synchronization is designed after the widely deployed Network Time Protocol (NTP)
-and implemented in the LSL library. This feature is explained in more detail in the
+and implemented in the LSL library.
+
+This feature is explained in more detail in the
 [TimeSynchronization](https://github.com/sccn/labstreaminglayer/wiki/TimeSynchronization.wiki) section.
 
 ## File Format
@@ -106,7 +108,7 @@ Please see the separate [build documentation](doc/BUILD.md).
 The distribution includes a range of code examples in C, C++, Python, MATLAB, Java, and C# including
 some very simple sender and receiver programs, as well as some fairly extensive demo apps.
 
-See [ExampleCode](https://github.com/sccn/labstreaminglayer/wiki/ExampleCode.wiki) for a broader
+See [ExampleCode](https://github.com/labstreaminglayer/App-Examples/) for a broader
 overview of example programs, API documentation link, and general programming tips, tricks, and
 frequently asked questions.
 
