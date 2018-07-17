@@ -75,7 +75,7 @@ There are two build types:
 
 ### In tree builds (recommended)
 
-1. extract the zip file or clone the repository (`git clone --recurse-submodules https://github.com/labstreaminglayer/labstreaminglayer.git`)
+1. clone the repository (`git clone --recurse-submodules https://github.com/labstreaminglayer/labstreaminglayer.git`)
 2. Configure the project using cmake
   - Option 1 - Using the GUI
     - Open a terminal/shell/command prompt and change to the labstreaminglayer directory.
@@ -173,16 +173,32 @@ An out of tree build doesn't include the whole `labstreaminglayer` directory but
 (a minimal example is contained in the
 [`OutOfTreeTest`](https://github.com/labstreaminglayer/App-OutOfTreeTest) folder).
 
-Building the LSL library should take only 1-2 minutes, so you should prefer [in tree builds](#in-tree-builds-recommended)
-unless you know what you're doing.
+Building the LSL library should take only 1-2 minutes, so you should prefer
+[in tree builds](#in-tree-builds-recommended) unless you know what you're doing.
+
+The process for building liblsl and each app separately is almost exactly as
+for [in tree builds](#in-tree-builds-recommended).
+The only difference is that you need to `cd` to each submodule separately,
+create a build directory (`mkdir build`) and build liblsl / the app as
+described above.
+
+### `LSL_INSTALL_ROOT`
 
 To import the LSL library in a separate CMake build, you need to set the the
 **absolute path** to the ['installed' LSL directory](#install-directory-tree)
-in the `LSL_INSTALL_ROOT` variable (e.g. `-DLSL_INSTALL_ROOT=C:/LSL/build/install/lsl_Release/LSL`)
+in the `LSL_INSTALL_ROOT` variable (e.g. `-DLSL_INSTALL_ROOT=C:/LSL/build/install/`)
 or add the **absolute path** to the`LSL/cmake` subfolder
 of the ['installed' LSL directory](#install-directory-tree) to your `CMAKE_PREFIX_PATH`
 (`list(APPEND CMAKE_MODULE_PATH "C:/path/to/LSL/build/install/cmake/")`.
 
+CMake looks for the file `${LSL_INSTALL_ROOT}/LSL/share/LSL/LSLConfig.cmake`,
+so make sure your `LSL_INSTALL_ROOT` has the files listed in
+[the previous section](#installed-directory-tree).
+
+By default, apps should look in `../../LSL/liblsl/build/install` so if you
+have a `build` folder in each submodule (`LSL/liblsl/build`,
+`Apps/Examples/build` etc.) and installed `liblsl` first, CMake automatically
+finds liblsl.
 
 ## Building for multiple platforms
 
