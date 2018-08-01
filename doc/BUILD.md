@@ -205,7 +205,7 @@ then you will have to provide some optional arguments to the cmake command.
     - `-DQt5_DIR=<path/to/qt/binaries>/lib/cmake/Qt5`
     - `-DBOOST_ROOT=<path/to/boost>`
         - liblsl comes with its own boost used by itself, but it is not uncommon for apps to require 'normal' boost.
-- Install root ([see here](#LSL_INSTALL_ROOT))
+- Install root ([see below](#LSL_INSTALL_ROOT))
     - Not necessary for in-tree builds.
 
 Here are some example cmake commands:
