@@ -76,7 +76,13 @@ There are two build types:
 ### In tree builds (recommended)
 
 1. clone the repository (`git clone --recurse-submodules https://github.com/labstreaminglayer/labstreaminglayer.git`)
-2. Configure the project using cmake
+1. Create the build directory
+  - You can use a GUI file manager to do this part or you can do it by command line as below.
+  - Open a terminal/shell/command prompt and change to the labstreaminglayer directory.
+      - If the build directory is already there then delete it
+          - Windows: `rmdir /S build`; Others: `rm -Rf build`
+      - Create the 'build' dir: `mkdir build`
+1. Configure the project using cmake
   - Option 1 - Using the GUI
     - Open a terminal/shell/command prompt and change to the labstreaminglayer directory.
       - If you have previously deleted the 'build' dir: `mkdir build`
@@ -95,13 +101,11 @@ There are two build types:
     - Click on `Generate` to create the build files / Visual Studio Solution file
   - Option 2 - Using commandline.
     - Open a Terminal window or, on Windows, a 'Developer Command Prompt for VS2015' (or 2017, as needed)
-    - Run cmake with commandline options.  The following is an example. Add/remove/modify options
-      as required:
-      - `cmake .. -G "Visual Studio 14 2015 Win64" -DQt5_DIR=C:\Qt\5.11.1\msvc2015_64\lib\cmake\Qt5 -DBOOST_ROOT=C:\local\boost_1_67_0 -DLSLAPPS_LabRecorder=ON -DLSLAPPS_XDFBrowser=ON -DLSLAPPS_OpenVR=ON`
+    - Run cmake with appropriate [commandline options](#common-cmake-options).
   - Option 3 - Visual Studio 2017 or later
     - Open the `CMakeLists.txt` file in Visual Studio (`File`->`Open`->`CMake`)
     - Change CMake settings via `CMake`->`Change CMake Settings`
-3. Build the project
+1. Build the project
   - Option 1 - Using MSVC
     - Still in cmake-gui, Click `Open Project`, or if not still in cmake-gui, double click on the
     created build/LabStreamingLayer.sln
@@ -181,6 +185,32 @@ for [in tree builds](#in-tree-builds-recommended).
 The only difference is that you need to `cd` to each submodule separately,
 create a build directory (`mkdir build`) and build liblsl / the app as
 described above.
+
+## Common CMake Options
+
+The cmake build system has many options.
+If you are using the CMake GUI then these options will be presented to you before you generate the project/makefiles.
+If you are using the commandline then default options will generate makefiles for liblsl only.
+If you want to use the commandline to generate a project for an IDE, or to generate a project that builds LSL Apps,
+then you will have to provide some optional arguments to the cmake command.
+
+- [Generator](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html#cmake-generators): `-G <generator name>`.
+- Apps: `-DLSLAPPS_<AppName>=ON`.
+    - `-DLSLAPPS_LabRecorder=ON`
+    - `-DLSLAPPS_XDFBrowser=ON`
+    - `-DLSLAPPS_OpenVR=ON`
+    - TODO: Each app should have its cmake option easily accessible in its readme.
+    - TODO: Each app should have its own additional options specified in its readme.
+- App dependencies (required by some apps). See [build environment docs](BUILD-ENVIRONMENT.md) for more info.
+    - `-DQt5_DIR=<path/to/qt/binaries>/lib/cmake/Qt5`
+    - `-DBOOST_ROOT=<path/to/boost>`
+        - liblsl comes with its own boost used by itself, but it is not uncommon for apps to require 'normal' boost.
+- Install root ([see here](#LSL_INSTALL_ROOT))
+    - Not necessary for in-tree builds.
+
+Here are some example cmake commands:
+
+- Chad's Windows build: `cmake .. -G "Visual Studio 14 2015 Win64" -DQt5_DIR=C:\Qt\5.11.1\msvc2015_64\lib\cmake\Qt5 -DBOOST_ROOT=C:\local\boost_1_67_0 -DLSLAPPS_LabRecorder=ON -DLSLAPPS_XDFBrowser=ON -DLSLAPPS_OpenVR=ON`
 
 ### `LSL_INSTALL_ROOT`
 
