@@ -59,14 +59,14 @@ The easiest way to fix this is to use the last version of boost that is compatib
 recent version of cmake.
 At the time of this writing, CMake 3.10 supported up to Boost 1.65.1
 
-### MacOS
+#### MacOS
 
 If you are using MacOS and homebrew, then install an old version of boost with (e.g.)
 `brew install boost@1.60`.
 Then the cmake argment will be `-DBOOST_ROOT=$(brew --prefix boost@1.60)`.
 Try `brew search boost` to see which older versions of boost are available.
 
-### Using the latest version of boost anyway
+#### Using the latest version of boost anyway
 
 If you absolutely need the latest version of boost then the next easiest way to fix this for
 this project and other projects, is to edit the file that tells cmake about boost versions:
