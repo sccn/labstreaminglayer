@@ -105,14 +105,19 @@ There are two build types:
   - Option 3 - Visual Studio 2017 or later
     - Open the `CMakeLists.txt` file in Visual Studio (`File`->`Open`->`CMake`)
     - Change CMake settings via `CMake`->`Change CMake Settings`
+      - See [Common Cmake Settings](#common-cmake-settings) below
+    - Change the selected project from the drop-down menu (x64-Debug, x64-Release). This will trigger a CMake re-configure with the new variables.
+    
 1. Build the project
-  - Option 1 - Using MSVC
+  - If in MSVC using cmake to generate project files
     - Still in cmake-gui, Click `Open Project`, or if not still in cmake-gui, double click on the
     created build/LabStreamingLayer.sln
     - Change the target to Release.
     - In the solution explorer, right click on INSTALL and click build.
-  - Option 2 - command line
+  - If using command line
     - Start the build process (`cmake --build . --config Release --target install`[*](#regarding-the-install-target))
+  - If using Visual Studio 2017 built-in CMake utilities
+    - Use the CMake menu > Install > LabStreamingLayer
 
 This will create a distribution tree in the folder specified by `CMAKE_INSTALL_PREFIX`[*](#regarding-the-install-target) similar to this:
 
@@ -190,6 +195,7 @@ described above.
 
 The cmake build system has many options.
 If you are using the CMake GUI then these options will be presented to you before you generate the project/makefiles.
+
 If you are using the commandline then default options will generate makefiles for liblsl only.
 If you want to use the commandline to generate a project for an IDE, or to generate a project that builds LSL Apps,
 then you will have to provide some optional arguments to the cmake command.
@@ -211,6 +217,27 @@ then you will have to provide some optional arguments to the cmake command.
 Here are some example cmake commands:
 
 - Chad's Windows build: `cmake .. -G "Visual Studio 14 2015 Win64" -DQt5_DIR=C:\Qt\5.11.1\msvc2015_64\lib\cmake\Qt5 -DBOOST_ROOT=C:\local\boost_1_67_0 -DLSLAPPS_LabRecorder=ON -DLSLAPPS_XDFBrowser=ON -DLSLAPPS_OpenVR=ON`
+
+If you are using Visual Studio 2017's built-in CMake Tools then the default options would have been used to configure the project.
+To set any variables you have to edit a file. Use the CMake menu > Change CMake Settings > LabStreamingLayer.
+This will open a json file. For each configuration, add a 'variables' entry with a list of key/value pairs.
+For example, somewhere below `"name": "x64-Debug",` add the following:
+```
+"variables": [
+        {
+          "name": "Qt5_DIR",
+          "value": "C:\\Qt\\5.11.1\\msvc2015_64\\lib\\cmake\\Qt5 "
+        },
+        {
+          "name": "BOOST_ROOT",
+          "value": "C:\\local\\boost_1_67_0"
+        },
+        {
+          "name": "LSLAPPS_LabRecorder",
+          "value": "ON"
+        }
+      ]
+```
 
 ### `LSL_INSTALL_ROOT`
 
