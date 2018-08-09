@@ -105,7 +105,7 @@ There are two build types:
   - Option 3 - Visual Studio 2017 or later
     - Open the `CMakeLists.txt` file in Visual Studio (`File`->`Open`->`CMake`)
     - Change CMake settings via `CMake`->`Change CMake Settings`
-      - See [Common Cmake Settings](#common-cmake-settings) below
+      - See [Common Cmake Settings](#common-cmake-options) below
     - Change the selected project from the drop-down menu (x64-Debug, x64-Release). This will trigger a CMake re-configure with the new variables.
     
 1. Build the project
