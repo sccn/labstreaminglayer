@@ -262,3 +262,14 @@ finds liblsl.
 In case you haven't got several PCs and Macs with different build environments
 to test your changes, you can use the [CI](CIs.md) to compile the code on
 multiple platforms and offer binaries to willing testers.
+
+### Raspberry Pi (currently not working)
+
+* In terminal, cd to a working folder.
+* `git clone https://github.com/raspberrypi/tools.git`
+* `export PITOOLS=/path/to/raspberrypi/tools`
+* Change to labstreaminglayer directory
+* `mkdir build_pi && cd build_pi`
+* `cd build_pi`
+* `cmake .. -DLSL_LSLBOOST_PATH="lslboost" -DCMAKE_TOOLCHAIN_FILE=../LSL/liblsl/pi.cmake`
+
