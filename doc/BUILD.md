@@ -265,11 +265,11 @@ multiple platforms and offer binaries to willing testers.
 
 ### Raspberry Pi (currently not working)
 
+Intended for Ubuntu 18.04
+
 * In terminal, cd to a working folder.
 * `git clone https://github.com/raspberrypi/tools.git`
 * `export PITOOLS=/path/to/raspberrypi/tools`
 * Change to labstreaminglayer directory
 * `mkdir build_pi && cd build_pi`
-* `cd build_pi`
 * `cmake .. -DLSL_LSLBOOST_PATH="lslboost" -DCMAKE_TOOLCHAIN_FILE=../LSL/liblsl/pi.cmake`
-
