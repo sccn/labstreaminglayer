@@ -218,12 +218,15 @@ Here are some example cmake commands:
 
 - Chad's Windows build: `cmake .. -G "Visual Studio 14 2015 Win64" -DQt5_DIR=C:\Qt\5.11.1\msvc2015_64\lib\cmake\Qt5 -DBOOST_ROOT=C:\local\boost_1_67_0 -DLSLAPPS_LabRecorder=ON -DLSLAPPS_XDFBrowser=ON -DLSLAPPS_OpenVR=ON`
 
+### Configure CMake options in VS 2017
+
 If you are using Visual Studio 2017's built-in CMake Tools then the default options would have been used to configure the project.
 To set any variables you have to edit a file. Use the CMake menu > Change CMake Settings > LabStreamingLayer.
-This will open a json file. For each configuration, add a 'variables' entry with a list of key/value pairs.
-For example, somewhere below `"name": "x64-Debug",` add the following:
+This will open a json file. For each configuration of interest, add a 'variables' entry with a list of key/value pairs.
+For example, under `"name": "x64-Release",` and immediately after `"ctestCommandArgs": ""` add the following:
 ```
-"variables": [
+,
+      "variables": [
         {
           "name": "Qt5_DIR",
           "value": "C:\\Qt\\5.11.1\\msvc2015_64\\lib\\cmake\\Qt5 "
@@ -233,7 +236,19 @@ For example, somewhere below `"name": "x64-Debug",` add the following:
           "value": "C:\\local\\boost_1_67_0"
         },
         {
+          "name": "LSLAPPS_Examples",
+          "value": "ON"
+        },
+        {
           "name": "LSLAPPS_LabRecorder",
+          "value": "ON"
+        },
+        {
+          "name": "LSLAPPS_Benchmarks",
+          "value": "ON"
+        },
+        {
+          "name": "LSLAPPS_XDFBrowser",
           "value": "ON"
         }
       ]
