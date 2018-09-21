@@ -140,3 +140,6 @@
 [submodule "Apps/BrainAmpSeries"]
 	path = Apps/BrainAmpSeries
 	url = https://github.com/labstreaminglayer/App-BrainAmpSeries.git
+[submodule "Apps/MeasurementComputing"]
+	path = Apps/MeasurementComputing
+	url = https://github.com/labstreaminglayer/App-MeasurementComputing.git
