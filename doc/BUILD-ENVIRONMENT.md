@@ -6,16 +6,27 @@ liblsl and most apps use [CMake](#CMake) and C++.
 
 Download a toolchain. The following platforms are the primary test targets:
 
-- Windows 7, Windows 10
-  - [Visual Studio 2015](https://www.visualstudio.com/vs/older-downloads/) ([alternate](https://stackoverflow.com/a/44290942)).
-  During install, choose custom install and be sure to select under
-  programming languages > Visual C++ > Common Tools (this should add the Windows SDK to the installation).
   - Alternatively, you can install the [Visual Studio 2017](https://www.visualstudio.com/downloads/) IDE with the Visual Studio 2015 compiler toolset.
 - Ubuntu Linux 16.04, 18.04
   - Clang 3.5
   - GCC 6.2
 - MacOS Sierra, High Sierra
   - XCode 8.3, 9.3
+- Windows 7, Windows 10
+  - [Visual Studio 2017](https://visualstudio.com/downloads)
+  To get a minimal installation, copy this block into a file and use "Import configuration"
+  in the installer:
+
+
+```
+{
+	"version": "1.0",
+	"components": [
+		"microsoft.visualstudio.component.vc.coreide",
+		"microsoft.visualstudio.component.vc.cmake.project"
+	]
+}
+```
 
 Some apps may have higher requirements while liblsl works on very old
 (e.g. Windows XP) and tiny (e.g. Raspberry Pi, some microcontrollers, Android)
