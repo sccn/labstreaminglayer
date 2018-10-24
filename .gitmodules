@@ -143,3 +143,6 @@
 [submodule "Apps/MeasurementComputing"]
 	path = Apps/MeasurementComputing
 	url = https://github.com/labstreaminglayer/App-MeasurementComputing.git
+[submodule "Apps/NeuroscanAcquire"]
+	path = Apps/NeuroscanAcquire
+	url = https://github.com/labstreaminglayer/App-NeuroscanAcquire.git
