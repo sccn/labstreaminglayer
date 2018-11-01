@@ -10,4 +10,5 @@ AllowShortCaseLabelsOnASingleLine: true
 AllowShortIfStatementsOnASingleLine: true
 AllowShortLoopsOnASingleLine: true
 AlignAfterOpenBracket: false
+MaxEmptyLinesToKeep: 2
 ...
