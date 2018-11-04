@@ -279,6 +279,31 @@ In case you haven't got several PCs and Macs with different build environments
 to test your changes, you can use the [CI](CIs.md) to compile the code on
 multiple platforms and offer binaries to willing testers.
 
+### Note about architectures / binaries
+
+(Also known as: "Which `liblsl.so` / `liblsl.dll` do I need?)
+
+Liblsl gets compiled to a binary for a combination of
+Operating System / libc (almost almost the same) and processor architecture.
+
+Most binaries include the native word size in bits in the name and a hint which
+platform the binary is for in the file extension,
+e.g. liblsl*32*.dll for a 32-bit windows dll, liblsl*64*.so for a 64 bit
+Linux / Android library or liblsl64.dylib for a 64 bit OS X dylib.
+
+The CI system automatically builds the following combinations:
+
+- x86 Windows DLL (liblsl32.dll)
+- x64 Windows DLL (liblsl64.dll)
+- x64 Linux shared object (liblsl64.so)
+- x64 OS X shared object (liblsl64.dylib)
+
+Android also has `.so` shared objects, but build with a different
+toolchain so they are not interchangable with `.so` files for regular Linuxes.
+It's planned to build Android binaries for the following architectures on the
+CI systems: arm64-v8a, armeabi, mips64, x86_64.
+
+
 ### Raspberry Pi (cross-compilation, currently not working)
 
 Intended for Ubuntu 18.04
