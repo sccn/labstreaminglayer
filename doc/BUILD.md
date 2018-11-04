@@ -66,12 +66,14 @@ but this may not be necessary for you depending on what you are building.
 
 First, set up your [build environment](BUILD-ENVIRONMENT.md).
 
-There are two build types:
+There are three build types:
 
 1. [in tree builds](#in-tree-builds-recommended) build the LSL library and all apps you explicitly enable.
    This is probably what you want.
 2. [out of tree builds](#out-of-tree-builds) build only a single app and require you to have a
    prebuilt LSL library and the exported build configuration (`LSLConfig.cmake`).
+3. [semi out of tree builds](#semi-out-of-tree-builds) build only a single app and liblsl alongside
+   it.
 
 ### In tree builds (recommended)
 
@@ -190,6 +192,14 @@ for [in tree builds](#in-tree-builds-recommended).
 The only difference is that you need to `cd` to each submodule separately,
 create a build directory (`mkdir build`) and build liblsl / the app as
 described above.
+
+### Semi out of tree builds
+
+Semi out of tree builds build only a single app, but liblsl doesn't have to be precompiled
+because the liblsl source directory is included as a build target.
+These builds are preferable if you need to change / debug both the app and liblsl, but
+because compiling liblsl takes considerably longer than most apps you shouldn't do it for more
+than one app (see [in tree builds](#in-tree-builds-recommended) for that).
 
 ## Common CMake Options
 
