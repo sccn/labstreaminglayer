@@ -1,10 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 
-# Minimum C++ standard, apps can request more features with
-# target_compile_features()
-set(CMAKE_CXX_STANDARD 11)
-
 option(LSLAPPS_Benchmarks       "Build benchmark apps"              OFF)
+option(LSLAPPS_BestPracticesGUI	"Build GUI example app"					OFF)
 option(LSLAPPS_EGIAmpServer     "Build the EGI (Geodesic) app"      OFF)
 option(LSLAPPS_Examples         "Build example apps"                OFF)
 option(LSLAPPS_LabRecorder      "Build the recorder app"            OFF)
@@ -21,33 +18,20 @@ if(WIN32)
 endif()
 
 # add all Apps the user wants to build
-if(LSLAPPS_Benchmarks)
-	add_subdirectory(Benchmarks)
-endif()
-
-if(LSLAPPS_EGIAmpServer)
-	add_subdirectory(EGIAmpServer)
-endif()
-
-if(LSLAPPS_Examples)
-    add_subdirectory(Examples)
-endif()
-
-if(LSLAPPS_LabRecorder)
-    add_subdirectory(LabRecorder)
-endif()
-
-if(LSLAPPS_XDFBrowser)
-    add_subdirectory(XDFBrowser)
-endif()
-
-if(LSLAPPS_Wiimote)
-    add_subdirectory(Wiimote)
-endif()
-
-if(LSLAPPS_OpenVR)
-    add_subdirectory(OpenVR)
-endif()
+get_cmake_property(appnames CACHE_VARIABLES)
+foreach(appvar ${appnames})
+	string(REGEX MATCH "^LSLAPPS_.+" isappvar ${appvar})
+	if(isappvar)
+		string(SUBSTRING ${appvar} 8 -1 appname)
+		if(${appvar})
+			if(NOT EXISTS "${CMAKE_CURRENT_LIST_DIR}/${appname}/CMakeLists.txt")
+				message(WARNING "${appvar} was enabled, but its folder is either nonexistent or not checked out")
+			else()
+				add_subdirectory(${appname})
+			endif()
+		endif()
+	endif()
+endforeach()
 
 if(LSLAPPS_BrainAmp)
     add_subdirectory(BrainAmpSeries)
