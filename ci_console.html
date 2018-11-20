@@ -18,16 +18,18 @@
 			white-space: pre-wrap;
 		}
 
-		form label {
+		label {
 			width: 10em;
 			display: inline-block;
 		}
 
-		input[type="text"],
-		input[type="button"],
-		textarea {
-			width: 25em;
+		input {
+			width: 15em;
 			display: inline-block;
+		}
+
+		textarea {
+			width: 90%;
 		}
 	</style>
 	<script>
@@ -36,6 +38,7 @@
 		function updateEnvBox(box) {
 			envdata = JSON.parse(formval(box));
 			envdata.CMakeArgs = formval('cmakeargs');
+			envdata.DODEPLOY = $('dodeploy').checked ? "true" : "false";
 			$(box).value = JSON.stringify(envdata, null, 2);
 			return envdata;
 		}
@@ -65,11 +68,11 @@
 			req.send(datastr);
 		}
 		function buildtravis() {
-			let data = { 'request': {'config':{'env':updateEnvBox('travisenv')}} };
+			let data = { 'request': { 'config': { 'env': updateEnvBox('travisenv') } } };
 			if (branch = formval('branch')) { data.request.branch = branch; }
 
 			let reponame = formval('accountName') + '%2F' + formval('projectSlug');
-			let url = 'https://api.travis-ci.org/repo/' + reponame + '/requests';
+			let url = `https://api.travis-ci.org/repo/${reponame}/requests`;
 			let headers = { 'Travis-API-Version': 3, 'Authorization': 'token ' + formval('trtoken') };
 			xhr(url, headers, data, (resp) => { });
 		};
@@ -93,15 +96,24 @@
 				let headers = { 'Authorization': 'Bearer ' + formval('avtoken') };
 				let cb = (resp) => {
 					let link = document.createElement('a');
-					link.href = 'https://ci.appveyor.com/project/' + formval('accountName') + '/' + formval('projectSlug') + '/build/' + resp.version;
+					link.href = `https://ci.appveyor.com/project/${formval('accountName')}/${formval('projectSlug')}/build/${resp.version}`;
 					link.textContent = 'Build log';
 					$('result').appendChild(link);
 				}
-				xhr('https://ci.appveyor.com/api/builds', headers, data, cb);
+				let url = `https://ci.appveyor.com/api/account/${formval('accountName')}/builds`;
+				xhr(url, headers, data, cb);
 			}
 			catch (err) {
 				alert('Invalid JSON in AppVeyor environment settings' + err);
 			}
+		}
+		function updategithublink() {
+			let org = formval('accountName');
+			let repo = formval('projectSlug');
+			let link = `https://github.com/${org}/${repo}`;
+			let a = $('githublink');
+			a.textContent = link;
+			a.href = link;
 		}
 		document.addEventListener("DOMContentLoaded", () => {
 			for (inp of document.getElementsByTagName('input')) {
@@ -119,18 +131,40 @@
 				$('appveyorenv').value = JSON.stringify(appveyorcompilers[formval('avcompiler')], null, 2);
 				updateEnvBox('appveyorenv');
 			};
-			$('cmakeargs').addEventListener('change', (e) => {	
+			let updateEnvBoxes = (e) => {
 				updateEnvBox('travisenv');
 				updateEnvBox('appveyorenv');
-			});
+			};
+			$('cmakeargs').addEventListener('change', updateEnvBoxes);
+			$('dodeploy').addEventListener('change', updateEnvBoxes);
+			$('repoAccountName').addEventListener('change', updategithublink);
+			$('projectSlug').addEventListener('change', updategithublink);
+			updategithublink();
 		});
 	</script>
 </head>
 
 <body>
+	<h1>CI build console</h1>
+	<h2>What's this for?</h2>
+	<span>LSL supports a large range of systems, from tiny Raspberry Pis and Android/iOS Phones to large PCs with Windows,
+		Linux
+		and OS X. Before proposing changes, it's therefore a good idea to test if your code compiles and runs on these
+		platforms.
+		You can register with your GitHub Account at
+		<a href="https://appveyor.com" target="_blank">AppVeyor</a>
+		and
+		<a href="https://travis-ci.com" target="_blank">Travis CI</a> and compile your code on most supported systems. To do
+		this, request your API tokens (see links below) and
+		fill out the forms below to start a CI build and see if everything works.
+	</span>
 	<form action="#">
 		<datalist id="accountNameList">
 			<option value="labstreaminglayer" />
+		</datalist>
+		<datalist id="repoAccountNameList">
+			<option value="labstreaminglayer" />
+			<option value="sccn" />
 		</datalist>
 		<datalist id="projectSlugList">
 			<option value="liblsl" />
@@ -138,51 +172,40 @@
 		</datalist>
 		<datalist id="cmakeargsList">
 			<option value="-DLSL_LSLBOOST_PATH=external" />
-			<option value="-DLSL_LSLBOOST_PATH=lslboost -DCMAKE_INTERPROCEDURAL_OPTIMIZATION:BOOL=1 -DCMAKE_POLICY_DEFAULT_CMP0069=NEW"
-			/>
+			<option value="-DLSL_LSLBOOST_PATH=lslboost -DCMAKE_INTERPROCEDURAL_OPTIMIZATION:BOOL=1 -DCMAKE_POLICY_DEFAULT_CMP0069=NEW" />
 		</datalist>
-		<h1>CI build console</h1>
-		<h2>What's this for?</h2>
-		<span>LSL supports a large range of systems, from tiny Raspberry Pis and Android/iOS Phones to large PCs with Windows, Linux
-			and OS X. Before proposing changes, it's therefore a good idea to test if your code compiles and runs on these platforms.
-			You can register with your GitHub Account at
-			<a href="https://appveyor.com">AppVeyor</a>
-			and
-			<a href="https://travis-ci.com">Travis CI</a> and compile your code on most supported systems. To do this, request your API tokens (see links below) and
-			fill out the forms below to start a CI build and see if everything works.
-		</span>
 		<fieldset>
 			<legend>Account / Repo settings</legend>
-			<label>Account Name:
-				<input id="accountName" type="text" list="accountNameList" />
-			</label>
+			<label for="accountName">CI Account:</label>
+			<input id="accountName" type="text" list="accountNameList" />
 			<br>
-			<label>Repo Name:
-				<input id="projectSlug" type="text" list="projectSlugList" />
-			</label>
+			<label for="projectSlug">Repo Name:</label>
+			<input id="projectSlug" type="text" list="projectSlugList" />
 			<br>
-			<label>
-				<a href="https://ci.appveyor.com/api-token">AppVeyor-Token:</a>
-				<input id="avtoken" value="" />
-			</label>
+			Github link: <a id="githublink" href="#">(calculated)</a>
 			<br>
-			<label>
-				<a href="https://docs.travis-ci.com/user/triggering-builds/">Travis-Token:</a>
-				<input id="trtoken" value="" />
+			<label for="avtoken">
+				<a href="https://ci.appveyor.com/api-keys" target="_blank">AppVeyor-Token:</a>
 			</label>
+			<input id="avtoken" type="text" value="" />
+			<br>
+			<label for="trtoken">
+				<a href="https://docs.travis-ci.com/user/triggering-builds/" target="_blank">Travis-Token:</a>
+			</label>
+			<input id="trtoken" type="text" value="" />
 			<br>
 			<input type="button" value="Save settings locally" onclick="savesettings()">
 		</fieldset>
 		<fieldset>
 			<legend>Build settings</legend>
-			<label>Branch (optional):
-				<input id="branch" type="text" />
-			</label>
+			<label for="branch">Branch (optional):</label>
+			<input id="branch" type="text" />
 			<br>
-			<label>CMake args:
-				<input id="cmakeargs" type="text" list="cmakeargsList" />
-			</label>
+			<label for="cmakeargs">CMake args:</label>
+			<input id="cmakeargs" type="text" list="cmakeargsList" />
 			<br>
+			<label for="dodeploy">Deploy binaries</label>
+			<input type="checkbox" id="dodeploy">
 		</fieldset>
 		<!--Travis-Repo-ID: <input id="travisrepoid" value="14417672"></br>-->
 		<fieldset>
@@ -191,9 +214,8 @@
 				<!-- Filled automatically on page load-->
 			</select>
 			<br>
-			<label>Env:
-				<textarea id="appveyorenv" cols="100" rows="15">{}</textarea>
-			</label>
+			<label for="appveyorenv">Env:</label>
+			<textarea id="appveyorenv" cols="100" rows="15">{}</textarea>
 			<input id="buildbtnAV" type="button" value="Build on AppVeyor" onclick="buildappveyor()">
 		</fieldset>
 		<fieldset>
@@ -201,9 +223,9 @@
 				<a href="https://docs.travis-ci.com/user/triggering-builds/">Travis settings</a>
 			</legend>
 			<input id="buildbtnTravis" type="button" value="Build on Travis" onclick="buildtravis()">
-			<label>Env:
-				<textarea id="travisenv" cols="100" rows="15">{}</textarea>
-			</label>
+			<br>
+			<label for="travisenv">Env:</label>
+			<textarea id="travisenv" cols="100" rows="15">{}</textarea>
 		</fieldset>
 	</form>
 	<div id="request">(Request data appears here)</div>
