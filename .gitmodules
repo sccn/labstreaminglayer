@@ -18,7 +18,7 @@
 	url = https://github.com/labstreaminglayer/liblsl-Python
 [submodule "LSL/liblsl"]
 	path = LSL/liblsl
-	url = https://github.com/labstreaminglayer/liblsl
+	url = https://github.com/sccn/liblsl
 	update = rebase
 [submodule "Apps/OutOfTreeTest"]
 	path = Apps/OutOfTreeTest
