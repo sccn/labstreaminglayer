@@ -1,3 +1,15 @@
+# Major Update as of Nov 23, 2018
+
+The old labstreaminglayer repository has moved to https://github.com/sccn/lsl_archived 
+You will have to clone this new repository to get the latest source code. Please note that this repository uses submodules so you will have to do a recursive clone: `git clone --recursive https://github.com/sccn/labstreaminglayer.git`.
+
+This repository is a container for all labstreaminglayer-related repositories.
+The core library (liblsl) is hosted in the sccn organization.
+Language wrappers and apps are hosted in the https://github.com/labstreaminglayer organization.
+
+If you have any outstanding issues that need addressing then please comment on them in the lsl_archived repo. We will continue to monitor that repo and will transfer issues here as needed.
+If you were working on any changes against the old repo then you can make a pull request against lsl_archived and we will take care of applying it to the new repo.
+
 # Summary
 
 The **lab streaming layer** (LSL) is a system for the unified collection of measurement time series
