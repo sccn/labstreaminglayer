@@ -1,7 +1,7 @@
 # Major Update as of Nov 23, 2018
 
-The old labstreaminglayer repository has moved to https://github.com/sccn/lsl_archived 
-You will have to clone this new repository to get the latest source code. Please note that this repository uses submodules so you will have to do a recursive clone: `git clone --recursive https://github.com/sccn/labstreaminglayer.git`.
+The old labstreaminglayer repository has moved to https://github.com/sccn/lsl_archived . 
+You will have to clone the new repository at https://github.com/sccn/labstreaminglayer to get the latest source code. Please note that this repository uses submodules so you will have to do a recursive clone: `git clone --recursive https://github.com/sccn/labstreaminglayer.git`.
 
 This repository is a container for all labstreaminglayer-related repositories.
 The core library (liblsl) is hosted in the sccn organization.
