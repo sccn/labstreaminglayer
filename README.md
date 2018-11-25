@@ -1,7 +1,8 @@
 # Major Update as of Nov 23, 2018
 
 The old labstreaminglayer repository has moved to https://github.com/sccn/lsl_archived . 
-You will have to clone the new repository at https://github.com/sccn/labstreaminglayer to get the latest source code. Please note that this repository uses submodules so you will have to do a recursive clone: `git clone --recursive https://github.com/sccn/labstreaminglayer.git`.
+
+If you cloned/forked labstreaminglayer before the move, then you must redo this to get the latest source code. Please note that this repository uses submodules so you will have to do a recursive clone: `git clone --recursive https://github.com/sccn/labstreaminglayer.git`.
 
 This repository is a container for all labstreaminglayer-related repositories.
 The core library (liblsl) is hosted in the sccn organization.
@@ -18,9 +19,9 @@ access as well as optionally the centralized collection, viewing and disk record
 
 The **LSL distribution** consists of:
 - The core transport library
-([liblsl](https://github.com/labstreaminglayer/liblsl/)) and its language interfaces
-  ([C](https://github.com/labstreaminglayer/liblsl/),
-  [C++](https://github.com/labstreaminglayer/liblsl/),
+([liblsl](https://github.com/sccn/liblsl/)) and its language interfaces
+  ([C](https://github.com/sccn/liblsl/),
+  [C++](https://github.com/sccn/liblsl/),
   [Python](https://github.com/labstreaminglayer/liblsl-Python/),
   [Java](https://github.com/labstreaminglayer/liblsl-Java/),
   [C#](https://github.com/labstreaminglayer/liblsl-Csharp/),
@@ -30,7 +31,7 @@ The **LSL distribution** consists of:
   and forms the heart of the project.
 - A suite of tools built on top of the library, including a
   [recording program](https://github.com/labstreaminglayer/App-LabRecorder),
-  [importers](https://github.com/sccn/labstreaminglayer/wiki/ImportingRecordingsInMatlab.wiki),
+  [file importers](https://github.com/sccn/xdf),
   and apps that make data from a range of
   [acquisition hardware](https://github.com/sccn/labstreaminglayer/wiki/SupportedDevices.wiki)
   available on the lab network (for example audio, EEG, or motion capture).
@@ -46,7 +47,7 @@ either download ready-to-use binary packages or clone just the repositories you 
 
 ## Download Binary Releases
 
-You can find old releases on our FTP site: ftp://sccn.ucsd.edu/pub/software/LSL/.
+You can find *old* releases on our FTP site: ftp://sccn.ucsd.edu/pub/software/LSL/.
 
 These releases are out of date. We are working toward an automated build and deployment system
 but it is not ready yet.
