@@ -128,11 +128,12 @@ frequently asked questions.
 ## How to get support
 
 If you are having trouble with LSL, there are few things you can do to get help.
-First, search this GitHub repository's issues list, including closed issues.
+First, look to the [Wiki](https://github.com/sccn/labstreaminglayer/wiki), especially the [frequently asked questions](https://github.com/sccn/labstreaminglayer/wiki/Frequently-Asked-Questions).
+Second, search the issues list, including closed issues, in this repository and in the archived repository [here](https://github.com/sccn/lsl_archived).
 If you don't find what you are looking for, then you can create a new issue. Try to include as much
 information as possible about your device (if applicable), your computing environment (operating
 system, processor achitecture), what you have tested so far, and also provide logs or other error
-messages if available. If you end up creating a new issue, please close it once the issue is solved.
+messages if available. If you create a new issue then please be responsive to follow-up questions and be sure to close it once the issue is solved.
 
 You can also try joining the LabStreamingLayer `#users` channel on Slack. [Invite Link](https://join.slack.com/t/labstreaminglayer/shared_invite/enQtMzA2NjEwNDk0NjA5LWI2MmI4MjBhYjgyMmRmMzg2NzEzODc2M2NjNDIwODhmNzViZmRmMWQyNTBkYzkwNmUyMzZhOTU5ZGFiYzkzMzQ).
 Someone there may be able to get to the bottom of your problem through conversation.
