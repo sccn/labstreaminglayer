@@ -3,6 +3,11 @@ project(LabStreamingLayer
 	VERSION 1.12.0
 	LANGUAGES CXX)
 
+if(NOT EXISTS "${CMAKE_CURRENT_LIST_DIR}/LSL/liblsl/CMakeLists.txt")
+	message(FATAL_ERROR "LSL/liblsl doesn't contain CMakeLists.txt.
+	Did you check out the liblsl submodule? For more information, see see
+	https://github.com/sccn/labstreaminglayer/blob/master/doc/Working-with-the-repository.md")
+endif()
 # add the liblsl build directory
 add_subdirectory(LSL/liblsl)
 
