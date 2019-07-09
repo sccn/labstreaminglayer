@@ -143,10 +143,11 @@ This will create a distribution tree in the folder specified by `CMAKE_INSTALL_P
   │   ├── SendDataC.exe
   │   ├── liblsl64.dll
   └── LSL
-    ├── cmake
-    │   ├── LSLCMake.cmake
-    │   ├── LSLConfig.cmake
-    │   └── [snip]
+    ├── share
+    │   ├── LSL
+    │   │   ├── LSLCMake.cmake
+    │   │   ├── LSLConfig.cmake
+    │   │   └── LSLCMake.cmake
     ├── include
     │   ├── lsl_c.h
     │   └── lsl_cpp.h
