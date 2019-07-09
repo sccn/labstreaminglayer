@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 
 option(LSLAPPS_Benchmarks       "Build benchmark apps"              OFF)
-option(LSLAPPS_BestPracticesGUI	"Build GUI example app"					OFF)
+option(LSLAPPS_BestPracticesGUI	"Build GUI example app"				OFF)
 option(LSLAPPS_EGIAmpServer     "Build the EGI (Geodesic) app"      OFF)
 option(LSLAPPS_Examples         "Build example apps"                OFF)
 option(LSLAPPS_LabRecorder      "Build the recorder app"            OFF)
@@ -11,12 +11,13 @@ option(LSLAPPS_OpenVR           "Build the OpenVR app"              OFF)
 
 # Windows-only apps
 if(WIN32)
-    option(LSLAPPS_BrainAmp     "Build the BrainAmp app"            OFF)
-    option(LSLAPPS_LiveAmp      "Build the LiveAmp app"             OFF)
-    option(LSLAPPS_Emotiv       "Build the Emotiv app"              OFF)
-    option(LSLAPPS_gNEEDaccess  "Build the g.Tec NEEDaccess app"    OFF)
+	option(LSLAPPS_BrainVisionRDA "Build the BrainVisionRDAapp"       OFF)
+    option(LSLAPPS_BrainAmp       "Build the BrainAmp app"            OFF)
+    option(LSLAPPS_LiveAmp        "Build the LiveAmp app"             OFF)
+    option(LSLAPPS_Emotiv         "Build the Emotiv app"              OFF)
+    option(LSLAPPS_gNEEDaccess    "Build the g.Tec NEEDaccess app"    OFF)
 endif()
-set(ManualAddApps "BrainAmp" "LiveAmp" "Emotiv" "gNEEDaccess")
+set(ManualAddApps "BrainVisionRDA" "BrainAmp" "LiveAmp" "Emotiv" "gNEEDaccess")
 
 # add all Apps the user wants to build
 get_cmake_property(appnames CACHE_VARIABLES)
@@ -40,8 +41,11 @@ endforeach()
 
 if(LSLAPPS_BrainAmp)
     add_subdirectory(BrainAmpSeries)
-    add_subdirectory(BrainProducts/BrainVisionRDA)
     #add_subdirectory(BrainProducts/BrainAmpImpedance)
+endif()
+
+if(LSLAPPS_BrainVisionRDA)
+	add_subdirectory(BrainProducts/BrainVisionRDA)
 endif()
 
 if(LSLAPPS_LiveAmp)
