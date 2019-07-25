@@ -146,3 +146,6 @@
 [submodule "Apps/NeuroscanAcquire"]
 	path = Apps/NeuroscanAcquire
 	url = https://github.com/labstreaminglayer/App-NeuroscanAcquire.git
+[submodule "Apps/Qualisys"]
+	path = Apps/Qualisys
+	url = https://github.com/qualisys/qualisys_lsl_app.git
