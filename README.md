@@ -33,7 +33,7 @@ The **LSL distribution** consists of:
   [recording program](https://github.com/labstreaminglayer/App-LabRecorder),
   [file importers](https://github.com/sccn/xdf),
   and apps that make data from a range of
-  [acquisition hardware](https://github.com/sccn/labstreaminglayer/wiki/SupportedDevices.wiki)
+  [acquisition hardware](https://github.com/sccn/labstreaminglayer/wiki/SupportedDevices)
   available on the lab network (for example audio, EEG, or motion capture).
 
 There is an intro lecture/demo on LSL here: [http://www.youtube.com/watch?v=Y1at7yrcFW0](http://www.youtube.com/watch?v=Y1at7yrcFW0)
