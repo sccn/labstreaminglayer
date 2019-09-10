@@ -6,14 +6,15 @@ liblsl and most apps use [CMake](#CMake) and C++.
 
 Download a toolchain. The following platforms are the primary test targets:
 
-  - Alternatively, you can install the [Visual Studio 2017](https://www.visualstudio.com/downloads/) IDE with the Visual Studio 2015 compiler toolset.
 - Ubuntu Linux 16.04, 18.04
   - Clang 3.5
   - GCC 6.2
 - MacOS Sierra, High Sierra
   - XCode 8.3, 9.3
+- Windows 7
+  - Visual Studio 2008
 - Windows 7, Windows 10
-  - [Visual Studio 2017](https://visualstudio.com/downloads)
+  - [Visual Studio 2019](https://visualstudio.com/downloads) with the Visual Studio 2017 compiler toolset
   To get a minimal installation, copy this block into a file and use "Import configuration"
   in the installer:
 
@@ -39,6 +40,7 @@ The oldest supported version is CMake 3.5.
 - *Windows*: choose the installer (.msi extension). During installation, check the box to add it to
   the path (for all users).
 - Debian / Ubuntu: `apt install cmake`
+- Fedora: `yum install cmake`
 - OS X: `brew install cmake`
 
 ## [Boost](https://boost.org)
