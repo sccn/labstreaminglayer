@@ -134,6 +134,9 @@
 [submodule "Apps/Tobii"]
 	path = Apps/Tobii
 	url = https://github.com/labstreaminglayer/App-Tobii.git
+[submodule "Apps/TobiiPro"]
+	path = Apps/TobiiPro
+	url = https://github.com/labstreaminglayer/App-TobiiPro.git
 [submodule "App-BestPracticesGUI"]
 	path = App-BestPracticesGUI
 	url = https://github.com/labstreaminglayer/App-BestPracticesGUI.git
