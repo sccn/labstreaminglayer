@@ -43,11 +43,14 @@ either clone the whole repository with submodules
 (`git clone --recurse-submodules https://github.com/labstreaminglayer/labstreaminglayer.git`)
 or change to the submodules you want to check out after cloning it without
 submodules (`git clone https://github.com/labstreaminglayer/labstreaminglayer.git`) and running
-in each directory `git submodule init` and `git submodule update`.
+`git submodule update --init …` for all submodules you want to initialize *from the repository root`, e.g.
+- `cd Source/Repos/labstreaminglayer`
+- `git submodule update --init LSL/liblsl Apps/LabRecorder`
 
 ## Dependencies (optional)
 
-The core liblsl does not have any external dependencies.
+The core `liblsl` does not have any external dependencies.
+
 Different language bindings or apps have their own dependencies so please consult those projects' build instructions.
 
 Many apps depend on Qt and boost so we provide some quick instructions here,
@@ -83,13 +86,11 @@ There are three build types:
   - Open a terminal/shell/command prompt and change to the labstreaminglayer directory.
       - If the build directory is already there then delete it
           - Windows: `rmdir /S build`; Others: `rm -Rf build`
-      - Create the 'build' dir: `mkdir build`
-1. Configure the project using cmake
+      - (Create the 'build' dir: `mkdir build`)
+1. Configure the project using `cmake`
   - Option 1 - Using the GUI
     - Open a terminal/shell/command prompt and change to the labstreaminglayer directory.
-      - If you have previously deleted the 'build' dir: `mkdir build`
-      - `cd build`
-      - `cmake-gui ..` (GUI) or `ccmake ..` (terminal) on other platforms.
+      - `cmake-gui -S . -B build ` (GUI) or `ccmake -S . -B build` (terminal) on other platforms.
     - Do an initial `Configure`. Agree to create the directory if asked.
     - Select your compiler and click Finish.
     - Use the interface to enable building of the Apps you want to use.
@@ -102,7 +103,7 @@ There are three build types:
       - Click on `Configure` again to confirm changes.
     - Click on `Generate` to create the build files / Visual Studio Solution file
   - Option 2 - Using commandline.
-    - Open a Terminal window or, on Windows, a 'Developer Command Prompt for VS2015' (or 2017, as needed)
+    - Open a Terminal window or, on Windows, a 'Developer Command Prompt for VS2017' (or 2019, as needed)
     - Run cmake with appropriate [commandline options](#common-cmake-options).
   - Option 3 - Visual Studio 2017 or later
     - Open the `CMakeLists.txt` file in Visual Studio (`File`->`Open`->`CMake`)
@@ -230,7 +231,7 @@ Here are some example cmake commands:
 - Chad's Windows build: `cmake .. -G "Visual Studio 14 2015 Win64" -DLSL_LSLBOOST_PATH="lslboost" -DQt5_DIR=C:\Qt\5.11.1\msvc2015_64\lib\cmake\Qt5 -DBOOST_ROOT=C:\local\boost_1_67_0 -DLSLAPPS_LabRecorder=ON -DLSLAPPS_XDFBrowser=ON -DLSLAPPS_OpenVR=ON`
 - Chad's Mac build: `cmake .. -DLSL_LSLBOOST_PATH="lslboost" -DLSLAPPS_Examples=ON -DLSLAPPS_LabRecorder=ON -DLSLAPPS_Benchmarks=ON -DLSLAPPS_XDFBrowser=ON -DQt5_DIR=$(brew --prefix qt)/lib/cmake/Qt5/`
 
-### Configure CMake options in VS 2017
+### Configure CMake options in VS 2017 / VS 2019
 
 If you are using Visual Studio 2017's built-in CMake Tools then the default options would have been used to configure the project.
 To set any variables you have to edit a file. Use the CMake menu > Change CMake Settings > LabStreamingLayer.
