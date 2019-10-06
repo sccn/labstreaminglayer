@@ -135,7 +135,7 @@ information as possible about your device (if applicable), your computing enviro
 system, processor achitecture), what you have tested so far, and also provide logs or other error
 messages if available. If you create a new issue then please be responsive to follow-up questions and be sure to close it once the issue is solved.
 
-You can also try joining the LabStreamingLayer `#users` channel on Slack. [Invite Link](https://join.slack.com/t/labstreaminglayer/shared_invite/enQtMzA2NjEwNDk0NjA5LWI2MmI4MjBhYjgyMmRmMzg2NzEzODc2M2NjNDIwODhmNzViZmRmMWQyNTBkYzkwNmUyMzZhOTU5ZGFiYzkzMzQ).
+You can also try joining the LabStreamingLayer `#users` channel on Slack. [Invite Link](https://join.slack.com/t/labstreaminglayer/shared_invite/enQtMzA2NjEwNDk0NjA5LTcyYWI4ZDk5OTY5MGI2YWYxNmViNjhkYWRhZTkwYWM0ODY0Y2M0YzdlZDRkZTg1OTUwZDU2M2UwNDgwYzUzNDg).
 Someone there may be able to get to the bottom of your problem through conversation.
 
 ## Acknowledgements
