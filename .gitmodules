@@ -152,3 +152,9 @@
 [submodule "Apps/Qualisys"]
 	path = Apps/Qualisys
 	url = https://github.com/qualisys/qualisys_lsl_app.git
+[submodule "Apps/TrignoWireless"]
+	path = Apps/QuaTrignoWirelesslisys
+	url = https://github.com/haze-sama/TrignoWireless.git
+[submodule "Apps/TobiiProNano"]
+	path = Apps/TobiiProNano
+	url = https://github.com/haze-sama/TobiiProNano.git
