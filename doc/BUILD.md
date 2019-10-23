@@ -10,7 +10,7 @@ The following paragraphs provide a step-by-step instruction of the build process
 This repository contains only the general project structure and references
 ("[git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)")
 to the liblsl C/C++ library
-([`LSL/liblsl/`](https://github.com/labstreaminglayer/liblsl/)),
+([`LSL/liblsl/`](https://github.com/sccn/liblsl/)),
 various language bindings (e.g.
 [`LSL/liblsl-Python`](https://github.com/labstreaminglayer/liblsl-Python)),
 the Apps to stream data from several types of devices including template Examples, and the

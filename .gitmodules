@@ -56,9 +56,6 @@
 [submodule "Apps/XDFBrowser"]
 	path = Apps/XDFBrowser
 	url = https://github.com/labstreaminglayer/App-XDFBrowser.git
-[submodule "Apps/Examples"]
-	path = Apps/Examples
-	url = https://github.com/labstreaminglayer/App-Examples.git
 [submodule "Apps/MINDO"]
 	path = Apps/MINDO
 	url = https://github.com/labstreaminglayer/App-MINDO.git

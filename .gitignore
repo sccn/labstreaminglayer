@@ -2,6 +2,8 @@
 # removing outdated PupilPro app
 /PupilPro
 
+/install
+
 ##
 # for video 
 *.avi
