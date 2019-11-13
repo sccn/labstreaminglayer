@@ -24,6 +24,7 @@ release = '1.13'
 # ones.
 extensions = [
     'sphinx.ext.autosectionlabel',
+    'sphinx.ext.intersphinx',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -47,4 +48,5 @@ html_theme = 'alabaster'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+master_doc = 'index' # for Sphinx < 2.0
 
