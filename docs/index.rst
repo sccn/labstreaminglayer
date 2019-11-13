@@ -8,13 +8,14 @@ Welcome to Labstreaminglayer's documentation!
    usersguide
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Developer's guide
 
    devguide
    dev/build
    dev/buildenv
    dev/appdev
+   dev/repository
 
 
 Indices and tables

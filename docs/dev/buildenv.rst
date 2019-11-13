@@ -6,8 +6,8 @@ liblsl and most apps use `CMake <#CMake>`__ and C++.
 Recommended compiler toolchain
 ------------------------------
 
-Download a toolchain. The following platforms are the primary test
-targets:
+Download a toolchain.
+The following platforms are the primary test targets for liblsl:
 
 -  Ubuntu Linux 16.04, 18.04
 
@@ -16,7 +16,7 @@ targets:
 
 -  MacOS Sierra, High Sierra
 
-   -  XCode 8.3, 9.3
+   -  XCode 9.3
 
 -  Windows 7
 
@@ -24,9 +24,8 @@ targets:
 
 -  Windows 7, Windows 10
 
-   -  `Visual Studio 2019 <https://visualstudio.com/downloads>`__ with
-      the Visual Studio 2017 compiler toolset To get a minimal
-      installation, copy this block into a file and use “Import
+   -  `Visual Studio 2019 <https://visualstudio.com/downloads>`_.
+      To get a minimal installation, copy this block into a file and use “Import
       configuration” in the installer:
 
 ::
@@ -44,28 +43,31 @@ Some apps may have higher requirements while liblsl works on very old
 Android) systems. See the respective build documentation for more
 information.
 
-`CMake <https://cmake.org/download/>`__
----------------------------------------
+`CMake <https://cmake.org/download/>`_
+--------------------------------------
 
-The oldest supported version is CMake 3.5.
+The oldest supported version is CMake 3.12.
 
--  *Windows*: choose the installer (.msi extension). During
-   installation, check the box to add it to the path (for all users).
--  Debian / Ubuntu: ``apt install cmake``
+-  *Windows*: choose the installer (.msi extension).
+   During installation, check the box to add it to the path (for all users).
+-  Debian / Ubuntu: ``apt install cmake`` or ``python -m pip install cmake``
 -  Fedora: ``yum install cmake``
 -  OS X: ``brew install cmake``
+
+.. _Boost:
 
 `Boost <https://boost.org>`__
 -----------------------------
 
-```liblsl`` <https://github.com/labstreaminglayer/liblsl/>`__ already
+`liblsl <https://github.com/labstreaminglayer/liblsl/>`__ already
 includes Boost, so you only need it to build some apps.
 
 Boost libraries come in two flavors: header-only and compiled libraries.
 For the header-only libraries you can download the source archive and
-point CMake to it (``-DBOOST_ROOT=path/to/boost``). For compiled
-libraries, you either have to compile it yourself (not recommended) or
-download precompiled binaries *that have to match your compiler version
+point CMake to it (``-DBOOST_ROOT=path/to/boost``).
+
+For compiled libraries, you either have to compile it yourself (not recommended)
+or download precompiled binaries *that have to match your compiler version
 and processor architecture!*
 
 Each apps build instructions should tell you exactly which boost
@@ -118,6 +120,9 @@ is 1.66 then make it ``106700``.
 
 NOTE: This has worked for me in the past but IS NOT working for Boost
 1.66. Something must have changed.
+
+
+.. _Qt5:
 
 `Qt5 <http://qt.io>`__
 ----------------------

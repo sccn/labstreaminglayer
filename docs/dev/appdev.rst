@@ -19,7 +19,7 @@ following parts:
    start / stop streaming data from a fictitious device to the network
    in a separate thread
 -  save / load the configuration
--  `CI <CI.md>`__ configuration so binaries are almost automatically
+-  CI configuration so binaries are almost automatically
    built on the three major OSes
 
 You can copy the `app
@@ -27,3 +27,13 @@ skeleton <https://github.com/labstreaminglayer/App-BestPracticesGUI/tree/master/
 to a new repository to get started and read the `annotated source
 files <https://github.com/labstreaminglayer/App-BestPracticesGUI/tree/master/doc>`__
 for an overview over the design decisions and things you should change.
+
+Python apps
+-----------
+
+Python is another great language for app development, as long as your target
+audience has Python and the required libraries installed.
+
+There's no starting kit, but you can let the
+`Pupils Labs <https://github.com/labstreaminglayer/App-PupilLabs>`__ app
+inspire you.

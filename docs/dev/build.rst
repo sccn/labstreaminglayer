@@ -15,12 +15,13 @@ This repository contains only the general project structure and
 references (“`git
 submodules <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`__”) to
 the liblsl C/C++ library
-(```LSL/liblsl/`` <https://github.com/labstreaminglayer/liblsl/>`__),
+(`LSL/liblsl <https://github.com/labstreaminglayer/liblsl/>`__),
 various language bindings (e.g.
-```LSL/liblsl-Python`` <https://github.com/labstreaminglayer/liblsl-Python>`__),
+`LSL/liblsl-Python <https://github.com/labstreaminglayer/liblsl-Python>`__),
 the Apps to stream data from several types of devices including template
-Examples, and the
-`LabRecorder <%60https://github.com/labstreaminglayer/App-LabRecorder%60>`__.:
+Examples,
+and the
+`LabRecorder <https://github.com/labstreaminglayer/App-LabRecorder>`__.:
 
 .. code:: bash
 
@@ -43,17 +44,8 @@ Examples, and the
        ├── liblsl-Python
        └── liblsl-Java
 
-To get the project with Git (see also `Cloning
-submodules <https://git-scm.com/book/en/v2/Git-Tools-Submodules#_cloning_submodules>`__)
-either clone the whole repository with submodules
-(``git clone --recurse-submodules https://github.com/labstreaminglayer/labstreaminglayer.git``)
-or change to the submodules you want to check out after cloning it
-without submodules
-(``git clone https://github.com/labstreaminglayer/labstreaminglayer.git``)
-and running ``git submodule update --init …`` for all submodules you
-want to initialize \*from the repository root\ ``, e.g. -``\ cd
-Source/Repos/labstreaminglayer\ ``-``\ git submodule update –init
-LSL/liblsl Apps/LabRecorder\`
+To get the project with Git, see :ref:`Working with this repository`.
+
 
 Dependencies (optional)
 -----------------------
@@ -63,7 +55,7 @@ The core ``liblsl`` does not have any external dependencies.
 Different language bindings or apps have their own dependencies so
 please consult those projects’ build instructions.
 
-Many apps depend on Qt and boost so we provide some quick instructions
+Many apps depend on Qt so we provide some quick instructions
 here, but this may not be necessary for you depending on what you are
 building.
 
@@ -71,21 +63,18 @@ building.
 
    -  `CMake <https://cmake.org/download/>`__
    -  `Qt5 <https://www.qt.io/download-open-source/>`__
-   -  `Boost <https://sourceforge.net/projects/boost/files/boost-binaries/>`__.
-      Be sure to choose the version that matches your version of MSVC.
 
--  Mac - Use `homebrew <https://brew.sh/>`__
+-  Mac - Use `homebrew <https://brew.sh/>`__ (``brew install cmake qt``)
 
-   -  ``brew install cmake qt boost``
+-  Ubuntu (/Debian):
+     ``sudo apt-get install build-essential cmake qt5-default``
 
--  Ubuntu (/Debian)
-
-   -  ``sudo apt-get install build-essential cmake qt5-default libboost-all-dev``
+A few apps also depend on :ref:`Boost`.
 
 Build instructions
 ------------------
 
-First, set up your `build environment <BUILD-ENVIRONMENT.md>`__.
+First, set up your :ref:`LSL build environment`.
 
 There are three build types:
 
@@ -132,10 +121,8 @@ In tree builds (recommended)
    -  Use the interface to enable building of the Apps you want to use.
    -  If necessary, change options or add options/paths (``Add Entry``).
 
-      -  `Qt <BUILD-ENVIRONMENT.md#Qt5>`__ if the guessed path is not
-         right
-      -  `Boost <BUILD-ENVIRONMENT.md#Boost>`__ if the default was not
-         correct
+      -  :ref:`Qt5` if the guessed path is not right
+      -  :ref:`Boost` if the default was not correct
       -  A path where redistributable binaries get copied
          (``CMAKE_INSTALL_PREFIX``)
       -  Build type (``CMAKE_BUILD_TYPE``, either ``Release`` or
@@ -149,8 +136,7 @@ In tree builds (recommended)
 
    -  Open a Terminal window or, on Windows, a ‘Developer Command Prompt
       for VS2017’ (or 2019, as needed)
-   -  Run cmake with appropriate `commandline
-      options <#common-cmake-options>`__.
+   -  Run cmake with appropriate `commandline options <#common-cmake-options>`__.
 
 -  Option 3 - Visual Studio 2017 or later
 
@@ -303,8 +289,7 @@ command.
    -  TODO: Each app should have its own additional options specified in
       its readme.
 
--  App dependencies (required by some apps). See `build environment
-   docs <BUILD-ENVIRONMENT.md>`__ for more info.
+-  App dependencies (required by some apps). See :ref:`LSL build environment` for more info.
 
    -  ``-DQt5_DIR=<path/to/qt/binaries>/lib/cmake/Qt5``
    -  ``-DBOOST_ROOT=<path/to/boost>``
@@ -389,7 +374,7 @@ Building for multiple platforms
 -------------------------------
 
 In case you haven’t got several PCs and Macs with different build
-environments to test your changes, you can use the `CI <CIs.md>`__ to
+environments to test your changes, you can use the CI to
 compile the code on multiple platforms and offer binaries to willing
 testers.
 
