@@ -12,13 +12,13 @@ option(LSLAPPS_OpenVR           "Build the OpenVR app"              OFF)
 
 # Windows-only apps
 if(WIN32)
-	option(LSLAPPS_BrainVisionRDA "Build the BrainVisionRDAapp"       OFF)
-    option(LSLAPPS_BrainAmp       "Build the BrainAmp app"            OFF)
-    option(LSLAPPS_LiveAmp        "Build the LiveAmp app"             OFF)
-    option(LSLAPPS_Emotiv         "Build the Emotiv app"              OFF)
-    option(LSLAPPS_gNEEDaccess    "Build the g.Tec NEEDaccess app"    OFF)
+	option(LSLAPPS_BrainVisionRDA	"Build the BrainVisionRDAapp"       OFF)
+	option(LSLAPPS_BrainAmpSeries	"Build the BrainAmpSeries app"            OFF)
+	option(LSLAPPS_LiveAmp		"Build the LiveAmp app"             OFF)
+	option(LSLAPPS_Emotiv		"Build the Emotiv app"              OFF)
+	option(LSLAPPS_gNEEDaccess	"Build the g.Tec NEEDaccess app"    OFF)
 endif()
-set(ManualAddApps "BrainVisionRDA" "BrainAmp" "LiveAmp" "Emotiv" "gNEEDaccess")
+set(ManualAddApps "BrainVisionRDA" "BrainAmpSeries" "LiveAmp" "Emotiv" "gNEEDaccess")
 
 # add all Apps the user wants to build
 get_cmake_property(appnames CACHE_VARIABLES)
