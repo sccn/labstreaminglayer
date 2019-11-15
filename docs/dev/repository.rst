@@ -1,3 +1,6 @@
+.. role:: cmd(code)
+   :language: bash
+
 Working with this repository
 ============================
 
@@ -10,9 +13,9 @@ submodules (i.e. ``Apps/Examples`` is found at commit ``abc123def`` of
 Recommended git settings
 ------------------------
 
-To avoid mistake, consider changing the following git settings, either
-for this repository (``git config --add setting.name value``) or for all
-repositories (``git config --global --add ...``).
+To avoid mistakes, consider changing the following git settings, either
+for this repository (:cmd:`git config --add setting.name value`) or for all
+repositories (:cmd:`git config --global --add ...`).
 
 -  ``pull.rebase`` ``true``: insert new commits *before* your commits,
    so no merge commits are created
@@ -30,29 +33,31 @@ Some operations have to be done differently than in a normal repository:
 Initial cloning, checking out *all* submodules:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  ``git clone --recurse-submodules git@github.com:labstreaminglayer/labstreaminglayer.git``
+  :cmd:`git clone --recurse-submodules git@github.com:labstreaminglayer/labstreaminglayer.git`
 
 Adding a submodule:
 ~~~~~~~~~~~~~~~~~~~
 
-``git submodule add https://github.com/<username>/<reponame>.git``
+:cmd:`git submodule add https://github.com/<username>/<reponame>.git Apps/AppXY`
+
 Don’t use URLs like ``ssh://git@github.com/<username>/<reponame>``
-because they can’t be checked out anonymously. Change them in your
-local tree with ``git remote set-url origin ssh://...`` after
+because they can’t be checked out anonymously.
+Change them *in your local tree* with
+:cmd:`git remote set-url origin ssh://...` after
 checking them out
 
 Check out a single submodule: 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``git submodule update --init <path>``
+:cmd:`git submodule update --init <path>`
 
 Update a submodule
 ~~~~~~~~~~~~~~~~~~
 
 set the referenced commit to the newest:
-``git submodule update --remote --rebase <path>`` (rebase local changes) or
+:cmd:`git submodule update --remote --rebase <path>` (rebase local changes) or
 
-``git submodule update --remote --merge <path>`` (merge local changes)
+:cmd:`git submodule update --remote --merge <path>` (merge local changes)
 
 Change the commit that’s referenced in this repository:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -68,7 +73,7 @@ Commit and push changes in the App repository:
 
 
 From the main repository, update the reference:
-``git add Apps/XY``
+:cmd:`git add Apps/XY`
 
 Once again, check that you have really pushed the app repository
 
