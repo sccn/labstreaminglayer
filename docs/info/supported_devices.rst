@@ -31,7 +31,7 @@ The following systems are supported by programs included in the LSL distribution
   * `Neuroscan Synamp II and Synamp Wireless <https://github.com/labstreaminglayer/App-Neuroscan>`__ (u)
 
  
-The following systems are also supported by a separate program, the `OpenViBE acquisition server <OVAS>`__ (unstable systems marked with a (u)):
+The following systems are also supported by a separate program, the `OpenViBE acquisition server <https://labstreaminglayer.readthedocs.io/en/latest/info/ovas.html>`__ (unstable systems marked with a (u)):
   * ANT Neuro ASALAB EEG
   * Brain Products QuickAmp, V-Amp, and BrainAmp series
   * CTF/VSM (u)
@@ -58,18 +58,18 @@ Several eye tracking systems are currently supported by LSL and included in the 
 Supported Human Interface Hardware
 **********************************
 A wide range of Windows-compatible input hardware is supported by LSL and included with the distribution:
-  * `Computer mice, trackballs, presenters, etc. <Mouse.wiki>`__
-  * `Computer keyboards <Keyboard.wiki>`__
-  * `DirectX-compatible joysticks, wheels, gamepads and other controllers <GameController.wiki>`__
-  * `Nintendo Wiimote and official expansions <Wiimote.wiki>`__
+  * `Computer mice, trackballs, presenters, etc. <https://github.com/labstreaminglayer/App-Mouse>`__
+  * `Computer keyboards <https://github.com/labstreaminglayer/App-Keyboard>`__
+  * `DirectX-compatible joysticks, wheels, gamepads and other controllers <https://github.com/labstreaminglayer/App-GameController>`__
+  * `Nintendo Wiimote and official expansions <https://github.com/labstreaminglayer/App-Wiimote>`__
 
 Supported Motion Capture Hardware
 *********************************
 Several motion-capture systems are currently supported by LSL and included in the distribution. These are:
-  * `AMTI force plates with serial I/O <AMTIForcePlate.wiki>`__
-  * `PhaseSpace <PhaseSpace.wiki>`__
-  * `Microsoft Kinect <KinectMocap.wiki>`__
-  * `NaturalPoint OptiTrack <OptiTrack.wiki>`__ (some versions)
+  * `AMTI force plates with serial I/O <https://github.com/labstreaminglayer/App-AMTIForcePlate>`__
+  * `PhaseSpace <https://github.com/labstreaminglayer/App-PhaseSpace>`__
+  * `Microsoft Kinect <https://github.com/labstreaminglayer/App-KinectMocap>`__
+  * `NaturalPoint OptiTrack <https://github.com/labstreaminglayer/App-OptiTrack>`__ (some versions)
   * `OpenVR <https://github.com/labstreaminglayer/App-OpenVR>`__
   * `Qualisys <https://github.com/qualisys/qualisys_lsl_app>`__
 
@@ -77,7 +77,7 @@ Supported Multimedia Hardware
 *****************************
 Support for standard Windows-compatible multimedia hardware is included:
   * DirectShow-compatible video hardware
-  * `PC-compatible sound cards <AudioCaptureWin.wiki>`__
+  * `PC-compatible sound cards <https://github.com/labstreaminglayer/App-AudioCaptureWin>`__
 
 Supported Stimulation Hardware
 ******************************
@@ -96,4 +96,5 @@ The following stimulus presentations systems are usable out of the box with LSL:
 Miscellaneous Hardware
 **********************
 The following miscellaneous hardware is supported:
-  * `Generic serial port <SerialPort.wiki>`__
+  * `Generic serial port <https://github.com/labstreaminglayer/App-SerialPort>`__
+  * `Measurement Computing DAQ <https://github.com/labstreaminglayer/App-MeasurementComputing>`_
