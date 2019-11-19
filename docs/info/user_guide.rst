@@ -1,5 +1,5 @@
-Users guide
-===========
+User's Guide
+############
 
 Clock synchronization
 ---------------------

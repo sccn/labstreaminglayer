@@ -31,3 +31,5 @@ docs/_build/
 # stupid ds_store:
 .DS_Store
 
+# JetBrains
+.idea

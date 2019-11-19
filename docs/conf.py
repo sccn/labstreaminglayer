@@ -48,5 +48,4 @@ html_theme = 'alabaster'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-master_doc = 'index' # for Sphinx < 2.0
-
+master_doc = 'index'  # for Sphinx < 2.0

@@ -3,18 +3,20 @@ Welcome to Labstreaminglayer's documentation!
 
 .. toctree::
    :maxdepth: 1
-   :caption: User's guide
+   :caption: User's Guide
 
-   usersguide
+   info/intro
+   info/user_guide
+   info/supported_devices.rst
 
 .. toctree::
    :maxdepth: 1
-   :caption: Developer's guide
+   :caption: Developer's Guide
 
-   devguide
+   dev/dev_guide
    dev/build
-   dev/buildenv
-   dev/appdev
+   dev/build_env
+   dev/app_dev
    dev/repository
 
 
