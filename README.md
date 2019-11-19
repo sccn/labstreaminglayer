@@ -8,7 +8,7 @@ access as well as optionally the centralized collection, viewing and disk record
 
 The most common way to use LSL is to use one or more applications with integrated LSL functionality.
 
-* Take a look at the list of [supported devices](https://github.com/sccn/labstreaminglayer/wiki/SupportedDevices)
+* Take a look at the list of [supported devices](https://labstreaminglayer.readthedocs.io/en/latest/info/supported_devices.html)
 and follow the instructions to start streaming data from your device.
 If your device is not in the list then see the "Getting Help" section below.
 * Download [LabRecorder](https://github.com/labstreaminglayer/App-LabRecorder) from its

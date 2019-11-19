@@ -6,8 +6,10 @@ Welcome to Labstreaminglayer's documentation!
    :caption: User's Guide
 
    info/intro
+   info/getting_started
    info/user_guide
-   info/supported_devices.rst
+   info/supported_devices
+   info/faqs
 
 .. toctree::
    :maxdepth: 1
@@ -18,6 +20,7 @@ Welcome to Labstreaminglayer's documentation!
    dev/build_env
    dev/app_dev
    dev/repository
+   dev/examples
 
 
 Indices and tables

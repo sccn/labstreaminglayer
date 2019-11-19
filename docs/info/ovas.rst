@@ -6,7 +6,7 @@ To enable LSL output, click on Preferences in the OVAS application, check the bo
 
 .. image:: ../images/OVAS-main.png
 
-.. image:: ../images/OVAS-driverprops.png
+.. image:: ../images/ovas-driverprops.png
 
 Minimizing Latency
 ******************
