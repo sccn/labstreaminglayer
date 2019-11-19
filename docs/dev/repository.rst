@@ -1,8 +1,8 @@
 .. role:: cmd(code)
    :language: bash
 
-Working with this repository
-============================
+Working With The LabStreamingLayer Repository
+=============================================
 
 See also https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
