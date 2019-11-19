@@ -2,6 +2,8 @@ Supported Devices
 #################
 The lab streaming layer was originally developed to facilitate human-subject experiments that involve multi-modal data acquisition, including both brain dynamics (primarily EEG), physiology (EOG, EMG, heart rate, respiration, skin conductance, etc.), as well as behavioral data (motion capture, eye tracking, touch interaction, facial expressions, etc.) and finally environmental and program state (for example, event markers).
 
+For device support hosted on GitHub, make sure to read the README and check the release page for downloads.
+
 Supported EEG Hardware
 **********************
 The majority of EEG systems on the market are currently compatible with LSL.

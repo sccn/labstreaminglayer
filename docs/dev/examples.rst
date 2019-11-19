@@ -1,5 +1,5 @@
-LSL Coding Fundamentals
-#######################
+LSL Coding Examples
+###################
 
 There are essentially two types of programs interacting with LSL: programs that provide data, such as a data source that represents a particular acquisition device, and programs that consume data (and occasionally mixtures of the two), such as a viewer, a recorder, or a program that takes some action based on real-time data.
 
@@ -12,9 +12,9 @@ The objects and functions to perform these tasks are provided by a single cross-
 Note: if you have trouble establishing communication between these programs across different computers especially on Windows, take a look at the NetworkConnectivity page and read the Network Troubleshooting section.
 
 API Documentation
-#################
+*****************
 
-It is recommended that you clone the repository to get the respective code (or check the `SDK mirror <ftp://sccn.ucsd.edu/pub/software/LSL/SDK/>`__ at SCCN). The documentation is at the following locations:
+It is recommended that you clone the repository to get the respective code. The documentation is at the following locations:
   * C: `C header file <https://github.com/sccn/liblsl/blob/master/include/lsl_c.h>`__
   * C++: `C++ header file <https://github.com/sccn/liblsl/blob/master/include/lsl_cpp.h>`__
   * Python: `pylsl module <https://github.com/labstreaminglayer/liblsl-Python/blob/master/pylsl/pylsl.py>`__
@@ -26,7 +26,7 @@ It is recommended that you clone the repository to get the respective code (or c
 The API documentation covers all classes, functions and types and should hopefully leave no questions unanswered. Note that a typical application will only need a small subset of the API (as used in the example programs).
 
 C Example Programs: Basic to Advanced
-#####################################
+*************************************
 
 These two example programs illustrate the bread-and-butter use of LSL as it is executing in almost any device module that comes with the distribution:
   * `Sending a multi-channel time series into LSL. <https://github.com/labstreaminglayer/App-Examples/blob/master/SendDataC.c>`__
@@ -40,7 +40,7 @@ The last example shows how to attach properly formatted meta-data to a stream, a
   * `Handling stream meta-data. <https://github.com/labstreaminglayer/App-Examples/blob/master/HandleMetaDataC.c>`__
 
 C++ Example Programs: Basic to Advanced
-#######################################
+***************************************
 
 These two example programs illustrate the shortest amount of code that is necessary to get a C++ program linked to LSL:
   * `Minimal data sending example. <https://github.com/labstreaminglayer/App-Examples/blob/master/SendDataSimple.cpp>`__
@@ -62,7 +62,7 @@ The last example shows how to attach properly formatted meta-data to a stream, a
   * `Handling stream meta-data. <https://github.com/labstreaminglayer/App-Examples/blob/master/HandleMetaData.cpp>`__
 
 C/C++ Special-Purpose Example Programs
-######################################
+**************************************
 These programs illustrate some special use cases of LSL that are also relevant for C programmers. See the lsl\_c.h header for the corresponding C APIs (they are very similar to the C++ code shown here).
 
 This example illustrates in more detail how streams can be resolved on the network:
@@ -75,7 +75,7 @@ This example shows how to obtain time-correction values for a given stream. Thes
   * `Querying the time-correction information for a stream. <https://github.com/labstreaminglayer/App-Examples/blob/master/GetTimeCorrection.cpp>`__
 
 Python Example Programs: Basic to Advanced
-##########################################
+******************************************
 These examples show how to transmit a numeric multi-channel time series through LSL:
   * `Sending a multi-channel time series into LSL. <https://github.com/labstreaminglayer/liblsl-Python/tree/master/pylsl/examples/SendData.py>`__
   * `Receiving a multi-channel time series from LSL. <https://github.com/labstreaminglayer/liblsl-Python/tree/master/pylsl/examples/ReceiveData.py>`__
@@ -92,7 +92,7 @@ The last example shows how to attach properly formatted meta-data to a stream, a
   * `Handling stream meta-data. <https://github.com/labstreaminglayer/liblsl-Python/tree/master/pylsl/examples/HandleMetadata.py>`__
 
 MATLAB Example Programs: Basic to Advanced
-##########################################
+******************************************
 These examples show how to transmit a numeric multi-channel time series through LSL:
   * `Sending a multi-channel time series into LSL. <https://github.com/labstreaminglayer/liblsl-Matlab/tree/master/examples/SendData.m>`__
   * `Receiving a multi-channel time series from LSL. <https://github.com/labstreaminglayer/liblsl-Matlab/tree/master/examples/ReceiveData.m>`__
@@ -109,7 +109,7 @@ The last example shows how to attach properly formatted meta-data to a stream, a
   * `Handling stream meta-data. <https://github.com/labstreaminglayer/liblsl-Matlab/tree/master/examples/HandleMetaData.m>`__
 
 Java Example Programs: Basic to Advanced
-########################################
+****************************************
 These examples show how to transmit a numeric multi-channel time series through LSL:
   * `Sending a multi-channel time series into LSL. <https://github.com/labstreaminglayer/liblsl-Java/tree/master/src/examples/SendData.java>`__
   * `Receiving a multi-channel time series from LSL. <https://github.com/labstreaminglayer/liblsl-Java/tree/master/src/examples/ReceiveData.java>`__
@@ -126,7 +126,7 @@ The last example shows how to attach properly formatted meta-data to a stream, a
   * `Handling stream meta-data. <https://github.com/labstreaminglayer/liblsl-Java/tree/master/src/examples/HandleMetaData.java>`__
 
 C# Example Programs: Basic to Advanced
-######################################
+**************************************
 These examples show how to transmit a numeric multi-channel time series through LSL:
   * `Sending a multi-channel time series into LSL. <https://github.com/labstreaminglayer/liblsl-Csharp/tree/master/examples/SendData.cs>`__
   * `Receiving a multi-channel time series from LSL. <https://github.com/labstreaminglayer/liblsl-Csharp/tree/master/examples/ReceiveData.cs>`__
@@ -143,7 +143,7 @@ The last example shows how to attach properly formatted meta-data to a stream, a
   * `Handling stream meta-data. <https://github.com/labstreaminglayer/liblsl-Csharp/tree/master/examples/HandleMetaData.cs>`__
 
 Real-World Example Programs
-###########################
+***************************
 These sample codes are from actual 'production' software that is used to do data transmission:
   * `Kinect: multi-channel signal with body joint positions and meta-data. <https://github.com/labstreaminglayer/App-KinectMocap>`__
   * `Keyboard: irregular marker stream based on keyboard inputs. <https://github.com/labstreaminglayer/App-Keyboard>`__
