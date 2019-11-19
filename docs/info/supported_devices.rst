@@ -1,8 +1,9 @@
-Supported Devices
-#################
-The lab streaming layer was originally developed to facilitate human-subject experiments that involve multi-modal data acquisition, including both brain dynamics (primarily EEG), physiology (EOG, EMG, heart rate, respiration, skin conductance, etc.), as well as behavioral data (motion capture, eye tracking, touch interaction, facial expressions, etc.) and finally environmental and program state (for example, event markers).
+Supported Devices and Tools
+###########################
 
-For device support hosted on GitHub, make sure to read the README and check the release page for downloads.
+**For device applications and tools hosted on GitHub, please make sure to read the respective repository's README and to check the release page for downloads.**
+
+The lab streaming layer was originally developed to facilitate human-subject experiments that involve multi-modal data acquisition, including both brain dynamics (primarily EEG), physiology (EOG, EMG, heart rate, respiration, skin conductance, etc.), as well as behavioral data (motion capture, eye tracking, touch interaction, facial expressions, etc.) and finally environmental and program state (for example, event markers).
 
 Supported EEG Hardware
 **********************
