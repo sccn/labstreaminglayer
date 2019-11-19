@@ -1,5 +1,5 @@
-Overview
-########
+Supported Devices
+#################
 The lab streaming layer was originally developed to facilitate human-subject experiments that involve multi-modal data acquisition, including both brain dynamics (primarily EEG), physiology (EOG, EMG, heart rate, respiration, skin conductance, etc.), as well as behavioral data (motion capture, eye tracking, touch interaction, facial expressions, etc.) and finally environmental and program state (for example, event markers).
 
 Supported EEG Hardware
@@ -31,7 +31,7 @@ The following systems are supported by programs included in the LSL distribution
   * `Neuroscan Synamp II and Synamp Wireless <https://github.com/labstreaminglayer/App-Neuroscan>`__ (u)
 
  
-The following systems are also supported by a separate program, the `OpenViBE acquisition server <OVAS.wiki>`__ (unstable systems marked with a (u)):
+The following systems are also supported by a separate program, the `OpenViBE acquisition server <OVAS>`__ (unstable systems marked with a (u)):
   * ANT Neuro ASALAB EEG
   * Brain Products QuickAmp, V-Amp, and BrainAmp series
   * CTF/VSM (u)

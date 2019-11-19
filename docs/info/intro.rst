@@ -6,12 +6,11 @@ What is LSL?
 
 The **LSL distribution** consists of the core library and a suite of tools built on top of the library.
 
-The core transport library is `liblsl <https://github.com/labstreaminglayer/liblsl/>`__ and its language interfaces (`C <https://github.com/sccn/liblsl/>`__,
-  `C++ <https://github.com/sccn/liblsl/>`__, `Python <https://github.com/labstreaminglayer/liblsl-Python/>`__, `Java <https://github.com/labstreaminglayer/liblsl-Java/>`__, `C# <https://github.com/labstreaminglayer/liblsl-Csharp/>`__, `MATLAB <https://github.com/labstreaminglayer/liblsl-Matlab/>`__).
+The core transport library is `liblsl <https://github.com/labstreaminglayer/liblsl/>`__ and its language interfaces (`C <https://github.com/sccn/liblsl/>`__, `C++ <https://github.com/sccn/liblsl/>`__, `Python <https://github.com/labstreaminglayer/liblsl-Python/>`__, `Java <https://github.com/labstreaminglayer/liblsl-Java/>`__, `C# <https://github.com/labstreaminglayer/liblsl-Csharp/>`__, `MATLAB <https://github.com/labstreaminglayer/liblsl-Matlab/>`__).
   The library is general-purpose and cross-platform (OS Support: Win / Linux / MacOS / `Android <https://github.com/labstreaminglayer/liblsl-Android/>`__ / iOS;
   Architecture Support: x86 / amd64 / arm).
 
-The suite of tools includes a `recording program <https://github.com/labstreaminglayer/App-LabRecorder>`__, `file importers <https://github.com/sccn/xdf>`__, and apps that make data from a range of `acquisition hardware <https://github.com/sccn/labstreaminglayer/wiki/SupportedDevices>`__ available on the lab network (for example audio, EEG, or motion capture).
+The suite of tools includes a `recording program <https://github.com/labstreaminglayer/App-LabRecorder>`__, `file importers <https://github.com/sccn/xdf>`__, and apps that make data from a range of `acquisition hardware <https://labstreaminglayer.readthedocs.io/en/latest/info/supported_devices.html>`__ available on the lab network (for example audio, EEG, or motion capture).
 
 There is an intro lecture/demo on LSL here: http://www.youtube.com/watch?v=Y1at7yrcFW0 (part of an online course on EEG-based brain-computer interfaces).
 
@@ -42,7 +41,7 @@ The lab streaming layer comes with a built-in synchronized time facility for all
 
 The built-in time synchronization is designed after the widely deployed Network Time Protocol (NTP) and implemented in the LSL library.
 
-This feature is explained in more detail in the `TimeSynchronization <https://github.com/sccn/labstreaminglayer/wiki/TimeSynchronization.wiki>`__ section.
+This feature is explained in more detail in the `TimeSynchronization <https://labstreaminglayer.readthedocs.io/en/latest/info/time_synchronization.html>`__ section.
 
 File Format
 ===========
@@ -52,7 +51,7 @@ The transport API itself does not endorse or provide a particular file format, b
 Developer Information
 =====================
 
-Please see the separate [build documentation](doc/BUILD.md).
+Please see the separate `build documentation <https://labstreaminglayer.readthedocs.io/en/latest/dev/dev_guide.html>`__.
 
 Clock synchronization
 ---------------------
