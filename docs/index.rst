@@ -16,7 +16,7 @@ Welcome to Labstreaminglayer's documentation!
    :caption: Developer's Guide
 
    dev/dev_guide
-   :ref:`liblsl:index`
+   :doc:`API <liblsl:index>`
    dev/build
    dev/build_env
    dev/app_dev
