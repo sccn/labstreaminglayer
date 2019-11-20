@@ -40,14 +40,14 @@ The lab streaming layer comes with a built-in synchronized time facility for all
 
 The built-in time synchronization is designed after the widely deployed Network Time Protocol (NTP) and implemented in the LSL library.
 
-This feature is explained in more detail in the `TimeSynchronization <https://labstreaminglayer.readthedocs.io/en/latest/info/time_synchronization.html>`__ section.
+This feature is explained in more detail in the :doc:`time_synchronization` document.
 
 File Format
 ===========
 
-The transport API itself does not endorse or provide a particular file format, but the provided recording program (``LabRecorder``) records into the XDF file format (`Extensible Data Format <https://github.com/sccn/xdf>`__). XDF was designed concurrently with the lab streaming layer and supports the full feature set of LSL (including multi-stream container files, per-stream arbitrarily large XML headers, all sample formats as well as time-synchronization information).
+The transport API itself does not endorse or provide a particular file format, but the provided recording program (`LabRecorder <https://github.com/labstreaminglayer/App-LabRecorder/releases>`_) records into the XDF file format (`Extensible Data Format <https://github.com/sccn/xdf>`__). XDF was designed concurrently with the lab streaming layer and supports the full feature set of LSL (including multi-stream container files, per-stream arbitrarily large XML headers, all sample formats as well as time-synchronization information).
 
 Developer Information
 =====================
 
-Please see the separate `build documentation <https://labstreaminglayer.readthedocs.io/en/latest/dev/dev_guide.html>`__.
+Please see the separate developer documentation :doc:`dev_guide`.

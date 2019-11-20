@@ -4,11 +4,15 @@ User's Guide
 Basic Operation
 ***************
 
-The networking in LSL works as follows. The only active participants in LSL networking are the outlet objects, the inlet objects, as well as calls to a resolve function (these are all implemented in the liblsl library). Most details of the communication are configurable, so in the following only the default behavior is explained for conciseness.
+An effective use of LSL requires there to be at least one application streaming data and at least one application receiving data. The stream source, also called an "Outlet", advertises itself on the network. The receiver resolves the advertised stream and creates a connection to it, also called an "Inlet". For each Inlet, the Outlet buffers data and then the next N samples are transmitted from that buffer to the inlet application when the inlet requests it.
+
+Stream advertisement and data transmission all happen using networking protocols. The networking in LSL works as follows. The only active participants in LSL networking are the outlet objects, the inlet objects, as well as calls to a resolve function (these are all implemented in the liblsl library). Most details of the communication are configurable, so in the following only the default behavior is explained for conciseness.
 
 Outlets
 =======
 An outlet may use either IPv4, or IPv6, or both IP stacks in parallel. In the latter case some of the sockets and threads are duplicated.
+
+The main outlet class is :class:`lsl::stream_outlet`.
 
 UDP Service Discovery
 ---------------------
@@ -45,8 +49,3 @@ Here we talk about important functions like the local clock
 (:func:`lsl_local_clock`), a function to query a time offset
 (:func:`lsl_time_correction_ex`) and a function to get the library version used
 by the loaded library (:func:`lsl_library_version`).
-
-Creating outlets
-----------------
-
-The main outlet class is :class:`lsl::stream_outlet`.

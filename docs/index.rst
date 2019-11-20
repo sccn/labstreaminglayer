@@ -1,5 +1,5 @@
-Welcome to Labstreaminglayer's documentation!
-=============================================
+LabStreamingLayer's Documentation
+=================================
 
 .. toctree::
    :maxdepth: 1
@@ -16,12 +16,9 @@ Welcome to Labstreaminglayer's documentation!
    :caption: Developer's Guide
 
    dev/dev_guide
-   :ref:`liblsl:index`
    dev/build
    dev/build_env
    dev/app_dev
-   dev/repository
-   dev/examples
 
 
 Indices and tables

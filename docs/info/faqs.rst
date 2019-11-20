@@ -1,5 +1,5 @@
-Frequently Asked Questions
-##########################
+FAQs
+####
 
 **I want to check the most recent sample of a stream every few seconds. How do I do that?**
 
