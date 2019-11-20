@@ -42,7 +42,7 @@ and the
        ├── liblsl-Python
        └── liblsl-Java
 
-To get the project with Git, see :doc:`repository`.
+To get the project with Git, see :doc:`full_tree`.
 
 
 Dependencies (optional)

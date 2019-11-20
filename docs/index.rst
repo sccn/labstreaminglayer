@@ -16,9 +16,9 @@ LabStreamingLayer's Documentation
    :caption: Developer's Guide
 
    dev/dev_guide
-   dev/build
-   dev/build_env
    dev/app_dev
+   dev/lib_dev
+   dev/api
 
 
 Indices and tables
