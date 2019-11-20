@@ -28,13 +28,11 @@ and the
      labstreaminglayer
      ├── Apps
      │   ├── AMTI ForcePlate
-     │   ├── Examples
      │   ├── LabRecorder
      │   ├── [several other apps]
      │   └── Wiimote
      └── LSL
        ├── liblsl
-       │   ├── external
        │   ├── include
        │   ├── lslboost
        │   ├── project
@@ -67,7 +65,7 @@ building.
 -  Mac - Use `homebrew <https://brew.sh/>`__ (``brew install cmake qt``)
 
 -  Ubuntu (/Debian):
-     ``sudo apt-get install build-essential cmake qt5-default``
+     :command:`sudo apt-get install build-essential cmake qt5-default`
 
 A few apps also depend on :ref:`Boost`.
 
@@ -101,36 +99,21 @@ In tree builds (recommended)
 
    -  If the build directory is already there then delete it
 
-      -  Windows: ``rmdir /S build``; Others: ``rm -Rf build``
+      -  Windows: :command:`rmdir /S build`; Others: :command:`rm -Rf build`
 
-   -  (Create the ‘build’ dir: ``mkdir build``)
+1. Configure the project using :ref:`buildenvcmake`
 
-1. Configure the project using ``cmake``
+- Option 1 - Visual Studio 2017 or later
 
--  Option 1 - Using the GUI
+   -  Open the :file:`CMakeLists.txt` file in Visual Studio
+      (:guilabel:`File->Open->CMake`)
+   -  Change CMake settings via :guilabel:`CMake->Change CMake Settings`
 
-   -  Open a terminal/shell/command prompt and change to the
-      labstreaminglayer directory.
+      -  See `Common Cmake Settings <#common-cmake-options>`__ below
 
-      -  ``cmake-gui -S . -B build`` (GUI) or ``ccmake -S . -B build``
-         (terminal) on other platforms.
-
-   -  Do an initial ``Configure``. Agree to create the directory if
-      asked.
-   -  Select your compiler and click Finish.
-   -  Use the interface to enable building of the Apps you want to use.
-   -  If necessary, change options or add options/paths (``Add Entry``).
-
-      -  :ref:`Qt5` if the guessed path is not right
-      -  :ref:`Boost` if the default was not correct
-      -  A path where redistributable binaries get copied
-         (``CMAKE_INSTALL_PREFIX``)
-      -  Build type (``CMAKE_BUILD_TYPE``, either ``Release`` or
-         ``Debug``). You can change this in Visual Studio later.
-      -  Click on ``Configure`` again to confirm changes.
-
-   -  Click on ``Generate`` to create the build files / Visual Studio
-      Solution file
+   -  Change the selected project from the drop-down menu (:guilabel:`x64-Debug`,
+      :guilabel:`x64-Release`).
+      This will trigger a CMake re-configure with the new variables.
 
 -  Option 2 - Using commandline.
 
@@ -138,39 +121,39 @@ In tree builds (recommended)
       for VS2017’ (or 2019, as needed)
    -  Run cmake with appropriate `commandline options <#common-cmake-options>`__.
 
--  Option 3 - Visual Studio 2017 or later
+-  Option 3 - Using the GUI
 
-   -  Open the ``CMakeLists.txt`` file in Visual Studio
-      (``File``->``Open``->``CMake``)
-   -  Change CMake settings via ``CMake``->``Change CMake Settings``
+   -  Open a terminal/shell/command prompt and change to the
+      labstreaminglayer directory (:command:`cmake-gui -S . -B build`)
+   -  Do an initial :guilabel:`Configure`.
+      Agree to create the directory if asked.
+   -  Select your compiler and click Finish.
+   -  Use the interface to set or add options/paths (:guilabel:`Add Entry`).
 
-      -  See `Common Cmake Settings <#common-cmake-options>`__ below
+      -  :ref:`Qt5` if the guessed path is not right
+      -  :ref:`Boost` if the default was not correct
+      -  A path where redistributable binaries get copied
+         (``CMAKE_INSTALL_PREFIX``)
+      -  Build type (``CMAKE_BUILD_TYPE``, either ``Release`` or
+         ``Debug``). You can change this in Visual Studio later.
+      -  Click on :guilabel:`Configure` again to confirm changes.
 
-   -  Change the selected project from the drop-down menu (x64-Debug,
-      x64-Release). This will trigger a CMake re-configure with the new
-      variables.
+   -  Click on :guilabel:`Generate` to create the build files / Visual Studio
+      Solution file
 
-1. Build the project
-
--  If in MSVC using cmake to generate project files
-
-   -  Still in cmake-gui, Click ``Open Project``, or if not still in
-      cmake-gui, double click on the created build/LabStreamingLayer.sln
-   -  Change the target to Release.
-   -  In the solution explorer, right click on INSTALL and click build.
-
+2. Build the project
 -  If using command line
 
    -  Start the build process
-      (``cmake --build . --config Release --target install``\ `\* <#regarding-the-install-target>`__)
+      (:command:`cmake --build . --config Release --target install`
+      (see also :ref:`cmakeinstalltarget`)
 
 -  If using Visual Studio 2017 built-in CMake utilities
 
    -  Use the CMake menu > Install > LabStreamingLayer
 
 This will create a distribution tree in the folder specified by
-``CMAKE_INSTALL_PREFIX``\ `\* <#regarding-the-install-target>`__ similar
-to this:
+:ref:`CMAKE_INSTALL_PREFIX <cmakeinstalltarget>` similar to this:
 
 ‘installed’ directory tree
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -208,20 +191,22 @@ to this:
          └── lslboost.lib
 
 On Unix systems (Linux+OS X) the executable’s library path is changed to
-include ``../LSL/lib/`` and the executable folder (``./``) so common
+include :file:`../LSL/lib/` and the executable folder (:file:`./`) so common
 libraries (Qt, Boost) can be distributed in a single library directory
-or put in the same folder. On Windows, the library is copied to (and
-searched in) the executable folder.
+or put in the same folder.
+On Windows, the library is copied to (and searched in) the executable folder.
 
-The resulting folder ``LSL`` contains three subfolders:
+The resulting folder :file:`LSL` contains three subfolders:
 
--  ``cmake`` contains the exported build configuration
-   (``LSLConfig.cmake``) that can be used to import the library in `out
+-  :file:`cmake` contains the exported build configuration
+   (:file:`LSLConfig.cmake`) that can be used to import the library in `out
    of tree builds <#out-of-tree-builds>`__.
--  ``include`` contains the include headers for C (``lsl_c.h``) and C++
-   (``lsl_cpp.h``) programs.
--  ``lib`` contains the library files. To run a program, you need the
-   ``liblslXY.dll`` (Windows) or ``.so`` (Linux) or ``.dylib`` (MacOS).
+-  :file:`include` contains the include headers for C (:file:`lsl_c.h`) and C++
+   (:file:`lsl_cpp.h`) programs.
+-  :file:`lib` contains the library files. To run a program, you need the
+   :file:`liblslXY.dll` (Windows) or :file:`.so` (Linux) or :file:`.dylib` (MacOS).
+
+.. _cmakeinstalltarget:
 
 Regarding the ``install`` target
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
