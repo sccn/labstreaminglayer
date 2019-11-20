@@ -49,3 +49,9 @@ html_theme = 'alabaster'
 html_static_path = ['_static']
 
 master_doc = 'index'  # for Sphinx < 2.0
+
+# intersphinx
+intersphinx_mapping = {
+    'liblsl': ('https://labstreaminglayer.readthedocs.io/projects/liblsl/en/latest', None),
+    }
+

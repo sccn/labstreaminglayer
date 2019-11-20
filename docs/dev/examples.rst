@@ -16,14 +16,18 @@ API Documentation
 
 It is recommended that you clone the repository to get the respective code. The documentation is at the following locations:
   * C: `C header file <https://github.com/sccn/liblsl/blob/master/include/lsl_c.h>`__
-  * C++: `C++ header file <https://github.com/sccn/liblsl/blob/master/include/lsl_cpp.h>`__
+  * C++: `C++ header file <https://github.com/sccn/liblsl/blob/master/include/lsl_cpp.h>`__,
+    :doc:`in progress API documentation <liblsl:index>`
   * Python: `pylsl module <https://github.com/labstreaminglayer/liblsl-Python/blob/master/pylsl/pylsl.py>`__
   * Java: `JavaDocs <https://github.com/labstreaminglayer/liblsl-Java/blob/master/javadoc/index.html>`__
   * C#: `LSL module <https://github.com/labstreaminglayer/liblsl-Csharp/blob/master/LSL.cs>`__
   * MATLAB: `class files <https://github.com/labstreaminglayer/liblsl-Matlab>`__.
   * Other languages (R, Octave, Ruby, Lua, Perl, Go): `SWIG interfaces <https://github.com/labstreaminglayer/liblsl-Generic>`__ (the C or C++ header file is the API reference).
 
-The API documentation covers all classes, functions and types and should hopefully leave no questions unanswered. Note that a typical application will only need a small subset of the API (as used in the example programs).
+The API documentation covers all classes, functions and types and should
+hopefully leave no questions unanswered.
+Note that a typical application will only need a small subset of the API
+(as used in the example programs).
 
 C Example Programs: Basic to Advanced
 *************************************
