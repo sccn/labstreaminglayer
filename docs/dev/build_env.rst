@@ -1,3 +1,5 @@
+.. _lslbuildenv:
+
 LSL build environment
 =====================
 
@@ -42,6 +44,8 @@ Some apps may have higher requirements while liblsl works on very old
 (e.g. Windows XP) and tiny (e.g. Raspberry Pi, some microcontrollers,
 Android) systems. See the respective build documentation for more
 information.
+
+.. _buildenv_cmake:
 
 `CMake <https://cmake.org/download/>`_
 --------------------------------------

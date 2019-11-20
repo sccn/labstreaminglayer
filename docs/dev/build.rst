@@ -44,7 +44,7 @@ and the
        ├── liblsl-Python
        └── liblsl-Java
 
-To get the project with Git, see :ref:`Working with this repository`.
+To get the project with Git, see :doc:`repository`.
 
 
 Dependencies (optional)
@@ -55,7 +55,7 @@ The core ``liblsl`` does not have any external dependencies.
 Different language bindings or apps have their own dependencies so
 please consult those projects’ build instructions.
 
-Many apps depend on Qt so we provide some quick instructions
+Many apps depend on :ref:`Qt5` so we provide some quick instructions
 here, but this may not be necessary for you depending on what you are
 building.
 
@@ -74,7 +74,7 @@ A few apps also depend on :ref:`Boost`.
 Build instructions
 ------------------
 
-First, set up your :ref:`LSL build environment`.
+First, set up your :doc:`build_env`.
 
 There are three build types:
 
@@ -289,7 +289,7 @@ command.
    -  TODO: Each app should have its own additional options specified in
       its readme.
 
--  App dependencies (required by some apps). See :ref:`LSL build environment` for more info.
+-  App dependencies (required by some apps). See :ref:`lslbuildenv` for more info.
 
    -  ``-DQt5_DIR=<path/to/qt/binaries>/lib/cmake/Qt5``
    -  ``-DBOOST_ROOT=<path/to/boost>``
