@@ -9,6 +9,7 @@ LabStreamingLayer's Documentation
    info/getting_started
    info/user_guide
    info/supported_devices
+   info/network-connectivity
    info/faqs
 
 .. toctree::
