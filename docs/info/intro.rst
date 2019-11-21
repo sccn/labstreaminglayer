@@ -18,10 +18,57 @@ Streaming Layer API
 
 The liblsl library provides the following **abstractions** for use by client programs:
 
-- **Stream Outlets**: for making time series data streams available on the lab network. The data is pushed sample-by-sample or chunk-by-chunk into the outlet, and can consist of single- or multichannel data, regular or irregular sampling rate, with uniform value types (integers, floats, doubles, strings). Streams can have arbitrary XML meta-data (akin to a file header). By creating an outlet the stream is made visible to a collection of computers (defined by the network settings/layout) where one can subscribe to it by creating an inlet.
-- **Resolve functions**: these allow to resolve streams that are present on the lab network according to content-based queries (for example, by name, content-type, or queries on the meta-data). The service discovery features do not depend on external services such as zeroconf and are meant to drastically simplify the data collection network setup.
-- **Stream Inlets**: for receiving time series data from a connected outlet. Allows to retrieve samples from the provider (in-order, with reliable transmission, optional type conversion and optional failure recovery). Besides the samples, the meta-data can be obtained (as XML blob or alternatively through a small built-in DOM interface).
-- **Built-in clock**: Allows to time-stamp the transmitted samples so that they can be mutually synchronized. See Time Synchronization.
+.. glossary::
+
+  Sample
+    A single measurement of all channels from a device is a called a sample.
+
+  Chunk
+    A :term:`Sample` can be transferred by itself for improved latency or
+    in chunks of multiple samples for improved throughput.
+
+  Metadata
+    Apart from the raw data, information about the :term:`stream` is stored and
+    transmitted as XML data (akin to a file header).
+
+  Stream
+    The combination of sampled data from a device with the :term:`Metadata`
+    is called a stream.
+    A stream can have a regular sampling rate (e.g. audio sampled at
+    44100 Hz, videos at 24 or 60 Hz)
+    or an irregular sampling rate (e.g. key presses, experimental
+    events) and one or more channels
+    (e.g. two channels for stereo audio, 32 / 64 channels for EEG recordings,
+    1920*1080 channels for a full HD screen capture, one channel for
+    key presses)
+    All data within a stream is required to have the same type
+    (integers, floats, doubles, strings).
+
+  Stream Outlet
+    for making time series data streams available on the lab network.
+    The data is pushed sample-by-sample or chunk-by-chunk into the outlet.
+    By creating an outlet the stream is made visible to a collection of
+    computers (defined by the network settings/layout) where one can
+    subscribe to it by find it via a :term:`Resolver` and connecting
+    a :term:`Stream Inlet` to it.
+
+  Stream Inlet
+    A stream inlet is for receiving time series data from a single connected outlet.
+    Allows to retrieve samples from the :term:`stream` (in-order, with reliable
+    (re-)transmission, optional type conversion and optional failure recovery).
+    Besides the samples, the :term:`Metadata` can be obtained (as XML blob
+    or alternatively through a small built-in DOM interface).
+
+  Resolver
+    LSL provides functions to resolve :term:`streams <Stream>` that are
+    present on the lab network according to content-based queries
+    (for example, by name, content-type, or queries on the meta-data).
+    The service discovery features do not depend on external services such as
+    zeroconf and are meant to simplify the data collection network setup.
+
+  Built-in clock
+    Allows to time-stamp the transmitted samples so that they can be mutually
+    synchronized. See :doc:`time_synchronization`.
 
 Reliability
 ===========
