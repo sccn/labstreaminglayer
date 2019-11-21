@@ -50,4 +50,4 @@ The transport API itself does not endorse or provide a particular file format, b
 Developer Information
 =====================
 
-Please see the separate developer documentation :doc:`dev_guide`.
+Please see the separate developer documentation :doc:`../dev/dev_guide`.

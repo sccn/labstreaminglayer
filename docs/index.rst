@@ -18,8 +18,11 @@ LabStreamingLayer's Documentation
    dev/dev_guide
    dev/app_dev
    dev/lib_dev
-   dev/api
 
+External documentation
+----------------------
+
+- :doc:`C++ API documentation <liblsl:index>`
 
 Indices and tables
 ==================
