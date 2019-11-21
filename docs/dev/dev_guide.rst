@@ -9,12 +9,16 @@ The :doc:`app_dev` guide is for you if you are:
 - writing an application that receives data (e.g., to process and possibly resend on a new stream);
 - trying to build an existing application that does not already have a release for your platform.
 
-The :doc:`lib_dev` guide is for you inf you are:
+The :doc:`lib_dev` guide is for you if you are:
+
 - trying to build liblsl for a platform that does not already have a release
-    - Please check the `liblsl release page <https://github.com/sccn/liblsl/releases>`_ first.
-    - Please let us know so we can add the platform to the list of automated builds, if possible.
+
+  - Please check the `liblsl release page <https://github.com/sccn/liblsl/releases>`_ first.
+  - Please let us know so we can add the platform to the list of automated builds, if possible.
+
 - trying to use liblsl in a language that does not already have an interface
-    - Already supported: Android, C#, Java, Matlab, Python
+
+  - `Already supported: Android, C#, Java, Matlab, Python <https://github.com/sccn/labstreaminglayer/tree/master/LSL>`_
 
 
 # Coding Guides

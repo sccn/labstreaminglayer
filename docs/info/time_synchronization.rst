@@ -57,17 +57,18 @@ Stream Header Synchronization Parameters
 ========================================
 It is recommended that all LSL stream generators attach the following block to the header of each stream. The offset\_mean parameter is used to subtract known constant time lags from each stream. can\_drop\_samples is used to label a stream as having a steady frame rate, except for dropped samples. This is what you expect for video players and video recorders. The other parameters are for informational purposes or error estimation only.
 
-.. codeblock:: xml
-<desc>
-  <synchronization>        # information about synchronization requirements
-    <offset_mean>          # mean offset (seconds). This value should be subtracted from XDF timestamps before comparing streams. For local LSL generated events, this value is defined to be zero.
-    <offset_rms>           # root-mean-square offset (seconds). Note that it is very rare for offset distributions to be Gaussian.
-    <offset_median>        # median offset (seconds).
-    <offset_5_centile>     # 95% of offsets are greater than this value (seconds)
-    <offset_95_centile>    # 95% of offsets are less than this value (seconds)
-    <can_drop_samples>     # whether the stream can have dropped samples (true/false). Typically true for video cameras and video displays and false otherwise.
-  </synchronization>
-</desc>
+.. code:: xml
+
+  <desc>
+    <synchronization>        # information about synchronization requirements
+      <offset_mean>          # mean offset (seconds). This value should be subtracted from XDF timestamps before comparing streams. For local LSL generated events, this value is defined to be zero.
+      <offset_rms>           # root-mean-square offset (seconds). Note that it is very rare for offset distributions to be Gaussian.
+      <offset_median>        # median offset (seconds).
+      <offset_5_centile>     # 95% of offsets are greater than this value (seconds)
+      <offset_95_centile>    # 95% of offsets are less than this value (seconds)
+      <can_drop_samples>     # whether the stream can have dropped samples (true/false). Typically true for video cameras and video displays and false otherwise.
+    </synchronization>
+  </desc>
 
 
 Validation

@@ -62,6 +62,6 @@ master_doc = 'index'  # for Sphinx < 2.0
 
 # intersphinx
 intersphinx_mapping = {
-    'liblsl': ('https://labstreaminglayer.readthedocs.io/projects/liblsl/en/latest', None),
+    'liblsl': ('https://labstreaminglayer.readthedocs.io/projects/liblsl', None),
     }
 
