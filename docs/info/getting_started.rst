@@ -6,7 +6,7 @@ https://github.com/sccn/labstreaminglayer/blob/master/README.md
 
 The most common way to use LSL is to use one or more applications with integrated LSL functionality.
 
-* Take a look at the list of `supported devices <https://labstreaminglayer.readthedocs.io/en/latest/info/supported_devices.html>`_ and follow the instructions to start streaming data from your device. If your device is not in the list then see the "Getting Help" section below.
+* Take a look at the list of `supported devices <https://labstreaminglayer.readthedocs.io/info/supported_devices.html>`_ and follow the instructions to start streaming data from your device. If your device is not in the list then see the "Getting Help" section below.
 * Download `LabRecorder <https://github.com/labstreaminglayer/App-LabRecorder>`_ from its `release page <https://github.com/labstreaminglayer/App-LabRecorder/releases>`_. (Note that LabRecorder saves data to `Extensible Data Format (xdf) <https://github.com/sccn/xdf>`_ which has its own set of tools for loading data after finishing recording.)
 * Use LSL from your scientific computing environment. LSL has many language interfaces, including Python and Matlab.
     * Python users need only ``pip install pylsl`` then try some of the `provided examples <https://github.com/labstreaminglayer/liblsl-Python/tree/master/pylsl/examples>`_.
