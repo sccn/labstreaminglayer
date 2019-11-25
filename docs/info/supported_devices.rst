@@ -35,7 +35,7 @@ The following systems are supported by programs included in the LSL distribution
   * `Neuroscan Synamp II and Synamp Wireless <https://github.com/labstreaminglayer/App-Neuroscan>`__ (u)
 
  
-The following systems are also supported by a separate program, the `OpenViBE acquisition server <https://labstreaminglayer.readthedocs.io/en/latest/info/ovas.html>`__ (unstable systems marked with a (u)):
+The following systems are also supported by a separate program, the `OpenViBE acquisition server <https://labstreaminglayer.readthedocs.io/info/ovas.html>`__ (unstable systems marked with a (u)):
   * ANT Neuro ASALAB EEG
   * Brain Products QuickAmp, V-Amp, and BrainAmp series
   * CTF/VSM (u)
