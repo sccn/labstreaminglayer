@@ -85,7 +85,7 @@ Future liblsl versions are planned to support multiple network devices.
 You can track the progress in the issue tracker
 (https://github.com/sccn/liblsl/pull/31).
 
-.. image:: http://sccn.ucsd.edu/images/advanced_network_settings.png
+.. image:: ../images/advanced_network_settings.png
 
 If you still have connection problems your router might be configured to
 disable or block certain features or ports between computers.
