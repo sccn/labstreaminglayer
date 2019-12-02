@@ -44,7 +44,11 @@ Don’t use URLs like ``ssh://git@github.com/<username>/<reponame>``
 because they can’t be checked out anonymously.
 Change them *in your local tree* with
 :cmd:`git remote set-url origin ssh://...` after
-checking them out
+checking them out.
+
+If you're using bash, you can ``cd`` to the subdirectory and set your local
+remote with
+:cmd:`git remote set-url origin git@github.com:labstreaminglayer/App-${PWD##*/}`
 
 Check out a single submodule: 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -75,11 +79,10 @@ Commit and push changes in the App repository:
 From the main repository, update the reference:
 :cmd:`git add Apps/XY`
 
-Once again, check that you have really pushed the app repository
-
 Commit and push as usual:
 
 .. code:: bash
 
+   git add Apps/XY
    git commit -m'Update references'
-   git push
+   git push --recurse-submodules=on-demand

@@ -150,7 +150,7 @@ Real-World Example Programs
 ***************************
 These sample codes are from actual 'production' software that is used to do data transmission:
   * `Kinect: multi-channel signal with body joint positions and meta-data. <https://github.com/labstreaminglayer/App-KinectMocap>`__
-  * `Keyboard: irregular marker stream based on keyboard inputs. <https://github.com/labstreaminglayer/App-Keyboard>`__
+  * `Input: irregular marker stream based on keyboard inputs. <https://github.com/labstreaminglayer/App-Input>`__
   * `B-Alert: reading from an EEG device in a separate thread. <https://github.com/labstreaminglayer/App-BAlert>`__
   * `EyeLink: reading from an eye tracker in Python. <https://github.com/labstreaminglayer/App-EyeLink>`__
 

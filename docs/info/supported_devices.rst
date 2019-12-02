@@ -62,8 +62,7 @@ Several eye tracking systems are currently supported by LSL and included in the 
 Supported Human Interface Hardware
 **********************************
 A wide range of Windows-compatible input hardware is supported by LSL and included with the distribution:
-  * `Computer mice, trackballs, presenters, etc. <https://github.com/labstreaminglayer/App-Mouse>`__
-  * `Computer keyboards <https://github.com/labstreaminglayer/App-Keyboard>`__
+  * `Input devices (keyboards, trackballs, presenters, etc.) <https://github.com/labstreaminglayer/App-Input>`__
   * `DirectX-compatible joysticks, wheels, gamepads and other controllers <https://github.com/labstreaminglayer/App-GameController>`__
   * `Nintendo Wiimote and official expansions <https://github.com/labstreaminglayer/App-Wiimote>`__
 
