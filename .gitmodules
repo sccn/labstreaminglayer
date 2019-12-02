@@ -86,9 +86,6 @@
 [submodule "Apps/EyeTribe"]
 	path = Apps/EyeTribe
 	url = https://github.com/labstreaminglayer/App-EyeTribe.git
-[submodule "Apps/Mouse"]
-	path = Apps/Mouse
-	url = https://github.com/labstreaminglayer/App-Mouse.git
 [submodule "Apps/SMIEyetracker"]
 	path = Apps/SMIEyetracker
 	url = https://github.com/labstreaminglayer/App-SMIEyetracker.git
@@ -110,9 +107,9 @@
 [submodule "Apps/Cognionics"]
 	path = Apps/Cognionics
 	url = https://github.com/labstreaminglayer/App-Cognionics.git
-[submodule "Apps/Keyboard"]
-	path = Apps/Keyboard
-	url = https://github.com/labstreaminglayer/App-Keyboard.git
+[submodule "Apps/Input"]
+	path = Apps/Input
+	url = https://github.com/labstreaminglayer/App-Input.git
 [submodule "Apps/OpenVR"]
 	path = Apps/OpenVR
 	url = https://github.com/labstreaminglayer/App-OpenVR.git
