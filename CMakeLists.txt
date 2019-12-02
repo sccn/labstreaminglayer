@@ -1,6 +1,6 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.12)
 project(LabStreamingLayer
-	VERSION 1.12.0
+	VERSION 1.13.0
 	LANGUAGES CXX)
 
 if(NOT EXISTS "${CMAKE_CURRENT_LIST_DIR}/LSL/liblsl/CMakeLists.txt")
