@@ -1,3 +1,6 @@
+.. role:: cmd(code)
+   :language: bash
+
 Building LSL
 ============
 
@@ -65,7 +68,7 @@ building.
 -  Mac - Use `homebrew <https://brew.sh/>`__ (``brew install cmake qt``)
 
 -  Ubuntu (/Debian):
-     :command:`sudo apt-get install build-essential cmake qt5-default`
+     :cmd:`sudo apt-get install build-essential cmake qt5-default`
 
 A few apps also depend on :ref:`Boost`.
 
@@ -99,7 +102,7 @@ In tree builds (recommended)
 
    -  If the build directory is already there then delete it
 
-      -  Windows: :command:`rmdir /S build`; Others: :command:`rm -Rf build`
+      -  Windows: :cmd:`rmdir /S build`; Others: :cmd:`rm -Rf build`
 
 1. Configure the project using :ref:`buildenvcmake`
 
@@ -124,7 +127,7 @@ In tree builds (recommended)
 -  Option 3 - Using the GUI
 
    -  Open a terminal/shell/command prompt and change to the
-      labstreaminglayer directory (:command:`cmake-gui -S . -B build`)
+      labstreaminglayer directory (:cmd:`cmake-gui -S . -B build`)
    -  Do an initial :guilabel:`Configure`.
       Agree to create the directory if asked.
    -  Select your compiler and click Finish.
@@ -145,7 +148,7 @@ In tree builds (recommended)
 -  If using command line
 
    -  Start the build process
-      (:command:`cmake --build . --config Release --target install`
+      (:cmd:`cmake --build . --config Release --target install`
       (see also :ref:`cmakeinstalltarget`)
 
 -  If using Visual Studio 2017 built-in CMake utilities
@@ -363,30 +366,47 @@ environments to test your changes, you can use the CI to
 compile the code on multiple platforms and offer binaries to willing
 testers.
 
+
+.. _liblslarch:
+
 Note about architectures / binaries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(Also known as: "Which ``liblsl.so`` / ``liblsl.dll`` do I need?)
+(Also known as: "Which :file:`liblsl.so` / :file:`liblsl.dll` do I need?)
 
-Liblsl gets compiled to a binary for a combination of Operating System /
-libc (almost almost the same) and processor architecture.
+Liblsl gets compiled to a binary for a *specific* combination of
+Operating System / libc (almost almost the same) and processor architecture.
 
 Most binaries include the native word size in bits in the name and a
 hint which platform the binary is for in the file extension,
-e.g. liblsl\ *32*.dll for a 32-bit windows dll, liblsl\ *64*.so for a 64
-bit Linux / Android library or liblsl64.dylib for a 64 bit OS X dylib.
+e.g. :file:`liblsl{32}.{dll}` for a 32-bit windows dll,
+:file:`liblsl{64}.{so}` for a 64 bit Linux / Android library or
+:file:`liblsl{64}.{dylib}` for a 64 bit OS X dylib.
 
 The CI system automatically builds the following combinations:
 
--  x86 Windows DLL (liblsl32.dll)
--  x64 Windows DLL (liblsl64.dll)
--  x64 Linux shared object (liblsl64.so)
--  x64 OS X shared object (liblsl64.dylib)
+-  x86 Windows DLL (:file:`liblsl32.dll`)
+-  x64 Windows DLL (:file:`liblsl64.dll`)
+-  x64 Linux shared object for Ubuntu 18.04 (:file:`liblsl64.so`)
+-  x64 OS X shared object (:file:`liblsl64.dylib`)
 
 Android also has ``.so`` shared objects, but build with a different
 toolchain so they are not interchangable with ``.so`` files for regular
-Linuxes. It’s planned to build Android binaries for the following
-architectures on the CI systems: arm64-v8a, armeabi, mips64, x86_64.
+Linuxes.
+
+Embedded Linux devices typically have an ARM processor instead of an x86 / x64
+processor so the default linux binaries won't work (resulting in an error such
+as ``dlopen failed: "package/bin/liblsl64.so has unexpected e_machine: 62``).
+
+On OS X / Linux you can check what device a binary is compiled for with the
+:program:`file` command, e.g.
+
+- :cmd:`file liblsl64.dll`:
+  :samp:`liblsl64.dll: PE32+ executable (DLL) (console) {x86-64}, for MS Windows`
+- :cmd:`file liblsl64.so`:
+  :samp:`liblsl64.so: ELF 64-bit LSB shared object, {x86-64}, version 1 (GNU/Linux)`.
+- :cmd:`file jni/arm64-v8a/liblsl.so`:
+  :samp:`jni/arm64-v8a/liblsl.so: ELF 64-bit LSB shared object, {ARM aarch64}`
 
 Raspberry Pi (cross-compilation, currently not working)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
