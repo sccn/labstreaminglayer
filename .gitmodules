@@ -149,3 +149,6 @@
 [submodule "Apps/SigVisualizer"]
 	path = Apps/SigVisualizer
 	url = https://github.com/labstreaminglayer/App-SigVisualizer
+[submodule "LSL/liblsl-Unity"]
+	path = LSL/liblsl-Unity
+	url = https://github.com/labstreaminglayer/LSL4Unity.git
