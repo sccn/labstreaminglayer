@@ -1,7 +1,11 @@
 FAQs
 ####
 
-**I want to check the most recent sample of a stream every few seconds. How do I do that?**
+Get the newest sample
+---------------------
+
+I want to check the most recent sample of a stream every few seconds.
+How do I do that?
 
 Because the result of :cpp:func:`~lsl::stream_inlet::pull_sample()` is the next
 sample in the order provided by the sender, you first need to pull out all
@@ -16,7 +20,11 @@ parameter of the :cpp:func:`~lsl::stream_inlet::stream_inlet()`
 constructor to e.g., one second), so that older samples are automatically
 discarded when the buffer is full.
 
-**What clock does LSL use? / How do I relate LSL's local_clock() to my wall clock?**
+lsl_local_clock() 
+-----------------
+
+What clock does LSL use? / 
+How do I relate LSL's :cpp:func:`lsl_local_clock()` to my wall clock?
 
 LSL's :cpp:func:`lsl_local_clock()` function measures the number of seconds
 from a starting point,
@@ -39,7 +47,11 @@ Otherwise, you have to add the time offset returned by
 :cpp:func:`lsl::stream_inlet::time_correction()`
 to the timestamps to have them in your local domain.
 
-**What is the latency of LSL? Does the chosen buffer size have anything to do with it?**
+Latency
+-------
+
+What is the latency of LSL?
+Does the chosen buffer size have anything to do with it?
 
 The latency of LSL is typically under 0.1 milliseconds on a local machine,
 unless a very large amount of data is transmitted (megabytes per sample).
@@ -51,7 +63,11 @@ network connectivity is restored.
 If you only need a limited backlog of data, you can set a shorter buffer size
 when creating the inlet.
 
-**I want to transmit data with multiple data types (e.g., floats, ints) per sample. What is the best way to do that?**
+Multiple data types in a single stream
+--------------------------------------
+
+I want to transmit multiple data types (e.g. floats, ints) at once.
+What is the best way to do that?
 
 The simplest way is to use a channel format that can hold all numbers that you
 want to represent and concatenate your data into a vector of that type -- the
@@ -69,7 +85,11 @@ In principle you can also send multiple streams and use the same time stamp
 when sending the samples, but that will require some extra complexity at the
 receiving that is rarely worth the effort.
 
-**I want to make an LSL driver for a piece of hardware. What is the fastest way to do that?**
+Stream data from a new hardware device
+---------------------------------------
+
+I want to make an LSL driver for a piece of hardware.
+What is the fastest way to do that?
 
 If a quick-and-dirty solution is fine, then the best way is to take one of the
 example programs for your favorite language and extend it as needed.
@@ -80,7 +100,12 @@ needed.
 
 See also: :doc:`../dev/app_dev`.
 
-**I am making a driver for a piece of hardware and want to make sure that my time stamps are accurate. How to do that?**
+Timestamp accuracy
+------------------
+
+I am making a driver for a piece of hardware and want to make sure that my time
+stamps are accurate.
+How to do that?
 
 If your data comes from a separate device your samples will generally be a few
 milliseconds old.
@@ -104,7 +129,33 @@ time stamps and leave it to the receiver to smooth them if needed.
 In particular, when you analyze the data offline (e.g., in MATLAB or Python),
 the XDF importer can do a much better job at linearizing the jitter post-hoc.
 
-**I am transferring data at high sampling rate or bandwidth. What is the most efficient way to do this?**
+Using device timestamps
+-----------------------
+
+My hardware can produce time stamps of its own.
+Should I pass them into LSL?
+
+Usually the answer is no -- the preferred way is to either leave it to LSL's
+:cpp:func:`~lsl::stream_outlet::push_sample()` or
+:cpp:func:`~lsl::stream_outlet::push_chunk()` functions to time-stamp the data
+(easiest), or to call the
+:cpp:func:`lsl_local_clock()` function to read out the LSL clock, and then pass
+that in, either unmodified or with a constant delay subtracted
+(if you know the delay of your hardware).
+
+The only exception is if you have multiple pieces of hardware, all of which
+have access to the same high-precision clock, and you want to use that clock
+instead of the LSL clock (if the millisecond precision provided by LSL is not
+enough for your needs, e.g., demanding physics experiments), and you know
+exactly what you are doing.
+If you have any doubt on how you would use your own clock to synchronize
+multiple pieces of hardware after you've recorded the data, don't use them.
+
+High sampling rates
+-------------------
+
+I am transferring data at high sampling rate or bandwidth.
+What is the most efficient way to do this?
 
 When sending big data, it usually doesn't matter how you send it (via
 :cpp:func:`~lsl::stream_outlet::push_sample()` or
@@ -132,25 +183,11 @@ pre-allocated buffer.
 Make sure that you use a recent version of liblsl (1.10 or later offers a
 faster network protocol) at both the sender and the receiver.
 
-**My hardware can produce time stamps of its own. Should I pass them into LSL?**
+Chunk sizes
+-----------
 
-Usually the answer is no -- the preferred way is to either leave it to LSL's
-:cpp:func:`~lsl::stream_outlet::push_sample()` or
-:cpp:func:`~lsl::stream_outlet::push_chunk()` functions to time-stamp the data
-(easiest), or to call the
-:cpp:func:`lsl_local_clock()` function to read out the LSL clock, and then pass
-that in, either unmodified or with a constant delay subtracted
-(if you know the delay of your hardware).
-
-The only exception is if you have multiple pieces of hardware, all of which
-have access to the same high-precision clock, and you want to use that clock
-instead of the LSL clock (if the millisecond precision provided by LSL is not
-enough for your needs, e.g., demanding physics experiments), and you know
-exactly what you are doing.
-If you have any doubt on how you would use your own clock to synchronize
-multiple pieces of hardware after you've recorded the data, don't use them.
-
-**My hardware supports different block/chunk sizes. Which one is best for use with LSL?**
+My hardware supports different block/chunk sizes.
+Which one is best for use with LSL?
 
 The chunk size trades off latency vs. network overhead, so we suggest to allow
 the user to override the value if desired.
@@ -171,7 +208,11 @@ in typical settings.
 
 .. _faqmultimatch:
 
-**I am getting more than one matching stream in my resolve query. What is the best way to handle this?**
+Multiple streams match a resolve query
+-------------------------------------- 
+
+I am getting more than one matching stream in my resolve query.
+What is the best way to handle this?
 
 You either have to rename one of your streams (if the software that provides
 them allows you to do that), or you can make the query more specific.
