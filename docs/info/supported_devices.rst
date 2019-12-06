@@ -95,6 +95,7 @@ The following stimulus presentations systems are usable out of the box with LSL:
   * Psychopy (using LSL for Python)
   * PsychToolbox (using LSL for MATLAB)
   * Unity (using LSL for C#)
+  * `Simulation and Neuroscience Application Platform (SNAP) <https://github.com/sccn/SNAP>`__
 
 Miscellaneous Hardware
 **********************
