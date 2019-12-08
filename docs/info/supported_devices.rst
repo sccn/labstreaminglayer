@@ -16,7 +16,7 @@ The following devices support LSL via vendor-provided software:
   * `InteraXon Muse <http://www.choosemuse.com/>`__
       * `Example use with Matlab <matlab_example_with_muse>`__
   * `mBrainTrain SMARTING <http://www.mbraintrain.com/smarting/>`__
-  * `neuroelectrics Enobio <http://www.neuroelectrics.com/products/enobio/>`__
+  * neuroelectrics `(Enobio <http://www.neuroelectrics.com/products/enobio/>`__, `StarStim <https://www.neuroelectrics.com/solutions/starstim>`__) via `NIC2 <https://www.neuroelectrics.com/solution/software-integrations/nic2>`__.
   * `OpenBCI (all headsets) <http://docs.openbci.com/software/06-labstreaminglayer>`__
 
 The following systems are supported by programs included in the LSL distribution (untested systems marked with a (u)):
@@ -28,7 +28,7 @@ The following systems are supported by programs included in the LSL distribution
   * `BrainVision RDA client <https://github.com/labstreaminglayer/App-BrainProducts>`__
   * `Cognionics dry/wireless <https://github.com/labstreaminglayer/App-Cognionics>`__
   * `EGI AmpServer <https://github.com/labstreaminglayer/App-EGIAmpServer>`__
-  * `Enobio dry/wireless <https://github.com/labstreaminglayer/App-Enobio>`__ (u)
+  * `Enobio dry/wireless <https://github.com/labstreaminglayer/App-Enobio>`__ (u) (please see vendor-provided above)
   * `g.Tec g.USBamp <https://github.com/labstreaminglayer/App-g.Tec/tree/master/g.USBamp>`__ (buggy at high sampling rates)
   * `g.Tec g.NEEDaccess <https://github.com/labstreaminglayer/App-g.Tec/tree/master/g.NEEDaccess>`__ (including g.USBamp, g.HIamp, g.Nautilus)
   * `MINDO dry/wireless <https://github.com/labstreaminglayer/App-MINDO>`__
