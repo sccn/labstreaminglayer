@@ -44,9 +44,6 @@
 [submodule "Apps/Wiimote"]
 	path = Apps/Wiimote
 	url = https://github.com/labstreaminglayer/App-Wiimote.git
-[submodule "Apps/Enobio"]
-	path = Apps/Enobio
-	url = https://github.com/labstreaminglayer/App-Enobio.git
 [submodule "Apps/MATLABViewer"]
 	path = Apps/MATLABViewer
 	url = https://github.com/labstreaminglayer/App-MATLABViewer.git
