@@ -1,3 +1,5 @@
+:orphan:
+
 This is the series of steps to connect with the Muse.
 
 1. Download the Muse SDK from http://developer.choosemuse.com

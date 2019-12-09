@@ -1,3 +1,5 @@
+:orphan:
+
 OVAS
 ####
 The OpenViBE acquisition server (OVAS) is an open-source program that is part of the OpenViBE distribution and OpenViBE project (http://openvibe.inria.fr/) developed at INRIA. The OVAS supports a wide range of EEG hardware by itself, and is almost entirely complementary to what the LSL distribution is offering. Together both distributions cover the majority of the EEG market. As of version 1.0, the OVAS supports LSL as an output modality.

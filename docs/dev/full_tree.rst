@@ -1,3 +1,5 @@
+:orphan:
+
 .. role:: cmd(code)
    :language: bash
 

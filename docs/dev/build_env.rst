@@ -1,3 +1,5 @@
+:orphan:
+
 .. _lslbuildenv:
 
 LSL build environment
