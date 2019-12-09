@@ -11,7 +11,7 @@ developer's guide.
 
 The labstreaminglayer source code is similarly split into Apps and LSL (core library and language interfaces),
 each of which comprises several submodules.
-One could work with the repository, submodules and all, as a :doc:`dev/full_tree`, but this is not recommended.
+One could work with the repository, submodules and all, as a :doc:`full_tree`, but this is not recommended.
 Most developers will be better working on individual apps or individual language interfaces.
 
 :doc:`app_dev`
