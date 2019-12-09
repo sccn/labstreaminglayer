@@ -11,10 +11,31 @@ To test such a case, confirm that you are also unable to transmit data using
 the example programs, e.g. :file:`labstreaminglayer/LSL/liblsl/bin/SendDataC`
 and :file:`labstreaminglayer/LSL/liblsl/bin/ReceiveDataC`, respectively.
 
+.. _firewallsettings:
+
+Firewall Settings
+*****************
+
+The connections that are required by LSL to work in its default settings are
+
+- UDP broadcasts to port 16571 and/or
+- UDP multicast to port 16571 at
+
+  - (`FF02:113D:6FDD:2C17:A643:FFE2:1BD1:3CD2`)
+  - `FF05:113D:6FDD:2C17:A643:FFE2:1BD1:3CD2`
+  - (`FF08113D:6FDD:2C17:A643:FFE2:1BD1:3CD2`)
+  - (`FF0E:113D:6FDD:2C17:A643:FFE2:1BD1:3CD2`)
+  - `224.0.0.1`, `224.0.0.183`, `239.255.172.215`
+
+- TCP and UDP connections to the ports 16572-16604
+
 To test whether the firewall is at issue, turn off both any personal firewall
 that you may have enabled, and then also turn off the Windows default firewall
 for the home or work network (if your network is declared home/work).
 As long as you are behind a router in a non-public network this should be safe.
+
+Windows Firewall
+================
 
 To turn off the Windows firewall, go to
 :guilabel:`Start Menu->Control Panel->Windows Firewall->Turn Windows Firewall on or off`
@@ -60,6 +81,9 @@ a rule to your firewall that allows your client programs through the network
 :guilabel:`Allow a program or feature through Windows Firewall`).
 Most personal firewalls also allow you to set up per-program rules.
 
+Windows Network Adapters
+************************
+
 Another possible reason is when you have multiple (perhaps virtual) network
 adapters, and the primary network adapter is not the one that is used to
 communicate with other machines on the lab network.
@@ -90,28 +114,11 @@ You can track the progress in the issue tracker
 If you still have connection problems your router might be configured to
 disable or block certain features or ports between computers.
 
-.. _firewallsettings:
-
-Firewall settings
-=================
-The connections that are required by LSL to work in its default settings are
-
-- UDP broadcasts to port 16571 and/or
-- UDP multicast to port 16571 at
-
-  - (`FF02:113D:6FDD:2C17:A643:FFE2:1BD1:3CD2`)
-  - `FF05:113D:6FDD:2C17:A643:FFE2:1BD1:3CD2`
-  - (`FF08113D:6FDD:2C17:A643:FFE2:1BD1:3CD2`)
-  - (`FF0E:113D:6FDD:2C17:A643:FFE2:1BD1:3CD2`)
-  - `224.0.0.1`, `224.0.0.183`, `239.255.172.215`
-
-- TCP and UDP connections to the ports 16572-16604
-
 Customizing Network Features of LSL
-===================================
+***********************************
 All network features used by LSL clients (such as the ports) can be customized
 using an appropriately-placed :doc:`configuration file <lslapicfg>`.
 
 Security
-========
+********
 Transmission between computers is unencrypted in LSL under the assumption that experiments involving sensitive data take place in a protected network environment. If you do not trust your network, the best way to establish such an environment by setting up a Virtual Private Network (VPN), which works even across the internet.
