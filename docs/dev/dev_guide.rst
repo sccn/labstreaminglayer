@@ -9,10 +9,15 @@ source code.
 The guides are therefore split into an app developer's guide and a liblsl
 developer's guide.
 
+The labstreaminglayer source code is similarly split into Apps and LSL (core library and language interfaces),
+each of which comprises several submodules.
+One could work with the repository, submodules and all, as a :doc:`dev/full_tree`, but this is not recommended.
+Most developers will be better working on individual apps or individual language interfaces.
+
 :doc:`app_dev`
 --------------
 
-This guide is for you if you are:
+:doc:`This guide <app_dev>` is for you if you are:
 
 - adding LSL support for a device to send its data to other applications;
 - writing an application that receives data (e.g., to process and possibly resend on a new stream);
@@ -29,7 +34,7 @@ Also make sure to glance over the :doc:`../info/faqs`.
 :doc:`lib_dev`
 --------------
 
-The guide is for you if you are:
+:doc:`The guide <lib_dev>` is for you if you are:
 
 - trying to build liblsl for a platform that does not already have a release
 
