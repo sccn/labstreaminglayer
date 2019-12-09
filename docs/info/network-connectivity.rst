@@ -93,7 +93,7 @@ disable or block certain features or ports between computers.
 .. _firewallsettings:
 
 Firewall settings
------------------
+=================
 The connections that are required by LSL to work in its default settings are
 
 - UDP broadcasts to port 16571 and/or
@@ -108,7 +108,7 @@ The connections that are required by LSL to work in its default settings are
 - TCP and UDP connections to the ports 16572-16604
 
 Customizing Network Features of LSL
-###################################
+===================================
 All network features used by LSL clients (such as the ports) can be customized
 using an appropriately-placed :doc:`configuration file <lslapicfg>`.
 
