@@ -29,9 +29,6 @@
 [submodule "Apps/BAlert"]
 	path = Apps/BAlert
 	url = https://github.com/labstreaminglayer/App-BAlert.git
-[submodule "Apps/BestPracticesGUI"]
-	path = Apps/BestPracticesGUI
-	url = https://github.com/labstreaminglayer/App-BestPracticesGUI.git
 [submodule "Apps/AMTIForcePlate"]
 	path = Apps/AMTIForcePlate
 	url = https://github.com/labstreaminglayer/App-AMTIForcePlate.git
@@ -128,9 +125,6 @@
 [submodule "Apps/TobiiPro"]
 	path = Apps/TobiiPro
 	url = https://github.com/labstreaminglayer/App-TobiiPro.git
-[submodule "App-BestPracticesGUI"]
-	path = App-BestPracticesGUI
-	url = https://github.com/labstreaminglayer/App-BestPracticesGUI.git
 [submodule "Apps/BrainAmpSeries"]
 	path = Apps/BrainAmpSeries
 	url = https://github.com/labstreaminglayer/App-BrainAmpSeries.git
@@ -149,3 +143,6 @@
 [submodule "LSL/liblsl-Unity"]
 	path = LSL/liblsl-Unity
 	url = https://github.com/labstreaminglayer/LSL4Unity.git
+[submodule "Apps/AppTemplate_cpp_qt"]
+	path = Apps/AppTemplate_cpp_qt
+	url = https://github.com/labstreaminglayer/AppTemplate_cpp_qt.git
