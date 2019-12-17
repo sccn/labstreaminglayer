@@ -9,18 +9,26 @@ Or see below for full applications.
 
 C++ apps
 --------
-To get started with a C++ acquisition app, take a look at the `BestPracticesGUI <https://github.com/labstreaminglayer/App-BestPracticesGUI/>`__, a small example that provides a solid groundwork for at least the following parts:
+To get started with a C++ acquisition app, take a look at the `AppTemplate_cpp_qt <https://github.com/labstreaminglayer/AppTemplate_cpp_qt/>`__, a small example that provides a solid groundwork for at least the following parts:
 
 -  license information
 -  setting up a build with CMake
--  showing a graphical user interface to change the configuration and start / stop streaming data from a fictitious device to the network in a separate thread
+-  setting up a data stream in a separate thread
+-  showing a graphical user interface to change the configuration and start / stop streaming data
 -  save / load the configuration
 -  CI configuration so binaries are almost automatically built on the three major OSes
 
-You can copy the `app skeleton <https://github.com/labstreaminglayer/App-BestPracticesGUI/tree/master/appskeleton>`__ to a new repository to get started and read the `annotated source files <https://github.com/labstreaminglayer/App-BestPracticesGUI/tree/master/doc>`__ for an overview over the design decisions and things you should change.
+On the AppTemplate_cpp_qt repository website click on "Use this template" to generate your own repository. Or `Click Here! <https://github.com/labstreaminglayer/AppTemplate_cpp_qt/generate>`__.
+
+Read the annotated CMakeLists.txt file and the annotated source files for an overview of the app design and pointers about what you should change.
 
 And of course many of the applications in the `labstreaminglayer submodules <https://github.com/sccn/labstreaminglayer/tree/master/Apps>`_ are good examples of C++ applications, most of which use Qt.
 
 Python apps
 -----------
-Python is another great language for app development, as long as your target audience has Python and the required libraries installed. While there are no full application examples, `Pupils Labs <https://github.com/labstreaminglayer/App-PupilLabs>`__ has both a plugin and a simple application that provide a good demonstration of using ``pylsl``.
+Python is another great language for app development, as long as your target audience has Python and the required libraries installed.
+
+While there are no full application templates, look at the `example code <https://github.com/labstreaminglayer/liblsl-Python/tree/master/pylsl/examples>`__ to begin.
+
+A couple good ``pylsl`` example apps are `the one from Pupils Labs <https://github.com/labstreaminglayer/App-PupilLabs>`__, which has both a plugin and a simple application, and `SigVisualizer <https://github.com/labstreaminglayer/App-SigVisualizer>`__.
+
