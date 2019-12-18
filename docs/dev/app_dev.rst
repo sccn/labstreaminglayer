@@ -24,6 +24,10 @@ Read the annotated CMakeLists.txt file and the annotated source files for an ove
 
 And of course many of the applications in the `labstreaminglayer submodules <https://github.com/sccn/labstreaminglayer/tree/master/Apps>`_ are good examples of C++ applications, most of which use Qt.
 
+You will also need to build your C++ application. Most LabStreamingLayer applications
+will follow similar :doc:`app_build` instructions. Please be sure to read the application's
+README (and optionally BUILD) before building.
+
 Python apps
 -----------
 Python is another great language for app development, as long as your target audience has Python and the required libraries installed.
