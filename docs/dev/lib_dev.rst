@@ -50,9 +50,9 @@ Configuring the liblsl project
 
 .. code:: bash
 
-cd liblsl
-mkdir build && cd build
-cmake .. -G <generator name>
+    cd liblsl
+    mkdir build && cd build
+    cmake .. -G <generator name>
 
 Note: call :cmd:`cmake -G` without a generator name to get a list of available generators.
 I use :cmd:`cmake .. -G "Visual Studio 16 2019" -A x64`
