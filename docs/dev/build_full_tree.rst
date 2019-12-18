@@ -3,29 +3,24 @@
 .. role:: cmd(code)
    :language: bash
 
-Building LSL
-============
+Building LabStreamingLayer Full Tree
+====================================
 
-This manual describes the process of building liblsl 
-from source for Windows, Mac OS X, and Linux. Since liblsl is
-cross-platform (it is written in standard C++ and uses some boost
-libraries), this process should be pretty straightforward. The following
-paragraphs provide a step-by-step instruction of the build process on
-all three platforms.
+This guide is intended only for advanced developers who intend to work
+ on multiple projects and/or the core library simultaneously.
 
 Project Structure
 -----------------
 
-This repository contains only the general project structure and
-references (“`git
+This main `labstreaminglayer repository <https://github.com/sccn/labstreaminglayer>`__
+contains only the general project structure and references (“`git
 submodules <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`__”) to
 the liblsl C/C++ library
 (`LSL/liblsl <https://github.com/labstreaminglayer/liblsl/>`__),
 various language bindings (e.g.
 `LSL/liblsl-Python <https://github.com/labstreaminglayer/liblsl-Python>`__),
-the Apps to stream data from several types of devices including template
-Examples,
-and the
+the Apps to stream data from several types of devices
+including a template examples, and the
 `LabRecorder <https://github.com/labstreaminglayer/App-LabRecorder>`__.:
 
 .. code:: bash
@@ -47,7 +42,7 @@ and the
        ├── liblsl-Python
        └── liblsl-Java
 
-To get the project with Git, see :doc:`full_tree`.
+To get the project source code using Git, see :doc:`full_tree`.
 
 
 Dependencies (optional)
@@ -58,48 +53,20 @@ The core ``liblsl`` does not have any external dependencies.
 Different language bindings or apps have their own dependencies so
 please consult those projects’ build instructions.
 
-Many apps depend on :ref:`Qt5` so we provide some quick instructions
-here, but this may not be necessary for you depending on what you are
-building.
-
--  Windows:
-
-   -  `CMake <https://cmake.org/download/>`__
-   -  `Qt5 <https://www.qt.io/download-open-source/>`__
-
--  Mac - Use `homebrew <https://brew.sh/>`__ (``brew install cmake qt``)
-
--  Ubuntu (/Debian):
-     :cmd:`sudo apt-get install build-essential cmake qt5-default`
-
-A few apps also depend on :ref:`Boost`.
+Many apps depend on :ref:`Qt5`, :ref:`boost`, and many use :ref:`CMake` build system.
+Follow the instructions to set up your :doc:`build_env`.
 
 Build instructions
 ------------------
 
-First, set up your :doc:`build_env`.
-
-There are three build types:
-
-1. `in tree builds <#in-tree-builds-recommended>`__ build the LSL
-   library and all apps you explicitly enable. This is probably what you
-   want.
-2. `out of tree builds <#out-of-tree-builds>`__ build only a single app
-   and require you to have a prebuilt LSL library and the exported build
-   configuration (``LSLConfig.cmake``).
-3. `semi out of tree builds <#semi-out-of-tree-builds>`__ build only a
-   single app and liblsl alongside it.
-
 In tree builds (recommended)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. clone the repository
-   (``git clone --recurse-submodules https://github.com/labstreaminglayer/labstreaminglayer.git``)
-2. Create the build directory
+1. Create the build directory
 
 -  You can use a GUI file manager to do this part or you can do it by
    command line as below.
--  Open a terminal/shell/command prompt and change to the
+-  Open a Terminal/shell/Command Prompt and change to the
    labstreaminglayer directory.
 
    -  If the build directory is already there then delete it
@@ -225,35 +192,6 @@ with Windows installers or package managers on Linux / OS X), but only
 copying them to a separate folder and fixing some hardcoded paths in the
 binaries.
 
-Out of tree builds
-~~~~~~~~~~~~~~~~~~
-
-An out of tree build doesn’t include the whole ``labstreaminglayer``
-directory but only a single application (a minimal example is contained
-in the
-```OutOfTreeTest`` <https://github.com/labstreaminglayer/App-OutOfTreeTest>`__
-folder).
-
-Building the LSL library should take only 1-2 minutes, so you should
-prefer `in tree builds <#in-tree-builds-recommended>`__ unless you know
-what you’re doing.
-
-The process for building liblsl and each app separately is almost
-exactly as for `in tree builds <#in-tree-builds-recommended>`__. The
-only difference is that you need to ``cd`` to each submodule separately,
-create a build directory (``mkdir build``) and build liblsl / the app as
-described above.
-
-Semi out of tree builds
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Semi out of tree builds build only a single app, but liblsl doesn’t have
-to be precompiled because the liblsl source directory is included as a
-build target. These builds are preferable if you need to change / debug
-both the app and liblsl, but because compiling liblsl takes considerably
-longer than most apps you shouldn’t do it for more than one app (see `in
-tree builds <#in-tree-builds-recommended>`__ for that).
-
 Common CMake Options
 --------------------
 
@@ -287,7 +225,7 @@ command.
       -  liblsl comes with its own boost used by itself, but it is not
          uncommon for apps to require ‘normal’ boost.
 
--  Install root (`see below <#LSL_INSTALL_ROOT>`__)
+-  Install root (see :doc:`LSL_INSTALL_ROOT`)
 
    -  Not necessary for in-tree builds.
 
@@ -338,100 +276,3 @@ immediately after ``"ctestCommandArgs": ""`` add the following:
              "value": "ON"
            }
          ]
-
-``LSL_INSTALL_ROOT``
-~~~~~~~~~~~~~~~~~~~~
-
-To import the LSL library in a separate CMake build, you need to set the
-the **absolute path** to the `‘installed’ LSL
-directory <#install-directory-tree>`__ in the ``LSL_INSTALL_ROOT``
-variable (e.g. ``-DLSL_INSTALL_ROOT=C:/LSL/build/install/``) or add the
-**absolute path** to the\ ``LSL/cmake`` subfolder of the `‘installed’
-LSL directory <#install-directory-tree>`__ to your ``CMAKE_PREFIX_PATH``
-(``list(APPEND CMAKE_MODULE_PATH "C:/path/to/LSL/build/install/cmake/")``.
-
-CMake looks for the file
-``${LSL_INSTALL_ROOT}/LSL/share/LSL/LSLConfig.cmake``, so make sure your
-``LSL_INSTALL_ROOT`` has the files listed in `the previous
-section <#installed-directory-tree>`__.
-
-By default, apps should look in ``../../LSL/liblsl/build/install`` so if
-you have a ``build`` folder in each submodule (``LSL/liblsl/build``,
-``Apps/Examples/build`` etc.) and installed ``liblsl`` first, CMake
-automatically finds liblsl.
-
-Building for multiple platforms
--------------------------------
-
-In case you haven’t got several PCs and Macs with different build
-environments to test your changes, you can use the CI to
-compile the code on multiple platforms and offer binaries to willing
-testers.
-
-
-.. _liblslarch:
-
-Note about architectures / binaries
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-(Also known as: "Which :file:`liblsl.so` / :file:`liblsl.dll` do I need?)
-
-Liblsl gets compiled to a binary for a *specific* combination of
-Operating System / libc (almost almost the same) and processor architecture.
-
-Most binaries include the native word size in bits in the name and a
-hint which platform the binary is for in the file extension,
-e.g. :file:`liblsl{32}.{dll}` for a 32-bit windows dll,
-:file:`liblsl{64}.{so}` for a 64 bit Linux / Android library or
-:file:`liblsl{64}.{dylib}` for a 64 bit OS X dylib.
-
-The CI system automatically builds the following combinations:
-
--  x86 Windows DLL (:file:`liblsl32.dll`)
--  x64 Windows DLL (:file:`liblsl64.dll`)
--  x64 Linux shared object for Ubuntu 18.04 (:file:`liblsl64.so`)
--  x64 OS X shared object (:file:`liblsl64.dylib`)
-
-Android also has ``.so`` shared objects, but build with a different
-toolchain so they are not interchangable with ``.so`` files for regular
-Linuxes.
-
-Embedded Linux devices typically have an ARM processor instead of an x86 / x64
-processor so the default linux binaries won't work (resulting in an error such
-as ``dlopen failed: "package/bin/liblsl64.so has unexpected e_machine: 62``).
-
-On OS X / Linux you can check what device a binary is compiled for with the
-:program:`file` command, e.g.
-
-- :cmd:`file liblsl64.dll`:
-  :samp:`liblsl64.dll: PE32+ executable (DLL) (console) {x86-64}, for MS Windows`
-- :cmd:`file liblsl64.so`:
-  :samp:`liblsl64.so: ELF 64-bit LSB shared object, {x86-64}, version 1 (GNU/Linux)`.
-- :cmd:`file jni/arm64-v8a/liblsl.so`:
-  :samp:`jni/arm64-v8a/liblsl.so: ELF 64-bit LSB shared object, {ARM aarch64}`
-
-Raspberry Pi (cross-compilation, currently not working)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Intended for Ubuntu 18.04
-
--  In terminal, cd to a working folder.
--  ``git clone https://github.com/raspberrypi/tools.git``
--  ``export PITOOLS=/path/to/raspberrypi/tools``
--  Change to labstreaminglayer directory
--  ``mkdir build_pi && cd build_pi``
--  ``cmake .. -DLSL_LSLBOOST_PATH="lslboost" -DCMAKE_TOOLCHAIN_FILE=../LSL/liblsl/pi.cmake``
--  ``make``
-
-Raspberry Pi (native Raspbian)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Just follow the usual `build instructions <#build-instructions>`__.
-
-Some caveats:
-
--  Make sure your charger is appropriate (>2.5A@5V for the 3B+),
-   otherwise the build will hang or your Pi will reset.
--  Avoid building with a running GUI, minimize the GPU memory (option
-   ``gpu_mem`` in ``/boot/config.txt``) and have at most 2 build
-   processes running at once (``-j`` option to make / ninja).

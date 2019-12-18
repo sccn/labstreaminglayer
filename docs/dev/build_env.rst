@@ -53,6 +53,8 @@ Android) systems.
 
 .. _buildenvcmake:
 
+Note: MacOS users are expected to have `homebrew <https://brew.sh/>`__ installed.
+
 `CMake <https://cmake.org/download/>`_
 --------------------------------------
 
@@ -85,7 +87,7 @@ regular expressions).
 
 Afterwards, point CMake to it (:samp:`-D{BOOST_ROOT}=path/to/boost`).
 
-Each apps build instructions should tell you exactly which boost
+Each app's build instructions should tell you exactly which boost
 libraries you need.
 
 -  Windows: install the `precompiled
