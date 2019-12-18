@@ -146,3 +146,6 @@
 [submodule "Apps/AppTemplate_cpp_qt"]
 	path = Apps/AppTemplate_cpp_qt
 	url = https://github.com/labstreaminglayer/AppTemplate_cpp_qt.git
+[submodule "Apps/PSMoveLSL"]
+	path = Apps/PSMoveLSL
+	url = https://github.com/labstreaminglayer/App-PSMove.git
