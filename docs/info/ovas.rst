@@ -10,6 +10,12 @@ To enable LSL output, click on Preferences in the OVAS application, check the bo
 
 .. image:: ../images/ovas-driverprops.png
 
+Problem with timestamps
+***********************
+Once upon a time, and possibly still in the version you have, OVAS incorrectly overrides the timestamps.
+This makes it impossible to synchronize streams obtained from OVAS with streams obtained from non-OVAS sources.
+There is a solution. Follow this link for more info: http://openvibe.inria.fr/tracker/view.php?id=197
+
 Minimizing Latency
 ******************
 The OVAS outputs the data in equal-sized chunks, and the chunk size determines most of the latency of the program. To minimize this latency, use the lowest possible setting under "Sample count per sent block". Some device drivers also offer options that indirectly affect the latency, for example the "Brain Products BrainAmp series" driver has an option called "Decimation factor", which serves to reduce the effective sampling rate (default=10x). The length of the output buffer (in seconds) is proportional to this factor, so a lower value will give you lower latency.
