@@ -149,3 +149,6 @@
 [submodule "Apps/PSMoveLSL"]
 	path = Apps/PSMoveLSL
 	url = https://github.com/labstreaminglayer/App-PSMove.git
+[submodule "Apps/TobiiStreamEngine"]
+	path = Apps/TobiiStreamEngine
+	url = https://github.com/labstreaminglayer/App-TobiiStreamEngine.git

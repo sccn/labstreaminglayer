@@ -55,9 +55,12 @@ Several eye tracking systems are currently supported by LSL and included in the 
   * `SMI iViewX <https://github.com/labstreaminglayer/App-SMIEyetracker>`__
   * `SMI Eye Tracking Glasses <https://github.com/labstreaminglayer/App-SMIEyetracker>`__
   * SR Research Eyelink (very basic)
-  * `Tobii Eye trackers <https://github.com/labstreaminglayer/App-Tobii>`__ (u)
+  * Tobii Eye trackers
+    * `Tobii Pro <https://github.com/labstreaminglayer/App-TobiiPro>`__
+	* `Tobii StreamEngine (consumer devices) <https://github.com/labstreaminglayer/App-TobiiStreamEngine>`__
+    * `Tobii other (older app)<https://github.com/labstreaminglayer/App-Tobii>`__ (u)
   * Custom 2-camera eye trackers (with some hacking)
-  * `Pupil-Labs <https://github.com/labstreaminglayer/App-PupilLabs>`__
+  * `Pupil-Labs < https://github.com/labstreaminglayer/App-PupilLabs>`__
 
 Supported Human Interface Hardware
 **********************************
