@@ -322,10 +322,6 @@ immediately after ``"ctestCommandArgs": ""`` add the following:
              "value": "C:\\local\\boost_1_67_0"
            },
            {
-             "name": "LSLAPPS_Examples",
-             "value": "ON"
-           },
-           {
              "name": "LSLAPPS_LabRecorder",
              "value": "ON"
            },
@@ -357,7 +353,7 @@ section <#installed-directory-tree>`__.
 
 By default, apps should look in ``../../LSL/liblsl/build/install`` so if
 you have a ``build`` folder in each submodule (``LSL/liblsl/build``,
-``Apps/Examples/build`` etc.) and installed ``liblsl`` first, CMake
+``Apps/LabRecorder/build`` etc.) and installed ``liblsl`` first, CMake
 automatically finds liblsl.
 
 Building for multiple platforms

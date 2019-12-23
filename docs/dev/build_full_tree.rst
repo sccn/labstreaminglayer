@@ -232,9 +232,9 @@ command.
 Here are some example cmake commands:
 
 -  Chad’s Windows build:
-   ``cmake .. -G "Visual Studio 14 2015 Win64" -DLSL_LSLBOOST_PATH="lslboost" -DQt5_DIR=C:\Qt\5.11.1\msvc2015_64\lib\cmake\Qt5 -DBOOST_ROOT=C:\local\boost_1_67_0 -DLSLAPPS_LabRecorder=ON -DLSLAPPS_XDFBrowser=ON -DLSLAPPS_OpenVR=ON``
+   ``cmake .. -G "Visual Studio 14 2015 Win64" -DQt5_DIR=C:\Qt\5.11.1\msvc2015_64\lib\cmake\Qt5 -DBOOST_ROOT=C:\local\boost_1_67_0 -DLSLAPPS_LabRecorder=ON -DLSLAPPS_XDFBrowser=ON -DLSLAPPS_OpenVR=ON``
 -  Chad’s Mac build:
-   ``cmake .. -DLSL_LSLBOOST_PATH="lslboost" -DLSLAPPS_Examples=ON -DLSLAPPS_LabRecorder=ON -DLSLAPPS_Benchmarks=ON -DLSLAPPS_XDFBrowser=ON -DQt5_DIR=$(brew --prefix qt)/lib/cmake/Qt5/``
+   ``cmake .. -DQt5_DIR=$(brew --prefix qt)/lib/cmake/Qt5/ -DLSLAPPS_LabRecorder=ON -DLSLAPPS_Benchmarks=ON -DLSLAPPS_XDFBrowser=ON``
 
 Configure CMake options in VS 2017 / VS 2019
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -258,10 +258,6 @@ immediately after ``"ctestCommandArgs": ""`` add the following:
            {
              "name": "BOOST_ROOT",
              "value": "C:\\local\\boost_1_67_0"
-           },
-           {
-             "name": "LSLAPPS_Examples",
-             "value": "ON"
            },
            {
              "name": "LSLAPPS_LabRecorder",

@@ -9,8 +9,8 @@ Working With The LabStreamingLayer Repository
 See also https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
 This repository doesn’t contain the apps, just links to their respective
-submodules (i.e. ``Apps/Examples`` is found at commit ``abc123def`` of
-``https://github.com/labstreaminglayer/App-Examples.git``).
+submodules (i.e. ``Apps/AppTemplate_cpp_qt`` is found at commit ``abc123def`` of
+``https://github.com/labstreaminglayer/AppTemplate_cpp_qt``).
 
 Recommended git settings
 ------------------------
