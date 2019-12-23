@@ -32,7 +32,7 @@ the specific application build instructions first.
 
       -  Windows: :cmd:`rmdir /S build`; Others: :cmd:`rm -Rf build`
 
-4. Configure the project using :ref:`buildenvcmake`
+4. Configure the project using :ref:`lslbuildenv` cmake.
 
 - Option 1 - Visual Studio 2017 or later
 
@@ -157,6 +157,8 @@ command.
    -  ``-DBOOST_ROOT=<path/to/boost>``
 
 -  Location of liblsl (see :doc:`LSL_INSTALL_ROOT`)
+
+- Use ``-DLSL_UNIXFOLDERS=0`` on MacOS if your application is not bundled with its dylib.
 
 - Please check the application's README and/or BUILD document for more options.
 
