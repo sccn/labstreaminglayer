@@ -22,6 +22,7 @@ your stimulus presentation package with the LabRecorder.
   (Note that LabRecorder saves data to
   `Extensible Data Format (xdf) <https://github.com/sccn/xdf>`_
   which has its own set of tools for loading data after finishing recording.)
+* Go through the Tutorials, currently residing in the `Wiki <https://github.com/sccn/labstreaminglayer/wiki>`_.
 * Use LSL from your scientific computing environment. LSL has many language interfaces,
   including Python and Matlab.
 

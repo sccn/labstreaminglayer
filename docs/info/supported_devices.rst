@@ -83,7 +83,7 @@ Supported Multimedia Hardware
 *****************************
 Support for standard Windows-compatible multimedia hardware is included:
   * DirectShow-compatible video hardware
-  * `PC-compatible sound cards <https://github.com/labstreaminglayer/App-AudioCaptureWin>`__
+  * `Qt-compatible audio input <https://github.com/labstreaminglayer/App-AudioCapture>`__
 
 Supported Stimulation Hardware
 ******************************
