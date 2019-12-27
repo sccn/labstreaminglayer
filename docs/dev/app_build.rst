@@ -17,71 +17,43 @@ the specific application build instructions first.
 1. Make sure you have a working :doc:`build_env`.
 
 2. Get the source code for your application.
-    - If you are creating a new C++ application to add support for a device,
-    generate a project from the `AppTemplate_cpp_qt <https://github.com/labstreaminglayer/AppTemplate_cpp_qt/generate>`__
-    - git clone the application. 
+  * If you are creating a new C++ application to add support for a device then generate a project from the `AppTemplate_cpp_qt <https://github.com/labstreaminglayer/AppTemplate_cpp_qt/generate>`__
+  * git clone the application
 
 3. Create the build directory
-
--  You can use a GUI file manager to do this part or you can do it by
-   command line as below.
--  Open a terminal/shell/command prompt and change to the
-   repository directory.
-
-   -  If the build directory is already there then delete it
-
-      -  Windows: :cmd:`rmdir /S build`; Others: :cmd:`rm -Rf build`
+  * You can use a GUI file manager to do this part or you can do it by command line as below.
+  * Open a terminal/shell/command prompt and change to the repository directory.
+  * If the build directory is already there then delete it
+      * Windows: :cmd:`rmdir /S build`; Others: :cmd:`rm -Rf build`
 
 4. Configure the project using :ref:`lslbuildenv` cmake.
-
-- Option 1 - Visual Studio 2017 or later
-
-   -  Open the :file:`CMakeLists.txt` file in Visual Studio
-      (:guilabel:`File->Open->CMake`)
-   -  Change CMake settings via :guilabel:`CMake->Change CMake Settings`
-
-      -  See `Common CMake Settings <#common-cmake-options>`__ below
-
-   -  Change the selected project from the drop-down menu (:guilabel:`x64-Debug`,
-      :guilabel:`x64-Release`).
-      This will trigger a CMake re-configure with the new variables.
-
--  Option 2 - Using commandline.
-
-   -  Open a Terminal window or, on Windows, a ``x64 Native Tools Command Prompt
-      for VS2017`` (or VS2019, as needed).
-   -  Run cmake with appropriate `commandline options <#common-cmake-options>`__.
-
--  Option 3 - Using the GUI
-
-   -  Open a terminal/shell/command prompt and change to the
-      repository directory (:cmd:`cmake-gui -S . -B build`)
-   -  Do an initial :guilabel:`Configure`.
-      Agree to create the directory if asked.
-   -  Select your compiler and click Finish.
-   -  Use the interface to set or add options/paths (:guilabel:`Add Entry`).
-
-      -  :ref:`Qt5` if the guessed path is not right
-      -  :ref:`Boost` if the default was not correct
-      -  A path where redistributable binaries get copied
-         (``CMAKE_INSTALL_PREFIX``)
-      -  Build type (``CMAKE_BUILD_TYPE``, either ``Release`` or
-         ``Debug``). You can change this in Visual Studio later.
-      -  Click on :guilabel:`Configure` again to confirm changes.
-
-   -  Click on :guilabel:`Generate` to create the build files / Visual Studio
-      Solution file
+  * Option 1 - Visual Studio 2017 or later
+      *  Open the :file:`CMakeLists.txt` file in Visual Studio (:guilabel:`File->Open->CMake`)
+      *  Change CMake settings via :guilabel:`CMake->Change CMake Settings`
+          *  See `Common CMake Settings <#common-cmake-options>`__ below
+      *  Change the selected project from the drop-down menu (:guilabel:`x64-Debug`, :guilabel:`x64-Release`). This will trigger a CMake re-configure with the new variables.
+  * Option 2 - Using commandline.
+      *  Open a Terminal window or, on Windows, a ``x64 Native Tools Command Prompt for VS2017`` (or VS2019, as needed).
+      *  Run cmake with appropriate `commandline options <#common-cmake-options>`__.
+  * Option 3 - Using the GUI
+      * Open a terminal/shell/command prompt and change to the repository directory.
+      * Run :cmd:`cmake-gui -S . -B build`
+      * Do an initial :guilabel:`Configure`. Agree to create the directory if asked.
+      * Select your compiler and click Finish.
+      * Use the interface to set or add options/paths (:guilabel:`Add Entry`).
+          * :ref:`Qt5` if the guessed path is not right
+          * :ref:`Boost` if the default was not correct
+          * A path where redistributable binaries get copied (``CMAKE_INSTALL_PREFIX``)
+          * Build type (``CMAKE_BUILD_TYPE``, either ``Release`` or ``Debug``). You can change this in Visual Studio later.
+      * Click on :guilabel:`Configure` again to confirm changes.
+      * Click on :guilabel:`Generate` to create the build files / Visual Studio Solution file
 
 5. Build the project
--  If using command line
-
-   -  Start the build process
-      (:cmd:`cmake --build . --config Release --target install`
-      (see also :ref:`cmakeinstalltarget`)
-
--  If using Visual Studio >=2017 built-in CMake utilities
-
-   -  Use the CMake menu > Install > ApplicationName
+  * If using command line
+      * Start the build process (:cmd:`cmake --build . --config Release --target install`)
+      * (see also :ref:`cmakeinstalltarget`)
+  * If using Visual Studio >=2017 built-in CMake utilities
+      * Use the CMake menu > Install > ApplicationName
 
 This will create a distribution tree in the folder specified by
 :ref:`CMAKE_INSTALL_PREFIX <cmakeinstalltarget>` similar to this:
@@ -148,15 +120,15 @@ Apps, then you will have to provide some optional arguments to the cmake
 command.
 
 -  `Generator <https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html#cmake-generators>`__:
-   ``-G <generator name>``.
+    ``-G <generator name>``.
 
 -  App dependencies (required by some apps). See :ref:`lslbuildenv` for more info.
+  - ``-DVendor_ROOT=<path/to/vendor/sdk>``
+  - ``-DQt5_DIR=<path/to/qt/binaries>/lib/cmake/Qt5``
+      - On MacOS the path can be learned from homebrew: ``-DQt5_DIR=$(brew --prefix qt5)/lib/cmake/Qt5``
+  - ``-DBOOST_ROOT=<path/to/boost>``
 
-   -  ``-DVendor_ROOT=<path/to/vendor/sdk>``
-   -  ``-DQt5_DIR=<path/to/qt/binaries>/lib/cmake/Qt5``
-   -  ``-DBOOST_ROOT=<path/to/boost>``
-
--  Location of liblsl (see :doc:`LSL_INSTALL_ROOT`)
+- Location of liblsl (see :doc:`LSL_INSTALL_ROOT`)
 
 - Use ``-DLSL_UNIXFOLDERS=0`` on MacOS if your application is not bundled with its dylib.
 
