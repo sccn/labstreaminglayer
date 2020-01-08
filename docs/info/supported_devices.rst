@@ -14,7 +14,9 @@ The following devices support LSL via vendor-provided software:
   * `Cognionics (all headsets) <http://www.cognionics.com/>`__
   * `EB Neuro BE Plus LTM <http://www.ebneuro.biz/en/neurology/ebneuro/galileo-suite/be-plus-ltm>`__
   * `InteraXon Muse <http://www.choosemuse.com/>`__
-      * :doc:`Example use with Matlab <matlab_example_with_muse>`
+      * :doc:`MU-01 - Muse - Released 2014 Example with Matlab <matlab_example_with_muse>`
+      * `MU-02 - Muse - Released 2016 <https://github.com/alexandrebarachant/muse-lsl>`__
+      * `MU-03 - Muse 2 - Released 2018 <https://github.com/alexandrebarachant/muse-lsl>`__
   * `mBrainTrain SMARTING <http://www.mbraintrain.com/smarting/>`__
   * neuroelectrics `(Enobio <http://www.neuroelectrics.com/products/enobio/>`__, `StarStim <https://www.neuroelectrics.com/solutions/starstim>`__) via `NIC2 <https://www.neuroelectrics.com/solution/software-integrations/nic2>`__.
   * `OpenBCI (all headsets) <http://docs.openbci.com/software/06-labstreaminglayer>`__
