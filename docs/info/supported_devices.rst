@@ -19,6 +19,7 @@ The following devices support LSL via vendor-provided software:
   * neuroelectrics `(Enobio <http://www.neuroelectrics.com/products/enobio/>`__, `StarStim <https://www.neuroelectrics.com/solutions/starstim>`__) via `NIC2 <https://www.neuroelectrics.com/solution/software-integrations/nic2>`__.
   * `OpenBCI (all headsets) <http://docs.openbci.com/software/06-labstreaminglayer>`__
 
+
 The following systems are supported by programs included in the LSL distribution (untested systems marked with a (u)):
   * `ABM B-Alert X4/X10/X24 wireless <https://github.com/labstreaminglayer/App-BAlert>`__ (u)
   * `BioSemi Active II Mk1 and Mk2 <https://github.com/labstreaminglayer/App-BioSemi>`__
@@ -99,9 +100,13 @@ The following stimulus presentations systems are usable out of the box with LSL:
   * PsychToolbox (using LSL for MATLAB)
   * Unity (using LSL for C#)
   * `Simulation and Neuroscience Application Platform (SNAP) <https://github.com/sccn/SNAP>`__
+  * `Reiz <https://github.com/pyreiz/pyreiz>`__
 
 Miscellaneous Hardware
 **********************
 The following miscellaneous hardware is supported:
   * `Generic serial port <https://github.com/labstreaminglayer/App-SerialPort>`__
   * `Measurement Computing DAQ <https://github.com/labstreaminglayer/App-MeasurementComputing>`_
+  * `biosignalsplux sensors using OpenSignals<https://www.biosignalsplux.com/index.php/software/apis>`__
+  * `Vernier Go Direct sensors <https://github.com/labstreaminglayer/app-vernier>`__
+  * `Tyromotion Amadeo Robot <https://github.com/pyreiz/ctrl-tyromotion>`__
