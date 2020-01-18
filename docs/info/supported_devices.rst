@@ -13,7 +13,7 @@ The following devices support LSL via vendor-provided software:
   * `ANT eego sports <https://www.ant-neuro.com/products/eego_sports>`__
   * `Cognionics (all headsets) <http://www.cognionics.com/>`__
   * `EB Neuro BE Plus LTM <http://www.ebneuro.biz/en/neurology/ebneuro/galileo-suite/be-plus-ltm>`__
-  * `InteraXon Muse <http://www.choosemuse.com/>`__ (:doc:`Matlab example<matlab_example_with_muse>`)
+  * `InteraXon Muse <http://www.choosemuse.com/>`__ (:doc:`Matlab example <matlab_example_with_muse>`)
   * `mBrainTrain SMARTING <http://www.mbraintrain.com/smarting/>`__
   * neuroelectrics `(Enobio <http://www.neuroelectrics.com/products/enobio/>`__, `StarStim <https://www.neuroelectrics.com/solutions/starstim>`__) via `NIC2 <https://www.neuroelectrics.com/solution/software-integrations/nic2>`__.
   * `OpenBCI (all headsets) <http://docs.openbci.com/software/06-labstreaminglayer>`__
@@ -58,9 +58,9 @@ Several eye tracking systems are currently supported by LSL and included in the 
   * Tobii Eye trackers
       * `Tobii Pro <https://github.com/labstreaminglayer/App-TobiiPro>`__
       * `Tobii StreamEngine (consumer devices) <https://github.com/labstreaminglayer/App-TobiiStreamEngine>`__
-      * `Tobii other (older app)<https://github.com/labstreaminglayer/App-Tobii>`__ (u)
+      * `Tobii other (older app) <https://github.com/labstreaminglayer/App-Tobii>`__ (u)
   * Custom 2-camera eye trackers (with some hacking)
-  * `Pupil-Labs < https://github.com/labstreaminglayer/App-PupilLabs>`__
+  * `Pupil-Labs <https://github.com/labstreaminglayer/App-PupilLabs>`__
 
 Supported Human Interface Hardware
 **********************************
