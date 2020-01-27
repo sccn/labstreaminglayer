@@ -51,9 +51,9 @@ Some apps may have higher requirements while liblsl works on very old
 (e.g. Windows XP) and tiny (e.g. Raspberry Pi, some microcontrollers,
 Android) systems.
 
-.. _buildenvcmake:
-
 Note: MacOS users are expected to have `homebrew <https://brew.sh/>`__ installed.
+
+.. _buildenvcmake:
 
 `CMake <https://cmake.org/download/>`_
 --------------------------------------

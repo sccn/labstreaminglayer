@@ -12,8 +12,9 @@ Follow this guide if you are...
 
 - want to add / modify core liblsl
 
-  - Please create a `GitHub issue <https://github.com/sccn/liblsl/issues>`__ first to ask for advice
-  and to get pre-approval if you would like your modification to be included in the official library.
+  - Please create a `GitHub issue <https://github.com/sccn/liblsl/issues>`__
+    first to ask for advice and to get pre-approval if you would like your
+    modification to be included in the official library.
 
 Building liblsl
 ***************
@@ -31,7 +32,7 @@ Getting the source
 
 Open a Terminal / Developer Command Prompt and cd to a convenient location to download and build the library.
 
-:cmd:`git clone https://github.com/sccn/liblsl.git`
+:samp:`git clone https://github.com/sccn/liblsl.git`
 
 The resulting folder structure is as follows.
 
@@ -62,13 +63,14 @@ Configuring the liblsl project
     mkdir build && cd build
     cmake .. -G <generator name>
 
-Note: call :cmd:`cmake -G` without a generator name to get a list of available generators.
-I use :cmd:`cmake .. -G "Visual Studio 16 2019" -A x64`
+Note: call :samp:`cmake -G` without a generator name to get a list of available
+generators.
+I use :samp:`cmake .. -G "Visual Studio 16 2019" -A x64`
 
 If you used a generator, you can now open the IDE project file. Then build the install target.
 
 Alternatively, you can build directly from command line:
-:cmd:`cmake --build . --config Release --target install`
+:samp:`cmake --build . --config Release --target install`
 
 In either case, this will create an ``install`` folder in your build folder.
 This ``install`` folder is your :doc:`LSL_INSTALL_ROOT` that you might use in when 
@@ -128,7 +130,7 @@ command line (:samp:`cmake -D{foo}={bar}`).
 Modifying liblsl
 ****************
 
-First read :doc:`the introduction <../intro>` to learn about LSL components and classes.
+First read :doc:`the introduction </info/intro>` to learn about LSL components and classes.
 :doc:`The C++ API documentation <liblsl:index>` is a work-in-progress but might also be a good reference.
 
 

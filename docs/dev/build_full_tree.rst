@@ -53,7 +53,8 @@ The core ``liblsl`` does not have any external dependencies.
 Different language bindings or apps have their own dependencies so
 please consult those projects’ build instructions.
 
-Many apps depend on :ref:`Qt5`, :ref:`boost`, and many use :ref:`CMake` build system.
+Many apps depend on :ref:`Qt5`, :ref:`boost`, and many use :ref:`buildenvcmake`
+build system.
 Follow the instructions to set up your :doc:`build_env`.
 
 Build instructions
