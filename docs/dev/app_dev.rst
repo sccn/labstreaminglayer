@@ -52,3 +52,9 @@ While there are no full application templates, look at the `example code <https:
 
 A couple good ``pylsl`` example apps are `the one from Pupils Labs <https://github.com/labstreaminglayer/App-PupilLabs>`__, which has both a plugin and a simple application, and `SigVisualizer <https://github.com/labstreaminglayer/App-SigVisualizer>`__.
 
+
+Windows Users
+-------------
+
+If users of applications linked to liblsl are encountering errors related to not being able to load the DLL, in particular missing a VCRUNTIME140_1.dll (or similar), then they probably need to install the `latest Microsoft Visual C++ Redistributable <https://support.microsoft.com/en-ca/help/2977003/the-latest-supported-visual-c-downloads>`__ for the application architecture
+
