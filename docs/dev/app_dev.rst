@@ -15,12 +15,13 @@ The recommended way to get liblsl is to simply download the latest release from 
 If you are using CMake, pass the `LSL_INSTALL_ROOT` argument set to the location where your liblsl file installed / unpacked to. And your application should use something like the following line to find liblsl:
 
 .. code-block:: cmake
-find_package(LSL 1.13.0 REQUIRED
-	HINTS ${LSL_INSTALL_ROOT}
-	"${CMAKE_CURRENT_LIST_DIR}/../../LSL/liblsl/build/"
-	"${CMAKE_CURRENT_LIST_DIR}/../../LSL/liblsl/build/install"
-	PATH_SUFFIXES share/LSL
-)
+
+  find_package(LSL 1.13.0 REQUIRED
+  	HINTS ${LSL_INSTALL_ROOT}
+  	"${CMAKE_CURRENT_LIST_DIR}/../../LSL/liblsl/build/"
+  	"${CMAKE_CURRENT_LIST_DIR}/../../LSL/liblsl/build/install"
+  	PATH_SUFFIXES share/LSL
+  )
 
 Then you can link your target to liblsl with ``target_link_libraries(${PROJECT_NAME} PRIVATE LSL::lsl)``.
 

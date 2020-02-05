@@ -41,5 +41,6 @@ html_static_path = ['_static']
 # intersphinx
 intersphinx_mapping = {
     'liblsl': ('https://labstreaminglayer.readthedocs.io/projects/liblsl', None),
+    'cmake': ('https://cmake.org/cmake/help/latest', None),
 }
 
