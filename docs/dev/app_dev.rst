@@ -34,7 +34,10 @@ For a more complete example to help you get started with a C++ acquisition app, 
 -  save / load the configuration
 -  CI configuration so binaries are almost automatically built on the three major OSes
 
-On the AppTemplate_cpp_qt repository website click on "Use this template" to generate your own repository. Or `Click Here! <https://github.com/labstreaminglayer/AppTemplate_cpp_qt/generate>`__.
+On the `AppTemplate_cpp_qt <https://github.com/labstreaminglayer/AppTemplate_cpp_qt/>`__
+repository website click on
+`"Use this template" <https://github.com/labstreaminglayer/AppTemplate_cpp_qt/generate>`__
+to generate your own repository.
 
 Read the annotated CMakeLists.txt file and the annotated source files for an overview of the app design and pointers about what you should change.
 
