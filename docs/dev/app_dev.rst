@@ -9,7 +9,22 @@ Or see below for full applications.
 
 C++ apps
 --------
-To get started with a C++ acquisition app, take a look at the `AppTemplate_cpp_qt <https://github.com/labstreaminglayer/AppTemplate_cpp_qt/>`__, a small example that provides a solid groundwork for at least the following parts:
+
+The recommended way to get liblsl is to simply download the latest release from `the release page <https://github.com/sccn/liblsl/releases>`__. You may need to click on the black arrow to expand the list of Assets.
+
+If you are using CMake, pass the `LSL_INSTALL_ROOT` argument set to the location where your liblsl file installed / unpacked to. And your application should use something like the following line to find liblsl:
+
+.. code-block:: cmake
+find_package(LSL 1.13.0 REQUIRED
+	HINTS ${LSL_INSTALL_ROOT}
+	"${CMAKE_CURRENT_LIST_DIR}/../../LSL/liblsl/build/"
+	"${CMAKE_CURRENT_LIST_DIR}/../../LSL/liblsl/build/install"
+	PATH_SUFFIXES share/LSL
+)
+
+Then you can link your target to liblsl with ``target_link_libraries(${PROJECT_NAME} PRIVATE LSL::lsl)``.
+
+For a more complete example to help you get started with a C++ acquisition app, take a look at the `AppTemplate_cpp_qt <https://github.com/labstreaminglayer/AppTemplate_cpp_qt/>`__, a small example that provides a solid groundwork for at least the following parts:
 
 -  license information
 -  setting up a build with CMake
@@ -31,6 +46,7 @@ README (and optionally BUILD) before building.
 Python apps
 -----------
 Python is another great language for app development, as long as your target audience has Python and the required libraries installed.
+You (and other app users) will need to have ``pylsl`` installed. The recommended way to get it is with ``pip install pylsl``.
 
 While there are no full application templates, look at the `example code <https://github.com/labstreaminglayer/liblsl-Python/tree/master/pylsl/examples>`__ to begin.
 
