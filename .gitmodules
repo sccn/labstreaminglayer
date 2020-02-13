@@ -152,3 +152,6 @@
 [submodule "Apps/TobiiStreamEngine"]
 	path = Apps/TobiiStreamEngine
 	url = https://github.com/labstreaminglayer/App-TobiiStreamEngine.git
+[submodule "Apps/BackyardBrains"]
+	path = Apps/BackyardBrains
+	url = https://github.com/labstreaminglayer/App-BackyardBrains.git
