@@ -13,10 +13,14 @@ The following devices support LSL via vendor-provided software:
   * `ANT eego sports <https://www.ant-neuro.com/products/eego_sports>`__
   * `Cognionics (all headsets) <http://www.cognionics.com/>`__
   * `EB Neuro BE Plus LTM <http://www.ebneuro.biz/en/neurology/ebneuro/galileo-suite/be-plus-ltm>`__
-  * `InteraXon Muse <http://www.choosemuse.com/>`__ (:doc:`Matlab example <matlab_example_with_muse>`)
+  * `InteraXon Muse <http://www.choosemuse.com/>`__
+      * :doc:`MU-01 - Muse - Released 2014 Example with Matlab <matlab_example_with_muse>`
+      * `MU-02 - Muse - Released 2016 <https://github.com/alexandrebarachant/muse-lsl>`__
+      * `MU-03 - Muse 2 - Released 2018 <https://github.com/alexandrebarachant/muse-lsl>`__
   * `mBrainTrain SMARTING <http://www.mbraintrain.com/smarting/>`__
   * neuroelectrics `(Enobio <http://www.neuroelectrics.com/products/enobio/>`__, `StarStim <https://www.neuroelectrics.com/solutions/starstim>`__) via `NIC2 <https://www.neuroelectrics.com/solution/software-integrations/nic2>`__.
   * `OpenBCI (all headsets) <http://docs.openbci.com/software/06-labstreaminglayer>`__
+
 
 The following systems are supported by programs included in the LSL distribution (untested systems marked with a (u)):
   * `ABM B-Alert X4/X10/X24 wireless <https://github.com/labstreaminglayer/App-BAlert>`__ (u)
@@ -99,9 +103,13 @@ The following stimulus presentations systems are usable out of the box with LSL:
   * PsychToolbox (using LSL for MATLAB)
   * Unity (using LSL for C#)
   * `Simulation and Neuroscience Application Platform (SNAP) <https://github.com/sccn/SNAP>`__
+  * `Reiz <https://github.com/pyreiz/pyreiz>`__
 
 Miscellaneous Hardware
 **********************
 The following miscellaneous hardware is supported:
   * `Generic serial port <https://github.com/labstreaminglayer/App-SerialPort>`__
   * `Measurement Computing DAQ <https://github.com/labstreaminglayer/App-MeasurementComputing>`_
+  * `biosignalsplux sensors using OpenSignals<https://www.biosignalsplux.com/index.php/software/apis>`__
+  * `Vernier Go Direct sensors <https://github.com/labstreaminglayer/app-vernier>`__
+  * `Tyromotion Amadeo Robot <https://github.com/pyreiz/ctrl-tyromotion>`__
