@@ -16,7 +16,7 @@ add_subdirectory(LSL/liblsl)
 # functions to make the app developer life easier.
 # LSLCMake was already included in LSL/liblsl, but we include it again so the
 # variables are in this scope (instead of just the LSL/liblsl scope)
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/LSL/liblsl")
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/LSL/liblsl/cmake")
 include(LSLCMake)
 
 # include the Apps directory which defines options, which Apps will be built

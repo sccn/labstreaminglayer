@@ -28,7 +28,8 @@ The following systems are supported by programs included in the LSL distribution
   * `Blackrock Cerebus/NSP <https://github.com/labstreaminglayer/App-BlackrockTimestamps>`__ (timestamps only)
   * `Brain Products ActiChamp series <https://github.com/labstreaminglayer/App-BrainProducts>`__
   * `Brain Products BrainAmp series <https://github.com/labstreaminglayer/App-BrainProducts>`__
-  * `BrainVision RDA client <https://github.com/labstreaminglayer/App-BrainProducts>`__
+  * `BrainVision RDA client <https://github.com/brain-products/LSL-BrainVisionRDA/releases>`__
+  * `Brain Products LiveAmp <https://github.com/labstreaminglayer/App-BrainProducts/releases>`__
   * `Cognionics dry/wireless <https://github.com/labstreaminglayer/App-Cognionics>`__
   * `EGI AmpServer <https://github.com/labstreaminglayer/App-EGIAmpServer>`__
   * `Enobio dry/wireless <https://github.com/labstreaminglayer/App-Enobio>`__ (u) (please see vendor-provided above)
@@ -59,11 +60,11 @@ Several eye tracking systems are currently supported by LSL and included in the 
   * `SMI Eye Tracking Glasses <https://github.com/labstreaminglayer/App-SMIEyetracker>`__
   * SR Research Eyelink (very basic)
   * Tobii Eye trackers
-    * `Tobii Pro <https://github.com/labstreaminglayer/App-TobiiPro>`__
-	* `Tobii StreamEngine (consumer devices) <https://github.com/labstreaminglayer/App-TobiiStreamEngine>`__
-    * `Tobii other (older app)<https://github.com/labstreaminglayer/App-Tobii>`__ (u)
+      * `Tobii Pro <https://github.com/labstreaminglayer/App-TobiiPro>`__
+      * `Tobii StreamEngine (consumer devices) <https://github.com/labstreaminglayer/App-TobiiStreamEngine>`__
+      * `Tobii other (older app) <https://github.com/labstreaminglayer/App-Tobii>`__ (u)
   * Custom 2-camera eye trackers (with some hacking)
-  * `Pupil-Labs < https://github.com/labstreaminglayer/App-PupilLabs>`__
+  * `Pupil-Labs <https://github.com/labstreaminglayer/App-PupilLabs>`__
 
 Supported Human Interface Hardware
 **********************************

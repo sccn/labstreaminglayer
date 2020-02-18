@@ -12,8 +12,9 @@ Follow this guide if you are...
 
 - want to add / modify core liblsl
 
-  - Please create a `GitHub issue <https://github.com/sccn/liblsl/issues>`__ first to ask for advice
-  and to get pre-approval if you would like your modification to be included in the official library.
+  - Please create a `GitHub issue <https://github.com/sccn/liblsl/issues>`__
+    first to ask for advice and to get pre-approval if you would like your
+    modification to be included in the official library.
 
 Building liblsl
 ***************
@@ -31,7 +32,7 @@ Getting the source
 
 Open a Terminal / Developer Command Prompt and cd to a convenient location to download and build the library.
 
-:cmd:`git clone https://github.com/sccn/liblsl.git`
+:samp:`git clone https://github.com/sccn/liblsl.git`
 
 The resulting folder structure is as follows.
 
@@ -48,34 +49,88 @@ The resulting folder structure is as follows.
 Configuring the liblsl project
 ==============================
 
+.. note::
+    Visual Studio and QtCreator users can use the integrated CMake, just open
+    the folder containing :file:`CMakeLists.txt` and select the appropriate
+    options.
+    Please see the documentation (TODO) comparing normal CMake to Visual Studio's integrated CMake.
+    If you wish to use the integrated cmake, then you do not need to follow the
+    terminal commands below.
+
 .. code:: bash
 
     cd liblsl
     mkdir build && cd build
     cmake .. -G <generator name>
 
-Note: call :cmd:`cmake -G` without a generator name to get a list of available generators.
-I use :cmd:`cmake .. -G "Visual Studio 16 2019" -A x64`
+Note: call :samp:`cmake -G` without a generator name to get a list of available
+generators.
+I use :samp:`cmake .. -G "Visual Studio 16 2019" -A x64`
 
 If you used a generator, you can now open the IDE project file. Then build the install target.
 
 Alternatively, you can build directly from command line:
-:cmd:`cmake --build . --config Release --target install`
+:samp:`cmake --build . --config Release --target install`
 
 In either case, this will create an ``install`` folder in your build folder.
 This ``install`` folder is your :doc:`LSL_INSTALL_ROOT` that you might use in when 
 :doc:`building other applications.<app_dev>`
 
-Note for Windows Users
-----------------------
+Build options for liblsl
+************************
 
-Please see the documentation (TODO) comparing normal CMake to Visual Studio's integrated CMake.
-If you wish to use VS-integrated cmake, then you do not need to follow the terminal commands above.
+There are several liblsl-specific build options.
+All of them can be set either in the GUI (cmake-gui or Visual Studio) or on the
+command line (:samp:`cmake -D{foo}={bar}`).
+
+.. option:: LSL_BUILD_EXAMPLES
+
+  The liblsl distributions includes several example programs.
+  Enabling this option builds them alongside liblsl.
+
+.. option:: LSL_BUILD_STATIC
+
+  By default, a shared library (`.so` on Unix, `.dylib` on OS X and `.dll` on
+  Windows) is built. This also exports a static library.
+
+.. option:: LSL_LEGACY_CPP_ABI
+
+  Once upon a time there was a C++-ABI, but it only worked under very specific
+  circumstances and created hard to debug errors otherwise. Don't enable this
+  unless you know exactly what you are doing.
+
+.. option:: LSL_NO_FANCY_LIBNAME
+
+  Currently, the naming scheme is
+  :file:`liblsl{<ptrsize>}.{<extension>}`
+  (see :ref:`liblslarch`).
+  Enabling this option produces a file name that allows the default linker on
+  this platform to find it if told to look for `lsl`.
+
+.. option:: LSL_UNITTESTS
+
+   liblsl includes two types of unittests: internal tests, that check that
+   various internal components work as intended, and external tests that
+   test the API as programs would.
+
+.. option:: LSL_UNIXFOLDERS
+
+  Macs, Unix / Android systems and distributions like Anaconda have a specific
+  directory layout (binaries in :file:`{prefix}/bin`, includes in
+  :file:`{prefix}/include` and so on), whereas Windows users prefer
+  everything in a single folder.
+  If enabled, the :doc:`LSL_INSTALL_ROOT` folder will have a layout as it
+  should be on Unix systems.
+
+.. option:: LSL_WINVER
+
+  Change the minimum targeted Windows version, defaults to `0x0601` for
+  Windows 7.
 
 Modifying liblsl
 ****************
 
-First read :doc:`the introduction <../intro>` to learn about LSL components and classes.
+First read :doc:`the introduction </info/intro>` to learn about LSL components and classes.
 :doc:`The C++ API documentation <liblsl:index>` is a work-in-progress but might also be a good reference.
 
 
