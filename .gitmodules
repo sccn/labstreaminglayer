@@ -23,9 +23,6 @@
 [submodule "Apps/OutOfTreeTest"]
 	path = Apps/OutOfTreeTest
 	url = https://github.com/labstreaminglayer/App-OutOfTreeTest.git
-[submodule "Apps/AudioCapture"]
-	path = Apps/AudioCapture
-	url = https://github.com/labstreaminglayer/App-AudioCapture
 [submodule "Apps/BAlert"]
 	path = Apps/BAlert
 	url = https://github.com/labstreaminglayer/App-BAlert.git
@@ -155,3 +152,6 @@
 [submodule "Apps/BackyardBrains"]
 	path = Apps/BackyardBrains
 	url = https://github.com/labstreaminglayer/App-BackyardBrains.git
+[submodule "Apps/AudioCapture"]
+	path = Apps/AudioCapture
+	url = https://github.com/labstreaminglayer/App-AudioCapture.git
