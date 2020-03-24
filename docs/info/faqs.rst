@@ -241,3 +241,57 @@ from the resolve function call).
 
 You could also point them to this FAQ entry on how they can make their query
 more specific (:ref:`permalink <faqmultimatch>`).
+
+.. _liblslarch:
+
+Binaries
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+(Also known as: "Which :file:`liblsl.so` / :file:`liblsl.dll` do I need?)
+
+Liblsl gets compiled to a binary for a *specific* combination of
+Operating System / libc (almost almost the same) and processor architecture.
+
+Older liblsl versions (1.13 and older) included the native word size in bits
+(also called *bitness*) in the name and a hint which platform the binary is for
+in the file extension, 
+e.g. :file:`liblsl{32}.{dll}` for a 32-bit windows dll,
+:file:`liblsl{64}.{so}` for a 64 bit Linux / Android library or
+:file:`liblsl{64}.{dylib}` for a 64 bit OS X dylib.
+
+
+Newer versions set the library name to ``lsl`` and let the compiler determine
+how to name the file, i.e. :file:`lsl.dll` for Windows,
+:file:`liblsl.so` for Linux and Android and
+:file:`liblsl.dylib` for MacOS / OS X.
+
+The `liblsl release page <http://github.com/sccn/liblsl/releases/latest>`_
+has multiple packages, generally called
+:file:`liblsl-{version}-{system}.{extension}`, e.g. 
+:file:`liblsl-1.13.1-Linux64-bionic.deb` with the 64 bit Ubuntu Linux 18.04
+(Codename Bionic Beaver) package or
+:file:`liblsl-1.13.1-Win32.zip` with the 32 bit Windows DLLs.
+
+.. warning
+
+    Android also has ``.so`` shared objects, but has a different
+    toolchain and architecture so the binaries (even if they're also named
+   :file:`liblsl.so`) are **not** interchangable with ``.so`` files for regular
+    Linuxes.
+
+.. warning
+
+    Embedded Linux devices typically have an ARM processor instead of an x86 /
+    x64 processor so the default linux binaries won't work (resulting in an
+    error such as
+    ``dlopen failed: "package/bin/liblsl64.so has unexpected e_machine: 62``).
+
+On OS X / Linux you can check what device a binary is compiled for with the
+:program:`file` command, e.g.
+
+- ``file liblsl64.dll``:
+  :samp:`liblsl64.dll: PE32+ executable (DLL) (console) {x86-64}, for MS Windows`
+- ``file liblsl64.so``:
+  :samp:`liblsl64.so: ELF 64-bit LSB shared object, {x86-64}, version 1 (GNU/Linux)`.
+- ``file jni/arm64-v8a/liblsl.so``:
+  :samp:`jni/arm64-v8a/liblsl.so: ELF 64-bit LSB shared object, {ARM aarch64}`

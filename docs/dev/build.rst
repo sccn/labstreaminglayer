@@ -364,48 +364,6 @@ environments to test your changes, you can use the CI to
 compile the code on multiple platforms and offer binaries to willing
 testers.
 
-
-.. _liblslarch:
-
-Note about architectures / binaries
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-(Also known as: "Which :file:`liblsl.so` / :file:`liblsl.dll` do I need?)
-
-Liblsl gets compiled to a binary for a *specific* combination of
-Operating System / libc (almost almost the same) and processor architecture.
-
-Most binaries include the native word size in bits in the name and a
-hint which platform the binary is for in the file extension,
-e.g. :file:`liblsl{32}.{dll}` for a 32-bit windows dll,
-:file:`liblsl{64}.{so}` for a 64 bit Linux / Android library or
-:file:`liblsl{64}.{dylib}` for a 64 bit OS X dylib.
-
-The CI system automatically builds the following combinations:
-
--  x86 Windows DLL (:file:`liblsl32.dll`)
--  x64 Windows DLL (:file:`liblsl64.dll`)
--  x64 Linux shared object for Ubuntu 18.04 (:file:`liblsl64.so`)
--  x64 OS X shared object (:file:`liblsl64.dylib`)
-
-Android also has ``.so`` shared objects, but build with a different
-toolchain so they are not interchangable with ``.so`` files for regular
-Linuxes.
-
-Embedded Linux devices typically have an ARM processor instead of an x86 / x64
-processor so the default linux binaries won't work (resulting in an error such
-as ``dlopen failed: "package/bin/liblsl64.so has unexpected e_machine: 62``).
-
-On OS X / Linux you can check what device a binary is compiled for with the
-:program:`file` command, e.g.
-
-- :cmd:`file liblsl64.dll`:
-  :samp:`liblsl64.dll: PE32+ executable (DLL) (console) {x86-64}, for MS Windows`
-- :cmd:`file liblsl64.so`:
-  :samp:`liblsl64.so: ELF 64-bit LSB shared object, {x86-64}, version 1 (GNU/Linux)`.
-- :cmd:`file jni/arm64-v8a/liblsl.so`:
-  :samp:`jni/arm64-v8a/liblsl.so: ELF 64-bit LSB shared object, {ARM aarch64}`
-
 Raspberry Pi (cross-compilation, currently not working)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
