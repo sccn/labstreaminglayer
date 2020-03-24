@@ -36,7 +36,7 @@ the specific application build instructions first.
 
 #. Configure the project using :ref:`lslbuildenv` cmake.
 
-   * Option 1 - Visual Studio 2017 or later
+   * Option 1 - Visual Studio 2017 or later (**recommended**)
 
       * Open the :file:`CMakeLists.txt` file in Visual Studio
         (:guilabel:`File->Open->CMake`)
@@ -112,22 +112,6 @@ include :file:`../LSL/lib/` and the executable folder (:file:`./`) so common
 libraries (Qt, Boost) can be distributed in a single library directory
 or put in the same folder.
 On Windows, the library is copied to (and searched in) the executable folder.
-
-
-.. _cmakeinstalltarget:
-
-Regarding the ``install`` target
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-CMake places built binary files as well as build sideproducts in a build
-tree that should be separate from the source directory. To copy only the
-needed files (and additional library files they depend on) to a folder
-you can share with colleagues or onto another PC, you need to ‘install’
-them. This doesn’t mean ‘installing’ them in a traditional sense (i.e.,
-with Windows installers or package managers on Linux / OS X), but only
-copying them to a separate folder and fixing some hardcoded paths in the
-binaries.
-
 
 Common CMake Options
 --------------------

@@ -20,6 +20,7 @@ LabStreamingLayer's Documentation
    dev/dev_guide
    dev/app_dev
    dev/lib_dev
+   dev/cmake
 
 External documentation
 ----------------------

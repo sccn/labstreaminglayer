@@ -167,20 +167,20 @@ This will create a distribution tree in the folder specified by
 
      ├── AppX
      │   ├── AppX.exe
-     │   ├── liblsl64.dll
+     │   ├── lsl.dll
      │   ├── Qt5Xml.dll
      │   ├── Qt5Gui.dll
      │   └── AppX_configuration.ini
      ├── AppY
      │   ├── AppY.exe
      │   ├── AppY_conf.exe
-     │   ├── liblsl64.dll
+     │   ├── lsl.dll
      │   └── example.png
      ├── examples
      │   ├── CppReceive.exe
      │   ├── CppSendRand.exe
      │   ├── SendDataC.exe
-     │   ├── liblsl64.dll
+     │   ├── lsl.dll
      └── LSL
        ├── share
        │   ├── LSL
@@ -191,8 +191,8 @@ This will create a distribution tree in the folder specified by
        │   ├── lsl_c.h
        │   └── lsl_cpp.h
        └── lib
-         ├── liblsl64.dll
-         ├── liblsl64.lib
+         ├── lsl.dll
+         ├── liblsl.lib
          └── lslboost.lib
 
 On Unix systems (Linux+OS X) the executable’s library path is changed to
@@ -209,21 +209,8 @@ The resulting folder :file:`LSL` contains three subfolders:
 -  :file:`include` contains the include headers for C (:file:`lsl_c.h`) and C++
    (:file:`lsl_cpp.h`) programs.
 -  :file:`lib` contains the library files. To run a program, you need the
-   :file:`liblslXY.dll` (Windows) or :file:`.so` (Linux) or :file:`.dylib` (MacOS).
-
-.. _cmakeinstalltarget:
-
-Regarding the ``install`` target
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-CMake places built binary files as well as build sideproducts in a build
-tree that should be separate from the source directory. To copy only the
-needed files (and additional library files they depend on) to a folder
-you can share with colleagues or onto another PC, you need to ‘install’
-them. This doesn’t mean ‘installing’ them in a traditional sense (i.e.,
-with Windows installers or package managers on Linux / OS X), but only
-copying them to a separate folder and fixing some hardcoded paths in the
-binaries.
+   :file:`lsl.dll` (Windows) or :file:`liblsl.so` (Linux) or
+   :file:`liblsl.dylib` (MacOS).
 
 Out of tree builds
 ~~~~~~~~~~~~~~~~~~

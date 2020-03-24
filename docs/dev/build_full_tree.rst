@@ -179,44 +179,10 @@ The resulting folder :file:`LSL` contains three subfolders:
 -  :file:`lib` contains the library files. To run a program, you need the
    :file:`liblslXY.dll` (Windows) or :file:`.so` (Linux) or :file:`.dylib` (MacOS).
 
-.. _cmakeinstalltarget:
-
-Regarding the ``install`` target
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-CMake places built binary files as well as build sideproducts in a build
-tree that should be separate from the source directory. To copy only the
-needed files (and additional library files they depend on) to a folder
-you can share with colleagues or onto another PC, you need to ‘install’
-them. This doesn’t mean ‘installing’ them in a traditional sense (i.e.,
-with Windows installers or package managers on Linux / OS X), but only
-copying them to a separate folder and fixing some hardcoded paths in the
-binaries.
-
 Common CMake Options
 --------------------
 
-The cmake build system has many options. If you are using the CMake GUI
-then these options will be presented to you before you generate the
-project/makefiles.
-
-If you are using the commandline then default options will generate
-makefiles for liblsl only. If you want to use the commandline to
-generate a project for an IDE, or to generate a project that builds LSL
-Apps, then you will have to provide some optional arguments to the cmake
-command.
-
--  `Generator <https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html#cmake-generators>`__:
-   ``-G <generator name>``.
--  Apps: ``-DLSLAPPS_<AppName>=ON``.
-
-   -  ``-DLSLAPPS_LabRecorder=ON``
-   -  ``-DLSLAPPS_XDFBrowser=ON``
-   -  ``-DLSLAPPS_OpenVR=ON``
-   -  TODO: Each app should have its cmake option easily accessible in
-      its readme.
-   -  TODO: Each app should have its own additional options specified in
-      its readme.
+(See :ref:`cmakeclioptions`).
 
 -  App dependencies (required by some apps). See :ref:`lslbuildenv` for more info.
 

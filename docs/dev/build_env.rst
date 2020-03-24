@@ -53,18 +53,10 @@ Android) systems.
 
 Note: MacOS users are expected to have `homebrew <https://brew.sh/>`__ installed.
 
-.. _buildenvcmake:
+CMake
+-----
 
-`CMake <https://cmake.org/download/>`_
---------------------------------------
-
--  *Windows*: either let Visual Studio install CMake or
-   download the installer (.msi extension).
-   During installation, check the box to add it to the path (for all users).
--  Debian / Ubuntu: :command:`apt install cmake` or
-   :command:`python -m pip install cmake`
--  Fedora: :command:`yum install cmake`
--  OS X: :command:`brew install cmake`
+See :ref:`CMake <buildenvcmake>`.
 
 .. _Boost:
 
