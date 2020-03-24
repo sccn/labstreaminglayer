@@ -109,7 +109,7 @@ Miscellaneous Hardware
 **********************
 The following miscellaneous hardware is supported:
   * `Generic serial port <https://github.com/labstreaminglayer/App-SerialPort>`__
-  * `Measurement Computing DAQ <https://github.com/labstreaminglayer/App-MeasurementComputing>`_
-  * `biosignalsplux sensors using OpenSignals<https://www.biosignalsplux.com/index.php/software/apis>`__
+  * `Measurement Computing DAQ <https://github.com/labstreaminglayer/App-MeasurementComputing>`__
+  * `biosignalsplux sensors using OpenSignals <https://www.biosignalsplux.com/index.php/software/apis>`__
   * `Vernier Go Direct sensors <https://github.com/labstreaminglayer/app-vernier>`__
   * `Tyromotion Amadeo Robot <https://github.com/pyreiz/ctrl-tyromotion>`__
