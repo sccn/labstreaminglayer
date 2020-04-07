@@ -10,9 +10,10 @@ Stream advertisement and data transmission all happen using networking protocols
 
 Outlets
 =======
-An outlet may use either IPv4, or IPv6, or both IP stacks in parallel. In the latter case some of the sockets and threads are duplicated.
+An :term:`Stream Outlet` may use either IPv4, or IPv6, or both IP stacks in parallel.
+In the latter case some of the sockets and threads are duplicated.
 
-The main outlet class is :class:`lsl::stream_outlet`.
+The main outlet class is :cpp:class:`lsl::stream_outlet`.
 
 UDP Service Discovery
 ---------------------
@@ -31,21 +32,33 @@ An outlet can handle an arbitrary number of parallel connections to serve any nu
 
 Resolve Operations
 ==================
-When a client resolves a stream with desired properties on the lab network, it issues a resolve operation. A resolve operation temporarily opens a range of UDP sockets through which queries are sent to the broadcast, multicast or unicast addresses that are configured as active. It also opens a UDP socket to receive result packets on a free port. The resolve operation emits a packet across each channel in a brief burst and waits for responses, then sends the next burst. This is repeated until the required conditions are fulfilled (e.g., service was found, timeout, etc.).
+When a client creates a Stream :term:`Resolver` to resolve a stream with desired properties on the
+lab network, it issues a resolve operation.
+A resolve operation temporarily opens a range of UDP sockets through which queries are sent to the broadcast, multicast or unicast addresses that are configured as active. It also opens a UDP socket to receive result packets on a free port. The resolve operation emits a packet across each channel in a brief burst and waits for responses, then sends the next burst. This is repeated until the required conditions are fulfilled (e.g., service was found, timeout, etc.).
 
 Inlets
 ======
-An inlet, when created, initially does not create any sockets. Sockets are created as needed for the following purposes:
+An :term:`Stream Inlet`, when created, initially does not create any sockets.
+Sockets are created as needed for the following purposes:
 
-* When a transmission of streaming data is started by calling pull\_sample() or open\_stream(), a TCP connection is established to the outlet in question and if successful, data is received over this connection until it breaks off or is explicitly terminated.
-* If the XML meta-data of the inlet is requested, another TCP connection is established which persists until the meta-data has been transferred from the outlet.
-* When the inlet is used to estimate time-correction values (as the recorder program does), a UDP socket is opened which periodically (every few seconds) exchanges a brief series of packets with the outlet's unicast UDP socket.
+* When a transmission of streaming data is started by calling
+  :cpp:func:`lsl::stream_inlet::pull_sample()` or
+  :cpp:func:`lsl::stream_inlet::open_stream()`, a TCP connection is established to the outlet in
+  question and if successful, data is received over this connection until it breaks off or is
+  explicitly terminated.
+* If the XML meta-data of the inlet is requested via :cpp:func:`lsl::stream_inlet::info`,
+  another TCP connection is established which persists until the meta-data has been transferred
+  from the outlet.
+* When the inlet is used to estimate time-correction values via
+  :cpp:func:`lsl::stream_inlet::time_correction()` (as the recorder program does), a UDP socket is
+  opened which periodically (every few seconds) exchanges a brief series of packets with the
+  outlet's unicast UDP socket.
 * If the connection to the outlet breaks off or is otherwise unsuccessful (for example due to a computer crash at the other end), and if the outlet was "recoverable", a resolve operation will be periodically scheduled every few seconds until the outlet in question is found again or the inlet is destroyed, or the active transmission is stopped.
 
 Clock synchronization
 ---------------------
 
 Here we talk about important functions like the local clock
-(:func:`lsl_local_clock`), a function to query a time offset
-(:func:`lsl_time_correction_ex`) and a function to get the library version used
-by the loaded library (:func:`lsl_library_version`).
+(:cpp:func:`lsl_local_clock`), a function to query a time offset
+(:cpp:func:`lsl_time_correction_ex`) and a function to get the library version used
+by the loaded library (:cpp:func:`lsl_library_version`).
