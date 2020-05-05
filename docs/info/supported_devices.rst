@@ -26,7 +26,7 @@ The following systems are supported by programs included in the LSL distribution
   * `ABM B-Alert X4/X10/X24 wireless <https://github.com/labstreaminglayer/App-BAlert>`__ (u)
   * `BioSemi Active II Mk1 and Mk2 <https://github.com/labstreaminglayer/App-BioSemi>`__
   * `Blackrock Cerebus/NSP <https://github.com/labstreaminglayer/App-BlackrockTimestamps>`__ (timestamps only)
-  * `Brain Products ActiChamp series <https://github.com/brain-products/LSL-actiCHamp>`__
+  * `Brain Products actiCHamp/actiCHamp Plus <https://github.com/brain-products/LSL-actiCHamp>`__
   * `Brain Products BrainAmp series <https://github.com/labstreaminglayer/App-BrainProducts>`__
   * `Brain Products LiveAmp <https://github.com/brain-products/LSL-LiveAmp/>`__
   * `BrainVision RDA client <https://github.com/brain-products/LSL-BrainVisionRDA>`__
