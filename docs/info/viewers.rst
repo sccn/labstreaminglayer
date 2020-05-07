@@ -9,21 +9,24 @@ A part of any LSL workbench should be a reliable way to monitor or check data th
 
 Stand alone online viewers:
   * `BrainVision LSL Viewer <https://www.brainproducts.com/downloads.php?kid=40&tab=3>`__
-  .. image:: ../images/LSL_BVLSL-Viewer.png
-  * `MATLABViewer <https://github.com/labstreaminglayer/App-MATLABViewer/tree/845384430d45f5290205b575ea6c13f6c8123b72>`__
-  .. image:: ../images/streamviewer.png
-  * `StreamViewer <ftp://sccn.ucsd.edu/pub/software/LSL/Mobi_Utils/mobi_utils_1_1_10/>` (part of LSL distribution) __
+  
+  .. image:: ../images/LSL_BVLSL-Viewer.jpg
+  
+  * `MATLABViewer <https://github.com/labstreaminglayer/App-MATLABViewer/tree/845384430d45f5290205b575ea6c13f6c8123b72>`__ (part of LSL distribution)
+  
   .. image:: ../images/visstream-adapted.png
   
+  * StreamViewer (available from SCCN ftp as part of the mobi_utils package: ftp://sccn.ucsd.edu/pub/software/LSL/Mobi_Utils/mobi_utils_1_1_10/)
+  
+  .. image:: ../images/streamviewer.png
+
 Software suites/pacakages supporting online LSL vizualization:
   * `Muse LSL <https://github.com/alexandrebarachant/muse-lsl>`__
   * `Neuropype <https://www.neuropype.io/>`__
 
 Offline Viewers
 **********************
-The following 
-
-Software suites/packages supporting online LSL vizualization:
+The following software suites/packages supporting online LSL vizualization:
   * `EEGLAB <https://sccn.ucsd.edu/eeglab/index.php>`__
   * `MNELab <https://github.com/cbrnr/mnelab>`__
   * `MoBILAB <https://sccn.ucsd.edu/wiki/MoBILAB>`__
