@@ -11,6 +11,8 @@ The majority of EEG systems on the market are currently compatible with LSL.
 
 The following devices support LSL via vendor-provided software:
   * `ANT eego sports <https://www.ant-neuro.com/products/eego_sports>`__
+  * `Brain Products LiveAmp <https://github.com/brain-products/LSL-LiveAmp/>`__
+  * `BrainVision RDA client <https://github.com/brain-products/LSL-BrainVisionRDA>`__
   * `Cognionics (all headsets) <http://www.cognionics.com/>`__
   * `EB Neuro BE Plus LTM <http://www.ebneuro.biz/en/neurology/ebneuro/galileo-suite/be-plus-ltm>`__
   * `InteraXon Muse <http://www.choosemuse.com/>`__
@@ -26,10 +28,8 @@ The following systems are supported by programs included in the LSL distribution
   * `ABM B-Alert X4/X10/X24 wireless <https://github.com/labstreaminglayer/App-BAlert>`__ (u)
   * `BioSemi Active II Mk1 and Mk2 <https://github.com/labstreaminglayer/App-BioSemi>`__
   * `Blackrock Cerebus/NSP <https://github.com/labstreaminglayer/App-BlackrockTimestamps>`__ (timestamps only)
-  * `Brain Products ActiChamp series <https://github.com/labstreaminglayer/App-BrainProducts>`__
+  * `Brain Products actiCHamp/actiCHamp Plus <https://github.com/brain-products/LSL-actiCHamp>`__
   * `Brain Products BrainAmp series <https://github.com/labstreaminglayer/App-BrainProducts>`__
-  * `BrainVision RDA client <https://github.com/brain-products/LSL-BrainVisionRDA/releases>`__
-  * `Brain Products LiveAmp <https://github.com/labstreaminglayer/App-BrainProducts/releases>`__
   * `Cognionics dry/wireless <https://github.com/labstreaminglayer/App-Cognionics>`__
   * `EGI AmpServer <https://github.com/labstreaminglayer/App-EGIAmpServer>`__
   * `Enobio dry/wireless <https://github.com/labstreaminglayer/App-Enobio>`__ (u) (please see vendor-provided above)
