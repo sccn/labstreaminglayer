@@ -1,13 +1,13 @@
 Viewers
 ###########################
 
-Over the years there several online and offline data viewers have been developed for LSL. The list below is by no means complete. If you have created a vizualizer for LSL and wish to add it to the list below, please clone this repository, edit this file and submit a pull request. We would be happy to hear from you and advertise your efforts! Each of the following software tools is available either as opensource software, or freeware.
+Over the years,  several online and offline data viewers have been developed for LSL. The list below is by no means complete. If you have created a visualizer for LSL and wish to add it to the list below, please clone this repository, edit this file and submit a pull request. We would be happy to hear from you and advertise your efforts! Each of the following software tools is available either as open source software, or freeware.
 
 Online Viewers
 **********************
-A part of any LSL workbench should be a reliable way to monitor your data. Thus, a sturdy, online data vizualizers are essential tools. There are a number of standalone applications for viewing LSL data in real-time and software packages include online vizualization windows.
+A part of any LSL workbench should be a reliable way to monitor your data. Thus, sturdy, online data visualizers are essential tools. There are a number of stand-alone applications for viewing LSL data in real-time and software packages include online visualization windows.
 
-Stand alone online viewers:
+Stand-alone online viewers:
   * `BrainVision LSL Viewer <https://www.brainproducts.com/downloads.php?kid=40&tab=3>`__
   
   .. image:: ../images/LSL_BVLSL-Viewer.jpg
@@ -20,13 +20,15 @@ Stand alone online viewers:
   
   .. image:: ../images/streamviewer.png
 
-Software suites/packages supporting online LSL vizualization:
+Software suites/packages supporting online LSL visualization:
+  * `BCI2000 <http://bci2000.org/>`__
   * `Muse LSL <https://github.com/alexandrebarachant/muse-lsl>`__
   * `Neuropype <https://www.neuropype.io/>`__
+  * `OpenViBE <http://openvibe.inria.fr//>`__
 
 Offline Viewers
 **********************
-The following software suites/packages supporting online LSL vizualization:
+The following software suites/packages supporting online LSL visualization:
   * `EEGLAB <https://sccn.ucsd.edu/eeglab/index.php>`__
   * `MNELab <https://github.com/cbrnr/mnelab>`__
   * `MoBILAB <https://sccn.ucsd.edu/wiki/MoBILAB>`__
