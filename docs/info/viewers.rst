@@ -20,7 +20,7 @@ Stand alone online viewers:
   
   .. image:: ../images/streamviewer.png
 
-Software suites/pacakages supporting online LSL vizualization:
+Software suites/packages supporting online LSL vizualization:
   * `Muse LSL <https://github.com/alexandrebarachant/muse-lsl>`__
   * `Neuropype <https://www.neuropype.io/>`__
 
