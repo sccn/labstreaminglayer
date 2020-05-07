@@ -1,11 +1,11 @@
 Viewers
 ###########################
 
-Over the years there several online and offline data viewers have been developed for LSL. The list below is by no means complete. If you have created a vizualizer for LSL and wish to add it to the list below, please clone this repository, edit this file and submit a pull request. We would be happy to hear from you and advertise your efforts!
+Over the years there several online and offline data viewers have been developed for LSL. The list below is by no means complete. If you have created a vizualizer for LSL and wish to add it to the list below, please clone this repository, edit this file and submit a pull request. We would be happy to hear from you and advertise your efforts! Each of the following software tools is available either as opensource software, or freeware.
 
 Online Viewers
 **********************
-A part of any LSL workbench should be a reliable way to monitor or check data these viewers are meant for online data monitoring. Some of the following viewers are part of more general purpose software suites.
+A part of any LSL workbench should be a reliable way to monitor your data. Thus, a sturdy, online data vizualizers are essential tools. There are a number of standalone applications for viewing LSL data in real-time and software packages include online vizualization windows.
 
 Stand alone online viewers:
   * `BrainVision LSL Viewer <https://www.brainproducts.com/downloads.php?kid=40&tab=3>`__
