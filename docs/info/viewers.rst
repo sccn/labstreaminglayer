@@ -1,7 +1,7 @@
 Viewers
 ###########################
 
-Over the years,  several online and offline data viewers have been developed for LSL. The list below is by no means complete. If you have created a visualizer for LSL and wish to add it to the list below, please clone this repository, edit this file and submit a pull request. We would be happy to hear from you and advertise your efforts! Each of the following software tools is available either as open source software, or freeware.
+Over the years,  several online and offline data viewers have been developed for LSL. The list below is by no means complete. If you have created a visualizer for LSL and wish to add it to the list below, please clone this repository, edit this file and submit a pull request. Or, if there is a viewer neglected in the list below, simply post an issue with a link.
 
 Online Viewers
 **********************
