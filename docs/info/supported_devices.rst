@@ -9,6 +9,10 @@ Supported EEG Hardware
 **********************
 The majority of EEG systems on the market are currently compatible with LSL.
 
+The following devices support LSL natively without any additional software:
+  * `Foc.us EEG Dev Kit <https://foc.us/eeg>`__
+
+
 The following devices support LSL via vendor-provided software:
   * `ANT eego sports <https://www.ant-neuro.com/products/eego_sports>`__
   * `Brain Products actiCHamp/actiCHamp Plus <https://github.com/brain-products/LSL-actiCHamp>`__
