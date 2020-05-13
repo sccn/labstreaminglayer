@@ -9,8 +9,19 @@ Supported EEG Hardware
 **********************
 The majority of EEG systems on the market are currently compatible with LSL.
 
-The following devices support LSL natively without any additional software:
-  * `Foc.us EEG Dev Kit <https://foc.us/eeg>`__
+
+The following systems are supported by programs included in the LSL distribution (untested systems marked with a (u)):
+  * `ABM B-Alert X4/X10/X24 wireless <https://github.com/labstreaminglayer/App-BAlert>`__ (u)
+  * `BioSemi Active II Mk1 and Mk2 <https://github.com/labstreaminglayer/App-BioSemi>`__
+  * `Blackrock Cerebus/NSP <https://github.com/labstreaminglayer/App-BlackrockTimestamps>`__ (timestamps only)
+  * `Brain Products BrainAmp series <https://github.com/labstreaminglayer/App-BrainProducts>`__
+  * `Cognionics dry/wireless <https://github.com/labstreaminglayer/App-Cognionics>`__
+  * `EGI AmpServer <https://github.com/labstreaminglayer/App-EGIAmpServer>`__
+  * `Enobio dry/wireless <https://github.com/labstreaminglayer/App-Enobio>`__ (u) (please see vendor-provided above)
+  * `g.Tec g.USBamp <https://github.com/labstreaminglayer/App-g.Tec/tree/master/g.USBamp>`__ (buggy at high sampling rates)
+  * `g.Tec g.NEEDaccess <https://github.com/labstreaminglayer/App-g.Tec/tree/master/g.NEEDaccess>`__ (including g.USBamp, g.HIamp, g.Nautilus)
+  * `MINDO dry/wireless <https://github.com/labstreaminglayer/App-MINDO>`__
+  * `Neuroscan Synamp II and Synamp Wireless <https://github.com/labstreaminglayer/App-Neuroscan>`__ (u)
 
 
 The following devices support LSL via vendor-provided software:
@@ -29,20 +40,11 @@ The following devices support LSL via vendor-provided software:
   * `OpenBCI (all headsets) <http://docs.openbci.com/software/06-labstreaminglayer>`__
 
 
-The following systems are supported by programs included in the LSL distribution (untested systems marked with a (u)):
-  * `ABM B-Alert X4/X10/X24 wireless <https://github.com/labstreaminglayer/App-BAlert>`__ (u)
-  * `BioSemi Active II Mk1 and Mk2 <https://github.com/labstreaminglayer/App-BioSemi>`__
-  * `Blackrock Cerebus/NSP <https://github.com/labstreaminglayer/App-BlackrockTimestamps>`__ (timestamps only)
-  * `Brain Products BrainAmp series <https://github.com/labstreaminglayer/App-BrainProducts>`__
-  * `Cognionics dry/wireless <https://github.com/labstreaminglayer/App-Cognionics>`__
-  * `EGI AmpServer <https://github.com/labstreaminglayer/App-EGIAmpServer>`__
-  * `Enobio dry/wireless <https://github.com/labstreaminglayer/App-Enobio>`__ (u) (please see vendor-provided above)
-  * `g.Tec g.USBamp <https://github.com/labstreaminglayer/App-g.Tec/tree/master/g.USBamp>`__ (buggy at high sampling rates)
-  * `g.Tec g.NEEDaccess <https://github.com/labstreaminglayer/App-g.Tec/tree/master/g.NEEDaccess>`__ (including g.USBamp, g.HIamp, g.Nautilus)
-  * `MINDO dry/wireless <https://github.com/labstreaminglayer/App-MINDO>`__
-  * `Neuroscan Synamp II and Synamp Wireless <https://github.com/labstreaminglayer/App-Neuroscan>`__ (u)
+The following devices support LSL natively without any additional software:
+  * `Foc.us EEG Dev Kit <https://foc.us/eeg>`__
+  * `NeuroBehavioralSystems LabStreamer <https://www.neurobs.com/menu_presentation/menu_hardware/labstreamer>`__
 
- 
+
 The following systems are also supported by a separate program, the :doc:`OpenViBE acquisition server <ovas>` (unstable systems marked with a (u)):
   * ANT Neuro ASALAB EEG
   * Brain Products QuickAmp, V-Amp, and BrainAmp series
@@ -55,6 +57,7 @@ The following systems are also supported by a separate program, the :doc:`OpenVi
   * Mitsar EEG 202 (u)
   * OpenEEG ModularEEG and MonolithEEG
   * TMSi Porti32 and Refa32
+
 
 Supported Eye Tracking Hardware
 *******************************
