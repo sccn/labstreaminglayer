@@ -20,6 +20,11 @@ Stand-alone online viewers:
   
   .. image:: ../images/streamviewer.png
 
+The `python bindings <https://github.com/labstreaminglayer/liblsl-Python>`__
+contain a `very basic visualizer <https://github.com/labstreaminglayer/liblsl-Python/blob/master/pylsl/examples/ReceiveAndPlot.py>`__.
+To start it, install pylsl and pyqtgraph and run it as
+:command:`python -m pylsl.examples.ReceiveAndPlot`.
+
 Software suites/packages supporting online LSL visualization:
   * `BCI2000 <http://bci2000.org/>`__
   * `Muse LSL <https://github.com/alexandrebarachant/muse-lsl>`__
