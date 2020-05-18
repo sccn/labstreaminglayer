@@ -33,7 +33,8 @@ Software suites/packages supporting online LSL visualization:
 
 Offline Viewers
 **********************
-The following software suites/packages supporting online LSL visualization:
+
+The following software suites/packages supporting offline LSL visualization:
   * `EEGLAB <https://sccn.ucsd.edu/eeglab/index.php>`__
   * `MNELab <https://github.com/cbrnr/mnelab>`__
   * `MoBILAB <https://sccn.ucsd.edu/wiki/MoBILAB>`__
