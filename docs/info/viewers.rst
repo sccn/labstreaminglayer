@@ -12,7 +12,7 @@ Stand-alone online viewers:
   
   .. image:: ../images/LSL_BVLSL-Viewer.png
   
-  * `MATLABViewer <https://github.com/labstreaminglayer/App-MATLABViewer/tree/845384430d45f5290205b575ea6c13f6c8123b72>`__ (part of LSL distribution)
+  * :lslrepo:`MATLABViewer` (part of LSL distribution)
   
   .. image:: ../images/visstream-adapted.png
   

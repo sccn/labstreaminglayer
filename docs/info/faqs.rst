@@ -226,7 +226,7 @@ For instance, instead of ``type='EEG'`` you could use e.g.,
 - use more specific queries, e.g. ``type='EEG' and serial_number='ABCDEF'``
 
 You can find out the names of the streams and of the computers that they run on
-using the `LabRecorder <https://github.com/labstreaminglayer/App-LabRecorder>`_
+using the :lslrepo:`LabRecorder`
 (it will list them in the format ``streamname (hostname)`` -- keep in mind that
 this is just how the recorder prints it, the ``(hostname)`` part is of course
 not baked into the stream name).

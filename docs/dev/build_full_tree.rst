@@ -20,8 +20,7 @@ the liblsl C/C++ library
 various language bindings (e.g.
 `LSL/liblsl-Python <https://github.com/labstreaminglayer/liblsl-Python>`__),
 the Apps to stream data from several types of devices
-including a template examples, and the
-`LabRecorder <https://github.com/labstreaminglayer/App-LabRecorder>`__.:
+including a template examples, and the :lslrepo:`LabRecorder`.:
 
 .. code:: bash
 

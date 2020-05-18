@@ -54,7 +54,8 @@ You (and other app users) will need to have ``pylsl`` installed. The recommended
 
 While there are no full application templates, look at the `example code <https://github.com/labstreaminglayer/liblsl-Python/tree/master/pylsl/examples>`__ to begin.
 
-A couple good ``pylsl`` example apps are `the one from Pupils Labs <https://github.com/labstreaminglayer/App-PupilLabs>`__, which has both a plugin and a simple application, and `SigVisualizer <https://github.com/labstreaminglayer/App-SigVisualizer>`__.
+A couple good ``pylsl`` example apps are the one from :lslrepo:`PupilLabs`,
+which has both a plugin and a simple application, and :lslrepo:`SigVisualizer`.
 
 
 Windows Users

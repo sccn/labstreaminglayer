@@ -17,16 +17,13 @@ Project Structure
 -----------------
 
 This repository contains only the general project structure and
-references (“`git
-submodules <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`__”) to
+references (“`git submodules <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`__”) to
 the liblsl C/C++ library
 (`LSL/liblsl <https://github.com/labstreaminglayer/liblsl/>`__),
 various language bindings (e.g.
 `LSL/liblsl-Python <https://github.com/labstreaminglayer/liblsl-Python>`__),
 the Apps to stream data from several types of devices including template
-Examples,
-and the
-`LabRecorder <https://github.com/labstreaminglayer/App-LabRecorder>`__.:
+Examples, and the :lslrepo:`LabRecorder`.:
 
 .. code:: bash
 

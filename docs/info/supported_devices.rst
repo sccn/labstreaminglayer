@@ -63,38 +63,38 @@ Supported Eye Tracking Hardware
 *******************************
 Several eye tracking systems are currently supported by LSL and included in the distribution (untested systems marked with a (u)):
   * Eye Tribe Tracker Pro
-  * `SMI iViewX <https://github.com/labstreaminglayer/App-SMIEyetracker>`__
-  * `SMI Eye Tracking Glasses <https://github.com/labstreaminglayer/App-SMIEyetracker>`__
+  * :lslrepo:`SMI iViewX <SMIEyetracker>`
+  * :lslrepo:`SMI Eye Tracking Glasses <SMIEyetracker>`
   * SR Research Eyelink (very basic)
   * Tobii Eye trackers
-      * `Tobii Pro <https://github.com/labstreaminglayer/App-TobiiPro>`__
-      * `Tobii StreamEngine (consumer devices) <https://github.com/labstreaminglayer/App-TobiiStreamEngine>`__
-      * `Tobii other (older app) <https://github.com/labstreaminglayer/App-Tobii>`__ (u)
+      * :lslrepo:`Tobii Pro <TobiiPro>`
+      * :lslrepo:`Tobii StreamEngine (consumer devices) <TobiiStreamEngine>`
+      * :lslrepo:`Tobii other (older app) <Tobii>` (u)
   * Custom 2-camera eye trackers (with some hacking)
-  * `Pupil-Labs <https://github.com/labstreaminglayer/App-PupilLabs>`__
+  * :lslrepo:`Pupil-Labs <PupilLabs>`
 
 Supported Human Interface Hardware
 **********************************
 A wide range of Windows-compatible input hardware is supported by LSL and included with the distribution:
-  * `Input devices (keyboards, trackballs, presenters, etc.) <https://github.com/labstreaminglayer/App-Input>`__
-  * `DirectX-compatible joysticks, wheels, gamepads and other controllers <https://github.com/labstreaminglayer/App-GameController>`__
-  * `Nintendo Wiimote and official expansions <https://github.com/labstreaminglayer/App-Wiimote>`__
+  * :lslrepo:`Input devices (keyboards, trackballs, presenters, etc.) <Input>`
+  * :lslrepo:`DirectX-compatible joysticks, wheels, gamepads and other controllers <GameController>`
+  * :lslrepo:`Nintendo Wiimote and official expansions <Wiimote>`
 
 Supported Motion Capture Hardware
 *********************************
 Several motion-capture systems are currently supported by LSL and included in the distribution. These are:
-  * `AMTI force plates with serial I/O <https://github.com/labstreaminglayer/App-AMTIForcePlate>`__
-  * `PhaseSpace <https://github.com/labstreaminglayer/App-PhaseSpace>`__
-  * `Microsoft Kinect <https://github.com/labstreaminglayer/App-KinectMocap>`__
-  * `NaturalPoint OptiTrack <https://github.com/labstreaminglayer/App-OptiTrack>`__ (some versions)
-  * `OpenVR <https://github.com/labstreaminglayer/App-OpenVR>`__
+  * :lslrepo:`AMTI force plates with serial I/O <AMTIForcePlate>`
+  * :lslrepo:`PhaseSpace`
+  * :lslrepo:`Microsoft Kinect <KinectMocap>`
+  * :lslrepo:`NaturalPoint OptiTrack <OptiTrack>` (some versions)
+  * :lslrepo:`OpenVR`
   * `Qualisys <https://github.com/qualisys/qualisys_lsl_app>`__
 
 Supported Multimedia Hardware
 *****************************
 Support for standard Windows-compatible multimedia hardware is included:
   * DirectShow-compatible video hardware
-  * `Qt-compatible audio input <https://github.com/labstreaminglayer/App-AudioCapture>`__
+  * :lslrepo:`Qt-compatible audio input <AudioCapture>`
 
 Supported Stimulation Hardware
 ******************************
@@ -115,8 +115,8 @@ The following stimulus presentations systems are usable out of the box with LSL:
 Miscellaneous Hardware
 **********************
 The following miscellaneous hardware is supported:
-  * `Generic serial port <https://github.com/labstreaminglayer/App-SerialPort>`__
-  * `Measurement Computing DAQ <https://github.com/labstreaminglayer/App-MeasurementComputing>`__
+  * :lslrepo:`Generic serial port <SerialPort>`
+  * :lslrepo:`Measurement Computing DAQ <MeasurementComputing>`
   * `biosignalsplux sensors using OpenSignals <https://www.biosignalsplux.com/index.php/software/apis>`__
-  * `Vernier Go Direct sensors <https://github.com/labstreaminglayer/app-vernier>`__
+  * :lslrepo:`Vernier Go Direct sensors <vernier>`
   * `Tyromotion Amadeo Robot <https://github.com/pyreiz/ctrl-tyromotion>`__

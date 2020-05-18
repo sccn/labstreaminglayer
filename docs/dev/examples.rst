@@ -151,9 +151,9 @@ The last example shows how to attach properly formatted meta-data to a stream, a
 Real-World Example Programs
 ***************************
 These sample codes are from actual 'production' software that is used to do data transmission:
-  * `Kinect: multi-channel signal with body joint positions and meta-data. <https://github.com/labstreaminglayer/App-KinectMocap>`__
-  * `Input: irregular marker stream based on keyboard inputs. <https://github.com/labstreaminglayer/App-Input>`__
-  * `B-Alert: reading from an EEG device in a separate thread. <https://github.com/labstreaminglayer/App-BAlert>`__
-  * `EyeLink: reading from an eye tracker in Python. <https://github.com/labstreaminglayer/App-EyeLink>`__
+  * :lslrepo:`KinectMocap`: multi-channel signal with body joint positions and meta-data.
+  * :lslrepo:`Input`: irregular marker stream based on keyboard inputs. 
+  * :lslrepo:`BAlert`: reading from an EEG device in a separate thread.
+  * :lslrepo:`EyeLink`: reading from an eye tracker in Python.
 
 Also, all applications in the Apps directory are open-source and can serve as examples, and most of them are very similar in how they pass on data to LSL.

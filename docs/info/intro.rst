@@ -9,9 +9,14 @@ The **LSL distribution** consists of the core library and a suite of tools built
 The core transport library is `liblsl <https://github.com/labstreaminglayer/liblsl/>`__ and its language interfaces (`C <https://github.com/sccn/liblsl/>`__, `C++ <https://github.com/sccn/liblsl/>`__, `Python <https://github.com/labstreaminglayer/liblsl-Python/>`__, `Java <https://github.com/labstreaminglayer/liblsl-Java/>`__, `C# <https://github.com/labstreaminglayer/liblsl-Csharp/>`__, `MATLAB <https://github.com/labstreaminglayer/liblsl-Matlab/>`__).
 The library is general-purpose and cross-platform (OS Support: Win / Linux / MacOS / `Android <https://github.com/labstreaminglayer/liblsl-Android/>`__ / iOS; Architecture Support: x86 / amd64 / arm).
 
-The suite of tools includes a `recording program <https://github.com/labstreaminglayer/App-LabRecorder>`__, `file importers <https://github.com/sccn/xdf>`__, and apps that make data from a range of acquisition hardware (see :doc:`supported_devices`) available on the lab network (for example audio, EEG, or motion capture).
+The suite of tools includes a :lslrepo:`recording program <LabRecorder>`,
+`file importers <https://github.com/sccn/xdf>`__, and apps that make data from
+a range of acquisition hardware (see :doc:`supported_devices`) available on the
+lab network (for example audio, EEG, or motion capture).
 
-There is an intro lecture/demo on LSL here: http://www.youtube.com/watch?v=Y1at7yrcFW0 (part of an online course on EEG-based brain-computer interfaces).
+There is an
+`intro lecture/demo on LSL <http://www.youtube.com/watch?v=Y1at7yrcFW0>`__
+(part of an online course on EEG-based brain-computer interfaces).
 
 Streaming Layer API
 ===================
@@ -92,7 +97,13 @@ This feature is explained in more detail in the :doc:`time_synchronization` docu
 File Format
 ===========
 
-The transport API itself does not endorse or provide a particular file format, but the provided recording program (`LabRecorder <https://github.com/labstreaminglayer/App-LabRecorder/releases>`_) records into the XDF file format (`Extensible Data Format <https://github.com/sccn/xdf>`__). XDF was designed concurrently with the lab streaming layer and supports the full feature set of LSL (including multi-stream container files, per-stream arbitrarily large XML headers, all sample formats as well as time-synchronization information).
+The transport API itself does not endorse or provide a particular file format,
+but the provided recording program (:lslrepo:`LabRecorder`) records into the
+XDF file format (`Extensible Data Format <https://github.com/sccn/xdf>`__).
+XDF was designed concurrently with the lab streaming layer and supports the
+full feature set of LSL (including multi-stream container files, per-stream
+arbitrarily large XML headers, all sample formats as well as
+time-synchronization information).
 
 Developer Information
 =====================
