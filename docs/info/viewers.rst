@@ -10,7 +10,7 @@ A part of any LSL workbench should be a reliable way to monitor your data. Thus,
 Stand-alone online viewers:
   * `BrainVision LSL Viewer <https://www.brainproducts.com/downloads.php?kid=40&tab=3>`__
   
-  .. image:: ../images/LSL_BVLSL-Viewer.jpg
+  .. image:: ../images/LSL_BVLSL-Viewer.png
   
   * `MATLABViewer <https://github.com/labstreaminglayer/App-MATLABViewer/tree/845384430d45f5290205b575ea6c13f6c8123b72>`__ (part of LSL distribution)
   
