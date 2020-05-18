@@ -33,7 +33,7 @@ The liblsl library provides the following **abstractions** for use by client pro
     in chunks of multiple samples for improved throughput.
 
   Metadata
-    Apart from the raw data, information about the :term:`stream` is stored and
+    Apart from the raw data, information about the :term:`Stream` is stored and
     transmitted as XML data (akin to a file header).
 
   Stream
@@ -59,7 +59,7 @@ The liblsl library provides the following **abstractions** for use by client pro
 
   Stream Inlet
     A stream inlet is for receiving time series data from a single connected outlet.
-    Allows to retrieve samples from the :term:`stream` (in-order, with reliable
+    Allows to retrieve samples from the :term:`Stream` (in-order, with reliable
     (re-)transmission, optional type conversion and optional failure recovery).
     Besides the samples, the :term:`Metadata` can be obtained (as XML blob
     or alternatively through a small built-in DOM interface).
