@@ -114,6 +114,47 @@ You can track the progress in the issue tracker
 If you still have connection problems your router might be configured to
 disable or block certain features or ports between computers.
 
+Unix (Linux / macOS)
+====================
+
+To test stream resolution problems, you can log all incoming query packets with
+the excellent ``socat`` utility:
+
+.. code:: bash
+
+  $ socat -d -d UDP-RECV:16571,reuseaddr,broadcast STDOUT
+  2020/05/20 12:08:38 socat[16940] N using stdout for reading and writing
+  2020/05/20 12:08:38 socat[16940] N starting data transfer loop with FDs [5,5] and [1,1]
+  2020/05/20 12:08:39 socat[16940] N received packet with 65 bytes from AF=2 192.168.1.170:58967
+  LSL:shortinfo
+  session_id='default'
+  16577 11973266323178842010
+
+
+To log *all* broadcast packets, use
+:samp:`UDP-RECV:16571,reuseaddr,broadcast` as source.
+
+For a specific broadcast address 
+:samp:`UDP-RECV:16571,reuseaddr,bind={224.0.0.183},ip-add-membership={224.0.0.183}:{enp0s25}`
+where ``224.0.0.183`` is the broadcast address and (optionally) ``enp0s25``
+your interface name.
+
+For multicast packets, use
+:samp:`UDP6-RECV:16571,reuseaddr,ipv6-join-group='[ff02:113D:6FDD:2C17:A643:FFE2:1BD1:3CD2]:enp0s25'`.
+Note that the interface name may also be an interface index as printed by
+:samp:`ip addr` (here ``wlan0`` has the interface index 4):
+
+.. code:: bash
+
+  [..]
+  4: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 7c:7a:91:31:7d:56 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.110/24 brd 192.168.1.255 scope global dynamic noprefixroute wlan0
+       valid_lft 6081sec preferred_lft 6081sec
+    inet6 fe80::7e7a:91ff:fe31:7d56/64 scope link 
+       valid_lft forever preferred_lft forever
+
+
 Customizing Network Features of LSL
 ***********************************
 All network features used by LSL clients (such as the ports) can be customized
