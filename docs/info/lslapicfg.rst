@@ -8,16 +8,16 @@ Configuration File Locations
 
 There are four possible locations where such a config file will be found by the library (liblsl):
 
-- :file:`/etc/lsl_api/lsl_api.cfg` (Unix)
-  :file:`C:\etc\lsl_api\lsl_api.cfg` (Windows)
+- :file:`/etc/lsl_api/lsl_api.cfg` (Unix); 
+  :file:`C:\\etc\\lsl_api\\lsl_api.cfg` (Windows).
   This is a global directory that is visible to all applications from all users
   on a given computer.
-- :file:`~/lsl_api/lsl_api.cfg` (Unix)
-  :file:`%HOMEPATH%\lsl_api\lsl_api.cfg` (Windows)
+- :file:`~/lsl_api/lsl_api.cfg` (Unix); 
+  :file:`%HOMEPATH%\\lsl_api\\lsl_api.cfg` (Windows).
   This is a user-specific directory that is visible for all applications of
   that user.
   No administrator rights are usually necessary to edit it.
-- :file:`$PWD/lsl_api.cfg`
+- :file:`$PWD/lsl_api.cfg`.
   This is a program-specific location: the file needs to be in the working
   directory of the program (for example right next to the binary).
   This allows to customize LSL behavior on a program-by-program basis.
