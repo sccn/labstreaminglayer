@@ -172,10 +172,10 @@ necessary.
 In order to enable a connection between two separate networks, there might be a number of 
 firewalls that might block traffic. Let's identify these points:
 
-- Forward outbound ports 16571 - 16604 for TCP/UDP on the Outlet's OS Firewall
-- Forward ports 16571 - 16604 for TCP/UDP on the Outlet's Endpoint (Router)
-- Forward ports 16571 - 16604 for TCP/UDP on the Inlet's Endpoint (Router/Virtual Firewall)
-- Forward inbound ports 16571 - 16604 for TCP/UDP on the Inlet's OS Firewall
+- Forward outbound ports :samp:`16571 - 16604` for TCP/UDP on the Outlet's OS Firewall
+- Forward ports :samp:`16571 - 16604` for TCP/UDP on the Outlet's Endpoint (Router)
+- Forward ports :samp:`16571 - 16604` for TCP/UDP on the Inlet's Endpoint (Router/Virtual Firewall)
+- Forward inbound ports :samp:`16571 - 16604` for TCP/UDP on the Inlet's OS Firewall
 
 Keep in mind that there are many possible setups for local networks. There may be additional 
 firewalls or network layers blocking your stream. If you believe this to be the case, please 
@@ -188,14 +188,14 @@ streaming device. It is often a requirement that a local network device has a st
 IP address in order to have its ports forwarded.
 
 Once all ports are forwarded on both sides, both outlet and inlet IP addresses need 
-to be added to the `KnownPeers` setting in the configuration file. This will override 
+to be added to the :samp:`KnownPeers` setting in the configuration file. This will override 
 the multicast discovery mechanism and only allow pairing between those endpoints. While 
-you're in the file, make sure the `SessionID` setting is something other than default for 
+you're in the file, make sure the :samp:`SessionID` setting is something other than default for 
 debugging and courtesy purposes.
 
 Distribute this configuration file between the outlet and inlet and *make sure the 
 directory and file names are correct per your OS distrubution.* **If the name of the file is 
-not exactly `lsl_api.cfg`, liblsl will not read it.**
+not exactly :samp:`lsl_api.cfg`, liblsl will not read it.**
 
 Finally to test that a remote connection is established, use a outlet/inlet 
 test using example files such as:
@@ -211,7 +211,7 @@ https://www.yougetsignal.com/tools/open-ports/. The port will only appear open w
 application is listening to it.
 
 Then run your Outlet program on the other device. Ensure that the data is printed to the 
-Inlet console and that the `SessionID` value is correct. 
+Inlet console and that the :samp:`SessionID` value is correct. 
 
 If problems persist, narrow down the possibilities. Try running both the Outlet and 
 Inlet on a single device. Try pinging from the Outlet to the Inlet 
