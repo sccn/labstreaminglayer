@@ -163,3 +163,56 @@ using an appropriately-placed :doc:`configuration file <lslapicfg>`.
 Security
 ********
 Transmission between computers is unencrypted in LSL under the assumption that experiments involving sensitive data take place in a protected network environment. If you do not trust your network, the best way to establish such an environment by setting up a Virtual Private Network (VPN), which works even across the internet.
+
+Remote Connections
+******************
+Connecting Outlets and Inlets across the internet can be risky but can sometimes be 
+necessary.
+
+In order to enable a connection between two separate networks, there might be a number of 
+firewalls that might block traffic. Let's identify these points:
+
+- Forward outbound ports 16571 - 16604 for TCP/UDP on the Outlet's OS Firewall
+- Forward ports 16571 - 16604 for TCP/UDP on the Outlet's Endpoint (Router)
+- Forward ports 16571 - 16604 for TCP/UDP on the Inlet's Endpoint (Router/Virtual Firewall)
+- Forward inbound ports 16571 - 16604 for TCP/UDP on the Inlet's OS Firewall
+
+Keep in mind that there are many possible setups for local networks. There may be additional 
+firewalls or network layers blocking your stream. If you believe this to be the case, please 
+consult your local IT or network administrator for help.
+
+An issue may pop up on some home networks regarding IP address reassignments. If you find 
+that your network keeps reassigning your device with a different local IP over time, please 
+consult your router's manual for turning on a static/reserved IP address for the data 
+streaming device. It is often a requirement that a local network device has a static/reserved 
+IP address in order to have its ports forwarded.
+
+Once all ports are forwarded on both sides, both outlet and inlet IP addresses need 
+to be added to the `KnownPeers` setting in the configuration file. This will override 
+the multicast discovery mechanism and only allow pairing between those endpoints. While 
+you're in the file, make sure the `SessionID` setting is something other than default for 
+debugging and courtesy purposes.
+
+Distribute this configuration file between the outlet and inlet and *make sure the 
+directory and file names are correct per your OS distrubution.* **If the name of the file is 
+not exactly `lsl_api.cfg`, liblsl will not read it.**
+
+Finally to test that a remote connection is established, use a outlet/inlet 
+test using example files such as:
+
+https://github.com/chkothe/pylsl/blob/master/examples/SendData.py
+https://github.com/chkothe/pylsl/blob/master/examples/ReceiveData.py
+
+Regardless of what test applications used, make sure to make modifications so that the Inlet 
+prints received data to a file or console.
+
+Run your Inlet program on one device and check its port visibility by using a tool such as 
+https://www.yougetsignal.com/tools/open-ports/. The port will only appear open when an 
+application is listening to it.
+
+Then run your Outlet program on the other device. Ensure that the data is printed to the 
+Inlet console and that the `SessionID` value is correct. 
+
+If problems persist, narrow down the possibilities. Try running both the Outlet and 
+Inlet on a single device. Try pinging from the Outlet to the Inlet 
+(Make sure to turn on ICMP). Try turning off all possible firewalls instead of adding rules. 
