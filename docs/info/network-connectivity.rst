@@ -111,6 +111,14 @@ You can track the progress in the issue tracker
 
 .. image:: ../images/advanced_network_settings.png
 
+You can also eliminate Hyper-V altogether by going to `Control Panel->Programs and Features->Turn Windows features on or off` and disabling Hyper-V. This requires admin priveges and a reboot.
+
+.. image:: ../images/hyper-v.png
+
+If the vEthernet adapters persist, you may also need to go into `Control Panel->Device Manager`. From there, expand the `Network adapters` tab and uninstall the offending virtual adapters by right-clicking and choosing `Uninstall`.
+
+For more information on these advanced settings, please read the following StackExchange article: https://superuser.com/questions/1282014/how-to-remove-all-the-vethernet-default-switch-once-and-for-all.
+
 If you still have connection problems your router might be configured to
 disable or block certain features or ports between computers.
 
