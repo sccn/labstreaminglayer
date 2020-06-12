@@ -123,7 +123,7 @@ If you still have connection problems your router might be configured to
 disable or block certain features or ports between computers.
 
 Unix (Linux / macOS)
-====================
+********************
 
 To test stream resolution problems, you can log all incoming query packets with
 the excellent ``socat`` utility:
