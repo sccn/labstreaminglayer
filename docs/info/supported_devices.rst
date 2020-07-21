@@ -77,7 +77,8 @@ Supported Human Interface Hardware
 **********************************
 A wide range of Windows-compatible input hardware is supported by LSL and included with the distribution:
   * :lslrepo:`Input devices (keyboards, trackballs, presenters, etc.) <Input>`
-  * :lslrepo:`DirectX-compatible joysticks, wheels, gamepads and other controllers <GameController>`
+  * :lslrepo:`DirectX-compatible joysticks, wheels <GameController>`
+  * :lslrepo:`Gamepads (e.g. XBox Controller) - cross-platform <Gamepad>`
   * :lslrepo:`Nintendo Wiimote and official expansions <Wiimote>`
 
 Supported Motion Capture Hardware
