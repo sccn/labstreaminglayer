@@ -155,3 +155,6 @@
 [submodule "Apps/AudioCapture"]
 	path = Apps/AudioCapture
 	url = https://github.com/labstreaminglayer/App-AudioCapture.git
+[submodule "Apps/Gamepad"]
+	path = Apps/Gamepad
+	url = https://github.com/labstreaminglayer/App-Gamepad.git
