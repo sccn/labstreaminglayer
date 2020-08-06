@@ -58,6 +58,11 @@ The following systems are also supported by a separate program, the :doc:`OpenVi
   * OpenEEG ModularEEG and MonolithEEG
   * TMSi Porti32 and Refa32
 
+Supported fNIRS Hardware
+************************
+The following devices support LSL natively without any additional software:
+  * `NIRX NIRScout <https://nirx.net/nirscout>`__
+  * `NIRX NIRSport 2 <https://nirx.net/nirsport>`__
 
 Supported Eye Tracking Hardware
 *******************************
