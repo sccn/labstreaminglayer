@@ -5,8 +5,8 @@ Supported Devices and Tools
 
 The lab streaming layer was originally developed to facilitate human-subject experiments that involve multi-modal data acquisition, including both brain dynamics (primarily EEG), physiology (EOG, EMG, heart rate, respiration, skin conductance, etc.), as well as behavioral data (motion capture, eye tracking, touch interaction, facial expressions, etc.) and finally environmental and program state (for example, event markers).
 
-Supported EEG Hardware
-**********************
+Supported Biosignal Hardware
+****************************
 The majority of EEG systems on the market are currently compatible with LSL.
 
 
@@ -16,7 +16,7 @@ The following systems are supported by programs included in the LSL distribution
   * `Blackrock Cerebus/NSP <https://github.com/labstreaminglayer/App-BlackrockTimestamps>`__ (timestamps only)
   * `Cognionics dry/wireless <https://github.com/labstreaminglayer/App-Cognionics>`__
   * `EGI AmpServer <https://github.com/labstreaminglayer/App-EGIAmpServer>`__
-  * `Enobio dry/wireless <https://github.com/labstreaminglayer/App-Enobio>`__ (u) (please see vendor-provided above)
+  * `Enobio dry/wireless <https://github.com/labstreaminglayer/App-Enobio>`__ (u) (please use vendor-provided section)
   * `g.Tec g.USBamp <https://github.com/labstreaminglayer/App-g.Tec/tree/master/g.USBamp>`__ (buggy at high sampling rates)
   * `g.Tec g.NEEDaccess <https://github.com/labstreaminglayer/App-g.Tec/tree/master/g.NEEDaccess>`__ (including g.USBamp, g.HIamp, g.Nautilus)
   * `MINDO dry/wireless <https://github.com/labstreaminglayer/App-MINDO>`__
@@ -31,17 +31,24 @@ The following devices support LSL via vendor-provided software:
   * `BrainVision RDA client <https://github.com/brain-products/LSL-BrainVisionRDA>`__
   * `Cognionics (all headsets) <http://www.cognionics.com/>`__
   * `EB Neuro BE Plus LTM <http://www.ebneuro.biz/en/neurology/ebneuro/galileo-suite/be-plus-ltm>`__
-  * `InteraXon Muse <http://www.choosemuse.com/>`__
-      * :doc:`MU-01 - Muse - Released 2014 Example with Matlab <matlab_example_with_muse>`
-      * `MU-02 - Muse - Released 2016 <https://github.com/alexandrebarachant/muse-lsl>`__
-      * `MU-03 - Muse 2 - Released 2018 <https://github.com/alexandrebarachant/muse-lsl>`__
   * `mBrainTrain SMARTING <http://www.mbraintrain.com/smarting/>`__
   * neuroelectrics `(Enobio <http://www.neuroelectrics.com/products/enobio/>`__, `StarStim <https://www.neuroelectrics.com/solutions/starstim>`__) via `NIC2 <https://www.neuroelectrics.com/solution/software-integrations/nic2>`__.
   * `OpenBCI (all headsets) <http://docs.openbci.com/software/06-labstreaminglayer>`__
 
 
+The following are some of the devices we know about that support LSL natively through thirdparty software, but there are many others we don't know about:
+  * `InteraXon Muse <http://www.choosemuse.com/>`__
+      * :doc:`MU-01 - Muse - Released 2014 Example with Matlab <matlab_example_with_muse>`
+      * `MU-02 - Muse - Released 2016 <https://github.com/alexandrebarachant/muse-lsl>`__
+      * `MU-03 - Muse 2 - Released 2018 <https://github.com/alexandrebarachant/muse-lsl>`__
+  * `Bittium Faros <https://www.bittium.com/medical/cardiology>`__      
+      * `Faros Streamer <https://github.com/bwrc/faros-streamer>`__
+      * `Faros Streamer 2 <https://github.com/bwrc/faros-streamer-2>`__
+
+
 The following devices support LSL natively without any additional software:
   * `Foc.us EEG Dev Kit <https://foc.us/eeg>`__
+  * `Neurosity Notion <https://neurosity.co/>`__
   * `NeuroBehavioralSystems LabStreamer <https://www.neurobs.com/menu_presentation/menu_hardware/labstreamer>`__
 
 
