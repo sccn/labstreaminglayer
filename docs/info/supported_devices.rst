@@ -24,7 +24,8 @@ The following systems are supported by programs included in the LSL distribution
 
 
 The following devices support LSL via vendor-provided software:
-  * `ANT eego sports <https://www.ant-neuro.com/products/eego_sports>`__
+  * `ANT Neuro eego sports <https://www.ant-neuro.com/products/eego_sports/eego-software>`__
+  * `ANT Neuro eego sports <https://www.ant-neuro.com/products/eego_mylab/software_features>`__
   * `Brain Products actiCHamp/actiCHamp Plus <https://github.com/brain-products/LSL-actiCHamp>`__
   * `Brain Products BrainAmp series <https://github.com/brain-products/LSL-BrainAmpSeries>`__
   * `Brain Products LiveAmp <https://github.com/brain-products/LSL-LiveAmp/>`__
@@ -36,6 +37,7 @@ The following devices support LSL via vendor-provided software:
   * `OpenBCI (all headsets) <http://docs.openbci.com/software/06-labstreaminglayer>`__
   * `Bittium NeurOne Tesla <https://www.bittium.com/medical/support>`__
   * `Starcat HackEEG Shield for Arduino <https://www.starcat.io/>`__
+  * `Mentalab Explore <https://github.com/Mentalab-hub/explorepy>`_
 
 The following are some of the devices we know about that support LSL natively through thirdparty software, but there are many others we don't know about:
   * `InteraXon Muse <http://www.choosemuse.com/>`__
