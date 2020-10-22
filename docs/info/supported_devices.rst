@@ -21,6 +21,7 @@ The following systems are supported by programs included in the LSL distribution
   * `g.Tec g.NEEDaccess <https://github.com/labstreaminglayer/App-g.Tec/tree/master/g.NEEDaccess>`__ (including g.USBamp, g.HIamp, g.Nautilus)
   * `MINDO dry/wireless <https://github.com/labstreaminglayer/App-MINDO>`__
   * `Neuroscan Synamp II and Synamp Wireless <https://github.com/labstreaminglayer/App-Neuroscan>`__ (u)
+  * `Wearable Sensing <https://github.com/labstreaminglayer/App-WearableSensing>`__
 
 
 The following devices support LSL via vendor-provided software:
