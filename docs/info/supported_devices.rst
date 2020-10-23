@@ -23,9 +23,9 @@ The following systems are supported by programs included in the LSL distribution
   * `Neuroscan Synamp II and Synamp Wireless <https://github.com/labstreaminglayer/App-Neuroscan>`__ (u)
   * `Wearable Sensing <https://github.com/labstreaminglayer/App-WearableSensing>`__
 
-
 The following devices support LSL via vendor-provided software:
   * `ANT eego sports <https://www.ant-neuro.com/products/eego_sports>`__
+  * `Bittium NeurOne Tesla <https://www.bittium.com/medical/support>`__
   * `Brain Products actiCHamp/actiCHamp Plus <https://github.com/brain-products/LSL-actiCHamp>`__
   * `Brain Products BrainAmp series <https://github.com/brain-products/LSL-BrainAmpSeries>`__
   * `Brain Products LiveAmp <https://github.com/brain-products/LSL-LiveAmp/>`__
@@ -35,9 +35,8 @@ The following devices support LSL via vendor-provided software:
   * `mBrainTrain SMARTING <http://www.mbraintrain.com/smarting/>`__
   * neuroelectrics `(Enobio <http://www.neuroelectrics.com/products/enobio/>`__, `StarStim <https://www.neuroelectrics.com/solutions/starstim>`__) via `NIC2 <https://www.neuroelectrics.com/solution/software-integrations/nic2>`__.
   * `OpenBCI (all headsets) <http://docs.openbci.com/software/06-labstreaminglayer>`__
-  * `Bittium NeurOne Tesla <https://www.bittium.com/medical/support>`__
   * `Starcat HackEEG Shield for Arduino <https://www.starcat.io/>`__
-
+  
 The following are some of the devices we know about that support LSL natively through thirdparty software, but there are many others we don't know about:
   * `InteraXon Muse <http://www.choosemuse.com/>`__
       * :doc:`MU-01 - Muse - Released 2014 Example with Matlab <matlab_example_with_muse>`
@@ -135,3 +134,5 @@ The following miscellaneous hardware is supported:
   * `biosignalsplux sensors using OpenSignals <https://www.biosignalsplux.com/index.php/software/apis>`__
   * :lslrepo:`Vernier Go Direct sensors <vernier>`
   * `Tyromotion Amadeo Robot <https://github.com/pyreiz/ctrl-tyromotion>`__
+  * `Zephyr BioHarness <https://github.com/labstreaminglayer/App-Zephyr>`__ (ECG/Respiration/Accelerometer)
+
