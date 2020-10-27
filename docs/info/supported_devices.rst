@@ -34,7 +34,7 @@ The following devices support LSL via vendor-provided software:
   * `EB Neuro BE Plus LTM <http://www.ebneuro.biz/en/neurology/ebneuro/galileo-suite/be-plus-ltm>`__
   * `mBrainTrain SMARTING <http://www.mbraintrain.com/smarting/>`__
   * neuroelectrics `(Enobio <http://www.neuroelectrics.com/products/enobio/>`__, `StarStim <https://www.neuroelectrics.com/solutions/starstim>`__) via `NIC2 <https://www.neuroelectrics.com/solution/software-integrations/nic2>`__.
-  * `Mentalab <https://mentalab.com/>`__
+  * `Mentalab Explore<https://mentalab.com/>`__
   * `OpenBCI (all headsets) <http://docs.openbci.com/software/06-labstreaminglayer>`__
   * `Starcat HackEEG Shield for Arduino <https://www.starcat.io/>`__
   
