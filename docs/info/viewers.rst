@@ -8,26 +8,29 @@ Online Viewers
 A part of any LSL workbench should be a reliable way to monitor your data. Thus, sturdy, online data visualizers are essential tools. There are a number of stand-alone applications for viewing LSL data in real-time and software packages include online visualization windows.
 
 Stand-alone online viewers:
+
   * `BrainVision LSL Viewer <https://www.brainproducts.com/downloads.php?kid=40&tab=3>`__
   
   .. image:: ../images/LSL_BVLSL-Viewer.png
+  
   
   * :lslrepo:`MATLABViewer` (part of LSL distribution)
   
   .. image:: ../images/visstream-adapted.png
   
+  
   * StreamViewer (available from SCCN ftp as part of the mobi_utils package: ftp://sccn.ucsd.edu/pub/software/LSL/Mobi_Utils/mobi_utils_1_1_10/)
   
   .. image:: ../images/streamviewer.png
+  
   
   * :lslrepo:`SigVisualizer` (Python/PyQt5 based - From Yida Lin and Clemens Brunner)
   
   .. image:: ../images/SigVisualizer_demo.gif
 
-The `python bindings <https://github.com/labstreaminglayer/liblsl-Python>`__
-contain a `very basic visualizer <https://github.com/labstreaminglayer/liblsl-Python/blob/master/pylsl/examples/ReceiveAndPlot.py>`__.
-To start it, install pylsl and pyqtgraph and run it as
-:command:`python -m pylsl.examples.ReceiveAndPlot`.
+
+  * The `python bindings <https://github.com/labstreaminglayer/liblsl-Python>`__ contain a `very basic visualizer <https://github.com/labstreaminglayer/liblsl-Python/blob/master/pylsl/examples/ReceiveAndPlot.py>`__. To start it, install pylsl and pyqtgraph and run it as :command:`python -m pylsl.examples.ReceiveAndPlot`.
+
 
 Software suites/packages supporting online LSL visualization:
   * `BCI2000 <http://bci2000.org/>`__
@@ -38,7 +41,7 @@ Software suites/packages supporting online LSL visualization:
 Offline Viewers
 **********************
 
-The following software suites/packages supporting offline LSL visualization:
+The following software suites/packages support offline visualization of XDF files, the file format used by :lslrepo:`LabRecorder` to store LSL streams:
   * `EEGLAB <https://sccn.ucsd.edu/eeglab/index.php>`__
   * `MNELab <https://github.com/cbrnr/mnelab>`__
   * `MoBILAB <https://sccn.ucsd.edu/wiki/MoBILAB>`__
