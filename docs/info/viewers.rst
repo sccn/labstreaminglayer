@@ -9,26 +9,18 @@ A part of any LSL workbench should be a reliable way to monitor your data. Thus,
 
 Stand-alone online viewers:
 
+  .. image:: ../images/LSL_BVLSL-Viewer.png
   * `BrainVision LSL Viewer <https://www.brainproducts.com/downloads.php?kid=40&tab=3>`__
   
-  .. image:: ../images/LSL_BVLSL-Viewer.png
-  
-  
+  .. image:: ../images/visstream-adapted.png
   * :lslrepo:`MATLABViewer` (part of LSL distribution)
   
-  .. image:: ../images/visstream-adapted.png
-  
-  
+  .. image:: ../images/streamviewer.png
   * StreamViewer (available from SCCN ftp as part of the mobi_utils package: ftp://sccn.ucsd.edu/pub/software/LSL/Mobi_Utils/mobi_utils_1_1_10/)
   
-  .. image:: ../images/streamviewer.png
-  
-  
+  .. image:: ../images/SigVisualizer_demo.gif
   * :lslrepo:`SigVisualizer` (Python/PyQt5 based - From Yida Lin and Clemens Brunner)
   
-  .. image:: ../images/SigVisualizer_demo.gif
-
-
   * The `python bindings <https://github.com/labstreaminglayer/liblsl-Python>`__ contain a `very basic visualizer <https://github.com/labstreaminglayer/liblsl-Python/blob/master/pylsl/examples/ReceiveAndPlot.py>`__. To start it, install pylsl and pyqtgraph and run it as :command:`python -m pylsl.examples.ReceiveAndPlot`.
 
 
