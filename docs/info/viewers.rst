@@ -20,7 +20,7 @@ Stand-alone online viewers:
   
   .. image:: ../images/streamviewer.png
   
-  * :lslrepo: `SigVisualizer` (Python/PyQt5 based - From Yida Lin and Clemens Brunner)
+  * :lslrepo:`SigVisualizer` (Python/PyQt5 based - From Yida Lin and Clemens Brunner)
   
   .. image:: ../images/SigVisualizer_demo.gif
 
