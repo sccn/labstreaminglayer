@@ -19,6 +19,10 @@ Stand-alone online viewers:
   * StreamViewer (available from SCCN ftp as part of the mobi_utils package: ftp://sccn.ucsd.edu/pub/software/LSL/Mobi_Utils/mobi_utils_1_1_10/)
   
   .. image:: ../images/streamviewer.png
+  
+  * :lslrepo: `SigVisualizer` (Python/PyQt5 based - From Yida Lin and Clemens Brunner)
+  
+  .. image:: ../images/SigVisualizer_demo.gif
 
 The `python bindings <https://github.com/labstreaminglayer/liblsl-Python>`__
 contain a `very basic visualizer <https://github.com/labstreaminglayer/liblsl-Python/blob/master/pylsl/examples/ReceiveAndPlot.py>`__.
