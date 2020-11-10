@@ -1,20 +1,25 @@
 Library Development
 ###################
 
+.. note:: Stop reading if you just want to...
+
+  - stream data from one of the :doc:`../info/supported_devices` or record data with the
+    LabRecorder. You can download pre-built releases for the apps and LabRecorder from each
+    repositories release page.
+
+  - create or use a program to stream or receive data via the LabStreamingLayer. You can
+    download a precompiled liblsl binary from the
+    `liblsl release page <https://github.com/sccn/liblsl/releases>`_
+
 Follow this guide if you are...
-
-- trying to build liblsl for a platform that does not already have a release
-
-  - Please check the `liblsl release page <https://github.com/sccn/liblsl/releases>`_ first.
-  - Please let us know so we can add the platform to the list of automated builds, if possible.
-
-- trying to use liblsl in a language that does not already have an interface
 
 - want to add / modify core liblsl
 
   - Please create a `GitHub issue <https://github.com/sccn/liblsl/issues>`__
     first to ask for advice and to get pre-approval if you would like your
     modification to be included in the official library.
+
+- build liblsl for a device / OS with no official release (e.g. an embedded Linux device)
 
 Building liblsl
 ***************
@@ -32,7 +37,7 @@ Getting the source
 
 Open a Terminal / Developer Command Prompt and cd to a convenient location to download and build the library.
 
-:samp:`git clone https://github.com/sccn/liblsl.git`
+:samp:`git clone --depth=1 https://github.com/sccn/liblsl.git`
 
 The resulting folder structure is as follows.
 
@@ -60,17 +65,16 @@ Configuring the liblsl project
 .. code:: bash
 
     cd liblsl
-    mkdir build && cd build
-    cmake .. -G <generator name>
+    cmake -S . -B build -G <generator name>
 
 Note: call :samp:`cmake -G` without a generator name to get a list of available
 generators.
-I use :samp:`cmake .. -G "Visual Studio 16 2019" -A x64`
+I use :samp:`cmake -S . -B build -G "Visual Studio 16 2019" -A x64`
 
 If you used a generator, you can now open the IDE project file. Then build the install target.
 
 Alternatively, you can build directly from command line:
-:samp:`cmake --build . --config Release --target install`
+:samp:`cmake --build build -j --config Release --target install`
 
 In either case, this will create an ``install`` folder in your build folder.
 This ``install`` folder is your :doc:`LSL_INSTALL_ROOT` that you might use in when 
