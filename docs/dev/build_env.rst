@@ -37,6 +37,9 @@ Some apps may have higher requirements while liblsl works on very old
 (e.g. Windows XP) and tiny (e.g. Raspberry Pi, some microcontrollers,
 Android) systems.
 
+.. _Qt5:
+
+
 `Qt5 <http://qt.io>`__
 ----------------------
 
@@ -52,6 +55,15 @@ on the same command line you call cmake from) or add the path to the Qt5 CMake
 configuration to the cmake parameters
 (:samp:`-D{Qt5_DIR}=C:/path_to/Qt/<version>/<compiler_arch>/lib/cmake/Qt5/`).
 
+.. _boost:
+
+`Boost <https://boost.org>`__
+-----------------------------
+
+Nowadays, Boost is mostly used for apps connecting to a device over the local network
+with Boost.Asio. As these apps don't need any parts of Boost to be built, you can
+just `download Boost <https://www.boost.org/users/download/>`__, extract it somewhere
+and tell CMake where to find it (:samp:`-D{BOOST_ROOT}=path/to/boost`).
 
 Installation: Windows
 ---------------------
@@ -98,6 +110,3 @@ Installation: Debian / Ubuntu
 `PyPI <https://pypi.org/project/cmake/>`_ has newer precompiled CMake binaries
 for some architectures, you can install those via
 :command:`python -m pip install cmake`.
-
-.. _Qt5:
-

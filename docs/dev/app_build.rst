@@ -6,13 +6,18 @@
 Building LSL Apps
 =================
 
-Advanced developers may wish to use :doc:`build_full_tree`.
-
 The instructions below are recommended for most users.
 Most LabStreamingLayer applications have a similar structure
 and use similar build tools. These instructions are general
-and should work for most applications. Always be sure to read
-the specific application build instructions first.
+and should work for most applications.
+Always be sure to read the specific application build instructions first.
+
+.. note:: When you're building only a single app, you can compile liblsl alongside the app.
+          These builds are preferable if you need to change / debug both the app and liblsl,
+          but because compiling liblsl takes considerably longer than most apps you shouldn’t
+          do it for more than one app. Download a
+          `pre-built liblsl <https://github.com/sccn/liblsl/releases>`_ instead or
+          :ref:`build it yourself <build_liblsl>`.
 
 #. Make sure you have a working :doc:`build_env`.
 
@@ -136,7 +141,7 @@ command.
       - On MacOS the path can be learned from homebrew:
         :samp:`-DQt5_DIR=$(brew --prefix qt5)/lib/cmake/Qt5`
 
-   - ``-DBOOST_ROOT=<path/to/boost>``
+   - ``-DBOOST_ROOT=<path/to/boost>`` (usually not needed)
 
 - Location of liblsl (see :doc:`LSL_INSTALL_ROOT`)
 

@@ -21,6 +21,8 @@ Follow this guide if you are...
 
 - build liblsl for a device / OS with no official release (e.g. an embedded Linux device)
 
+.. _build_liblsl:
+
 Building liblsl
 ***************
 

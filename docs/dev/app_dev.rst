@@ -1,6 +1,9 @@
 App Development
 ===============
-A LSL app is typically a (small) program that acquires data from a device (EEG amplifier, mouse, eye tracker, Wiimote) then sends it over a LSL stream, or that receives data from a LSL stream to do something meaningful with it (e.g. LabRecorder, visualization).
+
+An LSL app is typically a (small) program that acquires data from a device
+(EEG amplifier, mouse, eye tracker, Wiimote) then sends it over a LSL stream, or that receives
+data from a LSL stream to do something meaningful with it (e.g. LabRecorder, visualization).
 
 See :doc:`examples` for links to small examples of code,
 and see the :doc:`(in progress) API documentation <liblsl:index>`.
@@ -10,9 +13,13 @@ Or see below for full applications.
 C++ apps
 --------
 
-The recommended way to get liblsl is to simply download the latest release from `the release page <https://github.com/sccn/liblsl/releases>`__. You may need to click on the black arrow to expand the list of Assets.
+The recommended way to get liblsl is to simply download the latest release from
+`the release page <https://github.com/sccn/liblsl/releases>`__.
+You may need to click on the black arrow to expand the list of assets.
 
-If you are using CMake, pass the `LSL_INSTALL_ROOT` argument set to the location where your liblsl file installed / unpacked to. And your application should use something like the following line to find liblsl:
+If you are using CMake, pass the :doc:`LSL_INSTALL_ROOT` argument set to the location where your
+liblsl file installed / unpacked to.
+And your application should use something like the following line to find liblsl:
 
 .. code-block:: cmake
 
