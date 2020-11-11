@@ -106,6 +106,20 @@ corrections to the default settings).
     ; The session id should not be relied on as a "password" to hide one's data from unpriviledged users; use operating-system and
     ; network settings for this purpose. Note that you machine still gets to see some traffic from other activities if within the scope.
     SessionID = default
+    
+    [log]
+    ; the log level. Only messages at this level or below will be logged
+    ; -2: errors
+    ; -1: warnings
+    ; 0: information
+    ; 1-9: increasingly less important details
+    ; When liblsl is built with LSL_DEBUGLOG=On, the levels 1-9 will log more details
+    ; The log looks like this:
+    ; Date and time          |  runtime  |  thread ID        | source location        | level | Log message
+    ; 2020-11-11 08:54:08.696 (   3.132s) [        A5247740]   inlet_connection.cpp:46    WARN| The stream named 'timesync' can't be recovered automatically if its provider crashes because it doesn't have a unique source ID
+    level = -2
+    ; liblsl can also write all log messages to a file specified here. By default, log messages will be appended
+    file = 
 
 Changing the port ranges
 ------------------------
@@ -208,3 +222,16 @@ Note, that the SessionID is not a security feature, however.
 
 You are still be able to intercept packets involved in a session that is not
 yours.
+
+Logging
+-------
+
+In case something's not working and you want to investigate it or produce a
+helpful bug report, `liblsl` can log details of the normal operation and
+errors to the terminal or a log file:
+
+.. code:: bash
+
+    [log]
+    level = 0
+    file = lsllog.txt
