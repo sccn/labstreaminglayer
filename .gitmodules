@@ -158,3 +158,6 @@
 [submodule "Apps/Gamepad"]
 	path = Apps/Gamepad
 	url = https://github.com/labstreaminglayer/App-Gamepad.git
+[submodule "Apps/XDFStreamer"]
+	path = Apps/XDFStreamer
+	url = https://github.com/labstreaminglayer/App-XDFStreamer.git
