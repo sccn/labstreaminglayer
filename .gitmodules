@@ -83,9 +83,6 @@
 [submodule "Apps/g.Tec"]
 	path = Apps/g.Tec
 	url = https://github.com/labstreaminglayer/App-g.Tec.git
-[submodule "Apps/BrainProducts"]
-	path = Apps/BrainProducts
-	url = https://github.com/labstreaminglayer/App-BrainProducts.git
 [submodule "Apps/GameController"]
 	path = Apps/GameController
 	url = https://github.com/labstreaminglayer/App-GameController.git
