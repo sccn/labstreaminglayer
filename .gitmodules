@@ -158,3 +158,15 @@
 [submodule "Apps/XDFStreamer"]
 	path = Apps/XDFStreamer
 	url = https://github.com/labstreaminglayer/App-XDFStreamer.git
+[submodule "Apps/BrainProducts/ActiChamp"]
+	path = Apps/BrainProducts/ActiChamp
+	url = https://github.com/brain-products/LSL-actiCHamp.git
+[submodule "Apps/BrainProducts/BrainVisionRDA"]
+	path = Apps/BrainProducts/BrainVisionRDA
+	url = https://github.com/brain-products/LSL-BrainVisionRDA.git
+[submodule "Apps/BrainProducts/LiveAmp"]
+	path = Apps/BrainProducts/LiveAmp
+	url = https://github.com/brain-products/LSL-LiveAmp.git
+[submodule "Apps/BrainProducts/BrainAmpSeries"]
+	path = Apps/BrainProducts/BrainAmpSeries
+	url = https://github.com/brain-products/LSL-BrainAmpSeries.git
