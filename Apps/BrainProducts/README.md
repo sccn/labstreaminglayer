@@ -1,0 +1,2 @@
+In January 2021, the previous Brain Products-LSL app repositories hosted in the github.com/labstreaminglayer organization were archived and replaced with applications in the official github.com/brain-products organization.
+The vAMP application didn't make it through the migration. The archived version can still be found [here](https://github.com/labstreaminglayer/App-BrainProducts/tree/master/VAmp).
