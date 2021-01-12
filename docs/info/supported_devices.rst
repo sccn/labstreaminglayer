@@ -32,6 +32,7 @@ The following devices support LSL via vendor-provided software:
   * `BrainVision RDA client <https://github.com/brain-products/LSL-BrainVisionRDA>`__
   * `Cognionics (all headsets) <http://www.cognionics.com/>`__
   * `EB Neuro BE Plus LTM <http://www.ebneuro.biz/en/neurology/ebneuro/galileo-suite/be-plus-ltm>`__
+  * `Emotiv Brainware (e.g. EPOC) via EmotivPRO <https://github.com/Emotiv/labstreaminglayer>`__
   * `mBrainTrain SMARTING <http://www.mbraintrain.com/smarting/>`__
   * neuroelectrics `(Enobio <http://www.neuroelectrics.com/products/enobio/>`__, `StarStim <https://www.neuroelectrics.com/solutions/starstim>`__) via `NIC2 <https://www.neuroelectrics.com/solution/software-integrations/nic2>`__.
   * `Mentalab Explore <https://mentalab.com/>`__
