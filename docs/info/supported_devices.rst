@@ -21,6 +21,7 @@ The following systems are supported by programs included in the LSL distribution
   * `g.Tec g.NEEDaccess <https://github.com/labstreaminglayer/App-g.Tec/tree/master/g.NEEDaccess>`__ (including g.USBamp, g.HIamp, g.Nautilus)
   * `MINDO dry/wireless <https://github.com/labstreaminglayer/App-MINDO>`__
   * `Neuroscan Synamp II and Synamp Wireless <https://github.com/labstreaminglayer/App-Neuroscan>`__ (u)
+  * `Neuroscan Acquire <https://github.com/labstreaminglayer/App-NeuroscanAcquire>`__ (u)
   * `Wearable Sensing <https://github.com/labstreaminglayer/App-WearableSensing>`__
 
 The following devices support LSL via vendor-provided software:
@@ -57,7 +58,7 @@ The following devices support LSL natively without any additional software:
   * `NeuroBehavioralSystems LabStreamer <https://www.neurobs.com/menu_presentation/menu_hardware/labstreamer>`__
 
 
-The following systems are also supported by a separate program, the :doc:`OpenViBE acquisition server <ovas>` (unstable systems marked with a (u)):
+The following systems are also supported by a separate program, the :doc:`OpenViBE acquisition server <ovas>`, but note however that there is [an outstanding issue that prevents streams acquired with OpenViBE from synchronizing with other LSL streams](http://openvibe.inria.fr/tracker/view.php?id=197):
   * ANT Neuro ASALAB EEG
   * Brain Products QuickAmp, V-Amp, and BrainAmp series
   * CTF/VSM (u)
