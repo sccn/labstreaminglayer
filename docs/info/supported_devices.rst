@@ -58,7 +58,7 @@ The following devices support LSL natively without any additional software:
   * `NeuroBehavioralSystems LabStreamer <https://www.neurobs.com/menu_presentation/menu_hardware/labstreamer>`__
 
 
-The following systems are also supported by a separate program, the :doc:`OpenViBE acquisition server <ovas>`, but note however that there is [an outstanding issue that prevents streams acquired with OpenViBE from synchronizing with other LSL streams](http://openvibe.inria.fr/tracker/view.php?id=197):
+The following systems are also supported by a separate program, the :doc:`OpenViBE acquisition server <ovas>`, but note however that there is `an outstanding issue that prevents streams acquired with OpenViBE from synchronizing with other LSL streams <http://openvibe.inria.fr/tracker/view.php?id=197>`__:
   * ANT Neuro ASALAB EEG
   * Brain Products QuickAmp, V-Amp, and BrainAmp series
   * CTF/VSM (u)
