@@ -20,6 +20,7 @@ LabStreamingLayer's Documentation
 
    dev/dev_guide
    dev/app_dev
+   dev/build_android
    dev/lib_dev
    dev/cmake
 
