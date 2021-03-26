@@ -28,7 +28,6 @@ is built on every commit to the
 In order to avoid several commits until you get the formatting right, install
 the Python ``sphinx`` package (either with pip or conda) and build the
 documentation with
-
 :samp:`make html`, or (if you don't have :command:`make` installed)
 :samp:`sphinx-build . _build`.
 
@@ -73,7 +72,7 @@ LSL documentation shortcuts
 
 Some pages are linked to quite often, so there are some shortcuts configured in :file:`conf.py`:
 
-:samp:`:repo:`{foo}` creates a link to :samp:`https://github.com/{foo}`
+:samp:`:repo:`{foo}`` creates a link to :samp:`https://github.com/{foo}`
 (of course, you can add link texts with all these commands, e.g.
 :samp:`:repo:`{your new start page} <sccn/liblsl>``).
 
@@ -89,7 +88,7 @@ Some pages are linked to quite often, so there are some shortcuts configured in 
 
 You can link to anything in the :doc:`liblsl docs <liblsl:index>` with the commands described in
 :ref:`my-label` by prefixing the label / doc with ``liblsl``, e.g.
-:samp:`doc:`liblsl:ref/freefuncs`` produces this link: doc:`liblsl:ref/freefuncs`.
+:samp:`doc:`liblsl:ref/freefuncs`` produces this link: :doc:`liblsl:ref/freefuncs`.
 
 You can even use this to refer to pages created directly from the documentation
 comments in the C++ header files, e.g. :samp:`:any:`liblsl:proc_dejitter``
