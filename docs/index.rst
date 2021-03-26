@@ -18,6 +18,7 @@ LabStreamingLayer's Documentation
    :maxdepth: 1
    :caption: Developer's Guide
 
+   dev/doc_syntax
    dev/dev_guide
    dev/app_dev
    dev/build_android
