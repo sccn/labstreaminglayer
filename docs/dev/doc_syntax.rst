@@ -93,6 +93,8 @@ You can link to anything in the :doc:`liblsl docs <liblsl:index>` with the comma
 You can even use this to refer to pages created directly from the documentation
 comments in the C++ header files, e.g. :samp:`:any:`liblsl:proc_dejitter``
 produces this link: :any:`liblsl:proc_dejitter`.
+When using the predefined roles (e.g. `:cpp:enum`), you don't need to prefix `liblsl:`, e.g.
+:samp:`:cpp:enum:`lsl_processing_options_t`` produces :cpp:enum:`lsl_processing_options_t`.
 
 You can list the available link targets by running
 :command:`python -msphinx.ext.intersphinx https://labstreaminglayer.readthedocs.io/projects/liblsl/objects.inv`.
