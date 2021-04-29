@@ -109,7 +109,7 @@ Several motion-capture systems are currently supported by LSL. The ones we know 
   * :lslrepo:`NaturalPoint OptiTrack <OptiTrack>` (some versions)
   * :lslrepo:`OpenVR`
   * `Qualisys <https://github.com/qualisys/qualisys_lsl_app>`__
-  * `Vicon <https://gitlab.com/vicon-pupil-data-parser/vajkonstrim>`__
+  * `Vicon <https://gitlab.com/vicon-pupil-data-parser/vajkonstrim>`__ (LSL support unclear - check with authors)
   * `Xsens <https://github.com/Torres-SMIL/xsens_labstreaminglayer_link>`__
 
 Supported Multimedia Hardware
