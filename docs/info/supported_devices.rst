@@ -102,13 +102,15 @@ A wide range of Windows-compatible input hardware is supported by LSL and includ
 
 Supported Motion Capture Hardware
 *********************************
-Several motion-capture systems are currently supported by LSL and included in the distribution. These are:
+Several motion-capture systems are currently supported by LSL. The ones we know of are:
   * :lslrepo:`AMTI force plates with serial I/O <AMTIForcePlate>`
   * :lslrepo:`PhaseSpace`
   * :lslrepo:`Microsoft Kinect <KinectMocap>`
   * :lslrepo:`NaturalPoint OptiTrack <OptiTrack>` (some versions)
   * :lslrepo:`OpenVR`
   * `Qualisys <https://github.com/qualisys/qualisys_lsl_app>`__
+  * `Vicon <https://gitlab.com/vicon-pupil-data-parser/vajkonstrim>`__
+  * `Xsens <https://github.com/Torres-SMIL/xsens_labstreaminglayer_link>`__
 
 Supported Multimedia Hardware
 *****************************
