@@ -24,6 +24,8 @@ Stand-alone online viewers:
   * :lslrepo:`SigVisualizer` (Python/PyQt5 based - From Yida Lin and Clemens Brunner)
 
     .. image:: ../images/SigVisualizer_demo.gif
+    
+  * `PlotJuggler <https://github.com/facontidavide/PlotJuggler>`__ supporst LSL streams and other data sources.
   
   * The `python bindings <https://github.com/labstreaminglayer/liblsl-Python>`__ contain a
     `very basic visualizer <https://github.com/labstreaminglayer/liblsl-Python/blob/master/pylsl/examples/ReceiveAndPlot.py>`__.
