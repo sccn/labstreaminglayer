@@ -247,7 +247,7 @@ more specific (:ref:`permalink <faqmultimatch>`).
 Binaries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(Also known as: "Which :file:`liblsl.so` / :file:`liblsl.dll` do I need?)
+(Also known as: "Which :file:`liblsl.so` / :file:`lsl.dll` do I need?)
 
 Liblsl gets compiled to a binary for a *specific* combination of
 Operating System / libc (almost almost the same) and processor architecture.

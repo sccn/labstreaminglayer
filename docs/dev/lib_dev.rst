@@ -67,11 +67,11 @@ Configuring the liblsl project
 .. code:: bash
 
     cd liblsl
-    cmake -S . -B build -G <generator name>
+    cmake -S . -B build -G <generator name> <other options>
 
 Note: call :samp:`cmake -G` without a generator name to get a list of available
 generators.
-I use :samp:`cmake -S . -B build -G "Visual Studio 16 2019" -A x64`
+I use :samp:`cmake -S . -B build -G "Visual Studio 16 2019" -A x64 -DCMAKE_INSTALL_PREFIX="build/install"`
 
 If you used a generator, you can now open the IDE project file. Then build the install target.
 
@@ -89,6 +89,17 @@ There are several liblsl-specific build options.
 All of them can be set either in the GUI (cmake-gui or Visual Studio) or on the
 command line (:samp:`cmake -D{foo}={bar}`).
 
+.. option:: CMAKE_INSTALL_PREFIX
+
+  This is not an LSL-provided option, but it's a common and important option when building the install target.
+  See the `official documentation <https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html>`_.
+  This argument is often necessary on Windows because otherwise it will attempt to install into C:\Program Files
+  which will fail without administrative rights. A good value to pass is "build/install".
+
+.. option:: LSL_DEBUGLOG
+
+   Enable (lots of) additional debug messages. Defaults to OFF.
+
 .. option:: LSL_BUILD_EXAMPLES
 
   The liblsl distributions includes several example programs.
@@ -105,13 +116,14 @@ command line (:samp:`cmake -D{foo}={bar}`).
   circumstances and created hard to debug errors otherwise. Don't enable this
   unless you know exactly what you are doing.
 
-.. option:: LSL_NO_FANCY_LIBNAME
+.. option:: LSL_FORCE_FANCY_LIBNAME
 
-  Currently, the naming scheme is
+  By default, CMake decides what to name the library (see :ref:`liblslarch`).
+  On Windows this is :file:`lsl.{<extension>}` 
+  and for Unix (Linux/Mac) it is :file:`liblsl.{<extension>}`.
+  Enabling this option will force the library to be named
   :file:`liblsl{<ptrsize>}.{<extension>}`
-  (see :ref:`liblslarch`).
-  Enabling this option produces a file name that allows the default linker on
-  this platform to find it if told to look for `lsl`.
+  on all platforms.
 
 .. option:: LSL_UNITTESTS
 
@@ -132,6 +144,14 @@ command line (:samp:`cmake -D{foo}={bar}`).
 
   Change the minimum targeted Windows version, defaults to `0x0601` for
   Windows 7.
+  
+.. option:: LSL_OPTIMIZATIONS
+
+  Enable some more compiler optimizations. Defaults to ON.
+
+.. option:: LSL_BUNDLED_PUGIXML
+
+  Use the bundled pugixml by default. Defaults to ON.
 
 Modifying liblsl
 ****************
