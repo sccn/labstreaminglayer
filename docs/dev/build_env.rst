@@ -33,27 +33,28 @@ Alpine Linux              <3.6   3.12
 :ref:`buildenvcmake`      3.12   3.18
 ========================= ====== ===========
 
-Some apps may have higher requirements while liblsl works on very old
-(e.g. Windows XP) and tiny (e.g. Raspberry Pi, some microcontrollers,
-Android) systems.
+liblsl works on very old (e.g. Windows XP) and tiny (e.g. 
+Raspberry Pi, some microcontrollers, Android) systems.
+Some LSL Apps might have higher requirements.
 
-.. _Qt5:
+.. _Qt:
 
 
-`Qt5 <http://qt.io>`__
+`Qt <http://qt.io>`__
 ----------------------
 
 For compatibility with Ubuntu 16.04, Qt5.5 is the oldest supported
 version.
 
-Qt5 is the recommended toolkit to create graphical user interfaces.
+Qt5 or Qt6 is the recommended toolkit to create graphical user interfaces.
 To build apps using Qt, install it and if CMake doesn't find it automatically
 tell it where to find it, either by adding the compiler specific base path to
 the :envvar:`PATH`
 (:samp:`set {PATH}=C:\Qt\<version>\<compiler_arch>;%PATH%`
-on the same command line you call cmake from) or add the path to the Qt5 CMake
+on the same command line you call cmake from) or add the path to the Qt CMake
 configuration to the cmake parameters
-(:samp:`-D{Qt5_DIR}=C:/path_to/Qt/<version>/<compiler_arch>/lib/cmake/Qt5/`).
+(:samp:`-D{Qt5_DIR}=C:/Qt/<version>/<compiler_arch>/lib/cmake/Qt5/`).
+(:samp:`-D{Qt6_DIR}=C:/Qt/<version>/<compiler_arch>/lib/cmake/Qt6/`).
 
 .. _boost:
 
