@@ -12,10 +12,10 @@ and use similar build tools. These instructions are general
 and should work for most applications.
 Always be sure to read the specific application build instructions first.
 
-.. note:: When you're building only a single app, you can compile liblsl alongside the app.
+.. note:: You can create a project comprising both liblsl and the app.
           These builds are preferable if you need to change / debug both the app and liblsl,
-          but because compiling liblsl takes considerably longer than most apps you shouldn’t
-          do it for more than one app. Download a
+          but because compiling liblsl takes considerably longer than most apps you should
+          generally download a
           `pre-built liblsl <https://github.com/sccn/liblsl/releases>`_ instead or
           :ref:`build it yourself <build_liblsl>`.
 
@@ -29,7 +29,7 @@ Always be sure to read the specific application build instructions first.
 
    * git clone the application
 
-#. Create the build directory
+#. Clearn the build directory
 
    * You can use a GUI file manager to do this part or you can do it by command
      line as below.
@@ -41,11 +41,11 @@ Always be sure to read the specific application build instructions first.
 
 #. Configure the project using :ref:`lslbuildenv` cmake.
 
-   * Option 1 - Visual Studio 2017 or later (**recommended**)
+   * Option 1 - Windows **Recommended Option** - Visual Studio 2017 or later
 
       * Open the :file:`CMakeLists.txt` file in Visual Studio
         (:guilabel:`File->Open->CMake`)
-      * Change CMake settings via :guilabel:`CMake->Change CMake Settings`
+      * Change CMake settings via :guilabel:`CMake/Project->Change CMake Settings`
 
          * See `Common CMake Settings <#common-cmake-options>`__ below
 
@@ -56,6 +56,7 @@ Always be sure to read the specific application build instructions first.
 
       *  Open a Terminal window or, on Windows, a ``x64 Native Tools Command Prompt for VS2017`` (or VS2019, as needed).
       *  Run cmake with appropriate `commandline options <#common-cmake-options>`__.
+          * :samp:`cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="build/install" {other options}`
 
    * Option 3 - Using the GUI
 
@@ -65,7 +66,7 @@ Always be sure to read the specific application build instructions first.
       * Select your compiler and click Finish.
       * Use the interface to set or add options/paths (:guilabel:`Add Entry`).
 
-          * :ref:`Qt5` if the guessed path is not right
+          * :ref:`Qt5_DIR` or `Qt6_DIR` if the guessed path is not right
           * :ref:`Boost` if the default was not correct
           * A path where redistributable binaries get copied (``CMAKE_INSTALL_PREFIX``)
           * Build type (``CMAKE_BUILD_TYPE``, either ``Release`` or ``Debug``). You can change this in Visual Studio later.
@@ -81,7 +82,7 @@ Always be sure to read the specific application build instructions first.
       * (see also :ref:`cmakeinstalltarget`)
 
    * If using Visual Studio >=2017 built-in CMake utilities
-      * Use the menu :guilabel:`CMake > Install > ApplicationName`
+      * Use the menu :guilabel:`Build > Install > ApplicationName`
 
 This will create a distribution tree in the folder specified by
 :ref:`CMAKE_INSTALL_PREFIX <cmakeinstalltarget>` similar to this:
@@ -132,20 +133,32 @@ Apps, then you will have to provide some optional arguments to the cmake
 command.
 
 -  `Generator <https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html#cmake-generators>`__:
-    ``-G <generator name>``.
+   - :samp:`G <generator name>`
+   - On Windows, don't forget platform modifiers: `-A x64` for 64-bit and `-A Win32` if targeting 32-bit Windows.
+    
+- `CMAKE_INSTALL_PREFIX <https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html>`__:
+   - :samp:`-DCMAKE_INSTALL_PREFIX="build/install"`` is a good default.
 
 -  App dependencies (required by some apps). See :ref:`lslbuildenv` for more info.
    - :samp:`-DVendor_ROOT={<path/to/vendor/sdk>}`
    - :samp:`-DQt5_DIR={<path/to/qt/binaries>}/lib/cmake/Qt5`
+   - :samp:`-DQt6_DIR={<path/to/qt/binaries>}/lib/cmake/Qt6`
 
-      - On MacOS the path can be learned from homebrew:
+      - On MacOS, it's rarely necessary, but the path can be learned from homebrew:
         :samp:`-DQt5_DIR=$(brew --prefix qt5)/lib/cmake/Qt5`
+        :samp:`-DQt6_DIR=$(brew --prefix qt)/lib/cmake/Qt6`
 
    - ``-DBOOST_ROOT=<path/to/boost>`` (usually not needed)
 
 - Location of liblsl (see :doc:`LSL_INSTALL_ROOT`)
+   - Probably not required if liblsl was installed with homebrew, on Ubuntu as a deb package,
+     or if this is a full labstreaminglayer tree with LSL as a sister directory.
+   - :samp:`-DLSL_INSTALL_ROOT=path/to/liblsl/`
 
 - Use ``-DLSL_UNIXFOLDERS=0`` on MacOS if your application is not bundled with its dylib.
+
+- On Windows, to build a more universal executable
+   - :samp: `-T v142,host=x86`
 
 - Please check the application's README and/or BUILD document for more options.
 
