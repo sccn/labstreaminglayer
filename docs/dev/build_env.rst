@@ -37,11 +37,14 @@ liblsl works on very old (e.g. Windows XP) and tiny (e.g. 
 Raspberry Pi, some microcontrollers, Android) systems.
 Some LSL Apps might have higher requirements.
 
+Common Requirements
+-------------------
+
 .. _Qt:
 
 
 `Qt <http://qt.io>`__
-----------------------
+`````````````````````
 
 For compatibility with Ubuntu 16.04, Qt5.5 is the oldest supported
 version.
@@ -59,15 +62,21 @@ configuration to the cmake parameters
 .. _boost:
 
 `Boost <https://boost.org>`__
------------------------------
+`````````````````````````````
 
 Nowadays, Boost is mostly used for apps connecting to a device over the local network
 with Boost.Asio. As these apps don't need any parts of Boost to be built, you can
 just `download Boost <https://www.boost.org/users/download/>`__, extract it somewhere
 and tell CMake where to find it (:samp:`-D{BOOST_ROOT}=path/to/boost`).
 
-Installation: Windows
----------------------
+Environment Configuration
+-------------------------
+
+Windows
+```````
+
+Visual Studio
+'''''''''''''
 
 To get a minimal Visual Studio installation, copy this block into a file and
 use “Import configuration” in the
@@ -89,11 +98,14 @@ For a system wide CMake installation, download the
 `.msi installer <https://cmake.org/download/>`__
 and check the :guilabel:`Add to the path (for all users)` box.
 
+Qt
+''
+
 Qt can be installed with the
 `official Qt installer <http://download.qt.io/official_releases/online_installers/qt-unified-windows-x86-online.exe>`__
 
-Installation: OS X
--------------------
+OS X
+````
 
 Note: MacOS users are expected to have `homebrew <https://brew.sh/>`__ installed.
 
@@ -101,13 +113,39 @@ Note: MacOS users are expected to have `homebrew <https://brew.sh/>`__ installed
 
 - :command:`brew install qt` (not necessary for liblsl)
 
-Installation: Debian / Ubuntu
------------------------------
+- :command:`brew install labstreaminglayer/tap/lsl` (if you're only building an app, not liblsl itself)
+
+Debian / Ubuntu
+```````````````
+
+Build Tools
+'''''''''''
 
 - :command:`apt install build-essentials g++ cmake`
-
-- :command:`apt install qt5-default` (not necessary for liblsl)
 
 `PyPI <https://pypi.org/project/cmake/>`_ has newer precompiled CMake binaries
 for some architectures, you can install those via
 :command:`python -m pip install cmake`.
+
+Qt
+''
+
+The simplest way is to install whichever version of Qt is appropriate for your distro (18.04::Qt5.9; 20.04::Qt5.12):
+    - :command:`apt install qt5-default` (not necessary for liblsl)
+    
+However, if your app requires a newer version of Qt then the easiest way to install it is with `aqtinstall <https://aqtinstall.readthedocs.io/en/latest/>`__:
+    - :command:`sudo -i`
+    - :command:`apt install python3-pip`
+    - :command:`pip3 install aqtinstall`
+
+The newest version that will work with Ubuntu 18.04 is Qt 5.15.2:
+    - :command:`aqt install --outputdir /opt/Qt 5.15.2 linux desktop`
+    - :command:`apt-get install libxcb-xinerama0`
+    - You would then use this in cmake with `-DQt5_DIR=/opt/Qt/5.15.2/gcc_64/lib/cmake/Qt5`
+    
+For Ubuntu 20.04, you can use Qt 6. For example:
+    - :command:`aqt install --outputdir /opt/Qt 6.1.1 linux desktop`
+    - You would then use this in cmake with `-DQt6_DIR=/opt/Qt/6.1.1/gcc_64/lib/cmake/Qt5`
+    
+For your application to run, it needs to find Qt libraries. Add the following to the bottom of your .bashrc file:
+  `LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/Qt/{version}/gcc_64/lib"`  (make sure to swap out {version} for your qt version).
