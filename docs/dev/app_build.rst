@@ -29,7 +29,7 @@ Always be sure to read the specific application build instructions first.
 
    * git clone the application
 
-#. Clearn the build directory
+#. Clean the build directory
 
    * You can use a GUI file manager to do this part or you can do it by command
      line as below.
@@ -134,12 +134,14 @@ command.
 
 -  `Generator <https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html#cmake-generators>`__:
    - :samp:`G <generator name>`
-   - On Windows, don't forget platform modifiers: `-A x64` for 64-bit and `-A Win32` if targeting 32-bit Windows.
+   - On Windows, don't forget platform modifiers:
+       - `-A x64` for 64-bit
+       - `-A Win32` if targeting 32-bit Windows.
     
 - `CMAKE_INSTALL_PREFIX <https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html>`__:
    - :samp:`-DCMAKE_INSTALL_PREFIX="build/install"`` is a good default.
 
--  App dependencies (required by some apps). See :ref:`lslbuildenv` for more info.
+-  App dependencies (required by some apps). See :ref:`lslbuildenv` for more info.:
    - :samp:`-DVendor_ROOT={<path/to/vendor/sdk>}`
    - :samp:`-DQt5_DIR={<path/to/qt/binaries>}/lib/cmake/Qt5`
    - :samp:`-DQt6_DIR={<path/to/qt/binaries>}/lib/cmake/Qt6`
@@ -157,8 +159,8 @@ command.
 
 - Use ``-DLSL_UNIXFOLDERS=0`` on MacOS if your application is not bundled with its dylib.
 
-- On Windows, to build a more universal executable
-   - :samp: `-T v142,host=x86`
+- On Windows, to build a more universal executable:
+   - :samp:`-T v142,host=x86`
 
 - Please check the application's README and/or BUILD document for more options.
 
