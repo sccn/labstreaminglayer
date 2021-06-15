@@ -12,6 +12,7 @@ LabStreamingLayer's Documentation
    info/viewers
    info/network-connectivity
    info/lslapicfg
+   info/eeglab
    info/faqs
 
 .. toctree::
