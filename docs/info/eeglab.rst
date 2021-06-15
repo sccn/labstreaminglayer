@@ -4,6 +4,8 @@ EEGLAB integration
 Streaming and saving LSL data in EEGLAB
 ---------------------
 You may use the `App-MATLABViewer <https://github.com/labstreaminglayer/App-MATLABViewer/>` which is an EEGLAB plugin to directly stream data into EEGLAB and save it as an EEGLAB dataset.
+`intro lecture/demo on LSL <http://www.youtube.com/watch?v=Y1at7yrcFW0>`__
+
 
 Importing XDF data in EEGLAB
 ---------------------
