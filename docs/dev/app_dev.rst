@@ -12,12 +12,12 @@ effective for most cases:
 
 * Optionally present options to the user and wait for the user to click "Start" or "Link"
 * Upon start:
-    * Configure and query the device for the information needed to construct the LSL stream.
+    * Configure and query the device for the information needed to construct the LSL stream
         * `See the liblsl header for the minimally required information <https://github.com/sccn/liblsl/blob/48188a8f6db87bf9d4dee30e154490587342618e/include/lsl/streaminfo.h#L13-L37>`__
-    * Preallocate any data buffers needed to store data from the device.
+    * Preallocate any data buffers needed to store data from the device
     * Create the LSL StreamInfo
     * Optionally augment the StreamInfo with additional metadata
-        * It is encouraged that the metadata conforms to `the XDF specifications <https://github.com/sccn/xdf/wiki/Meta-Data>`_.
+        * It is encouraged that the metadata conforms to `the XDF specifications <https://github.com/sccn/xdf/wiki/Meta-Data>`_
     * Create the outlet
 * In a loop (in a thread), or via a callback:
     * Retrive data from the device
