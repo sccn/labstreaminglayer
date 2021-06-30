@@ -9,6 +9,7 @@ The optimal application structure will depend on the data source, the data sourc
 and the technology/language used to develop the application. We have several example applications,
 outlined below, that may serve as a guide. In general, we have found the following structure to be
 effective for most cases:
+
 * Optionally present options to the user and wait for the user to click "Start" or "Link"
 * Upon start:
     * Configure and query the device for the information needed to construct the LSL stream.
