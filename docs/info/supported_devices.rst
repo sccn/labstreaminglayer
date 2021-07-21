@@ -27,6 +27,7 @@ The following systems are supported by programs included in the LSL distribution
 The following devices support LSL via vendor-provided software:
   * `ANT Neuro eego sports <https://www.ant-neuro.com/products/eego_sports/eego-software>`__
   * `ANT Neuro eego sports <https://www.ant-neuro.com/products/eego_mylab/software_features>`__
+  * `Bitbrain EEG & Biosignals platform <https://www.bitbrain.com/neurotechnology-products/software/programming-tools>`__
   * `Bittium NeurOne Tesla <https://www.bittium.com/medical/support>`__
   * `Brain Products actiCHamp/actiCHamp Plus <https://github.com/brain-products/LSL-actiCHamp>`__
   * `Brain Products BrainAmp series <https://github.com/brain-products/LSL-BrainAmpSeries>`__
