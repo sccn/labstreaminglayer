@@ -4,6 +4,8 @@ Introduction
 What is LSL?
 ************
 
+The lab streaming layer (LSL) is a system for the unified collection of measurement time series in research experiments that handles both the networking, time-synchronization, (near-) real-time access as well as optionally the centralized collection, viewing and disk recording of the data.
+
 The **LSL distribution** consists of the core library and a suite of tools built on top of the library.
 
 The core transport library is `liblsl <https://github.com/labstreaminglayer/liblsl/>`__ and its language interfaces (`C <https://github.com/sccn/liblsl/>`__, `C++ <https://github.com/sccn/liblsl/>`__, `Python <https://github.com/labstreaminglayer/liblsl-Python/>`__, `Java <https://github.com/labstreaminglayer/liblsl-Java/>`__, `C# <https://github.com/labstreaminglayer/liblsl-Csharp/>`__, `MATLAB <https://github.com/labstreaminglayer/liblsl-Matlab/>`__).
