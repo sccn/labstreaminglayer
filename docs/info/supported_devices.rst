@@ -135,6 +135,7 @@ The following stimulus presentations systems are usable out of the box with LSL:
   * Unreal Engine (`Marketplace <https://www.unrealengine.com/marketplace/en-US/product/labstreaminglayer-plugin>`__, `GitHub <https://github.com/labstreaminglayer/plugin-UE4>`__)
   * `Simulation and Neuroscience Application Platform (SNAP) <https://github.com/sccn/SNAP>`__
   * `Reiz <https://github.com/pyreiz/pyreiz>`__
+  * `E-Prime 3.0 <https://github.com/PsychologySoftwareTools/eprime3-lsl-package-file/>`__
 
 Miscellaneous Hardware
 **********************
