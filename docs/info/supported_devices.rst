@@ -77,6 +77,8 @@ Supported fNIRS Hardware
 The following devices support LSL natively without any additional software:
   * `NIRx NIRScout <https://nirx.net/nirscout>`__
   * `NIRx NIRSport 2 <https://nirx.net/nirsport>`__
+  * `GowerLabs LUMO <https://www.gowerlabs.co.uk/lumo>`__
+
 
 Supported Eye Tracking Hardware
 *******************************
