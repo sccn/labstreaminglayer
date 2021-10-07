@@ -11,7 +11,7 @@ The majority of EEG systems on the market are currently compatible with LSL.
 
 
 The following systems are supported by programs included in the LSL distribution (untested systems marked with a (u)):
-  * `ABM B-Alert X4/X10/X24 wireless <https://github.com/labstreaminglayer/App-BAlert>`__ (u)
+  * `ABM B-Alert X4/X10/X24 wireless <https://github.com/labstreaminglayer/App-BAlertAthenaCLI>`__
   * `BioSemi Active II Mk1 and Mk2 <https://github.com/labstreaminglayer/App-BioSemi>`__
   * `Blackrock Cerebus/NSP <https://github.com/labstreaminglayer/App-BlackrockTimestamps>`__ (timestamps only)
   * `Cognionics dry/wireless <https://github.com/labstreaminglayer/App-Cognionics>`__
