@@ -147,6 +147,7 @@ The following miscellaneous hardware is supported:
   * :lslrepo:`Measurement Computing DAQ <MeasurementComputing>`
   * `biosignalsplux sensors using OpenSignals <https://www.biosignalsplux.com/index.php/software/apis>`__
   * :lslrepo:`Vernier Go Direct sensors <vernier>`
+  * :lslrepo:`Nonin Xpod PPG  <nonin>`
   * `Tyromotion Amadeo Robot <https://github.com/pyreiz/ctrl-tyromotion>`__
   * `Zephyr BioHarness <https://github.com/labstreaminglayer/App-Zephyr>`__ (ECG/Respiration/Accelerometer)
 
