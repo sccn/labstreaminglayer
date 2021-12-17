@@ -9,6 +9,10 @@ A part of any LSL workbench should be a reliable way to monitor your data. Thus,
 
 Stand-alone online viewers:
 
+  * `StreamViewer <https://github.com/intheon/stream_viewer>`__
+  
+    .. image:: ../images/stream_viewer-LineVis.gif
+
   * `BrainVision LSL Viewer <https://www.brainproducts.com/downloads.php?kid=40&tab=3>`__
   
     .. image:: ../images/LSL_BVLSL-Viewer.png
@@ -17,7 +21,7 @@ Stand-alone online viewers:
 
     .. image:: ../images/visstream-adapted.png
   
-  * StreamViewer (available from SCCN ftp as part of the mobi_utils package: ftp://sccn.ucsd.edu/pub/software/LSL/Mobi_Utils/mobi_utils_1_1_10/)
+  * StreamViewer (old version; used to be hosted at SCCN ftp as part of the mobi_utils package: ftp://sccn.ucsd.edu/pub/software/LSL/Mobi_Utils/mobi_utils_1_1_10/)
 
     .. image:: ../images/streamviewer.png
   
