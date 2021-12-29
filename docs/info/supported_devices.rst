@@ -78,6 +78,7 @@ The following devices support LSL natively without any additional software:
   * `NIRx NIRScout <https://nirx.net/nirscout>`__
   * `NIRx NIRSport 2 <https://nirx.net/nirsport>`__
   * `GowerLabs LUMO <https://www.gowerlabs.co.uk/lumo>`__
+  * `Cortivision PHOTON CAP <https://www.cortivision.com/products/photon/>`__
 
 
 Supported Eye Tracking Hardware
