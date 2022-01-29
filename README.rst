@@ -47,4 +47,4 @@ If you are having trouble with LSL then there are few things you can do to get h
 * Search GitHub issues in the `main repository <https://github.com/sccn/labstreaminglayer>`_, in the old `archived repository <https://github.com/sccn/lsl_archived>`_, and in the submodule for your App or language interface of interest.
 * Create a new GitHub issue. Please use the repository specific to the item you are having difficulty with. e.g. if you are having trouble with LabRecorder then open a new issue in its repository. If you don't know which repository is best then you can use the parent sccn/labstreaminglayer repository.
 * Join the LabStreamingLayer `#users` channel on Slack. `Invite Link <https://join.slack.com/t/labstreaminglayer/shared_invite/enQtMzA2NjEwNDk0NjA5LTcyYWI4ZDk5OTY5MGI2YWYxNmViNjhkYWRhZTkwYWM0ODY0Y2M0YzdlZDRkZTg1OTUwZDU2M2UwNDgwYzUzNDg>`_. Someone there may be able to get to the bottom of your problem through conversation.
-* You may also wish to subscribe to the `LSL mailing list <https://mailman.ucsd.edu/mailman/listinfo/lsl-l>`_
+* You may also wish to try the very new `labstreaminglayer.org forum <https://forum.labstreaminglayer.org/>`_
