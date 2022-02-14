@@ -167,3 +167,9 @@
 [submodule "Apps/BrainProducts/BrainAmpSeries"]
 	path = Apps/BrainProducts/BrainAmpSeries
 	url = https://github.com/brain-products/LSL-BrainAmpSeries.git
+[submodule "Apps/app-shimmer/liblsl-Java"]
+	path = Apps/app-shimmer/liblsl-Java
+	url = https://github.com/ShimmerEngineering/liblsl-Java.git
+[submodule "Apps/app-shimmer/liblsl-Csharp"]
+	path = Apps/app-shimmer/liblsl-Csharp
+	url = https://github.com/ShimmerEngineering/liblsl-Csharp.git
