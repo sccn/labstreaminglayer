@@ -121,7 +121,7 @@ Debian / Ubuntu
 Build Tools
 '''''''''''
 
-- :command:`apt install build-essentials g++ cmake`
+- :command:`apt install build-essential g++ cmake`
 
 `PyPI <https://pypi.org/project/cmake/>`_ has newer precompiled CMake binaries
 for some architectures, you can install those via
