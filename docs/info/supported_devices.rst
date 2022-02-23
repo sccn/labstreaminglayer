@@ -114,8 +114,6 @@ Several motion-capture systems are currently supported by LSL. The ones we know 
   * :lslrepo:`NaturalPoint OptiTrack <OptiTrack>` (some versions)
   * :lslrepo:`OpenVR`
   * `Qualisys <https://github.com/qualisys/qualisys_lsl_app>`__
-  * `Shimmer (using LSL for C#) <https://github.com/ShimmerEngineering/liblsl-Csharp>`__
-  * `Shimmer (using LSL for Java) <https://github.com/ShimmerEngineering/liblsl-Java/>`__
   * `Vicon <https://gitlab.com/vicon-pupil-data-parser/vajkonstrim>`__ (LSL support unclear - check with authors)
   * `Xsens <https://github.com/Torres-SMIL/xsens_labstreaminglayer_link>`__
 
@@ -153,4 +151,6 @@ The following miscellaneous hardware is supported:
   * :lslrepo:`Nonin Xpod PPG  <nonin>`
   * `Tyromotion Amadeo Robot <https://github.com/pyreiz/ctrl-tyromotion>`__
   * `Zephyr BioHarness <https://github.com/labstreaminglayer/App-Zephyr>`__ (ECG/Respiration/Accelerometer)
+  * `Shimmer Examples (using LSL for C#) <https://github.com/ShimmerEngineering/liblsl-Csharp>`__ (ECG/EMG/GSR/Accelerometer/Gyroscope/Magnetometer/PPG/Temperature/etc)
+  * `Shimmer Examples (using LSL for Java) <https://github.com/ShimmerEngineering/liblsl-Java/>`__ (ECG/EMG/GSR/Accelerometer/Gyroscope/Magnetometer/PPG/Temperature/etc)
 
