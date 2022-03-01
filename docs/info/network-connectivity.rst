@@ -224,3 +224,10 @@ Inlet console and that the :samp:`SessionID` value is correct.
 If problems persist, narrow down the possibilities. Try running both the Outlet and 
 Inlet on a single device. Try pinging from the Outlet to the Inlet 
 (Make sure to turn on ICMP). Try turning off all possible firewalls instead of adding rules. 
+
+Wireless Connections
+********************
+
+There are some settings that can be modified to help LSL perform more reliably across
+wireless networks. Please see the [tuning] section at the bottom of the :doc:`lslapicfg` 
+documentation for more information.
