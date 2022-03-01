@@ -41,7 +41,11 @@ Configuration File Contents
 
 The configuration file is formatted like a Windows .ini file.
 
-The following section contains the default settings of LSL that can be pasted
+The ground truth configuration parsing options can be found by reading the 
+liblsl/api_config.cpp file's `load_from_file` function:
+https://github.com/sccn/liblsl/blob/master/src/api_config.cpp#L84
+
+The following contains the default settings of LSL that can be pasted
 into a file as-is, although it is usually a good idea to specify only the
 subset of parameters that you would like to override (to allow for future
 corrections to the default settings).
@@ -77,6 +81,9 @@ corrections to the default settings).
     ; multi-casting). Another possibility is to use the AddressesOverride and TTLOverride settings to avoid pulling in every
     ; site at intermediate scopes.
     ResolveScope = site
+    
+    ; ListenAddress = ""
+    ; IPv6MulticastGroup = 113D:6FDD:2C17:A643:FFE2:1BD1:3CD2
 
     ; These are the default address pools for VisibilityScope. The following lists of addresses are merged according
     ; to the VisibilityScope setting to yield the set of addresses considered for communication.
@@ -84,7 +91,7 @@ corrections to the default settings).
     MachineAddresses = {FF31:113D:6FDD:2C17:A643:FFE2:1BD1:3CD2}
     LinkAddresses = {255.255.255.255, 224.0.0.183, FF02:113D:6FDD:2C17:A643:FFE2:1BD1:3CD2}
     SiteAddresses = {239.255.172.215, FF05:113D:6FDD:2C17:A643:FFE2:1BD1:3CD2}
-    OrganizationAddresses = {239.192.172.215, FF08:113D:6FDD:2C17:A643:FFE2:1BD1:3CD2}
+    OrganizationAddresses = {} ; old = {239.192.172.215, FF08:113D:6FDD:2C17:A643:FFE2:1BD1:3CD2}
     GlobalAddresses = {}
 
     ; This allows you to override the addresses calculated by VisibilityScope. To communicate conveniently wth a remote party without negotiating
@@ -106,6 +113,33 @@ corrections to the default settings).
     ; The session id should not be relied on as a "password" to hide one's data from unpriviledged users; use operating-system and
     ; network settings for this purpose. Note that you machine still gets to see some traffic from other activities if within the scope.
     SessionID = default
+    
+    [tuning]
+    ; This setting offers fine control over various intervals and constants in LSL.
+    ; We apologize that there is not more documentation for these settings at this time.
+    ; UseProtocolVersion = not set, read from common.h.
+    WatchdogCheckInterval = 15.0
+    WatchdogTimeThreshold = 15.0
+    MulticastMinRTT = 0.5
+    MulticastMaxRTT = 3.0
+    UnicastMinRTT = 0.75
+    UnicastMaxRTT = 5.0
+    ContinuousResolveInterval = 0.5
+    TimerResolution = 1
+    MaxCachedQueries = 100
+    TimeUpdateInterval = 2.0
+    TimeUpdateMinProbes = 6
+    TimeProbeCount = 8
+    TimeProbeInterval = 0.064
+    TimeProbeMaxRTT = 0.128
+    OutletBufferReserveMs = 5000
+    OutletBufferReserveSamples = 128
+    SendSocketBufferSize = 0
+    InletBufferReserveMs = 5000
+    InletBufferReserveSamples = 128
+    ReceiveSocketBufferSize = 0
+    SmoothingHalftime = 90.0
+    ForceDefaultTimestamps = false
     
     [log]
     ; the log level. Only messages at this level or below will be logged
@@ -235,3 +269,19 @@ errors to the terminal or a log file:
     [log]
     level = 0
     file = lsllog.txt
+
+Tuning
+------
+
+The following settings have been found to help the robustness of wireless transmission.
+
+.. code:: bash
+
+  [tuning]
+  TimeProbeMaxRtt = 0.100
+  TimeProbeInterval = 0.010
+  TimeProbeCount = 10
+  TimeUpdateInterval = 0.25
+  MulticastMinRTT = 0.100
+  MulticastMaxRTT = 30
+  
