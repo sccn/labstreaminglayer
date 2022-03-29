@@ -189,8 +189,8 @@ For a general overview of vcpkg, see https://github.com/microsoft/vcpkg/tree/mas
 The liblsl port is maintained at https://github.com/microsoft/vcpkg/tree/master/ports/liblsl.
 
 - For new liblsl releases where no changes have been made in the CMake build scripts,
-it should be enough to update the library versions in `vcpkg.json <https://github.com/microsoft/vcpkg/blob/master/ports/liblsl/vcpkg.json>`_
-and in `portfile.cmake <https://github.com/microsoft/vcpkg/blob/master/ports/liblsl/portfile.cmake>`_.
+  it should be enough to update the library versions in `vcpkg.json <https://github.com/microsoft/vcpkg/blob/master/ports/liblsl/vcpkg.json>`_
+  and in `portfile.cmake <https://github.com/microsoft/vcpkg/blob/master/ports/liblsl/portfile.cmake>`_.
 
 - If there have been changes in the CMake build scripts, portfile.cmake may need to be adapted correspondingly.
   If any dependencies have changed (e.g. the version of Boost), the dependency information in vcpkg.json needs to be updated, as well.
