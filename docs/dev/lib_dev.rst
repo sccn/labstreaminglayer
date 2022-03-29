@@ -192,7 +192,7 @@ The liblsl port is maintained at https://github.com/microsoft/vcpkg/tree/master/
   it should be enough to update the library versions in `vcpkg.json <https://github.com/microsoft/vcpkg/blob/master/ports/liblsl/vcpkg.json>`_
   and in `portfile.cmake <https://github.com/microsoft/vcpkg/blob/master/ports/liblsl/portfile.cmake>`_.
 
-- If there have been changes in the CMake build scripts, portfile.cmake may need to be adapted correspondingly.
+- If there have been changes in the CMake build scripts, portfile.cmake may need to be adapted accordingly.
   If any dependencies have changed (e.g. the version of Boost), the dependency information in vcpkg.json needs to be updated, as well.
 
 Conan
@@ -208,5 +208,5 @@ The liblsl port is maintained at https://github.com/conan-io/conan-center-index/
   it should be enough to add the new library version to `config.yml <https://github.com/conan-io/conan-center-index/blob/master/recipes/liblsl/config.yml>`_
   and to `conandata.yml <https://github.com/conan-io/conan-center-index/blob/master/recipes/liblsl/all/conandata.yml>`_.
 
-- If there have been changes in the CMake build scripts, `conanfile.py <https://github.com/conan-io/conan-center-index/blob/master/recipes/liblsl/all/conanfile.py>`_ may need to be adapted correspondingly.
+- If there have been changes in the CMake build scripts, `conanfile.py <https://github.com/conan-io/conan-center-index/blob/master/recipes/liblsl/all/conanfile.py>`_ may need to be adapted accordingly.
   If any dependencies have changed (e.g. the version of Boost), the dependency information in conanfile.py needs to be updated, as well.
