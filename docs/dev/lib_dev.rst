@@ -171,3 +171,42 @@ Full Tree Dev
 
 For advanced users (mostly core developers), it might be useful to simultaneously develop multiple apps and/or libraries. For this, please see the :doc:`full_tree` documentation to setup the lib and app tree,
 then follow the build instructions in :doc:`build_full_tree`.
+
+Maintaining package manager ports
+*********************************
+
+Ports of liblsl are available via a number of third-party package managers.
+When new releases of liblsl are published,
+these ports can be updated using the following steps:
+
+vcpkg
+=====
+
+vcpkg ports are managed in the `microsoft/vcpkg <https://github.com/microsoft/vcpkg>`_ repository on GitHub
+and changes or additions are submitted in the form of pull requests.
+For a general overview of vcpkg, see https://github.com/microsoft/vcpkg/tree/master/docs.
+
+The liblsl port is maintained at https://github.com/microsoft/vcpkg/tree/master/ports/liblsl.
+
+- For new liblsl releases where no changes have been made in the CMake build scripts,
+  it should be enough to update the library versions in `vcpkg.json <https://github.com/microsoft/vcpkg/blob/master/ports/liblsl/vcpkg.json>`_
+  and in `portfile.cmake <https://github.com/microsoft/vcpkg/blob/master/ports/liblsl/portfile.cmake>`_.
+
+- If there have been changes in the CMake build scripts, portfile.cmake may need to be adapted accordingly.
+  If any dependencies have changed (e.g. the version of Boost), the dependency information in vcpkg.json needs to be updated, as well.
+
+Conan
+=====
+
+Conan packages are managed in the `conan-io/conan-center-index <https://github.com/conan-io/conan-center-index>`_ repository on GitHub
+and changes or additions are submitted in the form of pull requests.
+For a general overview of the Conan package maintainance process, see `Adding Packages to ConanCenter <https://github.com/conan-io/conan-center-index/blob/master/docs/how_to_add_packages.md>`_.
+
+The liblsl port is maintained at https://github.com/conan-io/conan-center-index/tree/master/recipes/liblsl.
+
+- For new liblsl releases where no changes have been made in the CMake build scripts, 
+  it should be enough to add the new library version to `config.yml <https://github.com/conan-io/conan-center-index/blob/master/recipes/liblsl/config.yml>`_
+  and to `conandata.yml <https://github.com/conan-io/conan-center-index/blob/master/recipes/liblsl/all/conandata.yml>`_.
+
+- If there have been changes in the CMake build scripts, `conanfile.py <https://github.com/conan-io/conan-center-index/blob/master/recipes/liblsl/all/conanfile.py>`_ may need to be adapted accordingly.
+  If any dependencies have changed (e.g. the version of Boost), the dependency information in conanfile.py needs to be updated, as well.
