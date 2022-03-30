@@ -200,7 +200,7 @@ Conan
 
 Conan packages are managed in the `conan-io/conan-center-index <https://github.com/conan-io/conan-center-index>`_ repository on GitHub
 and changes or additions are submitted in the form of pull requests.
-For a general overview of the Conan package maintainance process, see `Adding Packages to ConanCenter <https://github.com/conan-io/conan-center-index/blob/master/docs/how_to_add_packages.md>`_.
+For a general overview of the Conan package maintenance process, see `Adding Packages to ConanCenter <https://github.com/conan-io/conan-center-index/blob/master/docs/how_to_add_packages.md>`_.
 
 The liblsl port is maintained at https://github.com/conan-io/conan-center-index/tree/master/recipes/liblsl.
 
