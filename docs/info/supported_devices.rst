@@ -153,3 +153,4 @@ The following miscellaneous hardware is supported:
   * `Zephyr BioHarness <https://github.com/labstreaminglayer/App-Zephyr>`__ (ECG/Respiration/Accelerometer)
   * `Shimmer Examples (using LSL for C#) <https://github.com/ShimmerEngineering/liblsl-Csharp/tree/shimmer_dev/examples/SendData>`__ (ECG/EMG/GSR/Accelerometer/Gyroscope/Magnetometer/PPG/Temperature/etc)
   * `Shimmer Examples (using LSL for Java) <https://github.com/ShimmerEngineering/liblsl-Java/tree/shimmer_dev/src/examples>`__ (ECG/EMG/GSR/Accelerometer/Gyroscope/Magnetometer/PPG/Temperature/etc)
+  * `bitalino (using LSL for Python) <https://github.com/fsuarezj/bitalino_lsl>`__ (wearables and various sensors)
