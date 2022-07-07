@@ -117,6 +117,7 @@ corrections to the default settings).
     [tuning]
     ; This setting offers fine control over various intervals and constants in LSL.
     ; We apologize that there is not more documentation for these settings at this time.
+    ; Brief descriptions can be found in https://github.com/sccn/liblsl/blob/master/src/api_config.h#L149-L200
     ; UseProtocolVersion = not set, read from common.h.
     WatchdogCheckInterval = 15.0
     WatchdogTimeThreshold = 15.0
