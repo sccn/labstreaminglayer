@@ -29,8 +29,8 @@ Building liblsl
 Before attempting to build liblsl, please make sure you have configured your :doc:`build_env`.
 
 This part of the guide describes the process of building liblsl from source
-for Windows, Mac OS X, and Linux. Since liblsl is cross-platform (it is written
-in standard C++ and uses some boost libraries), this process should be pretty
+for Windows, Mac OS, and Linux. Since liblsl is cross-platform (it is written
+in standard C++ and its dependencies are all cross-platform), this process should be pretty
 straightforward. The following paragraphs provide a step-by-step instruction of
 the build process on all three platforms.
 
@@ -47,6 +47,7 @@ The resulting folder structure is as follows.
 
      (working directory)
      └── liblsl
+         ├── {...}
          ├── include
          ├── lslboost
          ├── project
@@ -57,11 +58,10 @@ Configuring the liblsl project
 ==============================
 
 .. note::
-    Visual Studio and QtCreator users can use the integrated CMake, just open
-    the folder containing :file:`CMakeLists.txt` and select the appropriate
-    options.
-    Please see the documentation (TODO) comparing normal CMake to Visual Studio's integrated CMake.
-    If you wish to use the integrated cmake, then you do not need to follow the
+    Most popular IDEs have integrated CMake support. Typically, all that is necessary is to open
+    the root liblsl folder (i.e., the folder containing :file:`CMakeLists.txt`) and select the 
+    appropriate CMake options in the IDE.
+    If you wish to use the IDE's integrated cmake, then you do not need to follow the
     terminal commands below.
 
 .. code:: bash
@@ -71,7 +71,7 @@ Configuring the liblsl project
 
 Note: call :samp:`cmake -G` without a generator name to get a list of available
 generators.
-I use :samp:`cmake -S . -B build -G "Visual Studio 16 2019" -A x64 -DCMAKE_INSTALL_PREFIX="build/install"`
+I have used :samp:`cmake -S . -B build -G "Visual Studio 16 2019" -A x64 -DCMAKE_INSTALL_PREFIX="build/install"`
 
 If you used a generator, you can now open the IDE project file. Then build the install target.
 
@@ -86,7 +86,7 @@ Build options for liblsl
 ************************
 
 There are several liblsl-specific build options.
-All of them can be set either in the GUI (cmake-gui or Visual Studio) or on the
+All of them can be set either in the GUI (cmake-gui or IDE) or on the
 command line (:samp:`cmake -D{foo}={bar}`).
 
 .. option:: CMAKE_INSTALL_PREFIX
