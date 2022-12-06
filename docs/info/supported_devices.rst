@@ -80,6 +80,14 @@ The following devices support LSL natively without any additional software:
   * `GowerLabs LUMO <https://www.gowerlabs.co.uk/lumo>`__
   * `Cortivision PHOTON CAP <https://www.cortivision.com/products/photon/>`__
 
+Supported Electrophysiological Hardware
+****************************************
+Various devices with ECG and/or EMG sensors are supported. Some of these have non-electrophys sensors as well (i.e., GSR, Respiration, Temperature, Accelerometer, etc.) 
+  * `Zephyr BioHarness <https://github.com/labstreaminglayer/App-Zephyr>`__ (ECG/Respiration/Accelerometer)
+  * `Shimmer Examples (using LSL for C#) <https://github.com/ShimmerEngineering/liblsl-Csharp/tree/shimmer_dev/examples/SendData>`__ (ECG/EMG/GSR/Accelerometer/Gyroscope/Magnetometer/PPG/Temperature/etc)
+  * `Shimmer Examples (using LSL for Java) <https://github.com/ShimmerEngineering/liblsl-Java/tree/shimmer_dev/src/examples>`__ (ECG/EMG/GSR/Accelerometer/Gyroscope/Magnetometer/PPG/Temperature/etc)
+  * `bitalino (using LSL for Python) <https://github.com/fsuarezj/bitalino_lsl>`__ (wearables and various sensors)
+  * `CGX (Cognionics) AIM Physiological Monitor <https://www.cgxsystems.com/auxiliary-input-module-gen2>`__ (ExG/Respiration/GSR/SPo2/Temp)
 
 Supported Eye Tracking Hardware
 *******************************
@@ -150,7 +158,3 @@ The following miscellaneous hardware is supported:
   * :lslrepo:`Vernier Go Direct sensors <vernier>`
   * :lslrepo:`Nonin Xpod PPG  <nonin>`
   * `Tyromotion Amadeo Robot <https://github.com/pyreiz/ctrl-tyromotion>`__
-  * `Zephyr BioHarness <https://github.com/labstreaminglayer/App-Zephyr>`__ (ECG/Respiration/Accelerometer)
-  * `Shimmer Examples (using LSL for C#) <https://github.com/ShimmerEngineering/liblsl-Csharp/tree/shimmer_dev/examples/SendData>`__ (ECG/EMG/GSR/Accelerometer/Gyroscope/Magnetometer/PPG/Temperature/etc)
-  * `Shimmer Examples (using LSL for Java) <https://github.com/ShimmerEngineering/liblsl-Java/tree/shimmer_dev/src/examples>`__ (ECG/EMG/GSR/Accelerometer/Gyroscope/Magnetometer/PPG/Temperature/etc)
-  * `bitalino (using LSL for Python) <https://github.com/fsuarezj/bitalino_lsl>`__ (wearables and various sensors)
