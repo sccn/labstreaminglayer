@@ -18,7 +18,7 @@ Stand-alone online viewers:
     .. image:: ../images/LSL_BVLSL-Viewer.png
   
   * :lslrepo:`MATLABViewer` <https://github.com/labstreaminglayer/App-MATLABViewer>(part of LSL distribution)
-Allow visualizing, filtering and saving data in EEGLAB format. Exist as a compiled standalone application (see GitHub release) with no MATLAB installation necessary, or as an EEGLAB plugin. 
+    Allow visualizing, filtering and saving data in EEGLAB format. Exist as a compiled standalone application (see GitHub release) with no MATLAB installation necessary, or as an EEGLAB plugin. 
 
     .. image:: ../images/visstream-adapted2.png
   
