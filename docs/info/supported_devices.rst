@@ -95,6 +95,7 @@ Several eye tracking systems are currently supported by LSL and included in the 
   * Eye Tribe Tracker Pro
   * :lslrepo:`SMI iViewX <SMIEyetracker>`
   * :lslrepo:`SMI Eye Tracking Glasses <SMIEyetracker>`
+  * :lslrepo:`EyeLogic Solutions <EyeLogicLSL>`
   * SR Research Eyelink (very basic)
   * Tobii Eye trackers
       * :lslrepo:`Tobii Pro <TobiiPro>`
