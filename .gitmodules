@@ -169,4 +169,4 @@
 	url = https://github.com/brain-products/LSL-BrainAmpSeries.git
 [submodule "Apps/EyeLogic"]
 	path = Apps/EyeLogic
-	url = git@github.com:labstreaminglayer/App-EyeLogicLSL.git
+	url = https://github.com/EyeLogicSolutions/EyeLogic-LSL.git
