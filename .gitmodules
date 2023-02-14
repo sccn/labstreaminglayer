@@ -15,7 +15,7 @@
 	url = https://github.com/labstreaminglayer/liblsl-matlab
 [submodule "LSL/liblsl-Python"]
 	path = LSL/liblsl-Python
-	url = https://github.com/labstreaminglayer/liblsl-Python
+	url = https://github.com/labstreaminglayer/pylsl.git
 [submodule "LSL/liblsl"]
 	path = LSL/liblsl
 	url = https://github.com/sccn/liblsl
