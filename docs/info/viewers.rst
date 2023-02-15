@@ -32,7 +32,9 @@ Stand-alone online viewers:
     
   * `PlotJuggler <https://github.com/facontidavide/PlotJuggler>`__ supporst LSL streams and other data sources.
   
-  * `Open Ephys <https://open-ephys.org/gui>`__ via `LSL-Inlet Plugin <https://github.com/tne-lab/LSL-inlet>`__
+  * `Open Ephys <https://open-ephys.org/gui>`__ via `OpenEphysLSL-Inlet Plugin <https://github.com/labstreaminglayer/OpenEphysLSL-Inlet>`__
+  
+  * Older `LSL-Inlet Plugin <https://github.com/tne-lab/LSL-inlet>`__
   
   * The `python bindings <https://github.com/labstreaminglayer/liblsl-Python>`__ contain a
     `very basic visualizer <https://github.com/labstreaminglayer/liblsl-Python/blob/master/pylsl/examples/ReceiveAndPlot.py>`__.
