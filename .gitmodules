@@ -167,6 +167,3 @@
 [submodule "Apps/BrainProducts/BrainAmpSeries"]
 	path = Apps/BrainProducts/BrainAmpSeries
 	url = https://github.com/brain-products/LSL-BrainAmpSeries.git
-[submodule "Apps/EyeLogic"]
-	path = Apps/EyeLogic
-	url = https://github.com/labstreaminglayer/EyeLogic-LSL.git
