@@ -8,10 +8,10 @@ Library Development
     repositories release page.
 
   - create or use a program to stream or receive data via the LabStreamingLayer. You can
-    download a precompiled liblsl binary from the
-    `liblsl release page <https://github.com/sccn/liblsl/releases>`_
+    download a liblsl release following instructions on the 
+    `liblsl repository <https://github.com/sccn/liblsl/>`_
 
-Follow this guide if you are...
+Follow this guide if you...
 
 - want to add / modify core liblsl
 
@@ -19,7 +19,7 @@ Follow this guide if you are...
     first to ask for advice and to get pre-approval if you would like your
     modification to be included in the official library.
 
-- build liblsl for a device / OS with no official release (e.g. an embedded Linux device)
+- want to build liblsl for a device / OS with no official release (e.g. an embedded Linux device)
 
 .. _build_liblsl:
 
@@ -159,12 +159,22 @@ Modifying liblsl
 First read :doc:`the introduction </info/intro>` to learn about LSL components and classes.
 :doc:`The C++ API documentation <liblsl:index>` is a work-in-progress but might also be a good reference.
 
+Updating Boost
+**************
+
+liblsl uses boost.
+Because embedding liblsl in an application that links to an other Boost version (notably Matlab)
+causes runtime errors, we bundle a subset of boost in
+`lslboost`.
+
+To update the included lslboost, install Boost bcp and use the `update_lslboost.sh` script.
 
 Building liblsl language bindings
 *********************************
 
-TODO
+The most notable language bindings are `pylsl (Python) <https://github.com/labstreaminglayer/pylsl>`_ and `liblsl-Matlab <https://github.com/labstreaminglayer/liblsl-Matlab>`_. See their respective pages for building guides.
 
+See also the repositories for `CSharp <https://github.com/labstreaminglayer/liblsl-Csharp>`_, `Unity Custom Package <https://github.com/labstreaminglayer/LSL4Unity>`_, `Rust <https://github.com/labstreaminglayer/liblsl-rust>`_, `Java <https://github.com/labstreaminglayer/liblsl-Java>`_, and `Julia (external) <https://github.com/samuelpowell/LSL.jl>`_.
 
 Full Tree Dev
 *************
@@ -210,3 +220,9 @@ The liblsl port is maintained at https://github.com/conan-io/conan-center-index/
 
 - If there have been changes in the CMake build scripts, `conanfile.py <https://github.com/conan-io/conan-center-index/blob/master/recipes/liblsl/all/conanfile.py>`_ may need to be adapted accordingly.
   If any dependencies have changed (e.g. the version of Boost), the dependency information in conanfile.py needs to be updated, as well.
+
+homebrew
+========
+
+No documentation yet.
+See https://github.com/labstreaminglayer/homebrew-tap
