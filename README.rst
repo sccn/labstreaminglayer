@@ -10,8 +10,13 @@ The most up-to-date version of this document can always be found in the
 `online documentation <https://labstreaminglayer.readthedocs.io/info/getting_started.html>`_.
 
 The most common way to use LSL is to use one or more applications with integrated LSL functionality
-to stream data over the local network and record the data alongside any event markers (e.g., from
-your stimulus presentation package) with the LabRecorder.
+to stream data from one or more devices (e.g., EEG and Eye Tracker) and from a task application 
+(NBS Presentation, psychopy, etc.) over the local network and record the with the LabRecorder.
+
+Most LSL Applications will come bundled with its own copy of the LSL library (i.e., lsl.dll for a Windows application).
+However, many applications and interfaces (e.g., like pylsl) do not ship with liblsl.dylib or liblsl.so on Mac or Linux, respectively.
+In those cases, it is necessary to install liblsl separately and make it available to the application or interface.
+See the `liblsl repo <https://github.com/sccn/liblsl>`_ for more info.
 
 * Take a look at the list of
   `supported devices <https://labstreaminglayer.readthedocs.io/info/supported_devices.html>`_
@@ -27,7 +32,7 @@ your stimulus presentation package) with the LabRecorder.
   including Python and Matlab.
 
   * Python users need to ``pip install pylsl`` then try some of the
-    `provided examples <https://github.com/labstreaminglayer/liblsl-Python/tree/master/pylsl/examples>`_. On Mac and Linux, an extra step of installing liblsl is required.
+    `provided examples <https://github.com/labstreaminglayer/liblsl-Python/tree/master/pylsl/examples>`_.
   * The `Matlab interface <https://github.com/labstreaminglayer/liblsl-Matlab/>`_
     is also popular but requires a little more work to get started;
     please see its README for more info.
