@@ -26,8 +26,8 @@ your stimulus presentation package) with the LabRecorder.
 * Use LSL from your scientific computing environment. LSL has many language interfaces,
   including Python and Matlab.
 
-  * Python users need only ``pip install pylsl`` then try some of the
-    `provided examples <https://github.com/labstreaminglayer/liblsl-Python/tree/master/pylsl/examples>`_.
+  * Python users need to ``pip install pylsl`` then try some of the
+    `provided examples <https://github.com/labstreaminglayer/liblsl-Python/tree/master/pylsl/examples>`_. On Mac and Linux, an extra step of installing liblsl is required.
   * The `Matlab interface <https://github.com/labstreaminglayer/liblsl-Matlab/>`_
     is also popular but requires a little more work to get started;
     please see its README for more info.
