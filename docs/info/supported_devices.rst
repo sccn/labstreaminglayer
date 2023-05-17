@@ -75,8 +75,8 @@ The following systems are also supported by a separate program, the :doc:`OpenVi
 Supported fNIRS Hardware
 ************************
 The following devices support LSL natively without any additional software:
-  * `NIRx NIRScout <https://nirx.net/nirscout>`__
-  * `NIRx NIRSport 2 <https://nirx.net/nirsport>`__
+  * `NIRx NIRScout <https://nirx.net/nirscout>`__ via `Aurora <https://nirx.net/software>`__ and `Turbo-Satori <https://nirx.net/turbosatori>`__
+  * `NIRx NIRSport 2 <https://nirx.net/nirsport>`__  via `Aurora <https://nirx.net/software>`__ and `Turbo-Satori <https://nirx.net/turbosatori>`__
   * `GowerLabs LUMO <https://www.gowerlabs.co.uk/lumo>`__
   * `Cortivision PHOTON CAP <https://www.cortivision.com/products/photon/>`__
 
