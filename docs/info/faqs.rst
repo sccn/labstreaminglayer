@@ -245,7 +245,7 @@ more specific (:ref:`permalink <faqmultimatch>`).
 .. _liblslarch:
 
 Binaries
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------
 
 (Also known as: "Which :file:`liblsl.so` / :file:`lsl.dll` do I need?)
 
@@ -295,3 +295,25 @@ On OS X / Linux you can check what device a binary is compiled for with the
   :samp:`liblsl64.so: ELF 64-bit LSB shared object, {x86-64}, version 1 (GNU/Linux)`.
 - ``file jni/arm64-v8a/liblsl.so``:
   :samp:`jni/arm64-v8a/liblsl.so: ELF 64-bit LSB shared object, {ARM aarch64}`
+
+References
+----------
+
+Referencing LSL
+===============
+
+* When referencing the LabStreamingLayer project, please cite the GitHub repository (https://github.com/sccn/labstreaminglayer) as a standard APA/MLA type reference for an open source software package.
+* If you wish to lock a specific implementation of your tool to a specific version of liblsl, you may use the `Zenodo DOI <https://zenodo.org/record/6387090#.YovxAKjMIuU>`_.
+
+Other LSL Primers
+=================
+
+There are many other documents and manuscripts in the wild that describe LSL and its various configurations. You are encouraged to cite these as they are useful to you. A few examples are below:
+
+* The semi-official `LSL Wiki <https://github.com/sccn/labstreaminglayer/wiki>`_
+  * Many of the specifics are outdated but the general principles are still informative.
+* `A scoping review of the use of lab streaming layer framework in virtual and augmented reality research <https://link.springer.com/article/10.1007/s10055-023-00799-8>`_
+  * This paper introduces a guideline for using Lab Streaming Layer in Unity and other simulation environments while providing a comprehensive review of current research on multimodal sensing in virtual and immersive environments using Lab Streaming Layer.
+  * Wang, Q., Zhang, Q., Sun, W. et al. A scoping review of the use of lab streaming layer framework in virtual and augmented reality research. Virtual Reality (2023). https://doi.org/10.1007/s10055-023-00799-8
+* A `Youtube tutorial from Arnaud Delorme <https://www.youtube.com/watch?v=tDDkrmv3ZKE>`_ on the use of LSL with EEGLAB.
+* OG `Youtube tutorial from Christian Kothe <https://www.youtube.com/watch?v=Y1at7yrcFW0>`_
