@@ -318,7 +318,7 @@ There are many other documents and manuscripts in the wild that describe LSL and
 
   * This paper introduces a guideline for using Lab Streaming Layer in Unity and other simulation environments while providing a comprehensive review of current research on multimodal sensing in virtual and immersive environments using Lab Streaming Layer.
   
-  * Wang, Q., Zhang, Q., Sun, W. et al. A scoping review of the use of lab streaming layer framework in virtual and augmented reality research. Virtual Reality (2023). https://doi.org/10.1007/s10055-023-00799-8
+  * Wang, Q., Zhang, Q., Sun, W., Boulay, C., Kim, K., and Barmaki, R. A scoping review of the use of lab streaming layer framework in virtual and augmented reality research. Virtual Reality (2023). https://doi.org/10.1007/s10055-023-00799-8
   
 * A `Youtube tutorial from Arnaud Delorme <https://www.youtube.com/watch?v=tDDkrmv3ZKE>`_ on the use of LSL with EEGLAB.
 
