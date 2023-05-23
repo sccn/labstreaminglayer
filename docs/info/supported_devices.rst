@@ -142,13 +142,14 @@ Supported Stimulus Presentation Software
 The following stimulus presentations systems are usable out of the box with LSL:
   * `Neurobehavioral Systems Presentation <https://www.neurobs.com/>`__
   * `iMotions <https://www.imotions.com/>`__
-  * Psychopy (using LSL for Python)
-  * PsychToolbox (using LSL for MATLAB)
-  * Unity (using LSL for C#)
-  * Unreal Engine (`Marketplace <https://www.unrealengine.com/marketplace/en-US/product/labstreaminglayer-plugin>`__, `GitHub <https://github.com/labstreaminglayer/plugin-UE4>`__)
+  * `EventIDE <http://wiki.okazolab.com/wiki.okazolab.com/LAB-Streaming-Layer-in-EventIDE>`__
   * `Simulation and Neuroscience Application Platform (SNAP) <https://github.com/sccn/SNAP>`__
   * `Reiz <https://github.com/pyreiz/pyreiz>`__
   * `E-Prime 3.0 <https://github.com/PsychologySoftwareTools/eprime3-lsl-package-file/>`__
+  * Psychopy (using LSL for Python)
+  * PsychToolbox (using LSL for MATLAB)
+  * Unity (using `LSL4Unity <https://github.com/labstreaminglayer/LSL4Unity>`_ or liblsl C#)
+  * Unreal Engine (`Marketplace <https://www.unrealengine.com/marketplace/en-US/product/labstreaminglayer-plugin>`__, `GitHub <https://github.com/labstreaminglayer/plugin-UE4>`__)
 
 Miscellaneous Hardware
 **********************
