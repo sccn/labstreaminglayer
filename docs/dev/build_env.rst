@@ -24,7 +24,7 @@ Name                      Min           Max
 Windows                   10            11
 Visual C++                2017 (15.7)   2022 (16.6)
 OS X                      10.15         13.4
-XCode                     9.3           ?
+XCode                     11.7          13.2
 Ubuntu                    20.04         23.04
 CentOS                    8             9
 Clang                     10            16
