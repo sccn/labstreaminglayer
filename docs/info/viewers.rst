@@ -54,6 +54,7 @@ Offline Viewers
 
 The following software suites/packages support offline visualization of XDF files, the file format used by :lslrepo:`LabRecorder` to store LSL streams:
   * `EEGLAB <https://sccn.ucsd.edu/eeglab/index.php>`__
+  * `Neuropype <https://www.neuropype.io/>`__
   * `MNELab <https://github.com/cbrnr/mnelab>`__
   * `MoBILAB <https://sccn.ucsd.edu/wiki/MoBILAB>`__
   * `SigViewer <https://github.com/cbrnr/sigviewer>`__
