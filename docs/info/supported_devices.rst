@@ -41,7 +41,8 @@ The following devices support LSL via vendor-provided software:
   * `Mentalab Explore <https://mentalab.com/>`__
   * `OpenBCI (all headsets) <http://docs.openbci.com/software/06-labstreaminglayer>`__
   * `Starcat HackEEG Shield for Arduino <https://www.starcat.io/>`__
-  * `Mentalab Explore <https://github.com/Mentalab-hub/explorepy>`_
+  * `Mentalab Explore <https://github.com/Mentalab-hub/explorepy>`__
+  * `Tobii Glasses 3 <https://github.com/tobiipro/Tobii.Glasses3.SDK/releases>`__
   
 The following are some of the devices we know about that support LSL natively through thirdparty software, but there are many others we don't know about:
   * `InteraXon Muse <http://www.choosemuse.com/>`__
