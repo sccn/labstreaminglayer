@@ -46,10 +46,10 @@ Common Requirements
 `Qt <http://qt.io>`__
 `````````````````````
 
-For compatibility with Ubuntu 20.04, Qt5.12 is the oldest supported
+For compatibility with Ubuntu 22.04 (20.04 with a PPA), Qt 6.2 is the oldest supported
 version.
 
-Qt5 or Qt6 is the recommended toolkit to create graphical user interfaces.
+Qt6 is the recommended toolkit to create graphical user interfaces.
 To build apps using Qt, install it and if CMake doesn't find it automatically
 tell it where to find it, either by adding the compiler specific base path to
 the :envvar:`PATH`
@@ -143,9 +143,9 @@ The newest version that will work with Ubuntu 20.04 is Qt 5.15.2:
     - :command:`apt-get install libxcb-xinerama0`
     - You would then use this in cmake with `-DQt5_DIR=/opt/Qt/5.15.2/gcc_64/lib/cmake/Qt5`
     
-For Ubuntu 20.04, you can use Qt 6. For example:
-    - :command:`aqt install --outputdir /opt/Qt 6.1.1 linux desktop`
-    - You would then use this in cmake with `-DQt6_DIR=/opt/Qt/6.1.1/gcc_64/lib/cmake/Qt5`
+For Ubuntu 20.04 (+PPA) and Ubuntu 22.04, you can use Qt 6. For example:
+    - :command:`aqt install --outputdir /opt/Qt 6.2.4 linux desktop`
+    - You would then use this in cmake with `-DQt6_DIR=/opt/Qt/6.2.4/gcc_64/lib/cmake/Qt6`
     
 For your application to run, it needs to find Qt libraries. Add the following to the bottom of your .bashrc file:
   `LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/Qt/{version}/gcc_64/lib"`  (make sure to swap out {version} for your qt version).
