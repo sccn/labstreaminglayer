@@ -80,6 +80,12 @@ The following devices support LSL natively without any additional software:
   * `NIRx NIRSport 2 <https://nirx.net/nirsport>`__  via `Aurora <https://nirx.net/software>`__ and `Turbo-Satori <https://nirx.net/turbosatori>`__
   * `GowerLabs LUMO <https://www.gowerlabs.co.uk/lumo>`__
   * `Cortivision PHOTON CAP <https://www.cortivision.com/products/photon/>`__
+  * `Artinis Brite <https://www.artinis.com/Brite-family>`__  via `OxySoft <https://www.artinis.com/OxySoft>`__
+  * `Artinis Portalite <https://www.artinis.com/portalite-mkii>`__  via `OxySoft <https://www.artinis.com/OxySoft>`__
+  * `Artinis PortaMon <https://www.artinis.com/PortaMon>`__  via `OxySoft <https://www.artinis.com/OxySoft>`__
+  * `Artinis OxyMon <https://www.artinis.com/OxyMon>`__  via `OxySoft <https://www.artinis.com/OxySoft>`__
+  * `Artinis OctaMon <https://www.artinis.com/OctaMon>`__  via `OxySoft <https://www.artinis.com/OxySoft>`__
+  * `Artinis NIRS-EEG package <https://www.artinis.com/nirs-eeg-package>`__  via `OxySoft <https://www.artinis.com/OxySoft>`__
 
 Supported Electrophysiological Hardware
 ****************************************
