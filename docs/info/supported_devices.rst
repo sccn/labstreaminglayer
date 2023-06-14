@@ -42,13 +42,11 @@ The following devices support LSL via vendor-provided software:
   * `Neuracle NeuroHub <https://github.com/neuracle/Neuracle.LSLSample>`__
   * `OpenBCI (all headsets) <http://docs.openbci.com/software/06-labstreaminglayer>`__
   * `Starcat HackEEG Shield for Arduino <https://www.starcat.io/>`__
-  * `Tobii Glasses 3 <https://github.com/tobiipro/Tobii.Glasses3.SDK/releases>`__
   
 The following are some of the devices we know about that support LSL natively through thirdparty software, but there are many others we don't know about:
   * `InteraXon Muse <http://www.choosemuse.com/>`__
       * :doc:`MU-01 - Muse - Released 2014 Example with Matlab <matlab_example_with_muse>`
-      * `MU-02 - Muse - Released 2016 <https://github.com/alexandrebarachant/muse-lsl>`__
-      * `MU-03 - Muse 2 - Released 2018 <https://github.com/alexandrebarachant/muse-lsl>`__
+      * `Muse (MU-02 2016) and Muse 2 (MU-03 2018) <https://github.com/alexandrebarachant/muse-lsl>`__
   * `Bittium Faros <https://www.bittium.com/medical/cardiology>`__      
       * `Faros Streamer <https://github.com/bwrc/faros-streamer>`__
       * `Faros Streamer 2 <https://github.com/bwrc/faros-streamer-2>`__
@@ -76,8 +74,7 @@ The following systems are also supported by a separate program, the :doc:`OpenVi
 Supported fNIRS Hardware
 ************************
 The following devices support LSL natively without any additional software:
-  * `NIRx NIRScout <https://nirx.net/nirscout>`__ via `Aurora <https://nirx.net/software>`__ and `Turbo-Satori <https://nirx.net/turbosatori>`__
-  * `NIRx NIRSport 2 <https://nirx.net/nirsport>`__  via `Aurora <https://nirx.net/software>`__ and `Turbo-Satori <https://nirx.net/turbosatori>`__
+  * `NIRx NIRScout <https://nirx.net/nirscout>`__ and NIRSport 2 <https://nirx.net/nirsport>`__ via `Aurora <https://nirx.net/software>`__ and `Turbo-Satori <https://nirx.net/turbosatori>`__
   * `GowerLabs LUMO <https://www.gowerlabs.co.uk/lumo>`__
   * `Cortivision PHOTON CAP <https://www.cortivision.com/products/photon/>`__
 
@@ -101,6 +98,7 @@ Several eye tracking systems are currently supported by LSL and included in the 
       * :lslrepo:`Tobii Pro <TobiiPro>`
       * :lslrepo:`Tobii StreamEngine (consumer devices) <TobiiStreamEngine>`
       * :lslrepo:`Tobii other (older app) <Tobii>` (u)
+      * `Tobii Glasses 3 <https://github.com/tobiipro/Tobii.Glasses3.SDK/releases>`__
   * `HTC Vive Eye <https://github.com/mit-ll/Signal-Acquisition-Modules-for-Lab-Streaming-Layer>`__
   * `EyeLogic <https://github.com/EyeLogicSolutions/EyeLogic-LSL>`__
   * Custom 2-camera eye trackers (with some hacking)
