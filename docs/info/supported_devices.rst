@@ -74,9 +74,10 @@ The following systems are also supported by a separate program, the :doc:`OpenVi
 Supported fNIRS Hardware
 ************************
 The following devices support LSL natively without any additional software:
-  * `NIRx NIRScout <https://nirx.net/nirscout>`__ and NIRSport 2 <https://nirx.net/nirsport>`__ via `Aurora <https://nirx.net/software>`__ and `Turbo-Satori <https://nirx.net/turbosatori>`__
+  * `NIRx NIRScout <https://nirx.net/nirscout>`__ and `NIRSport 2 <https://nirx.net/nirsport>`__ via `Aurora <https://nirx.net/software>`__ and `Turbo-Satori <https://nirx.net/turbosatori>`__
   * `GowerLabs LUMO <https://www.gowerlabs.co.uk/lumo>`__
   * `Cortivision PHOTON CAP <https://www.cortivision.com/products/photon/>`__
+  * `Artinis Brite Family <https://www.artinis.com/Brite-family>`__,  `Portalite <https://www.artinis.com/portalite-mkii>`__  `PortaMon <https://www.artinis.com/PortaMon>`__, `OxyMon <https://www.artinis.com/OxyMon>`__, `OctaMon <https://www.artinis.com/OctaMon>`__ and `Artinis NIRS-EEG package <https://www.artinis.com/nirs-eeg-package>`__  via `OxySoft <https://www.artinis.com/OxySoft>`__
 
 Supported Electrophysiological Hardware
 ****************************************
