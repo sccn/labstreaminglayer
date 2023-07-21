@@ -6,16 +6,24 @@ Time Synchronization
 General Information
 ###################
 
-Permitted Synchronization Approaches
+Introduction
 ====================================
-Time synchronization in LSL can be handled either by the user of the API (i.e., by the client program), or it can be left to built-in timing support of the LSL library. Fundamentally, every collected sample may be associated with a timestamp, and this value can either be provided by the user (for example, read off a GPS clock or other sufficiently reliable source) or alternatively read off a clock source whose synchronization is handled by LSL. If the user of the API does not provide a time stamp for a sample (e.g., obtained from the LSL clock), it will be implicitly time-stamped by the library at the time of submission.
+LSL does not perform synchronization by default, but it does provide all of the information required for synchronization. Synchronization information includes timestamps for each sample (or chunk of samples) and clock offset measurements between the stream origin (outlet) and the stream consumer (inlet). Detailed descriptions of the timestamps and the clock offsets can be found below.
+
+File-recording applications should store all synchronization information to disk. File importers should then use the synchronization information from the entire span of the recording to perform synchronization. `LabRecorder <https://github.com/labstreaminglayer/App-LabRecorder>`_ handles storage of the synchronization information in the XDF file for you. The official XDF importers (pyxdf or xdf-Matlab), whether used directly or integrated into a tool like MNE or EEGLAB, use the synchronization information in the XDF file and perform stream synchronization upon file import. Please use these tools for your data storage and import if possible.
+
+Online applications often do not require synchronization. Typically, what's actually needed is low latency; the receiving application should use small chunk sizes and process data for feedback as soon as possible.
+However, there are use-cases requiring online synchronization such as event-triggered processing like P300- and SSVEP-based BCIs, because the time of the event is used to segment the neural data. When online synchronization is required, please set the `inlet's postprocessing flags appropriately <https://github.com/sccn/liblsl/blob/0b35dba3464c22bc707fef88d18483c597519e81/include/lsl/inlet.h#L126-L142>`_.
 
 Synchronization Information
 ===========================
 The built-in time synchronization in LSL relies on two pieces of data that are being collected alongside with the actual sample data:
 
-1. A timestamp for each sample that is read from a local high-resolution clock of the computer. The resolution is better than a microsecond on practically all consumer PC hardware. The method for obtaining the timestamp value can be found [here](https://github.com/sccn/liblsl/blob/master/src/lsl_freefuncs_c.cpp#L33-L42).
-2. Out-out-of-band clock synchronization information that is transmitted along with each data stream to the receiving computer and collected by those applications that are interested in synchronization features (a recording program, for instance). This clock synchronization information consists of measurements of the momentary offset between the two involved clocks that are made at periodic intervals (every few seconds).
+1. A timestamp for each sample that is read from a local monotonic clock of the computer. The method for obtaining the timestamp value can be found `here <https://github.com/sccn/liblsl/blob/6ca188c266c21f7228dc67077303fa6abaf2e8be/src/common.cpp#L20>`_. As of this writing, the clock is `std::chrono::steady_clock <https://en.cppreference.com/w/cpp/chrono/steady_clock>`_. From `this S/O answer <https://stackoverflow.com/a/45891628>`_, "`steady_clock` is like a stopwatch. It is great for timing how long something takes. But it can't tell you the time of day. It has no relationship whatsoever to a human calendar on any platform. On macOS `steady_clock` it is a count of nanoseconds since the computer booted."
+2. Out-out-of-band clock synchronization information that is transmitted along with each data stream to the receiving computer and collected by those applications that are interested in synchronization features (a recording program, such as LabRecorder, for instance). This clock synchronization information consists of measurements of the momentary offset between the two involved clocks that are made at periodic intervals (every few seconds).
+
+Detailed Information
+####################
 
 Clock Offset Measurement
 ========================
