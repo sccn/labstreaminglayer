@@ -9,7 +9,7 @@ How do I do that?
 
 Because the result of :cpp:func:`~lsl::stream_inlet::pull_sample()` is the next
 sample in the order provided by the sender, you first need to pull out all
-samples that have been buffered up in the inlet. You can do this by calling
+samples that have been buffered up in the inlet. You can do this by repeatedly calling
 :cpp:func:`~lsl::stream_inlet::pull_sample()` with a timeout of ``0.0`` -- once
 it returns zero, there are no more samples.
 
@@ -26,26 +26,8 @@ lsl_local_clock()
 What clock does LSL use? / 
 How do I relate LSL's :cpp:func:`lsl_local_clock()` to my wall clock?
 
-LSL's :cpp:func:`lsl_local_clock()` function measures the number of seconds
-from a starting point,
-e.g. since the local machine was started or since 1970-01-01 00:00.
-
-Clock jumps, e.g. when suspending the system or resetting the clock (e.g. by a
-network clock sychronization service like NTP) shouldn't occur.
-
-The correct way to map its output to the time measured by your preferred system
-clock is to first determine the constant offset between the two clocks, by
-reading them out at the same time, and then to add that offset to the result
-of :cpp:func:`lsl_local_clock()` whenever it is needed.
-
-Also keep in mind that the time-stamps that are returned by
-:cpp:func:`~lsl::stream_inlet::pull_sample()`
-will generally be local to the sender's machine unless you set the
-:cpp:enumerator:`proc_clocksync` or 
-:cpp:enumerator:`proc_ALL` postprocessing flags at inlet creation time.
-Otherwise, you have to add the time offset returned by
-:cpp:func:`lsl::stream_inlet::time_correction()`
-to the timestamps to have them in your local domain.
+LSL's :cpp:func:`lsl_local_clock()` function uses `std::chrono::steady_clock <https://en.cppreference.com/w/cpp/chrono/steady_clock>`_::now().time_since_epoch(). This returns the number of seconds from an arbitrary starting point. The starting point is platform-dependent -- it may be close to UNIX time, or the last reboot -- and LSL timestamps cannot be transformed naively to wall clock time without special effort.
+For more information, see the :doc:`../info/time_synchronization` under the "Manual Synchronization" section.
 
 Latency
 -------
@@ -150,6 +132,10 @@ enough for your needs, e.g., demanding physics experiments), and you know
 exactly what you are doing.
 If you have any doubt on how you would use your own clock to synchronize
 multiple pieces of hardware after you've recorded the data, don't use them.
+Note that it will be impossible to synchronize any of the streams using this
+custom clock with other streams using the LSL clock, and the default settings
+on the XDF importers will be incorrect. At that point, one has to wonder if LSL
+is the best choice for this scenario.
 
 High sampling rates
 -------------------
@@ -182,6 +168,10 @@ pre-allocated buffer.
 
 Make sure that you use a recent version of liblsl (1.10 or later offers a
 faster network protocol) at both the sender and the receiver.
+
+If you are writing an application that needs to push a lot of data, please show
+your interest by commenting on the long-lingering `pull request to speed up pushes
+<https://github.com/sccn/liblsl/pull/170>`_ by reducing the number of data copies.
 
 Chunk sizes
 -----------

@@ -13,6 +13,7 @@ LabStreamingLayer's Documentation
    info/network-connectivity
    info/lslapicfg
    info/eeglab
+   info/time_synchronization
    info/faqs
 
 .. toctree::
