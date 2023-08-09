@@ -16,24 +16,24 @@ Download the newest toolchain you can get.
 The following platforms are the supported targets for liblsl.
 Most apps require newer compilers.
 
-========================= ====== ===========
+========================= ======        ===========
 OS / Compiler             Supported Versions
-------------------------- ------------------
-Name                      Min    Max
-========================= ====== ===========
-Windows                   XP     10 (20H2)
-Visual C++                2015   2019 (16.6)
-OS X                      10.9   10.14 ?
-XCode                     9.3    ?
-Ubuntu                    16.04  20.10
-CentOS                    6      ?
-Clang                     3.5    9.0.0
-g++                       6.2    9.0
-Alpine Linux              <3.6   3.12
-:ref:`buildenvcmake`      3.12   3.18
-========================= ====== ===========
+------------------------- -------------------------
+Name                      Min           Max
+========================= ======        ===========
+Windows                   10            11
+Visual C++                2019          2022 (16.6)
+OS X                      10.15         13.4
+XCode                     11.7          13.2
+Ubuntu                    20.04         23.04
+CentOS                    8             9
+Clang                     10            16
+g++                       9.3           13
+Alpine Linux              3.13          3.18
+:ref:`buildenvcmake`      3.16          3.26
+========================= ======        ===========
 
-liblsl works on very old (e.g. Windows XP) and tiny (e.g. 
+liblsl works on very old (e.g. Windows 7) and tiny (e.g. 
 Raspberry Pi, some microcontrollers, Android) systems.
 Some LSL Apps might have higher requirements.
 
@@ -46,10 +46,10 @@ Common Requirements
 `Qt <http://qt.io>`__
 `````````````````````
 
-For compatibility with Ubuntu 16.04, Qt5.5 is the oldest supported
+For compatibility with Ubuntu 22.04 (20.04 with a PPA), Qt 6.2 is the oldest supported
 version.
 
-Qt5 or Qt6 is the recommended toolkit to create graphical user interfaces.
+Qt6 is the recommended toolkit to create graphical user interfaces.
 To build apps using Qt, install it and if CMake doesn't find it automatically
 tell it where to find it, either by adding the compiler specific base path to
 the :envvar:`PATH`
@@ -130,7 +130,7 @@ for some architectures, you can install those via
 Qt
 ''
 
-The simplest way is to install whichever version of Qt is appropriate for your distro (18.04::Qt5.9; 20.04::Qt5.12):
+The simplest way is to install whichever version of Qt is appropriate for your distro (20.04::Qt5.12):
     - :command:`apt install qt5-default` (not necessary for liblsl)
     
 However, if your app requires a newer version of Qt then the easiest way to install it is with `aqtinstall <https://aqtinstall.readthedocs.io/en/latest/>`__:
@@ -138,14 +138,14 @@ However, if your app requires a newer version of Qt then the easiest way to inst
     - :command:`apt install python3-pip`
     - :command:`pip3 install aqtinstall`
 
-The newest version that will work with Ubuntu 18.04 is Qt 5.15.2:
+The newest version that will work with Ubuntu 20.04 is Qt 5.15.2:
     - :command:`aqt install --outputdir /opt/Qt 5.15.2 linux desktop`
     - :command:`apt-get install libxcb-xinerama0`
     - You would then use this in cmake with `-DQt5_DIR=/opt/Qt/5.15.2/gcc_64/lib/cmake/Qt5`
     
-For Ubuntu 20.04, you can use Qt 6. For example:
-    - :command:`aqt install --outputdir /opt/Qt 6.1.1 linux desktop`
-    - You would then use this in cmake with `-DQt6_DIR=/opt/Qt/6.1.1/gcc_64/lib/cmake/Qt5`
+For Ubuntu 20.04 (+PPA) and Ubuntu 22.04, you can use Qt 6. For example:
+    - :command:`aqt install --outputdir /opt/Qt 6.2.4 linux desktop`
+    - You would then use this in cmake with `-DQt6_DIR=/opt/Qt/6.2.4/gcc_64/lib/cmake/Qt6`
     
 For your application to run, it needs to find Qt libraries. Add the following to the bottom of your .bashrc file:
   `LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/Qt/{version}/gcc_64/lib"`  (make sure to swap out {version} for your qt version).
