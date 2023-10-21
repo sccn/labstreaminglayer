@@ -125,6 +125,7 @@ Several motion-capture systems are currently supported by LSL. The ones we know 
   * `Qualisys <https://github.com/qualisys/qualisys_lsl_app>`__
   * `Vicon <https://gitlab.com/vicon-pupil-data-parser/vajkonstrim>`__ (LSL support unclear - check with authors)
   * `Xsens <https://github.com/Torres-SMIL/xsens_labstreaminglayer_link>`__
+  * `UltraLeap Leap Motion <https://github.com/labstreaminglayer/LSL-LeapMotion>`__
 
 Supported Multimedia Hardware
 *****************************
