@@ -97,9 +97,9 @@ Several eye tracking systems are currently supported by LSL and included in the 
   * SR Research Eyelink (very basic)
   * Tobii Eye trackers
       * :lslrepo:`Tobii Pro <TobiiPro>`
-      * :lslrepo:`Tobii StreamEngine (consumer devices) <TobiiStreamEngine>`
-      * :lslrepo:`Tobii other (older app) <Tobii>` (u)
       * `Tobii Glasses 3 <https://github.com/tobiipro/Tobii.Glasses3.SDK/releases>`__
+      * :lslrepo:`Tobii StreamEngine (consumer devices) <TobiiStreamEngine>`
+      
   * `HTC Vive Eye <https://github.com/mit-ll/Signal-Acquisition-Modules-for-Lab-Streaming-Layer>`__
   * `EyeLogic <https://github.com/EyeLogicSolutions/EyeLogic-LSL>`__
   * Custom 2-camera eye trackers (with some hacking)
