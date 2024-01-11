@@ -134,19 +134,19 @@ The last example shows how to attach properly formatted meta-data to a stream, a
 C# Example Programs: Basic to Advanced
 **************************************
 These examples show how to transmit a numeric multi-channel time series through LSL:
-  * `Sending a multi-channel time series into LSL. <https://github.com/labstreaminglayer/liblsl-Csharp/tree/master/examples/SendData.cs>`__
-  * `Receiving a multi-channel time series from LSL. <https://github.com/labstreaminglayer/liblsl-Csharp/tree/master/examples/ReceiveData.cs>`__
+  * `Sending a multi-channel time series into LSL. <https://github.com/labstreaminglayer/liblsl-Csharp/blob/master/examples/SendData/SendData.cs>`__
+  * `Receiving a multi-channel time series from LSL. <https://github.com/labstreaminglayer/liblsl-Csharp/blob/master/examples/ReceiveData/ReceiveData.cs>`__
 
 The following examples show how to transmit data in form of chunks instead of samples, which can be more convenient.
-  * `Sending a multi-channel time series in chunks. <https://github.com/labstreaminglayer/liblsl-Csharp/tree/master/examples/SendDataInChunks.cs>`__
-  * `Receiving a multi-channel time series in chunks. <https://github.com/labstreaminglayer/liblsl-Csharp/tree/master/examples/ReceiveDataInChunks.cs>`__
+  * `Sending a multi-channel time series in chunks. <https://github.com/labstreaminglayer/liblsl-Csharp/blob/master/examples/SendDataInChunks/SendDataInChunks.cs>`__
+  * `Receiving a multi-channel time series in chunks. <https://github.com/labstreaminglayer/liblsl-Csharp/blob/master/examples/ReceiveDataInChunks/ReceiveDataInChunks.cs>`__
 
 These examples show a special-purpose use case that is mostly relevant for stimulus-presentation programs or other applications that want to emit 'event' markers or other application state. The stream here is single-channel and has irregular sampling rate, but the value per channel is a string:
-  * `Sending string-formatted irregular streams. <https://github.com/labstreaminglayer/liblsl-Csharp/tree/master/examples/SendStringMarkers.cs>`__
-  * `Receiving string-formatted irregular streams. <https://github.com/labstreaminglayer/liblsl-Csharp/tree/master/examples/ReceiveStringMarkers.cs>`__
+  * `Sending string-formatted irregular streams. <https://github.com/labstreaminglayer/liblsl-Csharp/blob/master/examples/SendStringMarkers/SendStringMarkers.cs>`__
+  * `Receiving string-formatted irregular streams. <https://github.com/labstreaminglayer/liblsl-Csharp/blob/master/examples/ReceiveStringMarkers/ReceiveStringMarkers.cs>`__
 
 The last example shows how to attach properly formatted meta-data to a stream, and how to read it out again at the receiving end. While meta-data is strictly optional, it is very useful to make streams self-describing. LSL has adopted the convention to name meta-data fields according to the XDF file format specification whenever the content type matches (for example EEG, Gaze, MoCap, VideoRaw, etc); the spec is `here <https://github.com/sccn/xdf/wiki/Meta-Data>`__. Note that some older example programs (SendData/ReceiveData) predate this convention and name the channels inconsistently.
-  * `Handling stream meta-data. <https://github.com/labstreaminglayer/liblsl-Csharp/tree/master/examples/HandleMetaData.cs>`__
+  * `Handling stream meta-data. <https://github.com/labstreaminglayer/liblsl-Csharp/blob/master/examples/HandleMetaData/HandleMetaData.cs>`__
 
 Real-World Example Programs
 ***************************
