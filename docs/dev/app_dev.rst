@@ -20,7 +20,7 @@ effective for most cases:
         * It is encouraged that the metadata conforms to `the XDF specifications <https://github.com/sccn/xdf/wiki/Meta-Data>`_
     * Create the outlet
 * In a loop (in a thread), or via a callback:
-    * Retrive data from the device
+    * Retrieve data from the device
     * Push data to the outlet
 
 See :doc:`examples` for links to small examples of code,
