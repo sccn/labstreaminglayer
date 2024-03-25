@@ -94,7 +94,7 @@ corrections to the default settings).
     OrganizationAddresses = {} ; old = {239.192.172.215, FF08:113D:6FDD:2C17:A643:FFE2:1BD1:3CD2}
     GlobalAddresses = {}
 
-    ; This allows you to override the addresses calculated by VisibilityScope. To communicate conveniently wth a remote party without negotiating
+    ; This allows you to override the addresses calculated by VisibilityScope. To communicate conveniently with a remote party without negotiating
     ; the involved hostnames, you may choose a privately agreed-on multicast address of the appropriate scope here.
     AddressesOverride = {}
 
@@ -103,14 +103,14 @@ corrections to the default settings).
     TTLOverride = -1
 
     [lab]
-    ; This setting mainly serves as a fallback in case that your network configuration does not permit multicast/broadcast communciation.
+    ; This setting mainly serves as a fallback in case that your network configuration does not permit multicast/broadcast communication.
     ; By listing the names or IP addresses of your lab's machines here (both stream providers and stream users) and make the file available
     ; on all involved machines, you can bypass the need for multicasting. This setting can also be used to link a small collection of machines
     ; across the internet, provided that the firewall settings of each party permit communication (forward the BasePort to BasePort+PortRange ports).
     KnownPeers = {}
 
     ; This is the default "vanilla" session id; modify it to logically isolate your recording acitities from others within the scope.
-    ; The session id should not be relied on as a "password" to hide one's data from unpriviledged users; use operating-system and
+    ; The session id should not be relied on as a "password" to hide one's data from unprivileged users; use operating-system and
     ; network settings for this purpose. Note that you machine still gets to see some traffic from other activities if within the scope.
     SessionID = default
     

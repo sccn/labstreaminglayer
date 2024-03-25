@@ -202,7 +202,7 @@ you're in the file, make sure the :samp:`SessionID` setting is something other t
 debugging and courtesy purposes.
 
 Distribute this configuration file between the outlet and inlet and *make sure the 
-directory and file names are correct per your OS distrubution.* **If the name of the file is 
+directory and file names are correct per your OS distribution.* **If the name of the file is 
 not exactly :samp:`lsl_api.cfg`, liblsl will not read it.**
 
 Finally to test that a remote connection is established, use a outlet/inlet 

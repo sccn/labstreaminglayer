@@ -60,7 +60,7 @@ It is also possible to transmit raw structs, but note that this is generally
 unsafe and non-portable (e.g., different compilers insert varying amount of
 padding between struct elements; also on platforms with different endianness
 your data will be garbled).
-An exception to this is sending numpy structs with explicitely set endianness
+An exception to this is sending numpy structs with explicitly set endianness
 for all fields.
 
 In principle you can also send multiple streams and use the same time stamp
@@ -266,7 +266,7 @@ has multiple packages, generally called
 
     Android also has ``.so`` shared objects, but has a different
     toolchain and architecture so the binaries (even if they're also named
-   :file:`liblsl.so`) are **not** interchangable with ``.so`` files for regular
+   :file:`liblsl.so`) are **not** interchangeable with ``.so`` files for regular
     Linuxes.
 
 .. warning
