@@ -49,7 +49,7 @@ The following are some of the devices we know about that support LSL natively th
       * :doc:`MU-01 - Muse - Released 2014 Example with Matlab <matlab_example_with_muse>`
       * `Muse (MU-02 2016) and Muse 2 (MU-03 2018) <https://github.com/alexandrebarachant/muse-lsl>`__
       * `Muse 2016, Muse 2, Muse S <https://github.com/kowalej/BlueMuse>`__
-* `Bittium Faros <https://www.bittium.com/medical/cardiology>`__      
+  * `Bittium Faros <https://www.bittium.com/medical/cardiology>`__      
       * `Faros Streamer <https://github.com/bwrc/faros-streamer>`__
       * `Faros Streamer 2 <https://github.com/bwrc/faros-streamer-2>`__
 
