@@ -44,7 +44,7 @@ The following devices support LSL via vendor-provided software:
   * `OpenBCI (all headsets) <http://docs.openbci.com/software/06-labstreaminglayer>`__
   * `Starcat HackEEG Shield for Arduino <https://www.starcat.io/>`__
   
-The following are some of the devices we know about that support LSL natively through thirdparty software, but there are many others we don't know about:
+The following are some of the devices we know about that support LSL natively through third party software, but there are many others we don't know about:
   * `InteraXon Muse <http://www.choosemuse.com/>`__
       * :doc:`MU-01 - Muse - Released 2014 Example with Matlab <matlab_example_with_muse>`
       * `Muse (MU-02 2016) and Muse 2 (MU-03 2018) <https://github.com/alexandrebarachant/muse-lsl>`__
