@@ -36,7 +36,7 @@ Open a Terminal / Developer Command Prompt and retrieve the needed packages:
 Next, chdir to the `labstreaminglayer/LSL/liblsl-Java` subdirectory
 and configure your environment in the :file:`local.properties`:
 
-.. code::
+.. code:: bash
 
   ndk.dir=C\:\\Users\\user\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499
   android.ndkVersion=16.1.4479499

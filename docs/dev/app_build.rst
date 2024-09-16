@@ -135,6 +135,7 @@ command.
 -  `Generator <https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html#cmake-generators>`__:
    - :samp:`G <generator name>`
    - On Windows, don't forget platform modifiers:
+
       - `-A x64` for 64-bit
       - `-A Win32` if targeting 32-bit Windows.
     
