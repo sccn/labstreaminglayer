@@ -46,8 +46,7 @@ intersphinx_mapping = {
 }
 
 extlinks = {
-        'repo': ('https://github.com/%s', ''),
-        'lslrepo': ('https://github.com/labstreaminglayer/App-%s', ''),
-        'lslrelease': ('https://github.com/labstreaminglayer/App-%s/releases', 'Download '),
-        }
-
+    'repo': ('https://github.com/%s', None),
+    'lslrepo': ('https://github.com/labstreaminglayer/App-%s', None),
+    'lslrelease': ('https://github.com/labstreaminglayer/App-%s/releases', 'Download %s'),
+}
