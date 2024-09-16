@@ -22,7 +22,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 master_doc = 'index'  # for Sphinx < 2.0
 
 # -- Options for HTML output -------------------------------------------------
-
+html_theme = "sphinx_rtd_theme"
 html_theme_options = {
 #    'logo': 'logo.png',
     'github_user': 'sccn',
