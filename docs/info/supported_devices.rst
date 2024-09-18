@@ -52,6 +52,7 @@ The following are some of the devices we know about that support LSL natively th
   * `Bittium Faros <https://www.bittium.com/medical/cardiology>`__      
       * `Faros Streamer <https://github.com/bwrc/faros-streamer>`__
       * `Faros Streamer 2 <https://github.com/bwrc/faros-streamer-2>`__
+  * `Heart Rate bands <https://github.com/abcsds/HRBand-LSL>`__ (Many bluetooth HR bands such as the Polar H10)
 
 
 The following devices support LSL natively without any additional software:
