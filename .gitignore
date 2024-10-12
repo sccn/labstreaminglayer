@@ -34,3 +34,4 @@ docs/_build/
 
 # JetBrains
 .idea
+cmake-build*/
