@@ -27,7 +27,6 @@ See the `liblsl repo <https://github.com/sccn/liblsl>`_ for more info.
   (Note that LabRecorder saves data to
   `Extensible Data Format (xdf) <https://github.com/sccn/xdf>`_
   which has its own set of tools for loading data after finishing recording.)
-* Go through the `Tutorials <https://github.com/sccn/labstreaminglayer/wiki/Tutorial-1.-Getting-started-with-LSL-single-stream>`_.
 * Use LSL from your scientific computing environment. LSL has many language interfaces,
   including Python and Matlab.
 
