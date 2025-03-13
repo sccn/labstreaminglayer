@@ -9,6 +9,7 @@ LabStreamingLayer's Documentation
    info/getting_started
    info/user_guide
    info/supported_devices
+   info/language_wrappers
    info/viewers
    info/network-connectivity
    info/lslapicfg
