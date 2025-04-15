@@ -136,6 +136,7 @@ Support for standard Windows-compatible multimedia hardware is included:
   * DirectShow-compatible video hardware
   * :lslrepo:`Qt-compatible audio input <AudioCapture>`
   * `mbtCameraLSL (Android) <https://play.google.com/store/apps/details?id=com.mbraintrain.mbtcameralsl&hl=en>`__
+  * `TimeShot (Windows multi-camera capture) <https://github.com/markspan/TimeShot>`__
 
 Supported Stimulation Hardware
 ******************************
