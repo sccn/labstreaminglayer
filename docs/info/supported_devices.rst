@@ -89,6 +89,7 @@ Various devices with ECG and/or EMG sensors are supported. Some of these have no
   * `Shimmer Examples (using LSL for Java) <https://github.com/ShimmerEngineering/liblsl-Java/tree/shimmer_dev/src/examples>`__ (ECG/EMG/GSR/Accelerometer/Gyroscope/Magnetometer/PPG/Temperature/etc)
   * `bitalino (using LSL for Python) <https://github.com/fsuarezj/bitalino_lsl>`__ (wearables and various sensors)
   * `CGX (Cognionics) AIM Physiological Monitor <https://www.cgxsystems.com/auxiliary-input-module-gen2>`__ (ExG/Respiration/GSR/SPo2/Temp)
+  * `Polar H10 ECG <https://github.com/markspan/PolarBLE?tab=readme-ov-file>`__
 
 Supported Eye Tracking Hardware
 *******************************
