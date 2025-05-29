@@ -3,7 +3,9 @@ Supported Devices and Tools
 
 **For device applications and tools hosted on GitHub, please make sure to read the respective repository's README and to check the release page for downloads.**
 
-The lab streaming layer was originally developed to facilitate human-subject experiments that involve multi-modal data acquisition, including both brain dynamics (primarily EEG), physiology (EOG, EMG, heart rate, respiration, skin conductance, etc.), as well as behavioral data (motion capture, eye tracking, touch interaction, facial expressions, etc.) and finally environmental and program state (for example, event markers).
+The lab streaming layer was originally developed to facilitate human-subject experiments that involve multi-modal data acquisition, including brain dynamics (primarily EEG), physiology (EOG, EMG, heart rate, respiration, skin conductance, etc.), as well as behavioral data (motion capture, eye tracking, touch interaction, facial expressions, etc.) and finally environmental and program state (for example, event markers). There exists already many devices and applications with LSL integration already provided. This page lists the integrations of which we are aware, but does not serve as an endorsement and most integrations are untested by the LSL team.
+
+If you are looking for LSL support for a device that is not in the list, try specialized google searches (e.g., combine your device name, "LSL", and "GitHub"). If that fails to find a pre-existing solution, then you will need to get a device SDK to access the live signal stream and write your own application to push it to LSL -- this can be quite simple depending on the SDK.
 
 Supported Biosignal Hardware
 ****************************
@@ -29,6 +31,7 @@ The following devices support LSL via vendor-provided software:
   * `ANT Neuro eego sports <https://www.ant-neuro.com/products/eego_mylab/software_features>`__
   * `Bitbrain EEG & Biosignals platform <https://www.bitbrain.com/neurotechnology-products/software/programming-tools>`__
   * `Bittium NeurOne Tesla <https://www.bittium.com/medical/support>`__
+  * `BrainAccess by NEUROtechnology <https://www.brainaccess.ai>`__
   * `Brain Products actiCHamp/actiCHamp Plus <https://github.com/brain-products/LSL-actiCHamp>`__
   * `Brain Products BrainAmp series <https://github.com/brain-products/LSL-BrainAmpSeries>`__
   * `Brain Products LiveAmp <https://github.com/brain-products/LSL-LiveAmp/>`__
