@@ -95,6 +95,7 @@ Various devices with ECG and/or EMG sensors are supported. Some of these have no
   * `bitalino (using LSL for Python) <https://github.com/fsuarezj/bitalino_lsl>`__ (wearables and various sensors)
   * `CGX (Cognionics) AIM Physiological Monitor <https://www.cgxsystems.com/auxiliary-input-module-gen2>`__ (ExG/Respiration/GSR/SPo2/Temp)
   * `Polar H10 ECG <https://github.com/markspan/PolarBLE?tab=readme-ov-file>`__
+  * `Heart Rate Service bands <https://github.com/abcsds/HRBand-LSL>`__ (Many bluetooth HR bands such as the Polar H10)
   * `TMSi SPIRE EMG <https://www.tmsi.artinis.com/tmsi-python-library>`__
 
 Supported Eye Tracking Hardware
