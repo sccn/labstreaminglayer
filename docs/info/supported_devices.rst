@@ -46,6 +46,8 @@ The following devices support LSL via vendor-provided software:
   * `Neuracle NeuroHub <https://github.com/neuracle/Neuracle.LSLSample>`__
   * `OpenBCI (all headsets) <http://docs.openbci.com/software/06-labstreaminglayer>`__
   * `Starcat HackEEG Shield for Arduino <https://www.starcat.io/>`__
+  * `TMSi APEX <https://www.tmsi.artinis.com/tmsi-python-library>`__
+  * `TMSi SAGA <https://www.tmsi.artinis.com/tmsi-python-library>`__
   
 The following are some of the devices we know about that support LSL natively through third party software, but there are many others we don't know about:
   * `InteraXon Muse <http://www.choosemuse.com/>`__
@@ -93,6 +95,7 @@ Various devices with ECG and/or EMG sensors are supported. Some of these have no
   * `bitalino (using LSL for Python) <https://github.com/fsuarezj/bitalino_lsl>`__ (wearables and various sensors)
   * `CGX (Cognionics) AIM Physiological Monitor <https://www.cgxsystems.com/auxiliary-input-module-gen2>`__ (ExG/Respiration/GSR/SPo2/Temp)
   * `Polar H10 ECG <https://github.com/markspan/PolarBLE?tab=readme-ov-file>`__
+  * `TMSi SPIRE EMG <https://www.tmsi.artinis.com/tmsi-python-library>`__
 
 Supported Eye Tracking Hardware
 *******************************
