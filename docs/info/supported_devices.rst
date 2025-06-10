@@ -50,13 +50,13 @@ The following devices support LSL via vendor-provided software:
   * `TMSi SAGA <https://www.tmsi.artinis.com/tmsi-python-library>`__
   
 The following are some of the devices we know about that support LSL natively through third party software, but there are many others we don't know about:
+  * `Bittium Faros <https://www.bittium.com/medical/cardiology>`__      
+      * `Faros Streamer <https://github.com/bwrc/faros-streamer>`__
+      * `Faros Streamer 2 <https://github.com/bwrc/faros-streamer-2>`__
   * `InteraXon Muse <http://www.choosemuse.com/>`__
       * :doc:`MU-01 - Muse - Released 2014 Example with Matlab <matlab_example_with_muse>`
       * `Muse (MU-02 2016) and Muse 2 (MU-03 2018) <https://github.com/alexandrebarachant/muse-lsl>`__
       * `Muse 2016, Muse 2, Muse S <https://github.com/kowalej/BlueMuse>`__
-  * `Bittium Faros <https://www.bittium.com/medical/cardiology>`__      
-      * `Faros Streamer <https://github.com/bwrc/faros-streamer>`__
-      * `Faros Streamer 2 <https://github.com/bwrc/faros-streamer-2>`__
 
 
 The following devices support LSL natively without any additional software:
@@ -81,27 +81,33 @@ The following systems are also supported by a separate program, the :doc:`OpenVi
 Supported fNIRS Hardware
 ************************
 The following devices support LSL natively without any additional software:
-  * `NIRx NIRScout <https://nirx.net/nirscout>`__ and `NIRSport 2 <https://nirx.net/nirsport>`__ via `Aurora <https://nirx.net/software>`__ and `Turbo-Satori <https://nirx.net/turbosatori>`__
-  * `GowerLabs LUMO <https://www.gowerlabs.co.uk/lumo>`__
-  * `Cortivision PHOTON CAP <https://www.cortivision.com/products/photon/>`__
   * `Artinis Brite Family <https://www.artinis.com/Brite-family>`__,  `Portalite <https://www.artinis.com/portalite-mkii>`__  `PortaMon <https://www.artinis.com/PortaMon>`__, `OxyMon <https://www.artinis.com/OxyMon>`__, `OctaMon <https://www.artinis.com/OctaMon>`__ and `Artinis NIRS-EEG package <https://www.artinis.com/nirs-eeg-package>`__  via `OxySoft <https://www.artinis.com/OxySoft>`__
+  * `Cortivision PHOTON CAP <https://www.cortivision.com/products/photon/>`__
+  * `GowerLabs LUMO <https://www.gowerlabs.co.uk/lumo>`__
+  * `NIRx NIRScout <https://nirx.net/nirscout>`__ and `NIRSport 2 <https://nirx.net/nirsport>`__ via `Aurora <https://nirx.net/software>`__ and `Turbo-Satori <https://nirx.net/turbosatori>`__
 
 Supported Electrophysiological Hardware
 ****************************************
 Various devices with ECG and/or EMG sensors are supported. Some of these have non-electrophys sensors as well (i.e., GSR, Respiration, Temperature, Accelerometer, etc.) 
-  * `Zephyr BioHarness <https://github.com/labstreaminglayer/App-Zephyr>`__ (ECG/Respiration/Accelerometer)
-  * `Shimmer Examples (using LSL for C#) <https://github.com/ShimmerEngineering/liblsl-Csharp/tree/shimmer_dev/examples/SendData>`__ (ECG/EMG/GSR/Accelerometer/Gyroscope/Magnetometer/PPG/Temperature/etc)
-  * `Shimmer Examples (using LSL for Java) <https://github.com/ShimmerEngineering/liblsl-Java/tree/shimmer_dev/src/examples>`__ (ECG/EMG/GSR/Accelerometer/Gyroscope/Magnetometer/PPG/Temperature/etc)
   * `bitalino (using LSL for Python) <https://github.com/fsuarezj/bitalino_lsl>`__ (wearables and various sensors)
   * `CGX (Cognionics) AIM Physiological Monitor <https://www.cgxsystems.com/auxiliary-input-module-gen2>`__ (ExG/Respiration/GSR/SPo2/Temp)
-  * `Polar H10 ECG <https://github.com/markspan/PolarBLE?tab=readme-ov-file>`__
-  * `Heart Rate Service bands <https://github.com/abcsds/HRBand-LSL>`__ (Many bluetooth HR bands such as the Polar H10)
+  * `Heart Rate Service bands <https://github.com/abcsds/HRBand-LSL>`__ (Many bluetooth HR bands such as the Polar H10)  
+  * `Polar H10 ECG <https://github.com/markspan/PolarBLE?tab=readme-ov-file>`__  
+  * `Shimmer Examples (using LSL for C#) <https://github.com/ShimmerEngineering/liblsl-Csharp/tree/shimmer_dev/examples/SendData>`__ (ECG/EMG/GSR/Accelerometer/Gyroscope/Magnetometer/PPG/Temperature/etc)
+  * `Shimmer Examples (using LSL for Java) <https://github.com/ShimmerEngineering/liblsl-Java/tree/shimmer_dev/src/examples>`__ (ECG/EMG/GSR/Accelerometer/Gyroscope/Magnetometer/PPG/Temperature/etc)  
   * `TMSi SPIRE EMG <https://www.tmsi.artinis.com/tmsi-python-library>`__
+  * `Zephyr BioHarness <https://github.com/labstreaminglayer/App-Zephyr>`__ (ECG/Respiration/Accelerometer)
 
 Supported Eye Tracking Hardware
 *******************************
 Several eye tracking systems are currently supported by LSL and included in the distribution (untested systems marked with a (u)):
+  * `7invensun Eye Tracker <https://github.com/FishBones-DIY/App-7invensun>`__
+  * Custom 2-camera eye trackers (with some hacking)
+  * `EyeLogic <https://github.com/EyeLogicSolutions/EyeLogic-LSL>`__
+  * :lslrepo:`EyeTechDS - VT3-Mini <EyeTechDS>`
   * Eye Tribe Tracker Pro
+  * `HTC Vive Eye <https://github.com/mit-ll/Signal-Acquisition-Modules-for-Lab-Streaming-Layer>`__  
+  * :lslrepo:`Pupil-Labs <PupilLabs>`
   * :lslrepo:`SMI iViewX <SMIEyetracker>`
   * :lslrepo:`SMI Eye Tracking Glasses <SMIEyetracker>`
   * SR Research Eyelink (very basic)
@@ -109,13 +115,7 @@ Several eye tracking systems are currently supported by LSL and included in the 
       * :lslrepo:`Tobii Pro <TobiiPro>`
       * `Tobii Glasses 3 <https://github.com/tobiipro/Tobii.Glasses3.SDK/releases>`__
       * :lslrepo:`Tobii StreamEngine (consumer devices) <TobiiStreamEngine>`
-      
-  * `HTC Vive Eye <https://github.com/mit-ll/Signal-Acquisition-Modules-for-Lab-Streaming-Layer>`__
-  * `EyeLogic <https://github.com/EyeLogicSolutions/EyeLogic-LSL>`__
-  * `7invensun Eye Tracker <https://github.com/FishBones-DIY/App-7invensun>`__
-  * Custom 2-camera eye trackers (with some hacking)
-  * :lslrepo:`Pupil-Labs <PupilLabs>`
-  * :lslrepo:`EyeTechDS - VT3-Mini <EyeTechDS>`
+  
 
 Supported Human Interface Hardware
 **********************************
@@ -154,14 +154,14 @@ The following stimulation devices (TMS, TDCS / TACS) have LSL support:
 Supported Stimulus Presentation Software
 ****************************************
 The following stimulus presentations systems are usable out of the box with LSL:
-  * `Neurobehavioral Systems Presentation <https://www.neurobs.com/>`__
-  * `iMotions <https://www.imotions.com/>`__
   * `EventIDE <http://wiki.okazolab.com/wiki.okazolab.com/LAB-Streaming-Layer-in-EventIDE>`__
-  * `Simulation and Neuroscience Application Platform (SNAP) <https://github.com/sccn/SNAP>`__
-  * `Reiz <https://github.com/pyreiz/pyreiz>`__
   * `E-Prime 3.0 <https://github.com/PsychologySoftwareTools/eprime3-lsl-package-file/>`__
+  * `iMotions <https://www.imotions.com/>`__
+  * `Neurobehavioral Systems Presentation <https://www.neurobs.com/>`__
   * Psychopy (using LSL for Python)
   * PsychToolbox (using LSL for MATLAB)
+  * `Reiz <https://github.com/pyreiz/pyreiz>`__
+  * `Simulation and Neuroscience Application Platform (SNAP) <https://github.com/sccn/SNAP>`__
   * Unity (using `LSL4Unity <https://github.com/labstreaminglayer/LSL4Unity>`_ or liblsl C#)
   * Unreal Engine (`Marketplace <https://www.unrealengine.com/marketplace/en-US/product/labstreaminglayer-plugin>`__, `GitHub <https://github.com/labstreaminglayer/plugin-UE4>`__)
 
