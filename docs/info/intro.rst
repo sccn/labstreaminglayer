@@ -18,7 +18,9 @@ lab network (for example audio, EEG, or motion capture).
 
 There is an
 `intro lecture/demo on LSL <http://www.youtube.com/watch?v=Y1at7yrcFW0>`__
-(part of an online course on EEG-based brain-computer interfaces).
+(part of an online course on EEG-based brain-computer interfaces), as well as a 
+`tutorial <https://www.youtube.com/watch?v=tDDkrmv3ZKE>`__ with a general 
+overview of LSL in use. 
 
 Streaming Layer API
 ===================
