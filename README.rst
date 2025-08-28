@@ -10,8 +10,8 @@ The most up-to-date version of this document can always be found in the
 `online documentation <https://labstreaminglayer.readthedocs.io/info/getting_started.html>`_.
 
 The most common way to use LSL is to use one or more applications with integrated LSL functionality
-to stream data from one or more devices (e.g., EEG and Eye Tracker) and from a task application 
-(NBS Presentation, psychopy, etc.) over the local network and record the with the LabRecorder.
+to stream data from one or more devices (e.g., EEG and eye trackers) and from a task application 
+(NBS Presentation, PsychoPy, etc.) over the local network and record the data with LabRecorder.
 
 Most LSL Applications will come bundled with its own copy of the LSL library (i.e., lsl.dll for a Windows application).
 However, many applications and interfaces (e.g., like pylsl) do not ship with liblsl.dylib or liblsl.so on Mac or Linux, respectively.
