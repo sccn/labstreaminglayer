@@ -23,6 +23,7 @@ LabStreamingLayer's Documentation
 
    dev/doc_syntax
    dev/dev_guide
+   dev/app_build
    dev/app_dev
    dev/build_android
    dev/lib_dev
