@@ -163,7 +163,7 @@ The following stimulus presentations systems are usable out of the box with LSL:
   * PsychToolbox (using LSL for MATLAB)
   * `Reiz <https://github.com/pyreiz/pyreiz>`__
   * `Simulation and Neuroscience Application Platform (SNAP) <https://github.com/sccn/SNAP>`__
-  * `SuperLab X7 <https://cedrus.com/superlab/>`__
+  * `SuperLab X7 <https://cedrus.com/superlab/docs/lsl.htm>`__
   * Unity (using `LSL4Unity <https://github.com/labstreaminglayer/LSL4Unity>`_ or liblsl C#)
   * Unreal Engine (`Marketplace <https://www.unrealengine.com/marketplace/en-US/product/labstreaminglayer-plugin>`__, `GitHub <https://github.com/labstreaminglayer/plugin-UE4>`__)
 
