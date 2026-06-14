@@ -31,7 +31,7 @@ See the `liblsl repo <https://github.com/sccn/liblsl>`_ for more info.
   including Python and Matlab.
 
   * Python users need to ``pip install pylsl`` then try some of the
-    `provided examples <https://github.com/labstreaminglayer/liblsl-Python/tree/master/pylsl/examples>`_.
+    `provided examples <https://github.com/labstreaminglayer/pylsl/tree/main/src/pylsl/examples>`_.
   * The `Matlab interface <https://github.com/labstreaminglayer/liblsl-Matlab/>`_
     is also popular but requires a little more work to get started;
     please see its README for more info.

@@ -8,7 +8,7 @@ The lab streaming layer (LSL) is a system for the unified collection of measurem
 
 The **LSL distribution** consists of the core library and a suite of tools built on top of the library.
 
-The core transport library is `liblsl <https://github.com/labstreaminglayer/liblsl/>`__ and its language interfaces (`C <https://github.com/sccn/liblsl/>`__, `C++ <https://github.com/sccn/liblsl/>`__, `Python <https://github.com/labstreaminglayer/liblsl-Python/>`__, `Java <https://github.com/labstreaminglayer/liblsl-Java/>`__, `C# <https://github.com/labstreaminglayer/liblsl-Csharp/>`__, `MATLAB <https://github.com/labstreaminglayer/liblsl-Matlab/>`__).
+The core transport library is `liblsl <https://github.com/labstreaminglayer/liblsl/>`__ and its language interfaces (`C <https://github.com/sccn/liblsl/>`__, `C++ <https://github.com/sccn/liblsl/>`__, `Python <https://github.com/labstreaminglayer/pylsl/>`__, `Java <https://github.com/labstreaminglayer/liblsl-Java/>`__, `C# <https://github.com/labstreaminglayer/liblsl-Csharp/>`__, `MATLAB <https://github.com/labstreaminglayer/liblsl-Matlab/>`__).
 The library is general-purpose and cross-platform (OS Support: Win / Linux / MacOS / `Android <https://github.com/labstreaminglayer/liblsl-Android/>`__ / iOS; Architecture Support: x86 / amd64 / arm).
 
 The suite of tools includes a :lslrepo:`recording program <LabRecorder>`,
@@ -17,7 +17,7 @@ a range of acquisition hardware (see :doc:`supported_devices`) available on the
 lab network (for example audio, EEG, or motion capture).
 
 There is an
-`intro lecture/demo on LSL <http://www.youtube.com/watch?v=Y1at7yrcFW0>`__
+`intro lecture/demo on LSL <https://www.youtube.com/watch?v=Y1at7yrcFW0>`__
 (part of an online course on EEG-based brain-computer interfaces).
 
 Streaming Layer API

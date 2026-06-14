@@ -77,7 +77,7 @@ Python apps
 Python is another great language for app development, as long as your target audience has Python and the required libraries installed.
 You (and other app users) will need to have ``pylsl`` installed. The recommended way to get it is with ``pip install pylsl``.
 
-While there are no full application templates, look at the `example code <https://github.com/labstreaminglayer/liblsl-Python/tree/master/pylsl/examples>`__ to begin.
+While there are no full application templates, look at the `example code <https://github.com/labstreaminglayer/pylsl/tree/main/src/pylsl/examples>`__ to begin.
 
 A couple good ``pylsl`` example apps are the one from :lslrepo:`PupilLabs`,
 which has both a plugin and a simple application, and :lslrepo:`SigVisualizer`.
@@ -86,5 +86,5 @@ which has both a plugin and a simple application, and :lslrepo:`SigVisualizer`.
 Windows Users
 -------------
 
-If users of applications linked to liblsl are encountering errors related to not being able to load the DLL, in particular missing a VCRUNTIME140_1.dll (or similar), then they probably need to install the `latest Microsoft Visual C++ Redistributable <https://support.microsoft.com/en-ca/help/2977003/the-latest-supported-visual-c-downloads>`__ for the application architecture
+If users of applications linked to liblsl are encountering errors related to not being able to load the DLL, in particular missing a VCRUNTIME140_1.dll (or similar), then they probably need to install the `latest Microsoft Visual C++ Redistributable <https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist>`__ for the application architecture
 

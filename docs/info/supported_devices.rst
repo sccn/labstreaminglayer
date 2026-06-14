@@ -15,7 +15,7 @@ The majority of EEG systems on the market are currently compatible with LSL.
 The following systems are supported by programs included in the LSL distribution (untested systems marked with a (u)):
   * `ABM B-Alert X4/X10/X24 wireless <https://github.com/labstreaminglayer/App-BAlertAthenaCLI>`__
   * `BioSemi Active II Mk1 and Mk2 <https://github.com/labstreaminglayer/App-BioSemi>`__
-  * `Blackrock Cerebus/NSP <https://github.com/labstreaminglayer/App-BlackrockTimestamps>`__ (timestamps only)
+  * `Blackrock Cerebus/NSP <https://github.com/labstreaminglayer/App-BlackrockCerebus>`__ (timestamps only)
   * `Cognionics dry/wireless <https://github.com/labstreaminglayer/App-Cognionics>`__
   * `EGI AmpServer <https://github.com/labstreaminglayer/App-EGIAmpServer>`__
   * `Enobio dry/wireless <https://github.com/labstreaminglayer/App-Enobio>`__ (u) (please use vendor-provided section)
@@ -36,15 +36,15 @@ The following devices support LSL via vendor-provided software:
   * `Brain Products BrainAmp series <https://github.com/brain-products/LSL-BrainAmpSeries>`__
   * `Brain Products LiveAmp <https://github.com/brain-products/LSL-LiveAmp/>`__
   * `BrainVision RDA client <https://github.com/brain-products/LSL-BrainVisionRDA>`__
-  * `Cognionics (all headsets) <http://www.cognionics.com/>`__
+  * `Cognionics (all headsets) <https://www.cgxsystems.com/>`__
   * `EB Neuro BE Plus LTM <http://www.ebneuro.biz/en/neurology/ebneuro/galileo-suite/be-plus-ltm>`__
   * `Emotiv Brainware (e.g. EPOC) via EmotivPRO <https://github.com/Emotiv/labstreaminglayer>`__
   * `IDUN Guardian via provided Python scripts <https://sdk-docs.idunguardian.com/examples.html#stream-data-to-lsl>`__
   * `mBrainTrain SMARTING <http://www.mbraintrain.com/smarting/>`__
-  * neuroelectrics `(Enobio <http://www.neuroelectrics.com/products/enobio/>`__, `StarStim <https://www.neuroelectrics.com/solutions/starstim>`__) via `NIC2 <https://www.neuroelectrics.com/solution/software-integrations/nic2>`__.
+  * neuroelectrics `(Enobio <https://www.neuroelectrics.com/products/enobio/>`__, `StarStim <https://www.neuroelectrics.com/solutions/starstim>`__) via `NIC2 <https://www.neuroelectrics.com/solution/software-integrations/nic2>`__.
   * `Mentalab Explore <https://github.com/Mentalab-hub/explorepy>`__
   * `Neuracle NeuroHub <https://github.com/neuracle/Neuracle.LSLSample>`__
-  * `OpenBCI (all headsets) <http://docs.openbci.com/software/06-labstreaminglayer>`__
+  * `OpenBCI (all headsets) <https://docs.openbci.com/Software/CompatibleThirdPartySoftware/LSL/>`__
   * `Starcat HackEEG Shield for Arduino <https://www.starcat.io/>`__
   * `TMSi APEX <https://www.tmsi.artinis.com/tmsi-python-library>`__
   * `TMSi SAGA <https://www.tmsi.artinis.com/tmsi-python-library>`__
@@ -53,7 +53,7 @@ The following are some of the devices we know about that support LSL natively th
   * `Bittium Faros <https://www.bittium.com/medical/cardiology>`__      
       * `Faros Streamer <https://github.com/bwrc/faros-streamer>`__
       * `Faros Streamer 2 <https://github.com/bwrc/faros-streamer-2>`__
-  * `InteraXon Muse <http://www.choosemuse.com/>`__
+  * `InteraXon Muse <https://choosemuse.com/>`__
       * :doc:`MU-01 - Muse - Released 2014 Example with Matlab <matlab_example_with_muse>`
       * `Muse (MU-02 2016) and Muse 2 (MU-03 2018) <https://github.com/alexandrebarachant/muse-lsl>`__
       * `Muse 2016, Muse 2, Muse S <https://github.com/kowalej/BlueMuse>`__
@@ -94,8 +94,8 @@ Various devices with ECG and/or EMG sensors are supported. Some of these have no
   * `Heart Rate Service bands <https://github.com/abcsds/HRBand-LSL>`__ (Many bluetooth HR bands such as the Polar H10)  
   * `RRStreamer (Android) <https://github.com/abcsds/RRStreamer>`__ (BLE Heart Rate bands such as the Polar H10, streamed from an Android phone with R-R intervals in milliseconds)
   * `Polar H10 ECG <https://github.com/markspan/PolarBLE?tab=readme-ov-file>`__  
-  * `Shimmer Examples (using LSL for C#) <https://github.com/ShimmerEngineering/liblsl-Csharp/tree/shimmer_dev/examples/SendData>`__ (ECG/EMG/GSR/Accelerometer/Gyroscope/Magnetometer/PPG/Temperature/etc)
-  * `Shimmer Examples (using LSL for Java) <https://github.com/ShimmerEngineering/liblsl-Java/tree/shimmer_dev/src/examples>`__ (ECG/EMG/GSR/Accelerometer/Gyroscope/Magnetometer/PPG/Temperature/etc)  
+  * `Shimmer Examples (using LSL for C#) <https://github.com/ShimmerResearch/liblsl-Csharp/tree/shimmer_dev/examples/SendData>`__ (ECG/EMG/GSR/Accelerometer/Gyroscope/Magnetometer/PPG/Temperature/etc)
+  * `Shimmer Examples (using LSL for Java) <https://github.com/ShimmerResearch/liblsl-Java/tree/shimmer_dev/src/examples>`__ (ECG/EMG/GSR/Accelerometer/Gyroscope/Magnetometer/PPG/Temperature/etc)  
   * `TMSi SPIRE EMG <https://www.tmsi.artinis.com/tmsi-python-library>`__
   * `Zephyr BioHarness <https://github.com/labstreaminglayer/App-Zephyr>`__ (ECG/Respiration/Accelerometer)
 
@@ -104,7 +104,7 @@ Supported Eye Tracking Hardware
 Several eye tracking systems are currently supported by LSL and included in the distribution (untested systems marked with a (u)):
   * `7invensun Eye Tracker <https://github.com/FishBones-DIY/App-7invensun>`__
   * Custom 2-camera eye trackers (with some hacking)
-  * `EyeLogic <https://github.com/EyeLogicSolutions/EyeLogic-LSL>`__
+  * `EyeLogic <https://github.com/labstreaminglayer/EyeLogic-LSL>`__
   * :lslrepo:`EyeTechDS - VT3-Mini <EyeTechDS>`
   * Eye Tribe Tracker Pro
   * `HTC Vive Eye <https://github.com/mit-ll/Signal-Acquisition-Modules-for-Lab-Streaming-Layer>`__  
@@ -172,7 +172,7 @@ Miscellaneous Hardware
 The following miscellaneous hardware is supported:
   * :lslrepo:`Generic serial port <SerialPort>`
   * :lslrepo:`Measurement Computing DAQ <MeasurementComputing>`
-  * `biosignalsplux sensors using OpenSignals <https://www.biosignalsplux.com/index.php/software/apis>`__
+  * `biosignalsplux sensors using OpenSignals <https://support.pluxbiosignals.com/knowledge-base/biosignals-studio-lab-streaming-layer/>`__
   * :lslrepo:`Vernier Go Direct sensors <vernier>`
   * :lslrepo:`Nonin Xpod PPG  <nonin>`
   * `Tyromotion Amadeo Robot <https://github.com/pyreiz/ctrl-tyromotion>`__

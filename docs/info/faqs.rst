@@ -26,7 +26,7 @@ lsl_local_clock()
 What clock does LSL use? / 
 How do I relate LSL's :cpp:func:`lsl_local_clock()` to my wall clock?
 
-LSL's :cpp:func:`lsl_local_clock()` function uses `std::chrono::steady_clock <https://en.cppreference.com/w/cpp/chrono/steady_clock>`_::now().time_since_epoch(). This returns the number of seconds from an arbitrary starting point. The starting point is platform-dependent -- it may be close to UNIX time, or the last reboot -- and LSL timestamps cannot be transformed naively to wall clock time without special effort.
+LSL's :cpp:func:`lsl_local_clock()` function uses `std::chrono::steady_clock <https://en.cppreference.com/cpp/chrono/steady_clock>`_::now().time_since_epoch(). This returns the number of seconds from an arbitrary starting point. The starting point is platform-dependent -- it may be close to UNIX time, or the last reboot -- and LSL timestamps cannot be transformed naively to wall clock time without special effort.
 For more information, see the :doc:`../info/time_synchronization` under the "Manual Synchronization" section.
 
 Latency
@@ -255,7 +255,7 @@ how to name the file, i.e. :file:`lsl.dll` for Windows,
 :file:`liblsl.so` for Linux and Android and
 :file:`liblsl.dylib` for MacOS / OS X.
 
-The `liblsl release page <http://github.com/sccn/liblsl/releases/latest>`_
+The `liblsl release page <https://github.com/sccn/liblsl/releases>`_
 has multiple packages, generally called
 :file:`liblsl-{version}-{system}.{extension}`, e.g. 
 :file:`liblsl-1.13.1-Linux64-bionic.deb` with the 64 bit Ubuntu Linux 18.04

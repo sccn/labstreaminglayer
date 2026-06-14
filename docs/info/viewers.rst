@@ -31,24 +31,24 @@ Stand-alone online viewers:
 
     .. image:: ../images/SigVisualizer_demo.gif
     
-  * `PlotJuggler <https://github.com/facontidavide/PlotJuggler>`__ supporst LSL streams and other data sources.
+  * `PlotJuggler <https://github.com/PlotJuggler/PlotJuggler>`__ supporst LSL streams and other data sources.
   
   * `Open Ephys <https://open-ephys.org/gui>`__ via `OpenEphysLSL-Inlet Plugin <https://github.com/labstreaminglayer/OpenEphysLSL-Inlet>`__
   
   * Older `LSL-Inlet Plugin <https://github.com/tne-lab/LSL-inlet>`__
   
-  * The `python bindings <https://github.com/labstreaminglayer/liblsl-Python>`__ contain a
-    `very basic visualizer <https://github.com/labstreaminglayer/liblsl-Python/blob/master/pylsl/examples/ReceiveAndPlot.py>`__.
+  * The `python bindings <https://github.com/labstreaminglayer/pylsl>`__ contain a
+    `very basic visualizer <https://github.com/labstreaminglayer/pylsl/blob/main/src/pylsl/examples/ReceiveAndPlot.py>`__.
     To start it, install pylsl and pyqtgraph and run it as
     
     :command:`python -m pylsl.examples.ReceiveAndPlot`.
 
 
 Software suites/packages supporting online LSL visualization:
-  * `BCI2000 <http://bci2000.org/>`__
+  * `BCI2000 <https://www.bci2000.org/>`__
   * `Muse LSL <https://github.com/alexandrebarachant/muse-lsl>`__
   * `Neuropype <https://www.neuropype.io/>`__
-  * `OpenViBE <http://openvibe.inria.fr//>`__
+  * `OpenViBE <https://openvibe.inria.fr/>`__
 
 Offline Viewers
 **********************
@@ -57,7 +57,7 @@ The following software suites/packages support offline visualization of XDF file
   * `EEGLAB <https://sccn.ucsd.edu/eeglab/index.php>`__
   * `Neuropype <https://www.neuropype.io/>`__
   * `MNELab <https://github.com/cbrnr/mnelab>`__
-  * `MoBILAB <https://sccn.ucsd.edu/wiki/MoBILAB>`__
+  * `MoBILAB <https://github.com/sccn/mobilab/wiki>`__
   * `SigViewer <https://github.com/cbrnr/sigviewer>`__
   
 

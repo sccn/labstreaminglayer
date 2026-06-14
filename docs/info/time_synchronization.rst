@@ -97,4 +97,4 @@ It is recommended that all LSL stream generators attach the following block to t
 Validation
 ==========
 
-To see the synchronization capabilities of LSL in action, see http://sccn.ucsd.edu/~mgrivich/Synchronization.html and especially http://sccn.ucsd.edu/~mgrivich/LSL_Validation.html.
+To see the synchronization capabilities of LSL in action, see https://sccn.ucsd.edu/download/mgrivich/LSL_Validation.html and especially https://sccn.ucsd.edu/download/mgrivich/LSL_Validation.html.

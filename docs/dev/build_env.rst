@@ -43,7 +43,7 @@ Common Requirements
 .. _Qt:
 
 
-`Qt <http://qt.io>`__
+`Qt <https://www.qt.io/>`__
 `````````````````````
 
 For compatibility with Ubuntu 22.04 (20.04 with a PPA), Qt 6.2 is the oldest supported
@@ -61,7 +61,7 @@ configuration to the cmake parameters
 
 .. _boost:
 
-`Boost <https://boost.org>`__
+`Boost <https://www.boost.org/>`__
 `````````````````````````````
 
 Nowadays, Boost is mostly used for apps connecting to a device over the local network
