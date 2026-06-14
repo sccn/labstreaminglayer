@@ -17,10 +17,10 @@ API Documentation
 *****************
 
 It is recommended that you clone the repository to get the respective code. The documentation is at the following locations:
-  * C: `C header file <https://github.com/sccn/liblsl/blob/master/include/lsl_c.h>`__
-  * C++: `C++ header file <https://github.com/sccn/liblsl/blob/master/include/lsl_cpp.h>`__,
+  * C: `C header file <https://github.com/sccn/liblsl/blob/main/include/lsl_c.h>`__
+  * C++: `C++ header file <https://github.com/sccn/liblsl/blob/main/include/lsl_cpp.h>`__,
     :doc:`in progress API documentation <liblsl:index>`
-  * Python: `pylsl module <https://github.com/labstreaminglayer/liblsl-Python/blob/master/pylsl/pylsl.py>`__
+  * Python: `pylsl module <https://github.com/labstreaminglayer/pylsl>`__
   * Java: `JavaDocs <https://github.com/labstreaminglayer/liblsl-Java/blob/master/javadoc/index.html>`__
   * C#: `LSL module <https://github.com/labstreaminglayer/liblsl-Csharp/blob/master/LSL.cs>`__
   * MATLAB: `class files <https://github.com/labstreaminglayer/liblsl-Matlab>`__.
@@ -35,67 +35,67 @@ C Example Programs: Basic to Advanced
 *************************************
 
 These two example programs illustrate the bread-and-butter use of LSL as it is executing in almost any device module that comes with the distribution:
-  * `Sending a multi-channel time series into LSL. <https://github.com/sccn/liblsl/blob/master/examples/SendDataC.c>`__
-  * `Receiving a multi-channel time series from LSL. <https://github.com/sccn/liblsl/blob/master/examples/ReceiveDataC.c>`__
+  * `Sending a multi-channel time series into LSL. <https://github.com/sccn/liblsl/blob/main/examples/SendDataC.c>`__
+  * `Receiving a multi-channel time series from LSL. <https://github.com/sccn/liblsl/blob/main/examples/ReceiveDataC.c>`__
 
 These two example programs illustrate a more special-purpose use case, namely sending arbitrary string-formatted data at irregular sampling rate. Such streams are used by programs that produce event markers, for example:
-  * `Sending a stream of strings with irregular timing. <https://github.com/sccn/liblsl/blob/master/examples/SendStringMarkersC.c>`__
-  * `Receiving a stream of strings with irregular timing. <https://github.com/sccn/liblsl/blob/master/examples/ReceiveStringMarkersC.c>`__
+  * `Sending a stream of strings with irregular timing. <https://github.com/sccn/liblsl/blob/main/examples/SendStringMarkersC.c>`__
+  * `Receiving a stream of strings with irregular timing. <https://github.com/sccn/liblsl/blob/main/examples/ReceiveStringMarkersC.c>`__
 
 The last example shows how to attach properly formatted meta-data to a stream, and how to read it out again at the receiving end. While meta-data is strictly optional, it is very useful to make streams self-describing. LSL has adopted the convention to name meta-data fields according to the XDF file format specification whenever the content type matches (for example EEG, Gaze, MoCap, VideoRaw, etc); the spec is `here <https://github.com/sccn/xdf/wiki/Meta-Data>`__. Note that some older example programs (SendData/ReceiveData) predate this convention and name the channels inconsistently.
-  * `Handling stream meta-data. <https://github.com/sccn/liblsl/blob/master/examples/HandleMetaDataC.c>`__
+  * `Handling stream meta-data. <https://github.com/sccn/liblsl/blob/main/examples/HandleMetaDataC.c>`__
 
 C++ Example Programs: Basic to Advanced
 ***************************************
 
 These two example programs illustrate the shortest amount of code that is necessary to get a C++ program linked to LSL:
-  * `Minimal data sending example. <https://github.com/sccn/liblsl/blob/master/examples/SendDataSimple.cpp>`__
-  * `Minimal data receiving example. <https://github.com/sccn/liblsl/blob/master/examples/ReceiveDataSimple.cpp>`__
+  * `Minimal data sending example. <https://github.com/sccn/liblsl/blob/main/examples/SendDataSimple.cpp>`__
+  * `Minimal data receiving example. <https://github.com/sccn/liblsl/blob/main/examples/ReceiveDataSimple.cpp>`__
 
 These two example programs demonstrate how to write more complete LSL clients in C++ (they are 1:1 equivalents of the corresponding C programs):
-  * `Sending a multi-channel time series into LSL. <https://github.com/sccn/liblsl/blob/master/examples/SendData.cpp>`__
-  * `Receiving a multi-channel time series from LSL. <https://github.com/sccn/liblsl/blob/master/examples/ReceiveData.cpp>`__
+  * `Sending a multi-channel time series into LSL. <https://github.com/sccn/liblsl/blob/main/examples/SendData.cpp>`__
+  * `Receiving a multi-channel time series from LSL. <https://github.com/sccn/liblsl/blob/main/examples/ReceiveData.cpp>`__
 
 These two programs transmit their data at the granularity of chunks instead of samples. This is mostly a convenience matter, since inlets and outlets can be configured to automatically batch samples into chunks for transmission. Note that for LSL the data is always a linear sequence of samples and data that is pushed as samples can be pulled out as chunks or vice versa. They also show how structs can be used to represent the sample data, instead of numeric arrays (which is mostly a syntactic difference):
-  * `Sending a multi-channel time series at chunk granularity. <https://github.com/sccn/liblsl/blob/master/examples/SendDataInChunks.cpp>`__
-  * `Receiving a multi-channel time series at chunk granularity. <https://github.com/sccn/liblsl/blob/master/examples/ReceiveDataInChunks.cpp>`__
+  * `Sending a multi-channel time series at chunk granularity. <https://github.com/sccn/liblsl/blob/main/examples/SendDataInChunks.cpp>`__
+  * `Receiving a multi-channel time series at chunk granularity. <https://github.com/sccn/liblsl/blob/main/examples/ReceiveDataInChunks.cpp>`__
 
 These two example programs illustrate a more special-purpose use case, namely sending arbitrary string-formatted data at irregular sampling rate. Such streams are used by programs that produce event markers, for example. These are 1:1 equivalents of the corresponding C programs:
-  * `Sending a stream of strings with irregular timing. <https://github.com/sccn/liblsl/blob/master/examples/SendStringMarkers.cpp>`__
-  * `Receiving a stream of strings with irregular timing. <https://github.com/sccn/liblsl/blob/master/examples/ReceiveStringMarkers.cpp>`__
+  * `Sending a stream of strings with irregular timing. <https://github.com/sccn/liblsl/blob/main/examples/SendStringMarkers.cpp>`__
+  * `Receiving a stream of strings with irregular timing. <https://github.com/sccn/liblsl/blob/main/examples/ReceiveStringMarkers.cpp>`__
 
 The last example shows how to attach properly formatted meta-data to a stream, and how to read it out again at the receiving end. While meta-data is strictly optional, it is very useful to make streams self-describing. LSL has adopted the convention to name meta-data fields according to the XDF file format specification whenever the content type matches (for example EEG, Gaze, MoCap, VideoRaw, etc); the spec is `here <https://github.com/sccn/xdf/wiki/Meta-Data>`__. Note that some older example programs (SendData/ReceiveData) predate this convention and name the channels inconsistently.
-  * `Handling stream meta-data. <https://github.com/sccn/liblsl/blob/master/examples/HandleMetaData.cpp>`__
+  * `Handling stream meta-data. <https://github.com/sccn/liblsl/blob/main/examples/HandleMetaData.cpp>`__
 
 C/C++ Special-Purpose Example Programs
 **************************************
 These programs illustrate some special use cases of LSL that are also relevant for C programmers. See the lsl\_c.h header for the corresponding C APIs (they are very similar to the C++ code shown here).
 
 This example illustrates in more detail how streams can be resolved on the network:
-  * `Resolving all streams on the lab network, one-shot and continuous. <https://github.com/sccn/liblsl/blob/master/examples/GetAllStreams.cpp>`__
+  * `Resolving all streams on the lab network, one-shot and continuous. <https://github.com/sccn/liblsl/blob/main/examples/GetAllStreams.cpp>`__
 
 This example shows how to query the full XML meta-data of a stream (which may be several megabytes large):
-  * `Retrieving the XML meta-data of a stream. <https://github.com/sccn/liblsl/blob/master/examples/GetFullinfo.cpp>`__
+  * `Retrieving the XML meta-data of a stream. <https://github.com/sccn/liblsl/blob/main/examples/GetFullinfo.cpp>`__
 
 This example shows how to obtain time-correction values for a given stream. These time-correction values are offsets (in seconds) that are used to remap any stream's timestamps into the own local clock domain (just by adding the offset to the timestamp):
-  * `Querying the time-correction information for a stream. <https://github.com/sccn/liblsl/blob/master/examples/GetTimeCorrection.cpp>`__
+  * `Querying the time-correction information for a stream. <https://github.com/sccn/liblsl/blob/main/examples/GetTimeCorrection.cpp>`__
 
 Python Example Programs: Basic to Advanced
 ******************************************
 These examples show how to transmit a numeric multi-channel time series through LSL:
-  * `Sending a multi-channel time series into LSL. <https://github.com/labstreaminglayer/liblsl-Python/tree/master/pylsl/examples/SendData.py>`__
-  * `Receiving a multi-channel time series from LSL. <https://github.com/labstreaminglayer/liblsl-Python/tree/master/pylsl/examples/ReceiveData.py>`__
+  * `Sending a multi-channel time series into LSL. <https://github.com/labstreaminglayer/pylsl/blob/main/src/pylsl/examples/SendData.py>`__
+  * `Receiving a multi-channel time series from LSL. <https://github.com/labstreaminglayer/pylsl/blob/main/src/pylsl/examples/ReceiveData.py>`__
 
 The following examples show how to send and receive data in chunks, which can be more convenient. The data sender also demonstrates how to attach meta-data to the stream.
-  * `Sending a multi-channel time series in chunks. <https://github.com/labstreaminglayer/liblsl-Python/tree/master/pylsl/examples/SendDataAdvanced.py>`__
-  * `Receiving a multi-channel time series in chunks. <https://github.com/labstreaminglayer/liblsl-Python/tree/master/pylsl/examples/ReceiveDataInChunks.py>`__
+  * `Sending a multi-channel time series in chunks. <https://github.com/labstreaminglayer/pylsl/blob/main/src/pylsl/examples/SendDataAdvanced.py>`__
+  * `Receiving a multi-channel time series in chunks. <https://github.com/labstreaminglayer/pylsl/blob/main/src/pylsl/examples/ReceiveDataInChunks.py>`__
 
 These examples show a special-purpose use case that is mostly relevant for stimulus-presentation programs or other applications that want to emit 'event' markers or other application state. The stream here is single-channel and has irregular sampling rate, but the value per channel is a string:
-  * `Sending string-formatted irregular streams. <https://github.com/labstreaminglayer/liblsl-Python/tree/master/pylsl/examples/SendStringMarkers.py>`__
-  * `Receiving string-formatted irregular streams. <https://github.com/labstreaminglayer/liblsl-Python/tree/master/pylsl/examples/ReceiveStringMarkers.py>`__
+  * `Sending string-formatted irregular streams. <https://github.com/labstreaminglayer/pylsl/blob/main/src/pylsl/examples/SendStringMarkers.py>`__
+  * `Receiving string-formatted irregular streams. <https://github.com/labstreaminglayer/pylsl/blob/main/src/pylsl/examples/ReceiveStringMarkers.py>`__
 
 The last example shows how to attach properly formatted meta-data to a stream, and how to read it out again at the receiving end. While meta-data is strictly optional, it is very useful to make streams self-describing. LSL has adopted the convention to name meta-data fields according to the XDF file format specification whenever the content type matches (for example EEG, Gaze, MoCap, VideoRaw, etc); the spec is `here <https://github.com/sccn/xdf/wiki/Meta-Data>`__. Note that some older example programs (SendData/ReceiveData) predate this convention and name the channels inconsistently.
-  * `Handling stream meta-data. <https://github.com/labstreaminglayer/liblsl-Python/tree/master/pylsl/examples/HandleMetadata.py>`__
+  * `Handling stream meta-data. <https://github.com/labstreaminglayer/pylsl/blob/main/src/pylsl/examples/HandleMetadata.py>`__
 
 MATLAB Example Programs: Basic to Advanced
 ******************************************
@@ -128,7 +128,7 @@ These examples show a special-purpose use case that is mostly relevant for stimu
   * `Sending string-formatted irregular streams. <https://github.com/labstreaminglayer/liblsl-Java/tree/master/src/examples/SendStringMarkers.java>`__
   * `Receiving string-formatted irregular streams. <https://github.com/labstreaminglayer/liblsl-Java/tree/master/src/examples/ReceiveStringMarkers.java>`__
 
-The last example shows how to attach properly formatted meta-data to a stream, and how to read it out again at the receiving end. While meta-data is strictly optional, it is very useful to make streams self-describing. LSL has adopted the convention to name meta-data fields according to the XDF file format specification whenever the content type matches (for example EEG, Gaze, MoCap, VideoRaw, etc); the spec is `here <http://code.google.com/p/xdf/wiki/MetaData>`__. Note that some older example programs (SendData/ReceiveData) predate this convention and name the channels inconsistently.
+The last example shows how to attach properly formatted meta-data to a stream, and how to read it out again at the receiving end. While meta-data is strictly optional, it is very useful to make streams self-describing. LSL has adopted the convention to name meta-data fields according to the XDF file format specification whenever the content type matches (for example EEG, Gaze, MoCap, VideoRaw, etc); the spec is `here <https://github.com/sccn/xdf/wiki/Meta-Data>`__. Note that some older example programs (SendData/ReceiveData) predate this convention and name the channels inconsistently.
   * `Handling stream meta-data. <https://github.com/labstreaminglayer/liblsl-Java/tree/master/src/examples/HandleMetaData.java>`__
 
 C# Example Programs: Basic to Advanced

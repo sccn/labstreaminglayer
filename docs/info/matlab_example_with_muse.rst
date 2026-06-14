@@ -2,7 +2,7 @@
 
 This is the series of steps to connect with the Muse.
 
-1. Download the Muse SDK from http://developer.choosemuse.com
+1. Download the Muse SDK from https://choosemuse.com/pages/developers
 2. Pair your computer with your Muse headset and connect to your Muse using muse-io (replace Muse-XXXX with the name of your Muse device as it shows in the Bluetooth settings)
     ``muse-io --device Muse-XXXX --lsl-eeg EEG``
 
