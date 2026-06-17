@@ -24,7 +24,7 @@ Building the documentation
 The
 `documentation on ReadTheDocs <https://labstreaminglayer.readthedocs.io/>`_
 is built on every commit to the
-:repo:`Labstreaminglayer repository <labstreaminglayer/labstreaminglayer>`.
+:repo:`Labstreaminglayer repository <sccn/labstreaminglayer>`.
 In order to avoid several commits until you get the formatting right, install
 the Python ``sphinx`` package (either with pip or conda) and build the
 documentation with
