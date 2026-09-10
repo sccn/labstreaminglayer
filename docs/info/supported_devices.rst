@@ -57,7 +57,7 @@ The following are some of the devices we know about that support LSL natively th
       * :doc:`MU-01 - Muse - Released 2014 Example with Matlab <matlab_example_with_muse>`
       * `Muse (MU-02 2016) and Muse 2 (MU-03 2018) <https://github.com/alexandrebarachant/muse-lsl>`__
       * `Muse 2016, Muse 2, Muse S <https://github.com/kowalej/BlueMuse>`__
-
+  * `Natus/Xltek Connex / Brain Monitor <https://github.com/BrianLeeper/connex-lsl>`__ via connex-lsl (currently requires Natus Neuroworks)
 
 The following devices support LSL natively without any additional software:
   * `Foc.us EEG Dev Kit <https://foc.us/eeg>`__
