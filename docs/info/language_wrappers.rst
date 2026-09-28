@@ -12,4 +12,4 @@ liblsl language wrappers
 * `rust <https://github.com/labstreaminglayer/liblsl-rust>`__
 * `Generic SWIG <https://github.com/labstreaminglayer/liblsl-Generic>`__
 * `Julia <https://github.com/samuelpowell/LSL.jl>`__
-* `Dart <https://github.com/zeyus/liblsl.dart/tree/main/packages/liblsl>`__
+* `Dart <https://github.com/NexusDynamic/liblsl.dart> (pub.dev package: <https://pub.dev/packages/liblsl>)`__

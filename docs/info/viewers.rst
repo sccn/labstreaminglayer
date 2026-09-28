@@ -17,7 +17,14 @@ Stand-alone online viewers:
   * `BrainVision LSL Viewer <https://www.brainproducts.com/downloads.php?kid=40&tab=3>`__
   
     .. image:: ../images/LSL_BVLSL-Viewer.png
-  
+
+  * `LSL Viewer <https://github.com/NexusDynamic/liblsl.dart/releases?q=lsl_viewer&expanded=true>`__
+    Supports LSL streams, serial ports, XDF files (including replay). Native support for Windows, Linux, MacOS and Android (iOS can be built, but requires special entitlements from Apple).
+    Also available online as a `web application <https://nexusdynamic.org/liblsl.dart/lsl_viewer/>`__
+    that can work with LSL streams via a WebSocket bridge (see `LSL WebSocket Bridge <https://github.com/NexusDynamic/liblsl.dart/blob/main/packages/lsl_tools/doc/relay.md>`__).
+
+    .. image:: ../images/lsl_viewer.avif
+
   * `MATLABViewer <https://github.com/labstreaminglayer/App-MATLABViewer>`__
     Allow visualizing, filtering and saving data in EEGLAB format. Exist as a compiled standalone application (see GitHub release) with no MATLAB installation necessary, or as an EEGLAB plugin. 
 
