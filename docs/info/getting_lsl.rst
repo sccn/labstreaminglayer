@@ -14,30 +14,13 @@ What you need depends on what you want to do:
 liblsl
 ======
 
-liblsl is the C/C++ library that every LSL application and binding uses. Its own documentation
-covers in detail how to :liblsl:`get it <guide/getting.html>`,
-:liblsl:`use it in your project <guide/linking.html>` and
-:liblsl:`build it <guide/building.html>`. In short:
+liblsl, the C/C++ library under every LSL application and binding, comes as release downloads for
+Windows, Linux, macOS and iOS, from package managers (conda-forge, vcpkg, Conan, Homebrew), or
+built as part of your own CMake project. :liblsl:`Getting liblsl <guide/getting.html>` lists them
+all; :liblsl:`Using liblsl in your project <guide/linking.html>` shows how to link it.
 
-* **Build it with your project.** C/C++ projects using CMake can add liblsl with
-  ``FetchContent`` and link the ``LSL::lsl`` target. This always gives you exactly the version
-  you ask for, built with your compiler.
-* **Release downloads.** Every `liblsl release <https://github.com/sccn/liblsl/releases>`__
-  has builds for Windows (x64, x86, ARM64, and MinGW), Ubuntu (``.deb``, x64/ARM), macOS (an
-  installer for ``lsl.framework``) and an ``xcframework`` for macOS and iOS. These are built and
-  tested by the liblsl repository's own CI.
-* **Package managers.** liblsl is also available from:
-
-  * `conda-forge <https://anaconda.org/conda-forge/liblsl>`__: ``conda install -c conda-forge liblsl``
-  * `vcpkg <https://vcpkg.io>`__: ``vcpkg install liblsl``
-  * `Conan <https://conan.io/center/liblsl>`__
-  * `Homebrew <https://brew.sh>`__: ``brew install labstreaminglayer/tap/lsl``
-
-  .. warning::
-     These packages are maintained separately from liblsl and are updated by hand after each
-     release, so they are often one or more releases behind (check the version they offer).
-     The best-supported routes are the release downloads and building liblsl with your project
-     through its CMake integration, which liblsl's CI tests on every change.
+The package-manager versions are maintained separately and are often a release or more behind;
+the release downloads and liblsl's own CMake integration are the best-supported routes.
 
 Apps and the full source tree
 =============================

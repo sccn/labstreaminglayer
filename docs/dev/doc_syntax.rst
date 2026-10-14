@@ -1,6 +1,19 @@
-====================
-Documentation Syntax
-====================
+=================================
+Contributing to the documentation
+=================================
+
+LSL's documentation lives in two places:
+
+* **This site** (``docs/`` in the `labstreaminglayer repository <https://github.com/sccn/labstreaminglayer>`__):
+  what LSL is, getting started, devices, tools, language bindings, troubleshooting. Written in
+  reStructuredText, described below.
+* **The liblsl documentation** (``docs/`` in the `liblsl repository <https://github.com/sccn/liblsl>`__):
+  getting, building and linking liblsl, its configuration, how it works on the network, and the
+  C/C++ API reference. Written in Markdown (MyST) with Mermaid diagrams; build it with
+  ``pip install -r docs/requirements.txt`` and ``sphinx-build docs docs/_build/html`` (Doxygen
+  must be installed for the API reference).
+
+Both are published on Read the Docs and rebuilt on every push.
 
 Restructured Text (RST)
 =======================
@@ -9,10 +22,7 @@ Restructured Text
 (`Quickstart <https://docutils.sourceforge.io/docs/user/rst/quickstart.html>`_,
 `another Quickstart <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_)
 is a text based markup language like markdown.
-In combination with `Sphinx <https://www.sphinx-doc.org/>`_) it is used to build this documentation,
-most notable for the
-`official Labstreaminglayer documentation <https://labstreaminglayer.readthedocs.io/>`_
-hosted on ReadTheDocs and (some time in the future) a standalone PDF doc.
+In combination with `Sphinx <https://www.sphinx-doc.org/>`_ it is used to build this documentation.
 
 You can view the source code for
 `this page <https://github.com/sccn/labstreaminglayer/blob/master/docs/dev/doc_syntax.rst>`_
@@ -26,10 +36,10 @@ The
 is built on every commit to the
 :repo:`Labstreaminglayer repository <sccn/labstreaminglayer>`.
 In order to avoid several commits until you get the formatting right, install
-the Python ``sphinx`` package (either with pip or conda) and build the
-documentation with
+the requirements (``pip install -r docs/requirements.txt``) and build the
+documentation in the ``docs`` folder with
 :samp:`make html`, or (if you don't have :command:`make` installed)
-:samp:`sphinx-build . _build`.
+:samp:`sphinx-build . _build/html`.
 
 
 
@@ -80,6 +90,10 @@ Some pages are linked to quite often, so there are some shortcuts configured in 
 :samp:`https://github.com/labstreaminglayer/App-{LabRecorder}` and
 :samp:`:lslrelease:`{LabRecorder}`` to an App's release page, i.e.
 :samp:`https://github.com/labstreaminglayer/App-{LabRecorder}/releases`.
+
+:samp:`:liblsl:`{link text} <{guide/linking.html}>`` links to a page of the liblsl
+documentation, e.g. :liblsl:`Using liblsl in your project <guide/linking.html>`. Prefer this
+for liblsl's guide pages (written in Markdown); for the API reference use the intersphinx links below.
 
 `Intersphinx`_
 ~~~~~~~~~~~~~~
