@@ -169,9 +169,10 @@ pre-allocated buffer.
 Make sure that you use a recent version of liblsl (1.10 or later offers a
 faster network protocol) at both the sender and the receiver.
 
-If you are writing an application that needs to push a lot of data, please show
-your interest by commenting on the long-lingering `pull request to speed up pushes
-<https://github.com/sccn/liblsl/pull/170>`_ by reducing the number of data copies.
+For outlets that push a lot of data to few inlets, liblsl 1.18 adds a synchronous (zero-copy)
+mode: create the outlet with the ``transp_sync_blocking`` transport option, and each push writes
+directly to the connected inlets instead of copying through a buffer. See
+:liblsl:`data transport <internals/streamfeed.html>` for its trade-offs.
 
 Chunk sizes
 -----------
@@ -256,20 +257,19 @@ how to name the file, i.e. :file:`lsl.dll` for Windows,
 :file:`liblsl.dylib` for MacOS / OS X.
 
 The `liblsl release page <https://github.com/sccn/liblsl/releases>`_
-has multiple packages, generally called
-:file:`liblsl-{version}-{system}.{extension}`, e.g. 
-:file:`liblsl-1.13.1-Linux64-bionic.deb` with the 64 bit Ubuntu Linux 18.04
-(Codename Bionic Beaver) package or
-:file:`liblsl-1.13.1-Win32.zip` with the 32 bit Windows DLLs.
+has packages named for the system and processor, e.g.
+:file:`liblsl-{version}-noble_{amd64}.deb` for 64-bit Ubuntu 24.04 (Noble) or
+:file:`liblsl-{version}-Win_{i386}.zip` for 32-bit Windows;
+:liblsl:`Getting liblsl <guide/getting.html>` lists them all.
 
-.. warning
+.. warning::
 
     Android also has ``.so`` shared objects, but has a different
     toolchain and architecture so the binaries (even if they're also named
-   :file:`liblsl.so`) are **not** interchangeable with ``.so`` files for regular
+    :file:`liblsl.so`) are **not** interchangeable with ``.so`` files for regular
     Linuxes.
 
-.. warning
+.. warning::
 
     Embedded Linux devices typically have an ARM processor instead of an x86 /
     x64 processor so the default linux binaries won't work (resulting in an
