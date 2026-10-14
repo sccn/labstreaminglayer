@@ -1,5 +1,8 @@
-Supported Devices and Tools
-###########################
+Supported Devices
+#################
+
+This page lists hardware with LSL support. Software that works with any LSL stream (recording,
+viewers, stimulus presentation software, analysis) is on the :doc:`tools` page.
 
 **For device applications and tools hosted on GitHub, please make sure to read the respective repository's README and to check the release page for downloads.**
 
@@ -151,21 +154,6 @@ Supported Stimulation Hardware
 ******************************
 The following stimulation devices (TMS, TDCS / TACS) have LSL support:
   * `Soterix Medical MXN-33 Transcranial Electrical Stimulator <https://soterixmedical.com/research/hd/mxn-33>`__
-
-Supported Stimulus Presentation Software
-****************************************
-The following stimulus presentations systems are usable out of the box with LSL:
-  * `EventIDE <http://wiki.okazolab.com/wiki.okazolab.com/LAB-Streaming-Layer-in-EventIDE>`__
-  * `E-Prime 3.0 <https://github.com/PsychologySoftwareTools/eprime3-lsl-package-file/>`__
-  * `iMotions <https://www.imotions.com/>`__
-  * `Neurobehavioral Systems Presentation <https://www.neurobs.com/>`__
-  * Psychopy (using LSL for Python)
-  * PsychToolbox (using LSL for MATLAB)
-  * `Reiz <https://github.com/pyreiz/pyreiz>`__
-  * `Simulation and Neuroscience Application Platform (SNAP) <https://github.com/sccn/SNAP>`__
-  * `SuperLab X7 <https://cedrus.com/superlab/docs/lsl.htm>`__
-  * Unity (using `LSL4Unity <https://github.com/labstreaminglayer/LSL4Unity>`_ or liblsl C#)
-  * Unreal Engine (`Marketplace <https://www.unrealengine.com/marketplace/en-US/product/labstreaminglayer-plugin>`__, `GitHub <https://github.com/labstreaminglayer/plugin-UE4>`__)
 
 Miscellaneous Hardware
 **********************
