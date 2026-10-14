@@ -110,4 +110,5 @@ time-synchronization information).
 Developer Information
 =====================
 
-Please see the separate developer documentation :doc:`../dev/dev_guide`.
+Please see the separate developer documentation :doc:`../dev/dev_guide`, and the
+:liblsl:`liblsl documentation <index.html>` for how the core library works and how to build it and use it from C/C++.

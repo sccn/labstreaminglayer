@@ -11,8 +11,7 @@ developer's guide.
 
 The labstreaminglayer source code is similarly split into Apps and LSL (core library and language interfaces),
 each of which comprises several submodules.
-One could work with the repository, submodules and all, as a :doc:`full_tree`, but this is not recommended.
-Most developers will be better working on individual apps or individual language interfaces.
+Most developers work on individual apps or individual language interfaces, each in its own repository.
 
 :doc:`app_dev`
 --------------
@@ -31,10 +30,10 @@ See :doc:`examples` for a broader overview of example programs and general
 programming tips and tricks.
 Also make sure to glance over the :doc:`../info/faqs`.
 
-:doc:`lib_dev`
---------------
+liblsl
+------
 
-:doc:`The guide <lib_dev>` is for you if you are:
+The :liblsl:`liblsl documentation <index.html>` is for you if you are:
 
 - trying to build liblsl for a platform that does not already have a release
 
@@ -43,7 +42,10 @@ Also make sure to glance over the :doc:`../info/faqs`.
 
 - trying to use liblsl in a language that does not already have an interface
 
-  - `Already supported: Android, C#, Java, Matlab, Python <https://github.com/sccn/labstreaminglayer/tree/master/LSL>`_
+  - See the :doc:`existing language bindings <../info/language_wrappers>` first.
+
+- curious how liblsl works on the network (discovery, the data protocol, time synchronization, recovery):
+  see :liblsl:`How liblsl works <internals/overview.html>`.
 
 
 

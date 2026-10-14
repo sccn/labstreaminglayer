@@ -49,4 +49,6 @@ extlinks = {
     'repo': ('https://github.com/%s', None),
     'lslrepo': ('https://github.com/labstreaminglayer/App-%s', None),
     'lslrelease': ('https://github.com/labstreaminglayer/App-%s/releases', 'Download %s'),
+    # liblsl's own documentation (a sub-project of this site): :liblsl:`guide/linking.html`
+    'liblsl': ('https://labstreaminglayer.readthedocs.io/projects/liblsl/%s', None),
 }
