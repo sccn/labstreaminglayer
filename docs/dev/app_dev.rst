@@ -31,24 +31,18 @@ Or see below for full applications.
 C++ apps
 --------
 
-The recommended way to get liblsl is to simply download the latest release from
-`the release page <https://github.com/sccn/liblsl/releases>`__.
-You may need to click on the black arrow to expand the list of assets.
-
-If you are using CMake, pass the :doc:`LSL_INSTALL_ROOT` argument set to the location where your
-liblsl file installed / unpacked to.
-And your application should use something like the following line to find liblsl:
+With CMake, either let CMake build liblsl as part of your app (``FetchContent``) or use an
+installed liblsl (a `release download <https://github.com/sccn/liblsl/releases>`__, a package
+manager, or your own build) with ``find_package``:
 
 .. code-block:: cmake
 
-  find_package(LSL 1.13.0 REQUIRED
-  	HINTS ${LSL_INSTALL_ROOT}
-  	"${CMAKE_CURRENT_LIST_DIR}/../../LSL/liblsl/build/"
-  	"${CMAKE_CURRENT_LIST_DIR}/../../LSL/liblsl/build/install"
-  	PATH_SUFFIXES share/LSL
-  )
+  find_package(LSL REQUIRED)    # configure with -DCMAKE_PREFIX_PATH=<liblsl prefix> if needed
+  target_link_libraries(${PROJECT_NAME} PRIVATE LSL::lsl)
 
-Then you can link your target to liblsl with ``target_link_libraries(${PROJECT_NAME} PRIVATE LSL::lsl)``.
+:liblsl:`Using liblsl in your project <guide/linking.html>` covers both ways, shipping liblsl
+with your app (DLLs, RPATHs, macOS frameworks) and the ``LSLCMake`` helper functions.
+Many existing apps also accept :doc:`LSL_INSTALL_ROOT` as a hint for where liblsl is.
 
 For a more complete example to help you get started with a C++ acquisition app, take a look at the `AppTemplate_cpp_qt <https://github.com/labstreaminglayer/AppTemplate_cpp_qt/>`__, a small example that provides a solid groundwork for at least the following parts:
 

@@ -79,13 +79,12 @@ Always be sure to read the specific application build instructions first.
    * If using command line
 
       * Start the build process (:cmd:`cmake --build . --config Release --target install`)
-      * (see also :ref:`cmakeinstalltarget`)
 
    * If using Visual Studio >=2017 built-in CMake utilities
       * Use the menu :guilabel:`Build > Install > ApplicationName`
 
 This will create a distribution tree in the folder specified by
-:ref:`CMAKE_INSTALL_PREFIX <cmakeinstalltarget>` similar to this:
+``CMAKE_INSTALL_PREFIX`` similar to this:
 
 ‘installed’ directory tree
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
