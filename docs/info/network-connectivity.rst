@@ -131,42 +131,29 @@ disable or block certain features or ports between computers.
 Unix (Linux / macOS)
 ********************
 
-To test stream resolution problems, you can log all incoming query packets with
-the excellent ``socat`` utility:
+To see which LSL packets actually reach a machine, capture them with ``tcpdump``:
 
 .. code:: bash
 
-  $ socat -d -d UDP-RECV:16571,reuseaddr,broadcast STDOUT
-  2020/05/20 12:08:38 socat[16940] N using stdout for reading and writing
-  2020/05/20 12:08:38 socat[16940] N starting data transfer loop with FDs [5,5] and [1,1]
-  2020/05/20 12:08:39 socat[16940] N received packet with 65 bytes from AF=2 192.168.1.170:58967
+  $ sudo tcpdump -vvnA -i lo udp portrange 16571-16603
+  [..] IP 127.0.0.1.58967 > 127.0.0.1.16571: UDP, length 65
   LSL:shortinfo
   session_id='default'
   16577 11973266323178842010
 
+``-vv`` prints details, ``-n`` skips name lookups, ``-A`` prints the packet contents, and ``-i``
+selects the interface: ``lo`` is the loopback interface on Linux (``lo0`` on macOS); use your
+network interface (``ip addr`` / ``ifconfig`` list them, e.g. ``eth0``, ``wlan0`` or ``en0``) to
+watch traffic between machines. Discovery queries start with ``LSL:shortinfo`` and are followed
+by the query and the port and id to reply to; each matching outlet answers with its stream
+description. Use ``tcp portrange 16572-16603`` to watch the data connections.
 
-To log *all* broadcast packets, use
-:samp:`UDP-RECV:16571,reuseaddr,broadcast` as source.
+Prefer ``tcpdump`` over tools that listen on the LSL ports themselves (such as
+``socat UDP-RECV:16571,reuseaddr``): those can receive unicast discovery queries meant for
+outlets on the same machine and so change what you are trying to observe.
 
-For a specific broadcast address 
-:samp:`UDP-RECV:16571,reuseaddr,bind={224.0.0.183},ip-add-membership={224.0.0.183}:{enp0s25}`
-where ``224.0.0.183`` is the broadcast address and (optionally) ``enp0s25``
-your interface name.
-
-For multicast packets, use
-:samp:`UDP6-RECV:16571,reuseaddr,ipv6-join-group='[ff02:113D:6FDD:2C17:A643:FFE2:1BD1:3CD2]:enp0s25'`.
-Note that the interface name may also be an interface index as printed by
-:samp:`ip addr` (here ``wlan0`` has the interface index 4):
-
-.. code:: bash
-
-  [..]
-  4: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
-    link/ether 7c:7a:91:31:7d:56 brd ff:ff:ff:ff:ff:ff
-    inet 192.168.1.110/24 brd 192.168.1.255 scope global dynamic noprefixroute wlan0
-       valid_lft 6081sec preferred_lft 6081sec
-    inet6 fe80::7e7a:91ff:fe31:7d56/64 scope link 
-       valid_lft forever preferred_lft forever
+More debugging techniques, including requesting data from an outlet by hand with ``nc``, are in
+liblsl's :liblsl:`debugging guide <guide/debugging.html>`.
 
 
 Same-Machine Discovery (Loopback)
@@ -193,9 +180,9 @@ service-port range (``16572``–``16603``), where every stream owns its own sock
 No configuration or routing changes are needed — all local streams are
 discoverable regardless of bind order.
 
-The same applies to any other program bound to port ``16571`` with address reuse,
-such as the ``socat`` command above: while it runs, it can receive unicast queries
-meant for outlets on that machine. Stop it once you are done testing.
+The same applies to any other program bound to port ``16571`` with address reuse
+(e.g. ``socat UDP-RECV:16571,reuseaddr``): while it runs, it can receive unicast
+queries meant for outlets on that machine.
 
 .. note::
 
