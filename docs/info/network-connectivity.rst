@@ -23,11 +23,17 @@ The connections that are required by LSL to work in its default settings are
 
   - (`FF02:113D:6FDD:2C17:A643:FFE2:1BD1:3CD2`)
   - `FF05:113D:6FDD:2C17:A643:FFE2:1BD1:3CD2`
-  - (`FF08113D:6FDD:2C17:A643:FFE2:1BD1:3CD2`)
+  - (`FF08:113D:6FDD:2C17:A643:FFE2:1BD1:3CD2`)
   - (`FF0E:113D:6FDD:2C17:A643:FFE2:1BD1:3CD2`)
   - `224.0.0.1`, `224.0.0.183`, `239.255.172.215`
 
-- TCP and UDP connections to the ports 16572-16604
+- TCP and UDP connections to the ports 16572-16603 (``BasePort`` 16572 and ``PortRange`` 32 in the
+  :doc:`configuration file <lslapicfg>`)
+- UDP replies to the inlet's time-synchronization probes, which come back to an OS-chosen port
+  (a stateful firewall matches them to the outgoing probe)
+
+The exact ports and directions for the outlet and the inlet computer are listed in liblsl's
+:liblsl:`stream discovery <internals/discovery.html#what-this-means-for-firewalls>` documentation.
 
 To test whether the firewall is at issue, turn off both any personal firewall
 that you may have enabled, and then also turn off the Windows default firewall
@@ -163,6 +169,51 @@ Note that the interface name may also be an interface index as printed by
        valid_lft forever preferred_lft forever
 
 
+Same-Machine Discovery (Loopback)
+*********************************
+
+Streams produced and consumed on the *same* machine are discovered over the
+loopback interface using the machine-local address ``127.0.0.1`` (configurable
+via the ``MachineAddresses`` setting in the ``[multicast]`` section of the
+:doc:`configuration file <lslapicfg>`).
+
+``127.0.0.1`` is a *unicast* address, not a multicast group. Historically this
+caused a subtle problem: when several outlets run on one machine, a unicast
+discovery query sent to the shared port ``16571`` is delivered by the OS to only
+**one** of the listening sockets, so only one local stream would resolve and
+which one depended on socket bind order (restarting programs would shuffle which
+stream was visible). This is the cause behind reports such as
+`liblsl#92 <https://github.com/sccn/liblsl/issues/92>`_,
+`#28 <https://github.com/sccn/liblsl/issues/28>`_, and
+`#207 <https://github.com/sccn/liblsl/issues/207>`_.
+
+liblsl 1.18 and newer fix this automatically: in addition to querying
+``16571``, the resolver also probes each machine address across the per-stream
+service-port range (``16572``–``16603``), where every stream owns its own socket.
+No configuration or routing changes are needed — all local streams are
+discoverable regardless of bind order.
+
+The same applies to any other program bound to port ``16571`` with address reuse,
+such as the ``socat`` command above: while it runs, it can receive unicast queries
+meant for outlets on that machine. Stop it once you are done testing.
+
+.. note::
+
+   **Advanced (optional).** If you instead want *true* multicast semantics on the
+   loopback interface — for example to avoid the unicast probe entirely, or for
+   container/network-namespace setups where each stream lives in its own
+   namespace — you can add a multicast route to the loopback device on Linux:
+
+   .. code:: bash
+
+     $ sudo ip route add multicast 224.0.0.0/4 dev lo
+
+   With this route in place, link-scope multicast groups (e.g. ``224.0.0.183``)
+   are delivered to every local listener over loopback, so you may also remove
+   ``127.0.0.1`` from ``MachineAddresses`` and raise the ``ResolveScope`` to
+   ``link``. This is **not required** for normal same-machine use and is
+   Linux-specific; the default behavior above already handles the common case.
+
 Customizing Network Features of LSL
 ***********************************
 All network features used by LSL clients (such as the ports) can be customized
@@ -180,10 +231,10 @@ necessary.
 In order to enable a connection between two separate networks, there might be a number of 
 firewalls that might block traffic. Let's identify these points:
 
-- Forward outbound ports :samp:`16571 - 16604` for TCP/UDP on the Outlet's OS Firewall
-- Forward ports :samp:`16571 - 16604` for TCP/UDP on the Outlet's Endpoint (Router)
-- Forward ports :samp:`16571 - 16604` for TCP/UDP on the Inlet's Endpoint (Router/Virtual Firewall)
-- Forward inbound ports :samp:`16571 - 16604` for TCP/UDP on the Inlet's OS Firewall
+- Forward outbound ports :samp:`16571 - 16603` for TCP/UDP on the Outlet's OS Firewall
+- Forward ports :samp:`16571 - 16603` for TCP/UDP on the Outlet's Endpoint (Router)
+- Forward ports :samp:`16571 - 16603` for TCP/UDP on the Inlet's Endpoint (Router/Virtual Firewall)
+- Forward inbound ports :samp:`16571 - 16603` for TCP/UDP on the Inlet's OS Firewall
 
 Keep in mind that there are many possible setups for local networks. There may be additional 
 firewalls or network layers blocking your stream. If you believe this to be the case, please 
@@ -196,8 +247,9 @@ streaming device. It is often a requirement that a local network device has a st
 IP address in order to have its ports forwarded.
 
 Once all ports are forwarded on both sides, both outlet and inlet IP addresses need 
-to be added to the :samp:`KnownPeers` setting in the configuration file. This will override 
-the multicast discovery mechanism and only allow pairing between those endpoints. While 
+to be added to the :samp:`KnownPeers` setting in the configuration file. liblsl then also sends
+discovery queries directly (unicast) to those computers; multicast discovery keeps running
+alongside. While 
 you're in the file, make sure the :samp:`SessionID` setting is something other than default for 
 debugging and courtesy purposes.
 
@@ -229,5 +281,5 @@ Wireless Connections
 ********************
 
 There are some settings that can be modified to help LSL perform more reliably across
-wireless networks. Please see the [tuning] section at the bottom of the :doc:`lslapicfg` 
-documentation for more information.
+wireless networks; see :liblsl:`Tune for wireless networks <guide/configuration.html#tune-for-wireless-networks>`
+in the liblsl configuration reference.

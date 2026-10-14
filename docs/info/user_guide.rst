@@ -21,12 +21,12 @@ An outlet creates a group of UDP sockets on which it listens for incoming conten
 
 In particular, outlets listen via UDP on the multicast port (16571) for broadcast and multicast queries. Multiple sockets are created for this purpose, each of which listens on a different multicast address; these include both IPv4 and IPv6 addresses of the desired scope (for robustness to network conditions). The sockets are served from a single thread using asynchronous I/O for efficiency. While this still sounds like a lot of overhead, note that this thread is in waiting state for most of the time.
 
-In addition, outlets create a single regular (unicast) UDP socket that listens for content queries on a free port in the port range 16572-16604. This is a fallback in case the broadcast/multicast service discovery is disabled. This socket not only handles content queries but also responds to time estimation packets (used by inlets to estimate clock synchronization when a transmission is ongoing).
+In addition, outlets create a single regular (unicast) UDP socket that listens for content queries on a free port in the port range 16572-16603. Resolvers query it directly for machine-local streams and for the computers listed in ``KnownPeers``. This socket not only handles content queries but also responds to time estimation packets (used by inlets to estimate clock synchronization when a transmission is ongoing).
 
 
 TCP Data Transmission
 ---------------------
-In addition each outlet creates a TCP server socket on a free port in the port range 16572-16604 to accept actual data transmission requests. There are two types of transmission requests: a request for streaming data (such a connection would be established when an inlet is used to pull samples from a particular provider) and a request for meta-data (such a connection would be established when an inlet is used to retrieve the full meta-data of a stream). TCP servers can also in principle handle service discovery, but are not used for this purpose due to the relative inefficiency of this.
+In addition each outlet creates a TCP server socket on a free port in the port range 16572-16603 to accept actual data transmission requests. There are two types of transmission requests: a request for streaming data (such a connection would be established when an inlet is used to pull samples from a particular provider) and a request for meta-data (such a connection would be established when an inlet is used to retrieve the full meta-data of a stream). TCP servers can also answer discovery queries; this is only used when the optional ``ResolveOverTCP`` setting is turned on, because it is slow.
 
 An outlet can handle an arbitrary number of parallel connections to serve any number of listeners.
 
@@ -34,7 +34,7 @@ Resolve Operations
 ==================
 When a client creates a Stream :term:`Resolver` to resolve a stream with desired properties on the
 lab network, it issues a resolve operation.
-A resolve operation temporarily opens a range of UDP sockets through which queries are sent to the broadcast, multicast or unicast addresses that are configured as active. It also opens a UDP socket to receive result packets on a free port. The resolve operation emits a packet across each channel in a brief burst and waits for responses, then sends the next burst. This is repeated until the required conditions are fulfilled (e.g., service was found, timeout, etc.).
+A resolve operation temporarily opens a UDP socket per IP version through which queries are sent to the broadcast, multicast or unicast addresses that are configured as active; replies come back to the same socket. The resolve operation emits a packet across each channel in a brief burst and waits for responses, then sends the next burst. This is repeated until the required conditions are fulfilled (e.g., service was found, timeout, etc.).
 
 Inlets
 ======
@@ -62,3 +62,9 @@ Here we talk about important functions like the local clock
 (:cpp:func:`lsl_local_clock`), a function to query a time offset
 (:cpp:func:`lsl_time_correction_ex`) and a function to get the library version used
 by the loaded library (:cpp:func:`lsl_library_version`).
+
+Further reading
+===============
+
+liblsl's documentation describes the mechanisms in detail, with the exact messages, ports and
+timings: :liblsl:`How liblsl works <internals/overview.html>`.
