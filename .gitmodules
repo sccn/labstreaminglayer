@@ -170,3 +170,6 @@
 [submodule "Apps/EyeLogic"]
 	path = Apps/EyeLogic
 	url = https://github.com/labstreaminglayer/EyeLogic-LSL.git
+[submodule "Apps/App-PurpleGaze"]
+	path = Apps/App-PurpleGaze
+	url = https://github.com/purple-gaze/App-PurpleGaze.git
