@@ -96,7 +96,7 @@ Various devices with ECG and/or EMG sensors are supported. Some of these have no
   * `CGX (Cognionics) AIM Physiological Monitor <https://www.cgxsystems.com/auxiliary-input-module-gen2>`__ (ExG/Respiration/GSR/SPo2/Temp)
   * `Heart Rate Service bands <https://github.com/abcsds/HRBand-LSL>`__ (Many bluetooth HR bands such as the Polar H10)  
   * `RRStreamer (Android) <https://github.com/abcsds/RRStreamer>`__ (BLE Heart Rate bands such as the Polar H10, streamed from an Android phone with R-R intervals in milliseconds)
-  * `Polar H10 ECG <https://github.com/markspan/PolarBLE?tab=readme-ov-file>`__  
+  * `Polar H10 ECG <https://github.com/markspan/PolarBLE?tab=readme-ov-file>`__  (android version: <https://github.com/markspan/PolarMobile>)
   * `Shimmer Examples (using LSL for C#) <https://github.com/ShimmerResearch/liblsl-Csharp/tree/shimmer_dev/examples/SendData>`__ (ECG/EMG/GSR/Accelerometer/Gyroscope/Magnetometer/PPG/Temperature/etc)
   * `Shimmer Examples (using LSL for Java) <https://github.com/ShimmerResearch/liblsl-Java/tree/shimmer_dev/src/examples>`__ (ECG/EMG/GSR/Accelerometer/Gyroscope/Magnetometer/PPG/Temperature/etc)  
   * `TMSi SPIRE EMG <https://www.tmsi.artinis.com/tmsi-python-library>`__
