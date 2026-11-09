@@ -55,3 +55,5 @@ event markers:
 * Unity (using `LSL4Unity <https://github.com/labstreaminglayer/LSL4Unity>`__ or liblsl C#)
 * Unreal Engine (`GitHub <https://github.com/labstreaminglayer/plugin-UE4>`__,
   `Marketplace <https://www.unrealengine.com/marketplace/en-US/product/labstreaminglayer-plugin>`__)
+* `VibeMyExpt <https://vibemyexpt.com/tutorials/lab-streaming-layer>`__ (browser-based
+  jsPsych experiments; sends event markers through the ``vibemyexpt-lsl`` bridge)
